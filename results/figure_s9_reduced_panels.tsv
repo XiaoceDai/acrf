@@ -1,0 +1,11 @@
+axis	gene	baseline_dir
+matrix	PRELP	-1
+matrix	OMD	-1
+matrix	FMOD	-1
+matrix	CHST3	-1
+matrix	B4GALT1	-1
+metabolic	IDH2	1
+metabolic	NDUFA8	1
+metabolic	NDUFS2	1
+metabolic	COX5A	1
+metabolic	UQCRC1	1

@@ -1,0 +1,4 @@
+test	metric	n_total	n_RA_to_LA	n_LA_to_RA	ratio	statistic	p_value	fg_size	fg_in_SLRP	fg_SLRP_genes	bg_in_SLRP	odds_ratio	adipocyte_AF_mean	adipocyte_Ctl_mean	adipocyte_delta	adipocyte_n_AF	adipocyte_n_Ctl	lymphatic_endothelial_AF_mean	lymphatic_endothelial_Ctl_mean	lymphatic_endothelial_delta	lymphatic_endothelial_n_AF	lymphatic_endothelial_n_Ctl	n_paired_donors	n_pos	n_neg	wilcoxon_p	sign_p
+directional_asymmetry	binomtest (RA→LA vs LA→RA, p_null = 0.5)	24.0	21.0	3.0	21:3	0.125	0.0002771615982055664																				
+SLRP_enrichment	Fisher's exact (one-sided greater)	12309.0					0.00023762716995704466	24.0	2.0	DCN;PRELP	10.0	111.5909090909091															
+BMP_bidirectionality	paired Wilcoxon  +  sign-test on  Δ_adipo − Δ_lymph												0.19936613014884036	0.16717646487280857	0.03218966527603179	16.0	15.0	0.08019575158040484	0.14834984657906444	-0.0681540949986596	10.0	7.0	9.0	8.0	1.0	0.0078125	0.0390625

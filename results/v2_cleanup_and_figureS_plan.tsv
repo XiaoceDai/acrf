@@ -1,0 +1,21 @@
+item_path	kind	action	target_section	replacement_or_note	exists_now
+results/fig2_ncp_v2_acai_long.tsv	legacy_v2_runtime	delete	none	replaced by results/fig2_primary_acai_long.tsv	False
+results/fig2_ncp_v2_acai_summary.tsv	legacy_v2_runtime	delete	none	replaced by results/fig2_primary_acai_summary.tsv	False
+results/fig3_v2_program_celltype_delta.tsv	legacy_v2_runtime	delete	none	replaced by results/fig3_primary_program_celltype_delta.tsv	False
+results/fig3_v2_family_celltype_delta.tsv	legacy_v2_runtime	delete	none	replaced by results/fig3_primary_family_celltype_delta.tsv	False
+results/fig3_v2_program_carrier.tsv	legacy_v2_runtime	delete	none	replaced by results/fig3_primary_program_carrier.tsv	False
+results/fig3_v2_source_data.tsv	legacy_v2_runtime	delete	none	replaced by results/fig3_primary_source_data.tsv	False
+results/fig3_ncpv2_program_le.tsv	legacy_v2_runtime	delete	none	replaced by results/fig3_primary_program_le.tsv	False
+results/n2b_v2_reversal_per_celltype_long.tsv	legacy_v2_runtime	delete	none	replaced by results/n2b_primary_reversal_per_celltype_long.tsv	False
+results/n2b_v2_reversal_per_celltype_summary.tsv	legacy_v2_runtime	delete	none	replaced by results/n2b_primary_reversal_per_celltype_summary.tsv	False
+Project_P3/GSE255612/program_scores_v2.tsv	legacy_v2_runtime	delete	none	replaced by Project_P3/GSE255612/program_scores_primary.tsv	False
+Project_P4/GSE41177/program_scores_v2.tsv	legacy_v2_runtime	delete	none	replaced by Project_P4/GSE41177/program_scores_primary.tsv	False
+Project_P4/GSE41177/results_v2	legacy_v2_runtime	delete	none	replaced by Project_P4/GSE41177/results_primary	False
+figures/innovation_v2_vs_v3_benchmark.pdf	method_comparison	keep_and_relabel	Figure S13	copied to figures/figS13_v2_vs_v3_benchmark.pdf	True
+figures/innovation_ncp_bootstrap_frequency.pdf	method_validation	keep_and_relabel	Figure S14	copied to figures/figS14_v3_bootstrap_stability.pdf	True
+results/innovation_v2_vs_v3_metrics.tsv	method_comparison_source	keep	Supplementary methods benchmark	source for Fig S13	True
+results/innovation_v2_vs_v3_axis_effects.tsv	method_comparison_source	keep	Supplementary methods benchmark	source for Fig S13	True
+results/innovation_v2_vs_v3_decision_table.tsv	method_comparison_source	keep	Supplementary methods benchmark	source for Fig S13	True
+results/innovation_ncp_v2_acai_long.tsv	method_comparison_source	keep	Supplementary methods benchmark	needed for reproducible v2-v3 comparison	True
+results/innovation_ncp_v2_acai_summary.tsv	method_comparison_source	keep	Supplementary methods benchmark	needed for reproducible v2-v3 comparison	True
+results/fig1c_ncp_panel_v2.tsv	baseline_panel_definition	keep	Supplementary methods benchmark	frozen baseline panel used for all v2 comparisons	True

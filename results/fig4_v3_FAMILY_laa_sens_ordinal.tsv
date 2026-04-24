@@ -1,0 +1,17 @@
+analysis	n_samples	rho_spearman	p_perm	bootstrap_ci_lo	bootstrap_ci_hi	family_id	direction	family_source
+laa_ordinal	16	0.000000	1.000000	-0.521067	0.518287	1	LA-biased	baseline
+laa_ordinal	16	-0.542326	0.038696	-0.857514	-0.084515	2	LA-biased	baseline
+laa_ordinal	16	0.271163	0.329567	-0.285134	0.740101	3	LA-biased	baseline
+laa_ordinal	16	0.189814	0.517848	-0.351013	0.690975	4	LA-biased	baseline
+laa_ordinal	16	-0.216930	0.453455	-0.699521	0.338386	5	LA-biased	baseline
+laa_ordinal	16	-0.135582	0.639536	-0.603746	0.409174	6	LA-biased	baseline
+laa_ordinal	16	-0.027116	0.960504	-0.545174	0.492090	7	LA-biased	baseline
+laa_ordinal	16	0.081349	0.793021	-0.479277	0.574243	8	LA-biased	baseline
+laa_ordinal	16	-0.216930	0.445655	-0.682961	0.289327	9	RA-biased	baseline
+laa_ordinal	16	-0.054233	0.879412	-0.547221	0.480064	10	RA-biased	baseline
+laa_ordinal	16	-0.189814	0.498650	-0.673075	0.338572	11	RA-biased	baseline
+laa_ordinal	16	-0.271163	0.331367	-0.779242	0.281305	12	LA-biased	new_v3
+laa_ordinal	16	0.054233	0.877612	-0.480787	0.571590	13	LA-biased	new_v3
+laa_ordinal	16	-0.027116	0.957204	-0.563185	0.484015	14	LA-biased	new_v3
+laa_ordinal	16	-0.027116	0.958204	-0.535722	0.505599	15	RA-biased	new_v3
+laa_ordinal	16	0.162698	0.579442	-0.378811	0.681726	16	RA-biased	new_v3

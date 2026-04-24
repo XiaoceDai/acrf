@@ -1,0 +1,11 @@
+domain	metric	v2_value	v3_value	delta_v3_minus_v2	rule_or_note	rule_pass	overall_decision
+panel	panel_size	30.0	30.0	0.0	matched panel size		upgrade-ready
+panel	overlap_fraction_vs_v2	1.0	0.8333	-0.16669999999999996	continuity >= 0.80		upgrade-ready
+direction_balance	ra_count	6.0	8.0	2.0	RA coverage >= 8		upgrade-ready
+redundancy	mean_pairwise_jaccard	0.0213	0.0217	0.00040000000000000105	increase <= 0.005		upgrade-ready
+Panel continuity	overlap_fraction_vs_v2		0.8333		overlap_fraction_vs_v2 >= 0.80	True	upgrade-ready
+Direction balance (RA coverage)	ra_count		8.0		ra_count_v3 >= 8	True	upgrade-ready
+Redundancy control	mean_pairwise_jaccard		0.0004		jaccard_increase <= 0.005	True	upgrade-ready
+No cohort sign flip (all-program delta)	n_sign_flip		0.0		n_sign_flip == 0	True	upgrade-ready
+Transferability (delta stability)	mean_abs_delta_shift		0.0038		mean_abs_delta_shift <= 0.02	True	upgrade-ready
+Transferability (effect-size stability)	mean_abs_g_shift		0.0871		mean_abs_g_shift <= 0.20	True	upgrade-ready

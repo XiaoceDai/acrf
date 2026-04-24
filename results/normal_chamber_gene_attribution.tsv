@@ -1,0 +1,1031 @@
+gene	bulk_direction	dominant_cell_type	attribution_score	note
+PITX2	LA-high	atrialCM	5.82636838740298	atrialCM(t=-5.83)
+CLDN18	LA-high	atrialCM	3.65778658260658	atrialCM(t=-3.66)
+PKP1	LA-high	Unresolved	0	no_concordant_signal
+CCL21	LA-high	Mixed	3.24155417212274	atrialCM(t=-2.04); fibroblast(t=-2.12); endothelial_or_vascular(t=-3.24)
+LOC100144602	LA-high	Unresolved	0	no_concordant_signal
+TPO	LA-high	Mixed	4.2290360389297	fibroblast(t=-2.03); endothelial_or_vascular(t=-4.23)
+EPHA5	LA-high	Mixed	6.61541876852245	atrialCM(t=-6.62); endothelial_or_vascular(t=-1.50)
+SAA1	LA-high	Mixed	3.63835148676532	atrialCM(t=-3.39); fibroblast(t=-1.56); endothelial_or_vascular(t=-3.64)
+GABRA4	LA-high	atrialCM	4.73470357931498	atrialCM(t=-4.73)
+P2RX3	LA-high	Unresolved	0	no_concordant_signal
+AGAP2	LA-high	Unresolved	0	no_concordant_signal
+ADIPOQ	LA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=-0.35)
+SAA2	LA-high	Unresolved	0	no_concordant_signal
+SLC38A11	LA-high	immune	3.3729667338368	immune(t=-3.37)
+ROBO2	LA-high	atrialCM	5.30157744624955	atrialCM(t=-5.30)
+ITLN1	LA-high	Mixed	2.63076346995497	atrialCM(t=-2.63); fibroblast(t=-1.90); endothelial_or_vascular(t=-1.98)
+LOC100131825	LA-high	Unresolved	0	no_concordant_signal
+SERPINB2	LA-high	Unresolved	0	no_concordant_signal
+FHL5	LA-high	fibroblast	2.52458237400543	fibroblast(t=-2.52)
+PLIN1	LA-high	Unresolved	0	no_concordant_signal
+THBS4	LA-high	Mixed	2.61622014129703	atrialCM(t=-1.48); fibroblast(t=-2.62); endothelial_or_vascular(t=-2.46)
+PRG4	LA-high	atrialCM	1.81082984686904	atrialCM(t=-1.81)
+LEP	LA-high	Unresolved	0	no_concordant_signal
+VTN	LA-high	Unresolved	0	no_concordant_signal
+MYOT	LA-high	Mixed	2.72706438545092	atrialCM(t=-2.73); fibroblast(t=-2.06)
+SFRP2	LA-high	Unresolved	0	best_concordant=fibroblast(t=-0.19)
+SLC8A3	LA-high	Mixed	3.95165875061293	atrialCM(t=-3.95); immune(t=-3.90)
+GABRB2	LA-high	Mixed	7.31199379979868	atrialCM(t=-7.31); immune(t=-2.65)
+EPGN	LA-high	Unresolved	0	no_concordant_signal
+SNX31	LA-high	Unresolved	0	best_concordant=fibroblast(t=-0.31)
+CIDEC	LA-high	Unresolved	0	no_concordant_signal
+CHI3L1	LA-high	Unresolved	0	best_concordant=fibroblast(t=-1.33)
+SFRP1	LA-high	Mixed	6.81038390905238	atrialCM(t=-6.81); fibroblast(t=-2.38); endothelial_or_vascular(t=-1.73)
+BMP5	LA-high	Mixed	4.86697022123143	atrialCM(t=-4.87); fibroblast(t=-2.80)
+FAM189A1	LA-high	atrialCM	3.8041248382143	atrialCM(t=-3.80)
+OSR1	LA-high	Mixed	7.91530472684762	atrialCM(t=-7.92); fibroblast(t=-1.50)
+LINC00842	LA-high	Mixed	7.1828702495205	atrialCM(t=-7.18); fibroblast(t=-3.40)
+RBP4	LA-high	Mixed	3.07777291921766	atrialCM(t=-2.20); fibroblast(t=-3.08)
+ADAMTS8	LA-high	Unresolved	0	no_concordant_signal
+DDIT4L	LA-high	atrialCM	3.80424593897787	atrialCM(t=-3.80)
+LRRC15	LA-high	Unresolved	0	no_concordant_signal
+CLEC4GP1	LA-high	Unresolved	0	no_concordant_signal
+LTF	LA-high	endothelial_or_vascular	1.5346204924576	endothelial_or_vascular(t=-1.53)
+KLB	LA-high	Unresolved	0	no_concordant_signal
+EREG	LA-high	atrialCM	2.33247036990492	atrialCM(t=-2.33)
+AZGP1	LA-high	atrialCM	5.01748694385073	atrialCM(t=-5.02)
+IGLL5	LA-high	Unresolved	0	no_concordant_signal
+GDA	LA-high	Unresolved	0	best_concordant=atrialCM(t=-0.29)
+PDZK1IP1	LA-high	Unresolved	0	no_concordant_signal
+CYP4B1	LA-high	Mixed	2.6059699658289	fibroblast(t=-1.94); endothelial_or_vascular(t=-2.61)
+SHISA6	LA-high	fibroblast	2.36307584093201	fibroblast(t=-2.36)
+SLC19A3	LA-high	Unresolved	0	no_concordant_signal
+C1QTNF9	LA-high	Unresolved	0	no_concordant_signal
+DARC	LA-high	Unresolved	0	no_concordant_signal
+HUNK	LA-high	Unresolved	0	best_concordant=atrialCM(t=-1.13)
+AKR1B10	LA-high	Unresolved	0	no_concordant_signal
+CCL18	LA-high	Unresolved	0	no_concordant_signal
+PNPLA3	LA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=-0.62)
+GPD1	LA-high	Unresolved	0	best_concordant=atrialCM(t=-1.11)
+CCL13	LA-high	Unresolved	0	no_concordant_signal
+EPB42	LA-high	Unresolved	0	no_concordant_signal
+LPL	LA-high	endothelial_or_vascular	1.70341520707305	endothelial_or_vascular(t=-1.70)
+CLDN1	LA-high	Unresolved	0	no_concordant_signal
+CXCL14	LA-high	Unresolved	0	best_concordant=fibroblast(t=-0.04)
+DSC3	LA-high	fibroblast	2.58008049561006	fibroblast(t=-2.58)
+HOXD8	LA-high	Unresolved	0	no_concordant_signal
+COL25A1	LA-high	Unresolved	0	no_concordant_signal
+PTGFR	LA-high	fibroblast	3.5841526718007	fibroblast(t=-3.58)
+TFF3	LA-high	Unresolved	0	no_concordant_signal
+EGFLAM	LA-high	Mixed	1.77309824705133	atrialCM(t=-1.77); fibroblast(t=-1.77)
+FABP4	LA-high	Mixed	4.35829466317194	atrialCM(t=-4.36); fibroblast(t=-4.22); endothelial_or_vascular(t=-4.15); immune(t=-2.22)
+CCL19	LA-high	Unresolved	0	no_concordant_signal
+CPAMD8	LA-high	endothelial_or_vascular	2.09048133068592	endothelial_or_vascular(t=-2.09)
+FASN	LA-high	Unresolved	0	best_concordant=atrialCM(t=-0.73)
+AVPR1A	LA-high	Unresolved	0	no_concordant_signal
+FBN2	LA-high	Mixed	3.46394202200881	atrialCM(t=-3.46); fibroblast(t=-1.45)
+DPP4	LA-high	atrialCM	1.60737987029792	atrialCM(t=-1.61)
+SCD	LA-high	Mixed	2.48946021563258	atrialCM(t=-1.60); fibroblast(t=-1.65); immune(t=-2.49)
+N4BP3	LA-high	Unresolved	0	no_concordant_signal
+SGK2	LA-high	Unresolved	0	no_concordant_signal
+HIGD1B	LA-high	Unresolved	0	best_concordant=atrialCM(t=-0.94)
+ELK2AP	LA-high	Unresolved	0	no_concordant_signal
+ASTN1	LA-high	fibroblast	1.86578444818301	fibroblast(t=-1.87)
+CCL8	LA-high	Unresolved	0	best_concordant=immune(t=-1.16)
+MT3	LA-high	Unresolved	0	no_concordant_signal
+AMPH	LA-high	Mixed	3.25794384502103	atrialCM(t=-2.46); fibroblast(t=-3.26)
+ADRA1A	LA-high	atrialCM	2.10806839114028	atrialCM(t=-2.11)
+FIGF	LA-high	Unresolved	0	no_concordant_signal
+CD79B	LA-high	endothelial_or_vascular	2.29931306158449	endothelial_or_vascular(t=-2.30)
+LOC100128531	LA-high	Unresolved	0	no_concordant_signal
+RPL3L	LA-high	Mixed	6.1719354240007	atrialCM(t=-6.17); endothelial_or_vascular(t=-3.05)
+C1orf168	LA-high	Unresolved	0	no_concordant_signal
+BCYRN1	LA-high	Unresolved	0	no_concordant_signal
+OR51E1	LA-high	Unresolved	0	no_concordant_signal
+KCNMB1	LA-high	fibroblast	3.06479655978235	fibroblast(t=-3.06)
+CLDN5	LA-high	Mixed	6.07723735147694	atrialCM(t=-3.38); fibroblast(t=-2.78); endothelial_or_vascular(t=-6.08)
+GUCY1A2	LA-high	Mixed	4.0647845088851	fibroblast(t=-4.06); endothelial_or_vascular(t=-3.75)
+LIPE	LA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=-0.94)
+CILP	LA-high	fibroblast	3.87843304527001	fibroblast(t=-3.88)
+EFNB3	LA-high	Unresolved	0	no_concordant_signal
+CDH17	LA-high	Unresolved	0	no_concordant_signal
+GPAM	LA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=-1.22)
+CALB2	LA-high	Unresolved	0	no_concordant_signal
+PPM1E	LA-high	atrialCM	2.72045004880847	atrialCM(t=-2.72)
+ISLR2	LA-high	endothelial_or_vascular	3.96851162787072	endothelial_or_vascular(t=-3.97)
+HP	LA-high	Mixed	2.12303638541302	atrialCM(t=-1.68); endothelial_or_vascular(t=-2.12)
+TPD52L1	LA-high	Mixed	4.00927557804416	atrialCM(t=-4.01); fibroblast(t=-1.65); endothelial_or_vascular(t=-3.08)
+RGS9BP	LA-high	Unresolved	0	no_concordant_signal
+ADRA2B	LA-high	Unresolved	0	no_concordant_signal
+SSTR2	LA-high	Unresolved	0	no_concordant_signal
+TENM1	LA-high	fibroblast	4.10041285068191	fibroblast(t=-4.10)
+PDGFRL	LA-high	fibroblast	2.93886142638466	fibroblast(t=-2.94)
+IDO1	LA-high	endothelial_or_vascular	1.82652801322869	endothelial_or_vascular(t=-1.83)
+RIPK4	LA-high	Unresolved	0	no_concordant_signal
+FAM89A	LA-high	endothelial_or_vascular	2.99450063406398	endothelial_or_vascular(t=-2.99)
+SIX2	LA-high	Unresolved	0	no_concordant_signal
+ITIH5	LA-high	fibroblast	6.92301234793275	fibroblast(t=-6.92)
+LAMA1	LA-high	Unresolved	0	no_concordant_signal
+NMB	LA-high	Unresolved	0	no_concordant_signal
+TRPC6	LA-high	Unresolved	0	no_concordant_signal
+RELN	LA-high	endothelial_or_vascular	1.71779594133482	endothelial_or_vascular(t=-1.72)
+GPR98	LA-high	Unresolved	0	no_concordant_signal
+HK2	LA-high	Unresolved	0	best_concordant=atrialCM(t=-0.40)
+STOX1	LA-high	Unresolved	0	no_concordant_signal
+PTPN5	LA-high	Unresolved	0	no_concordant_signal
+STK32B	LA-high	endothelial_or_vascular	1.52050584489123	endothelial_or_vascular(t=-1.52)
+RASD2	LA-high	Unresolved	0	no_concordant_signal
+ELOVL6	LA-high	Mixed	2.54905931616699	atrialCM(t=-2.39); fibroblast(t=-2.23); endothelial_or_vascular(t=-1.78); immune(t=-2.55)
+SCN3A	LA-high	endothelial_or_vascular	1.74277962289961	endothelial_or_vascular(t=-1.74)
+IGF1	LA-high	fibroblast	2.12176140158431	fibroblast(t=-2.12)
+CPNE4	LA-high	atrialCM	2.35444653414042	atrialCM(t=-2.35)
+FRMPD2	LA-high	atrialCM	4.00336985844849	atrialCM(t=-4.00)
+HDC	LA-high	Unresolved	0	best_concordant=immune(t=-1.94)
+FLRT3	LA-high	Unresolved	0	no_concordant_signal
+KCNMB2	LA-high	Mixed	6.0024050450356	atrialCM(t=-6.00); fibroblast(t=-4.60); endothelial_or_vascular(t=-1.64)
+MFAP5	LA-high	Mixed	2.456090969827	atrialCM(t=-2.20); fibroblast(t=-2.46)
+AKR1B1	LA-high	Mixed	6.33284816749963	atrialCM(t=-6.33); fibroblast(t=-2.89); endothelial_or_vascular(t=-2.45)
+GRIP2	LA-high	fibroblast	1.42598196245518	fibroblast(t=-1.43)
+RAB27B	LA-high	immune	3.23515654331608	immune(t=-3.24)
+CHRDL2	LA-high	fibroblast	2.28921269809988	fibroblast(t=-2.29)
+GPT2	LA-high	atrialCM	3.64203396555408	atrialCM(t=-3.64)
+APOD	LA-high	Mixed	6.14072575785899	atrialCM(t=-4.05); fibroblast(t=-4.34); endothelial_or_vascular(t=-6.14); immune(t=-4.06)
+ADCYAP1	LA-high	Unresolved	0	no_concordant_signal
+CLEC4G	LA-high	Unresolved	0	best_concordant=immune(t=-0.24)
+GATA5	LA-high	atrialCM	4.90604957393946	atrialCM(t=-4.91)
+ZNF385D	LA-high	Mixed	1.76031744756148	fibroblast(t=-1.41); endothelial_or_vascular(t=-1.76)
+TLL2	LA-high	Mixed	5.54784680607656	atrialCM(t=-3.69); fibroblast(t=-5.55)
+ACTG2	LA-high	Unresolved	0	best_concordant=fibroblast(t=-0.84)
+DIO2	LA-high	fibroblast	2.9142109384864	fibroblast(t=-2.91)
+THY1	LA-high	Unresolved	0	no_concordant_signal
+LPPR4	LA-high	Unresolved	0	no_concordant_signal
+RNF165	LA-high	Mixed	3.3413259550362	atrialCM(t=-3.34); fibroblast(t=-1.47); endothelial_or_vascular(t=-2.77)
+NDNF	LA-high	Mixed	3.03833081195012	fibroblast(t=-3.04); endothelial_or_vascular(t=-2.95)
+DGKB	LA-high	Mixed	3.06617295283159	atrialCM(t=-1.46); fibroblast(t=-3.07)
+IGJ	LA-high	Unresolved	0	no_concordant_signal
+ABCG1	LA-high	Mixed	6.35444774402362	atrialCM(t=-6.35); fibroblast(t=-1.44)
+INPP4B	LA-high	atrialCM	1.49490661460232	atrialCM(t=-1.49)
+KCNA7	LA-high	Unresolved	0	no_concordant_signal
+MYO5B	LA-high	Unresolved	0	best_concordant=fibroblast(t=-0.29)
+ADAMTS12	LA-high	fibroblast	4.82224114772845	fibroblast(t=-4.82)
+PLAU	LA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=-0.52)
+F5	LA-high	atrialCM	3.86132471480501	atrialCM(t=-3.86)
+AGXT2L1	LA-high	Unresolved	0	no_concordant_signal
+LINGO1	LA-high	Unresolved	0	no_concordant_signal
+IL2RA	LA-high	Unresolved	0	best_concordant=immune(t=-1.63)
+ASB12	LA-high	Unresolved	0	no_concordant_signal
+PDE1B	LA-high	Unresolved	0	no_concordant_signal
+SLC38A4	LA-high	Unresolved	0	best_concordant=atrialCM(t=-1.06)
+SLC22A3	LA-high	Unresolved	0	best_concordant=fibroblast(t=-1.27)
+ADAMTS19	LA-high	Mixed	7.98132125760547	atrialCM(t=-4.15); fibroblast(t=-7.98)
+NRK	LA-high	fibroblast	6.60496718200649	fibroblast(t=-6.60)
+MAPT	LA-high	atrialCM	4.51655685741452	atrialCM(t=-4.52)
+MYO5C	LA-high	endothelial_or_vascular	1.41104593275668	endothelial_or_vascular(t=-1.41)
+GFPT2	LA-high	Unresolved	0	no_concordant_signal
+KCNB1	LA-high	endothelial_or_vascular	1.62702718663026	endothelial_or_vascular(t=-1.63)
+CDKN2B	LA-high	Unresolved	0	no_concordant_signal
+KCNA3	LA-high	Unresolved	0	no_concordant_signal
+FAM167B	LA-high	endothelial_or_vascular	2.83949353288968	endothelial_or_vascular(t=-2.84)
+TMEM40	LA-high	atrialCM	2.73305176812038	atrialCM(t=-2.73)
+CNR1	LA-high	Unresolved	0	best_concordant=fibroblast(t=-0.53)
+BDKRB2	LA-high	Unresolved	0	no_concordant_signal
+SERPIND1	LA-high	Unresolved	0	no_concordant_signal
+CXorf36	LA-high	endothelial_or_vascular	2.35502845145452	endothelial_or_vascular(t=-2.36)
+F2RL3	LA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=-0.57)
+EFHD1	LA-high	Mixed	4.45069324253084	fibroblast(t=-4.45); endothelial_or_vascular(t=-1.80)
+ABCB1	LA-high	endothelial_or_vascular	1.55787672133151	endothelial_or_vascular(t=-1.56)
+SYN2	LA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=-1.23)
+SLC17A7	LA-high	Unresolved	0	no_concordant_signal
+PLCB1	LA-high	Mixed	5.21282707471652	atrialCM(t=-5.21); fibroblast(t=-1.98)
+CTSG	LA-high	Unresolved	0	no_concordant_signal
+WDR62	LA-high	atrialCM	3.50092573326119	atrialCM(t=-3.50)
+SLCO4A1	LA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=-0.68)
+PRDM8	LA-high	fibroblast	1.86766280128918	fibroblast(t=-1.87)
+RAC3	LA-high	Unresolved	0	no_concordant_signal
+FHL1	LA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=-0.38)
+P2RY14	LA-high	Mixed	3.5206574620744	fibroblast(t=-2.82); endothelial_or_vascular(t=-1.57); immune(t=-3.52)
+TCF15	LA-high	Mixed	2.40306554385376	atrialCM(t=-2.09); endothelial_or_vascular(t=-2.40)
+GPIHBP1	LA-high	endothelial_or_vascular	3.48753014872311	endothelial_or_vascular(t=-3.49)
+ANKRD23	LA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=-0.93)
+NR5A2	LA-high	Unresolved	0	no_concordant_signal
+MYL2	LA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=-1.18)
+SCN9A	LA-high	Mixed	3.2032491719704	fibroblast(t=-2.62); immune(t=-3.20)
+KCNA4	LA-high	Unresolved	0	no_concordant_signal
+GLP1R	LA-high	atrialCM	2.58810458735146	atrialCM(t=-2.59)
+LRRC10	LA-high	Mixed	6.76593108059517	atrialCM(t=-6.77); fibroblast(t=-2.39)
+FAM131C	LA-high	Unresolved	0	no_concordant_signal
+MOXD1	LA-high	Mixed	2.91768011107355	atrialCM(t=-2.92); fibroblast(t=-2.71)
+KCNN2	LA-high	atrialCM	3.36274817427863	atrialCM(t=-3.36)
+CABP1	LA-high	endothelial_or_vascular	3.94658055227866	endothelial_or_vascular(t=-3.95)
+SYNGR3	LA-high	Unresolved	0	no_concordant_signal
+PKD1L1	LA-high	Unresolved	0	no_concordant_signal
+MYO1H	LA-high	Unresolved	0	best_concordant=immune(t=-1.43)
+RNF125	LA-high	Mixed	3.46186100786399	atrialCM(t=-2.83); endothelial_or_vascular(t=-3.46)
+ELOVL7	LA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=-0.21)
+SLC29A4	LA-high	Unresolved	0	no_concordant_signal
+TRPM2	LA-high	immune	3.59194515475574	immune(t=-3.59)
+FITM1	LA-high	Mixed	3.81907265827845	atrialCM(t=-3.82); fibroblast(t=-1.97); endothelial_or_vascular(t=-1.93)
+RHCG	LA-high	Unresolved	0	no_concordant_signal
+GPR132	LA-high	Unresolved	0	no_concordant_signal
+COMTD1	LA-high	Mixed	3.92234251159561	atrialCM(t=-3.92); fibroblast(t=-1.99)
+FAIM3	LA-high	Unresolved	0	no_concordant_signal
+CCDC85A	LA-high	endothelial_or_vascular	3.46013608217844	endothelial_or_vascular(t=-3.46)
+GALNT16	LA-high	atrialCM	3.81574617469057	atrialCM(t=-3.82)
+BDH1	LA-high	atrialCM	1.82097016240715	atrialCM(t=-1.82)
+METTL21EP	LA-high	Unresolved	0	no_concordant_signal
+MFI2	LA-high	Unresolved	0	no_concordant_signal
+RYR3	LA-high	immune	2.14574749788426	immune(t=-2.15)
+FNDC1	LA-high	fibroblast	2.37453999834952	fibroblast(t=-2.37)
+SRPX2	LA-high	fibroblast	2.0520873305933	fibroblast(t=-2.05)
+LOC375295	LA-high	Unresolved	0	no_concordant_signal
+CDKN1C	LA-high	Mixed	5.10004815146509	atrialCM(t=-1.52); fibroblast(t=-5.10); endothelial_or_vascular(t=-4.23)
+GRIN3A	LA-high	Unresolved	0	best_concordant=fibroblast(t=-0.15)
+SLC38A1	LA-high	atrialCM	2.36964455102992	atrialCM(t=-2.37)
+ZBED6	LA-high	Unresolved	0	no_concordant_signal
+ACTA2	LA-high	endothelial_or_vascular	2.7885843889076	endothelial_or_vascular(t=-2.79)
+FLT4	LA-high	endothelial_or_vascular	1.44329261321792	endothelial_or_vascular(t=-1.44)
+MT1L	LA-high	Unresolved	0	no_concordant_signal
+SGK223	LA-high	Unresolved	0	no_concordant_signal
+RETSAT	LA-high	Unresolved	0	best_concordant=atrialCM(t=-1.15)
+SLC27A6	LA-high	Unresolved	0	best_concordant=atrialCM(t=-1.04)
+CYP1A1	LA-high	Unresolved	0	no_concordant_signal
+DOC2B	LA-high	Unresolved	0	best_concordant=fibroblast(t=-0.25)
+MEOX2	LA-high	Mixed	4.58614148804006	fibroblast(t=-4.59); endothelial_or_vascular(t=-3.91)
+LAMA4	LA-high	atrialCM	2.33111448970763	atrialCM(t=-2.33)
+CD248	LA-high	fibroblast	1.4543150240142	fibroblast(t=-1.45)
+HAND1	LA-high	Unresolved	0	no_concordant_signal
+PROM1	LA-high	atrialCM	2.98639193724564	atrialCM(t=-2.99)
+C12orf75	LA-high	immune	2.18301017501337	immune(t=-2.18)
+NOTCH3	LA-high	endothelial_or_vascular	1.42059681633044	endothelial_or_vascular(t=-1.42)
+PLA2G12B	LA-high	atrialCM	1.4678085315858	atrialCM(t=-1.47)
+KBTBD11	LA-high	Unresolved	0	best_concordant=atrialCM(t=-0.83)
+RGS5	LA-high	Mixed	3.99597485362139	atrialCM(t=-3.27); fibroblast(t=-3.95); endothelial_or_vascular(t=-4.00)
+SIRT2	LA-high	atrialCM	2.19227018264672	atrialCM(t=-2.19)
+MCTP1	LA-high	endothelial_or_vascular	1.49569906052391	endothelial_or_vascular(t=-1.50)
+PPARG	LA-high	Mixed	3.06397555331057	atrialCM(t=-3.06); endothelial_or_vascular(t=-1.48)
+SCN3B	LA-high	endothelial_or_vascular	1.64314348311887	endothelial_or_vascular(t=-1.64)
+GPT	LA-high	atrialCM	1.67261455719791	atrialCM(t=-1.67)
+LHX6	LA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=-0.86)
+ACSL1	LA-high	Unresolved	0	best_concordant=atrialCM(t=-0.81)
+PHLDB2	LA-high	Mixed	1.66500765418859	atrialCM(t=-1.67); endothelial_or_vascular(t=-1.49)
+OBSCN	LA-high	Unresolved	0	best_concordant=fibroblast(t=-0.90)
+MARVELD2	LA-high	Unresolved	0	no_concordant_signal
+LSP1	LA-high	fibroblast	5.66982099431846	fibroblast(t=-5.67)
+ACTC1	LA-high	endothelial_or_vascular	1.87900083736416	endothelial_or_vascular(t=-1.88)
+C11orf21	LA-high	atrialCM	1.92475024959723	atrialCM(t=-1.92)
+DDAH1	LA-high	Unresolved	0	best_concordant=fibroblast(t=-0.77)
+NEURL2	LA-high	fibroblast	2.11017991995168	fibroblast(t=-2.11)
+IL20RA	LA-high	Mixed	6.97993854718837	atrialCM(t=-6.98); fibroblast(t=-3.67)
+IDH2	LA-high	Mixed	2.0212391808566	atrialCM(t=-2.02); fibroblast(t=-1.47)
+PLIN4	LA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=-1.32)
+IL17RD	LA-high	fibroblast	3.67274407878359	fibroblast(t=-3.67)
+C14orf37	LA-high	Unresolved	0	no_concordant_signal
+P2RY2	LA-high	atrialCM	1.85732984003382	atrialCM(t=-1.86)
+CENPN	LA-high	Unresolved	0	no_concordant_signal
+ANXA3	LA-high	endothelial_or_vascular	2.72334718050886	endothelial_or_vascular(t=-2.72)
+GPAT2	LA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=-0.35)
+WFDC1	LA-high	Unresolved	0	no_concordant_signal
+PLXDC1	LA-high	Mixed	6.23435174531867	fibroblast(t=-6.23); endothelial_or_vascular(t=-2.01)
+TUBB2A	LA-high	endothelial_or_vascular	1.62802805977394	endothelial_or_vascular(t=-1.63)
+COL12A1	LA-high	fibroblast	4.24045716668979	fibroblast(t=-4.24)
+TPSB2	LA-high	immune	6.81089935351225	immune(t=-6.81)
+FAH	LA-high	Unresolved	0	best_concordant=immune(t=-1.58)
+AIF1L	LA-high	Mixed	3.04030526142607	fibroblast(t=-3.04); endothelial_or_vascular(t=-2.69)
+MYH15	LA-high	atrialCM	1.58442886032339	atrialCM(t=-1.58)
+LZTS1	LA-high	fibroblast	3.12429449389767	fibroblast(t=-3.12)
+RORC	LA-high	atrialCM	2.10446301608712	atrialCM(t=-2.10)
+HPN	LA-high	atrialCM	1.75642269060464	atrialCM(t=-1.76)
+PNCK	LA-high	Unresolved	0	no_concordant_signal
+IGFBP2	LA-high	Mixed	2.84277740019163	fibroblast(t=-1.59); endothelial_or_vascular(t=-2.84)
+DGKI	LA-high	fibroblast	2.23660026879405	fibroblast(t=-2.24)
+STAT4	LA-high	Unresolved	0	no_concordant_signal
+PLK2	LA-high	endothelial_or_vascular	1.84214098877099	endothelial_or_vascular(t=-1.84)
+NT5M	LA-high	atrialCM	1.63438889119925	atrialCM(t=-1.63)
+SCN8A	LA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=-0.98)
+ITGA6	LA-high	Mixed	4.34393197905329	atrialCM(t=-4.34); fibroblast(t=-1.68); endothelial_or_vascular(t=-3.48)
+FAM78B	LA-high	atrialCM	2.84277181602936	atrialCM(t=-2.84)
+ZFHX4	LA-high	Mixed	3.71584622193376	atrialCM(t=-1.57); fibroblast(t=-3.72)
+SPSB4	LA-high	fibroblast	4.16976849275315	fibroblast(t=-4.17)
+MFGE8	LA-high	Mixed	2.92189606742227	fibroblast(t=-1.51); endothelial_or_vascular(t=-2.92)
+GNAI1	LA-high	Mixed	3.41239145409172	atrialCM(t=-2.50); fibroblast(t=-3.41); endothelial_or_vascular(t=-3.40)
+ADD2	LA-high	endothelial_or_vascular	1.67334172365608	endothelial_or_vascular(t=-1.67)
+GNB5	LA-high	atrialCM	2.74201311560432	atrialCM(t=-2.74)
+SYPL2	LA-high	atrialCM	3.85298215120622	atrialCM(t=-3.85)
+HSPA12B	LA-high	Mixed	3.29548758883263	fibroblast(t=-3.30); endothelial_or_vascular(t=-2.68)
+NDRG4	LA-high	fibroblast	1.53667174092749	fibroblast(t=-1.54)
+TUBA4A	LA-high	Unresolved	0	best_concordant=atrialCM(t=-1.25)
+SHMT1	LA-high	Mixed	2.86751738945336	fibroblast(t=-1.86); immune(t=-2.87)
+PPM1L	LA-high	Mixed	3.97326255363661	atrialCM(t=-3.97); fibroblast(t=-2.31)
+C6orf132	LA-high	atrialCM	2.51349985152281	atrialCM(t=-2.51)
+TNFRSF21	LA-high	Mixed	3.00705469077911	atrialCM(t=-1.66); immune(t=-3.01)
+LRP8	LA-high	Unresolved	0	best_concordant=atrialCM(t=-0.75)
+ISOC1	LA-high	endothelial_or_vascular	3.48859583390426	endothelial_or_vascular(t=-3.49)
+MTFP1	LA-high	atrialCM	2.29004251482259	atrialCM(t=-2.29)
+MAP1B	LA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=-1.31)
+SYNM	LA-high	Unresolved	0	no_concordant_signal
+CA4	LA-high	Mixed	3.94951354942649	atrialCM(t=-2.88); endothelial_or_vascular(t=-3.95)
+C1orf115	LA-high	Unresolved	0	no_concordant_signal
+KIAA1211L	LA-high	Mixed	2.20221673123961	atrialCM(t=-2.20); endothelial_or_vascular(t=-1.43)
+SCN4B	LA-high	Unresolved	0	no_concordant_signal
+STX11	LA-high	endothelial_or_vascular	1.91248582005459	endothelial_or_vascular(t=-1.91)
+PDPN	LA-high	endothelial_or_vascular	1.43845347221723	endothelial_or_vascular(t=-1.44)
+CREB3L1	LA-high	Unresolved	0	best_concordant=atrialCM(t=-0.92)
+ZNF385A	LA-high	atrialCM	3.59790567563773	atrialCM(t=-3.60)
+TUBB6	LA-high	Unresolved	0	no_concordant_signal
+PRR26	LA-high	Unresolved	0	no_concordant_signal
+PHLDA1	LA-high	Mixed	3.90718300224831	atrialCM(t=-3.91); endothelial_or_vascular(t=-1.98)
+GABRB1	LA-high	atrialCM	2.16854330734515	atrialCM(t=-2.17)
+FAM20A	LA-high	Unresolved	0	best_concordant=fibroblast(t=-1.12)
+PPA1	LA-high	atrialCM	2.62060661031396	atrialCM(t=-2.62)
+FAM162B	LA-high	fibroblast	3.96845468558117	fibroblast(t=-3.97)
+FAM21B	LA-high	Unresolved	0	no_concordant_signal
+TNNT1	LA-high	Unresolved	0	no_concordant_signal
+RASGRF2	LA-high	endothelial_or_vascular	2.52510942286151	endothelial_or_vascular(t=-2.53)
+FADS3	LA-high	endothelial_or_vascular	1.53990044826149	endothelial_or_vascular(t=-1.54)
+SH3KBP1	LA-high	fibroblast	3.61152819224245	fibroblast(t=-3.61)
+DUSP13	LA-high	atrialCM	2.55222959192429	atrialCM(t=-2.55)
+GPSM2	LA-high	Mixed	2.09177526926627	fibroblast(t=-2.09); endothelial_or_vascular(t=-1.40); immune(t=-2.08)
+PTPRD	LA-high	fibroblast	4.53759189761251	fibroblast(t=-4.54)
+STEAP4	LA-high	Unresolved	0	no_concordant_signal
+PNPLA2	LA-high	Unresolved	0	best_concordant=fibroblast(t=-0.37)
+TUBB	LA-high	Unresolved	0	best_concordant=atrialCM(t=-1.38)
+MSX1	LA-high	Unresolved	0	no_concordant_signal
+NES	LA-high	endothelial_or_vascular	2.557350877316	endothelial_or_vascular(t=-2.56)
+GJA1	LA-high	Mixed	3.26153723055078	atrialCM(t=-3.26); endothelial_or_vascular(t=-1.68)
+CTNND2	LA-high	atrialCM	2.70651537008478	atrialCM(t=-2.71)
+PLIN5	LA-high	Unresolved	0	no_concordant_signal
+COLEC12	LA-high	Mixed	4.33255044304256	fibroblast(t=-2.32); endothelial_or_vascular(t=-2.36); immune(t=-4.33)
+PCBP3	LA-high	Unresolved	0	best_concordant=atrialCM(t=-0.21)
+TYRO3	LA-high	Unresolved	0	best_concordant=fibroblast(t=-1.09)
+NDUFA4L2	LA-high	Mixed	4.2352684229274	atrialCM(t=-2.99); endothelial_or_vascular(t=-4.24)
+PHACTR3	LA-high	atrialCM	2.37173105854322	atrialCM(t=-2.37)
+ABLIM2	LA-high	Unresolved	0	best_concordant=atrialCM(t=-0.60)
+MEDAG	LA-high	Unresolved	0	no_concordant_signal
+ARHGAP18	LA-high	Mixed	3.97997699183454	atrialCM(t=-3.98); fibroblast(t=-3.36); immune(t=-3.13)
+GTF2IRD1	LA-high	Unresolved	0	best_concordant=atrialCM(t=-1.09)
+ADAMTS9	LA-high	Unresolved	0	no_concordant_signal
+FAM65C	LA-high	Unresolved	0	no_concordant_signal
+LRRC20	LA-high	atrialCM	3.58855366079985	atrialCM(t=-3.59)
+TMEM38A	LA-high	Mixed	4.72604573983261	atrialCM(t=-4.73); fibroblast(t=-1.52); endothelial_or_vascular(t=-1.82)
+ATP6V0E2	LA-high	atrialCM	3.76115486751134	atrialCM(t=-3.76)
+AQP1	LA-high	atrialCM	3.24570476488288	atrialCM(t=-3.25)
+TUBB4B	LA-high	Mixed	2.22495081724946	atrialCM(t=-2.05); endothelial_or_vascular(t=-2.22)
+SDK1	LA-high	Mixed	3.30224786657404	atrialCM(t=-3.30); fibroblast(t=-2.60)
+PLCB4	LA-high	Mixed	5.11870948503563	atrialCM(t=-2.71); fibroblast(t=-5.12); endothelial_or_vascular(t=-3.77)
+NPM3	LA-high	atrialCM	1.80613569819427	atrialCM(t=-1.81)
+TFRC	LA-high	Unresolved	0	no_concordant_signal
+GPR176	LA-high	Unresolved	0	best_concordant=atrialCM(t=-1.36)
+MYO1B	LA-high	Mixed	1.81187254024955	fibroblast(t=-1.81); endothelial_or_vascular(t=-1.53)
+CAMK2A	LA-high	atrialCM	3.26283022421729	atrialCM(t=-3.26)
+RUNDC3B	LA-high	endothelial_or_vascular	2.37235912563814	endothelial_or_vascular(t=-2.37)
+KLHL32	LA-high	atrialCM	1.72233400831647	atrialCM(t=-1.72)
+CABLES2	LA-high	Unresolved	0	no_concordant_signal
+SLC12A2	LA-high	atrialCM	2.61633714492395	atrialCM(t=-2.62)
+LOC158376	LA-high	Unresolved	0	no_concordant_signal
+GCAT	LA-high	Unresolved	0	best_concordant=atrialCM(t=-0.36)
+FABP5	LA-high	Mixed	3.43760641455441	atrialCM(t=-3.44); fibroblast(t=-1.70); endothelial_or_vascular(t=-2.52)
+CD82	LA-high	endothelial_or_vascular	4.88269006695007	endothelial_or_vascular(t=-4.88)
+AACS	LA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=-0.52)
+ENPP1	LA-high	Mixed	3.04856763933954	atrialCM(t=-1.49); fibroblast(t=-3.05)
+DAB2	LA-high	immune	2.78245157974503	immune(t=-2.78)
+CSRP2	LA-high	endothelial_or_vascular	2.63632833057452	endothelial_or_vascular(t=-2.64)
+GAN	LA-high	atrialCM	5.14116824542989	atrialCM(t=-5.14)
+PRMT1	LA-high	atrialCM	2.74987136835662	atrialCM(t=-2.75)
+PFKFB2	LA-high	Unresolved	0	best_concordant=atrialCM(t=-0.74)
+BCHE	LA-high	Mixed	4.99822837067498	atrialCM(t=-5.00); fibroblast(t=-3.79)
+NBEAL1	LA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=-1.20)
+SNCA	LA-high	atrialCM	1.96671327961521	atrialCM(t=-1.97)
+DNM1	LA-high	Mixed	2.33524320320971	fibroblast(t=-2.01); immune(t=-2.34)
+MYL7	LA-high	Mixed	2.73774936716067	atrialCM(t=-2.74); fibroblast(t=-2.46); endothelial_or_vascular(t=-2.05)
+ARHGEF4	LA-high	Unresolved	0	no_concordant_signal
+SERPINI1	LA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=-1.16)
+KRT18	LA-high	fibroblast	1.41067228160105	fibroblast(t=-1.41)
+EFR3B	LA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=-0.65)
+PRODH	LA-high	Unresolved	0	no_concordant_signal
+MIR143HG	LA-high	Unresolved	0	no_concordant_signal
+SORL1	LA-high	atrialCM	1.63590372264149	atrialCM(t=-1.64)
+PCNT	LA-high	Unresolved	0	no_concordant_signal
+COL4A6	LA-high	Mixed	3.33007891486355	atrialCM(t=-3.33); fibroblast(t=-2.81)
+MCF2L	LA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=-0.75)
+ACOT11	LA-high	Unresolved	0	best_concordant=atrialCM(t=-0.66)
+HMMR	LA-high	Unresolved	0	no_concordant_signal
+PAWR	LA-high	atrialCM	1.84676191820508	atrialCM(t=-1.85)
+TNNI3	LA-high	endothelial_or_vascular	1.89207494311498	endothelial_or_vascular(t=-1.89)
+OSBP2	LA-high	Unresolved	0	best_concordant=fibroblast(t=-0.83)
+PCDH1	LA-high	endothelial_or_vascular	1.5657065380465	endothelial_or_vascular(t=-1.57)
+PAG1	LA-high	Mixed	2.0802997885618	atrialCM(t=-1.53); fibroblast(t=-2.08)
+ACSS1	LA-high	endothelial_or_vascular	1.9142297398678	endothelial_or_vascular(t=-1.91)
+LRRC2	LA-high	Mixed	2.93678414047017	atrialCM(t=-2.94); fibroblast(t=-2.13)
+MSRB1	LA-high	atrialCM	3.38279150111932	atrialCM(t=-3.38)
+TPM1	LA-high	Mixed	2.53592993872189	fibroblast(t=-1.44); endothelial_or_vascular(t=-2.54); immune(t=-2.46)
+BVES	LA-high	Unresolved	0	no_concordant_signal
+CHDH	LA-high	fibroblast	3.13777085797282	fibroblast(t=-3.14)
+STC2	LA-high	Mixed	4.63472874161135	atrialCM(t=-4.63); fibroblast(t=-2.34)
+HHATL	LA-high	Unresolved	0	no_concordant_signal
+ZBTB7C	LA-high	Unresolved	0	no_concordant_signal
+ACOT1	LA-high	Unresolved	0	no_concordant_signal
+ITPKB	LA-high	endothelial_or_vascular	2.98889327405148	endothelial_or_vascular(t=-2.99)
+FGFR2	LA-high	Unresolved	0	no_concordant_signal
+SEMA3A	LA-high	Unresolved	0	no_concordant_signal
+DAAM2	LA-high	Mixed	2.75443724759507	fibroblast(t=-1.54); immune(t=-2.75)
+CDK6	LA-high	Mixed	4.27160872236874	atrialCM(t=-3.92); fibroblast(t=-4.01); endothelial_or_vascular(t=-4.27); immune(t=-2.73)
+LAMB3	LA-high	Unresolved	0	best_concordant=atrialCM(t=-0.99)
+FARP1	LA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=-0.80)
+COL4A1	LA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=-0.12)
+MSS51	LA-high	Unresolved	0	best_concordant=atrialCM(t=-0.43)
+NETO2	LA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=-1.17)
+GAREM	LA-high	Unresolved	0	no_concordant_signal
+CAPN3	LA-high	Unresolved	0	no_concordant_signal
+CYP7B1	LA-high	fibroblast	2.25112073698351	fibroblast(t=-2.25)
+NEURL1B	LA-high	Mixed	1.70433699400212	atrialCM(t=-1.68); fibroblast(t=-1.70); endothelial_or_vascular(t=-1.62)
+REPS2	LA-high	Mixed	3.27943674296586	atrialCM(t=-3.28); fibroblast(t=-3.20); endothelial_or_vascular(t=-2.16); immune(t=-2.35)
+EMB	LA-high	immune	2.74217496501997	immune(t=-2.74)
+FAM81A	LA-high	Unresolved	0	best_concordant=immune(t=-0.65)
+PATL2	LA-high	Unresolved	0	best_concordant=immune(t=-1.09)
+SEPT9	LA-high	Unresolved	0	best_concordant=atrialCM(t=-0.86)
+HLA-DQA1	LA-high	endothelial_or_vascular	4.11504945778813	endothelial_or_vascular(t=-4.12)
+OXCT1	LA-high	Unresolved	0	best_concordant=fibroblast(t=-0.36)
+ATF5	LA-high	Mixed	3.08591509890804	fibroblast(t=-3.09); immune(t=-2.20)
+TSPAN32	LA-high	Unresolved	0	best_concordant=atrialCM(t=-0.01)
+ETV5	LA-high	Unresolved	0	best_concordant=immune(t=-1.87)
+PPP1R1A	LA-high	Unresolved	0	best_concordant=atrialCM(t=-0.80)
+ACTN1	LA-high	Unresolved	0	no_concordant_signal
+MACROD1	LA-high	Unresolved	0	best_concordant=immune(t=-0.46)
+SIX4	LA-high	Unresolved	0	no_concordant_signal
+FAM179A	LA-high	Unresolved	0	no_concordant_signal
+SLC6A16	LA-high	atrialCM	4.01888803398766	atrialCM(t=-4.02)
+CCDC167	LA-high	Unresolved	0	no_concordant_signal
+APBA1	LA-high	Mixed	1.92865211614096	atrialCM(t=-1.47); endothelial_or_vascular(t=-1.93)
+APBB2	LA-high	atrialCM	4.86875564216086	atrialCM(t=-4.87)
+TIGD2	LA-high	Unresolved	0	no_concordant_signal
+ACTN2	LA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=-0.17)
+AGPAT2	LA-high	endothelial_or_vascular	1.447873221217	endothelial_or_vascular(t=-1.45)
+FGF14	LA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=-0.16)
+BMP10	RA-high	Mixed	5.67136306676867	atrialCM(t=+5.67); fibroblast(t=+2.83)
+CYP4F30P	RA-high	Unresolved	0	no_concordant_signal
+HAMP	RA-high	Mixed	9.12712037730929	atrialCM(t=+9.13); fibroblast(t=+8.42); endothelial_or_vascular(t=+6.65); immune(t=+4.30)
+LOC440905	RA-high	Unresolved	0	no_concordant_signal
+HS3ST3A1	RA-high	atrialCM	4.60101386194265	atrialCM(t=+4.60)
+MCHR1	RA-high	Unresolved	0	no_concordant_signal
+KRT74	RA-high	Unresolved	0	no_concordant_signal
+DISC2	RA-high	Unresolved	0	no_concordant_signal
+PCDH10	RA-high	fibroblast	2.2825286457096	fibroblast(t=+2.28)
+FAM163B	RA-high	Unresolved	0	no_concordant_signal
+KY	RA-high	atrialCM	3.6908044685386	atrialCM(t=+3.69)
+NETO1	RA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=+0.43)
+PRSS35	RA-high	atrialCM	4.76124319415429	atrialCM(t=+4.76)
+CRHBP	RA-high	atrialCM	2.25233149612007	atrialCM(t=+2.25)
+STMN2	RA-high	Unresolved	0	no_concordant_signal
+WSCD2	RA-high	Unresolved	0	no_concordant_signal
+COL9A1	RA-high	atrialCM	4.55521445460824	atrialCM(t=+4.56)
+IGFN1	RA-high	Unresolved	0	no_concordant_signal
+FAM84A	RA-high	endothelial_or_vascular	3.63801647604588	endothelial_or_vascular(t=+3.64)
+SPINK2	RA-high	atrialCM	3.19716363740096	atrialCM(t=+3.20)
+C15orf60	RA-high	Unresolved	0	no_concordant_signal
+LILRA3	RA-high	Unresolved	0	no_concordant_signal
+SLC5A12	RA-high	atrialCM	6.33067638210973	atrialCM(t=+6.33)
+NPR3	RA-high	Mixed	4.48374890994382	atrialCM(t=+4.48); fibroblast(t=+1.95); endothelial_or_vascular(t=+2.14)
+AQP2	RA-high	Unresolved	0	no_concordant_signal
+APOA1	RA-high	Unresolved	0	no_concordant_signal
+ADAMTSL2	RA-high	Mixed	7.34123509802421	atrialCM(t=+4.99); fibroblast(t=+7.34); endothelial_or_vascular(t=+3.41)
+EPHX4	RA-high	Unresolved	0	no_concordant_signal
+IGSF1	RA-high	atrialCM	5.17760248437367	atrialCM(t=+5.18)
+CACNA2D2	RA-high	atrialCM	7.02144366009876	atrialCM(t=+7.02)
+FHL2	RA-high	Mixed	7.44806331415325	atrialCM(t=+7.45); endothelial_or_vascular(t=+4.08); immune(t=+2.39)
+PTHLH	RA-high	endothelial_or_vascular	3.12237875982371	endothelial_or_vascular(t=+3.12)
+DNASE1L3	RA-high	endothelial_or_vascular	3.98250669223014	endothelial_or_vascular(t=+3.98)
+SCGN	RA-high	Unresolved	0	best_concordant=fibroblast(t=+1.57)
+DKK2	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.64)
+MYOZ1	RA-high	atrialCM	5.70226899842143	atrialCM(t=+5.70)
+SMAD6	RA-high	Mixed	6.49357824821659	atrialCM(t=+6.49); fibroblast(t=+5.95); endothelial_or_vascular(t=+4.85); immune(t=+2.96)
+FAM133A	RA-high	atrialCM	2.3845001264547	atrialCM(t=+2.38)
+KCNK17	RA-high	fibroblast	4.78048836161949	fibroblast(t=+4.78)
+HCN4	RA-high	atrialCM	7.04507708194395	atrialCM(t=+7.05)
+LOC100216479	RA-high	Unresolved	0	no_concordant_signal
+SALL1	RA-high	endothelial_or_vascular	1.4701100149024	endothelial_or_vascular(t=+1.47)
+AFF2	RA-high	Mixed	3.37762206684178	atrialCM(t=+3.38); fibroblast(t=+2.48)
+ZNF536	RA-high	Mixed	7.5392701943011	atrialCM(t=+7.54); endothelial_or_vascular(t=+1.42)
+ADM	RA-high	Mixed	5.94405747689168	atrialCM(t=+5.94); immune(t=+2.96)
+MLC1	RA-high	Unresolved	0	no_concordant_signal
+HOPX	RA-high	Mixed	5.82343505731127	atrialCM(t=+5.82); fibroblast(t=+2.05)
+SAMD11	RA-high	Mixed	5.383906779064	atrialCM(t=+3.44); fibroblast(t=+5.38); endothelial_or_vascular(t=+2.92)
+WBSCR17	RA-high	Unresolved	0	no_concordant_signal
+SSTR5-AS1	RA-high	Unresolved	0	no_concordant_signal
+SNAP25	RA-high	Mixed	5.73099026680541	atrialCM(t=+5.73); fibroblast(t=+1.96); endothelial_or_vascular(t=+1.48)
+COLEC11	RA-high	endothelial_or_vascular	2.99993131294987	endothelial_or_vascular(t=+3.00)
+WDR49	RA-high	atrialCM	4.33341143429915	atrialCM(t=+4.33)
+JAKMIP2	RA-high	fibroblast	2.17888187424544	fibroblast(t=+2.18)
+PLCH1	RA-high	atrialCM	2.76187007962462	atrialCM(t=+2.76)
+LINC00643	RA-high	Unresolved	0	no_concordant_signal
+SERPINI2	RA-high	atrialCM	4.86722263072615	atrialCM(t=+4.87)
+TMEM132B	RA-high	Mixed	5.00510662098832	atrialCM(t=+4.51); fibroblast(t=+2.34); endothelial_or_vascular(t=+5.01)
+SMOC1	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.54)
+CP	RA-high	Mixed	5.0465416105242	atrialCM(t=+3.44); fibroblast(t=+2.08); endothelial_or_vascular(t=+5.05)
+FCGR3A	RA-high	Unresolved	0	best_concordant=immune(t=+0.81)
+MARCO	RA-high	Mixed	3.30883736803563	fibroblast(t=+3.31); endothelial_or_vascular(t=+1.38); immune(t=+3.11)
+WNT9B	RA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=+1.15)
+PPEF1	RA-high	endothelial_or_vascular	3.05332317015573	endothelial_or_vascular(t=+3.05)
+PDCD1	RA-high	atrialCM	2.70583189711254	atrialCM(t=+2.71)
+KIAA1211	RA-high	endothelial_or_vascular	1.66090534296071	endothelial_or_vascular(t=+1.66)
+FLJ41200	RA-high	Unresolved	0	no_concordant_signal
+SUCNR1	RA-high	Unresolved	0	no_concordant_signal
+SMAD9	RA-high	Mixed	6.5049678659519	atrialCM(t=+6.50); fibroblast(t=+3.11); endothelial_or_vascular(t=+2.81)
+HTR2B	RA-high	Mixed	2.42997450791447	fibroblast(t=+2.43); endothelial_or_vascular(t=+1.96)
+IRX3	RA-high	endothelial_or_vascular	1.95198351945119	endothelial_or_vascular(t=+1.95)
+GPR111	RA-high	Unresolved	0	no_concordant_signal
+MOV10L1	RA-high	endothelial_or_vascular	1.47359085219156	endothelial_or_vascular(t=+1.47)
+IRX5	RA-high	Unresolved	0	no_concordant_signal
+INHA	RA-high	atrialCM	3.55943508056738	atrialCM(t=+3.56)
+KSR2	RA-high	endothelial_or_vascular	1.84590352577069	endothelial_or_vascular(t=+1.85)
+TSPAN8	RA-high	atrialCM	2.46623527900906	atrialCM(t=+2.47)
+GPR115	RA-high	Unresolved	0	no_concordant_signal
+RND1	RA-high	endothelial_or_vascular	4.06687955886658	endothelial_or_vascular(t=+4.07)
+ADARB2	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.54)
+LRRN2	RA-high	atrialCM	3.96856741030676	atrialCM(t=+3.97)
+PDLIM4	RA-high	Mixed	3.91700239935532	atrialCM(t=+3.92); fibroblast(t=+2.69)
+SLC9A7P1	RA-high	Unresolved	0	no_concordant_signal
+NRG3	RA-high	Mixed	4.84291802908504	atrialCM(t=+4.84); endothelial_or_vascular(t=+1.91); immune(t=+2.83)
+CNTN2	RA-high	Unresolved	0	best_concordant=atrialCM(t=+0.89)
+IGFBP3	RA-high	Mixed	2.36344051135353	atrialCM(t=+2.24); fibroblast(t=+2.36)
+LAMC3	RA-high	atrialCM	2.56789513065939	atrialCM(t=+2.57)
+ITGA10	RA-high	Mixed	2.36202875888888	fibroblast(t=+2.34); endothelial_or_vascular(t=+2.36)
+ANO3	RA-high	Mixed	5.22355612343613	fibroblast(t=+5.22); endothelial_or_vascular(t=+1.87)
+C8orf34	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.59)
+SMYD2	RA-high	Mixed	4.31580133096911	atrialCM(t=+4.32); immune(t=+1.95)
+TENM2	RA-high	Mixed	5.22985985208425	atrialCM(t=+5.23); endothelial_or_vascular(t=+1.48)
+GPR126	RA-high	Unresolved	0	no_concordant_signal
+FGFR3	RA-high	endothelial_or_vascular	2.86718241363016	endothelial_or_vascular(t=+2.87)
+NTNG2	RA-high	Mixed	2.37219582987628	atrialCM(t=+2.37); endothelial_or_vascular(t=+2.31)
+NTM	RA-high	Mixed	6.80236112956547	atrialCM(t=+6.80); endothelial_or_vascular(t=+1.77)
+NPY5R	RA-high	Unresolved	0	best_concordant=fibroblast(t=+0.83)
+FCGBP	RA-high	immune	1.73521924416423	immune(t=+1.74)
+ATRNL1	RA-high	Mixed	4.29240254123278	atrialCM(t=+2.45); fibroblast(t=+2.44); endothelial_or_vascular(t=+4.29)
+CD244	RA-high	Unresolved	0	no_concordant_signal
+DAB1	RA-high	Mixed	5.88836426877399	atrialCM(t=+5.89); fibroblast(t=+1.98)
+SMAD7	RA-high	Mixed	5.39249753888384	atrialCM(t=+5.39); fibroblast(t=+4.12); endothelial_or_vascular(t=+3.49); immune(t=+1.86)
+SARDH	RA-high	Unresolved	0	best_concordant=fibroblast(t=+0.97)
+AQP5	RA-high	fibroblast	2.47494370288996	fibroblast(t=+2.47)
+NPY1R	RA-high	Mixed	2.67527721449092	fibroblast(t=+2.10); endothelial_or_vascular(t=+2.68)
+FGFR4	RA-high	Unresolved	0	best_concordant=fibroblast(t=+0.57)
+ANKRD45	RA-high	endothelial_or_vascular	1.52598030619791	endothelial_or_vascular(t=+1.53)
+WISP2	RA-high	Mixed	5.32151964627371	atrialCM(t=+5.32); fibroblast(t=+2.88)
+SSTR5	RA-high	Unresolved	0	no_concordant_signal
+DBC1	RA-high	Unresolved	0	no_concordant_signal
+NLGN4X	RA-high	Mixed	3.92736435674705	atrialCM(t=+2.03); fibroblast(t=+3.93)
+CGNL1	RA-high	Mixed	3.93094099308422	fibroblast(t=+3.93); endothelial_or_vascular(t=+1.97); immune(t=+1.70)
+SLC15A2	RA-high	atrialCM	3.94794869551703	atrialCM(t=+3.95)
+RGS9	RA-high	Unresolved	0	best_concordant=atrialCM(t=+0.92)
+CSF3	RA-high	fibroblast	4.3220322976526	fibroblast(t=+4.32)
+APCDD1L	RA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=+0.31)
+CD24	RA-high	Unresolved	0	no_concordant_signal
+ATP8A2	RA-high	atrialCM	2.81951246707971	atrialCM(t=+2.82)
+ID4	RA-high	Mixed	5.50238393184648	atrialCM(t=+3.93); fibroblast(t=+5.50); endothelial_or_vascular(t=+2.75)
+ALCAM	RA-high	Mixed	7.66532102010811	atrialCM(t=+7.67); fibroblast(t=+2.40); immune(t=+1.97)
+SIGLEC10	RA-high	immune	2.89878794384669	immune(t=+2.90)
+ANGPT1	RA-high	atrialCM	6.98318035949359	atrialCM(t=+6.98)
+PRRX2	RA-high	fibroblast	7.6153237395441	fibroblast(t=+7.62)
+IGSF10	RA-high	Unresolved	0	best_concordant=atrialCM(t=+0.32)
+COL13A1	RA-high	Mixed	4.65279855223998	atrialCM(t=+4.65); endothelial_or_vascular(t=+2.97)
+CCDC163P	RA-high	Unresolved	0	no_concordant_signal
+IL1RL1	RA-high	Unresolved	0	no_concordant_signal
+KCNK13	RA-high	Mixed	3.19507241708813	atrialCM(t=+3.20); immune(t=+2.66)
+DDN	RA-high	Unresolved	0	no_concordant_signal
+FRMPD1	RA-high	Unresolved	0	best_concordant=fibroblast(t=+1.11)
+POSTN	RA-high	Mixed	2.76500467223003	atrialCM(t=+2.77); endothelial_or_vascular(t=+2.57)
+MYH7	RA-high	Mixed	6.03396443997451	atrialCM(t=+6.03); fibroblast(t=+3.07); endothelial_or_vascular(t=+3.95); immune(t=+1.99)
+PPP2R2B	RA-high	Mixed	2.31591544161836	atrialCM(t=+2.32); endothelial_or_vascular(t=+1.46)
+PABPC4L	RA-high	Unresolved	0	no_concordant_signal
+P2RY1	RA-high	Unresolved	0	no_concordant_signal
+TREM2	RA-high	Unresolved	0	no_concordant_signal
+ALDH1A2	RA-high	Mixed	4.03467793071017	atrialCM(t=+4.03); immune(t=+3.23)
+ART4	RA-high	endothelial_or_vascular	2.31892142350372	endothelial_or_vascular(t=+2.32)
+BMX	RA-high	endothelial_or_vascular	1.44518104382989	endothelial_or_vascular(t=+1.45)
+ADORA3	RA-high	Unresolved	0	no_concordant_signal
+FAM5C	RA-high	Unresolved	0	no_concordant_signal
+ST8SIA6	RA-high	endothelial_or_vascular	1.79445649513827	endothelial_or_vascular(t=+1.79)
+LRRTM1	RA-high	Unresolved	0	no_concordant_signal
+TIAM1	RA-high	Mixed	5.49960592052195	atrialCM(t=+3.31); fibroblast(t=+5.50); endothelial_or_vascular(t=+1.79); immune(t=+1.61)
+PRIMA1	RA-high	atrialCM	2.86256384847906	atrialCM(t=+2.86)
+LTK	RA-high	Unresolved	0	no_concordant_signal
+CYP4F24P	RA-high	Unresolved	0	no_concordant_signal
+PTGS1	RA-high	endothelial_or_vascular	1.8711848987106	endothelial_or_vascular(t=+1.87)
+PCYT1B	RA-high	atrialCM	2.67384836528099	atrialCM(t=+2.67)
+FAM19A5	RA-high	Mixed	3.38233143002422	atrialCM(t=+2.31); fibroblast(t=+3.38)
+SLN	RA-high	Mixed	5.30241386890923	atrialCM(t=+5.30); endothelial_or_vascular(t=+1.46)
+CHODL	RA-high	Unresolved	0	best_concordant=fibroblast(t=+0.95)
+KIF5C	RA-high	atrialCM	3.5401656139888	atrialCM(t=+3.54)
+WNT2	RA-high	endothelial_or_vascular	1.8412911971296	endothelial_or_vascular(t=+1.84)
+PCDH7	RA-high	Mixed	2.11223149510783	atrialCM(t=+2.11); endothelial_or_vascular(t=+1.31)
+WNK3	RA-high	Mixed	3.23550339418042	atrialCM(t=+3.24); endothelial_or_vascular(t=+1.34)
+GLDN	RA-high	Mixed	4.66520326658219	atrialCM(t=+4.67); fibroblast(t=+1.94)
+FLJ42875	RA-high	Unresolved	0	no_concordant_signal
+QPCT	RA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=+0.05)
+GHRH	RA-high	Unresolved	0	no_concordant_signal
+LGI3	RA-high	Unresolved	0	no_concordant_signal
+TRPV4	RA-high	atrialCM	2.66808215865884	atrialCM(t=+2.67)
+NCS1	RA-high	Mixed	4.19669236196522	atrialCM(t=+4.20); fibroblast(t=+3.88)
+CFP	RA-high	Unresolved	0	no_concordant_signal
+SUSD4	RA-high	atrialCM	3.71673246573606	atrialCM(t=+3.72)
+PLCB2	RA-high	Mixed	6.96637395798211	atrialCM(t=+6.97); immune(t=+2.57)
+LGR6	RA-high	Mixed	3.95409488172709	atrialCM(t=+3.95); immune(t=+1.78)
+ZNF469	RA-high	Unresolved	0	no_concordant_signal
+RBM11	RA-high	atrialCM	3.54609865933365	atrialCM(t=+3.55)
+CLEC12A	RA-high	atrialCM	2.33559384690296	atrialCM(t=+2.34)
+FMOD	RA-high	fibroblast	4.10672759368269	fibroblast(t=+4.11)
+CD300A	RA-high	Unresolved	0	best_concordant=immune(t=+0.67)
+PRICKLE1	RA-high	Mixed	8.93652402678137	atrialCM(t=+8.94); endothelial_or_vascular(t=+4.40)
+KAZALD1	RA-high	fibroblast	5.15646065749503	fibroblast(t=+5.16)
+FAT3	RA-high	atrialCM	3.62007666242645	atrialCM(t=+3.62)
+GNG8	RA-high	Unresolved	0	no_concordant_signal
+ATOH8	RA-high	Mixed	4.89179673650778	atrialCM(t=+4.88); fibroblast(t=+4.89)
+ENG	RA-high	Mixed	7.48176698677322	fibroblast(t=+7.48); endothelial_or_vascular(t=+3.22); immune(t=+2.74)
+ABAT	RA-high	atrialCM	3.59453408642125	atrialCM(t=+3.59)
+HS3ST1	RA-high	endothelial_or_vascular	1.24908566947768	endothelial_or_vascular(t=+1.25)
+CLEC7A	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.24)
+WNT5A	RA-high	atrialCM	2.45118298144722	atrialCM(t=+2.45)
+TP63	RA-high	Mixed	2.48232676821727	atrialCM(t=+2.48); endothelial_or_vascular(t=+1.54)
+GYPE	RA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=+0.18)
+EXOC3L2	RA-high	Unresolved	0	best_concordant=fibroblast(t=+1.18)
+TUB	RA-high	atrialCM	4.37475445973607	atrialCM(t=+4.37)
+ASTN2	RA-high	atrialCM	5.95354237232955	atrialCM(t=+5.95)
+ZNF385B	RA-high	Mixed	5.39274547105634	atrialCM(t=+5.39); fibroblast(t=+3.20); endothelial_or_vascular(t=+1.49); immune(t=+2.38)
+CACNA1D	RA-high	atrialCM	5.53253988602817	atrialCM(t=+5.53)
+PI16	RA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=+1.14)
+LIMD2	RA-high	Unresolved	0	no_concordant_signal
+SHC4	RA-high	Mixed	3.19331806314333	atrialCM(t=+3.19); endothelial_or_vascular(t=+2.05)
+TCEAL2	RA-high	Mixed	4.61855340157836	atrialCM(t=+4.62); fibroblast(t=+3.20)
+PRRG4	RA-high	Mixed	3.0806415655547	atrialCM(t=+2.09); fibroblast(t=+3.08)
+ART3	RA-high	atrialCM	2.79917459203002	atrialCM(t=+2.80)
+HS6ST3	RA-high	Mixed	5.62926328231295	atrialCM(t=+2.42); fibroblast(t=+5.63); endothelial_or_vascular(t=+4.08)
+NLGN3	RA-high	Unresolved	0	best_concordant=fibroblast(t=+1.69)
+SLC11A1	RA-high	Mixed	4.30726592671063	atrialCM(t=+4.31); fibroblast(t=+2.68); endothelial_or_vascular(t=+3.50); immune(t=+3.82)
+CLEC3B	RA-high	endothelial_or_vascular	2.08165122945526	endothelial_or_vascular(t=+2.08)
+KIAA1324L	RA-high	atrialCM	4.26313630444337	atrialCM(t=+4.26)
+DACT3	RA-high	atrialCM	2.05100694709015	atrialCM(t=+2.05)
+TRABD2B	RA-high	Mixed	4.2223718466098	atrialCM(t=+4.22); fibroblast(t=+2.40)
+PLCL1	RA-high	Mixed	4.96604024900959	atrialCM(t=+4.97); fibroblast(t=+3.69)
+LINC00092	RA-high	Unresolved	0	no_concordant_signal
+MYRIP	RA-high	endothelial_or_vascular	2.56049170701902	endothelial_or_vascular(t=+2.56)
+LOC646329	RA-high	Unresolved	0	no_concordant_signal
+SCN4A	RA-high	atrialCM	2.57119464862893	atrialCM(t=+2.57)
+GPC6	RA-high	Mixed	2.75764160949682	atrialCM(t=+2.76); fibroblast(t=+2.25); endothelial_or_vascular(t=+2.42); immune(t=+1.87)
+TMEM2	RA-high	Unresolved	0	no_concordant_signal
+GPC3	RA-high	Mixed	3.07833633404381	atrialCM(t=+3.08); endothelial_or_vascular(t=+1.52); immune(t=+1.49)
+INMT	RA-high	Unresolved	0	no_concordant_signal
+FAIM2	RA-high	fibroblast	3.2081209390068	fibroblast(t=+3.21)
+BASP1	RA-high	Mixed	3.71158528499415	fibroblast(t=+3.16); endothelial_or_vascular(t=+1.22); immune(t=+3.71)
+SRCIN1	RA-high	atrialCM	2.1805746845687	atrialCM(t=+2.18)
+IL33	RA-high	Mixed	2.48812989580475	atrialCM(t=+2.49); endothelial_or_vascular(t=+1.59)
+SHROOM2	RA-high	Mixed	3.44260205839936	atrialCM(t=+3.44); fibroblast(t=+2.17); endothelial_or_vascular(t=+2.21)
+DIRAS3	RA-high	Unresolved	0	no_concordant_signal
+CD1D	RA-high	Unresolved	0	no_concordant_signal
+KRT222	RA-high	Unresolved	0	no_concordant_signal
+GGTA1P	RA-high	Unresolved	0	no_concordant_signal
+CCDC151	RA-high	atrialCM	2.2225790833084	atrialCM(t=+2.22)
+BEX1	RA-high	Unresolved	0	no_concordant_signal
+CFH	RA-high	Mixed	5.88775186333758	atrialCM(t=+4.37); fibroblast(t=+5.89); endothelial_or_vascular(t=+3.04); immune(t=+2.10)
+ECE2	RA-high	Unresolved	0	no_concordant_signal
+TCF21	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.22)
+AKR1C1	RA-high	Mixed	3.69845871028186	atrialCM(t=+3.70); fibroblast(t=+3.63); endothelial_or_vascular(t=+1.43); immune(t=+2.28)
+PRSS23	RA-high	Mixed	3.49148129704976	atrialCM(t=+3.49); endothelial_or_vascular(t=+2.40)
+TMEM132C	RA-high	endothelial_or_vascular	1.29670602753607	endothelial_or_vascular(t=+1.30)
+TGM2	RA-high	Mixed	5.14900370759078	atrialCM(t=+4.72); fibroblast(t=+5.15); endothelial_or_vascular(t=+3.71)
+PTPN22	RA-high	immune	2.49117868642172	immune(t=+2.49)
+CPEB1	RA-high	Unresolved	0	best_concordant=atrialCM(t=+0.27)
+SLC16A9	RA-high	atrialCM	4.77319917656901	atrialCM(t=+4.77)
+MLLT11	RA-high	fibroblast	2.47565773783718	fibroblast(t=+2.48)
+NRXN3	RA-high	endothelial_or_vascular	3.38606868143779	endothelial_or_vascular(t=+3.39)
+C14orf132	RA-high	Mixed	3.66884063151961	atrialCM(t=+2.31); fibroblast(t=+3.67)
+CCDC68	RA-high	Mixed	5.6348533304498	fibroblast(t=+5.63); endothelial_or_vascular(t=+2.03)
+PCDP1	RA-high	Unresolved	0	no_concordant_signal
+SLC6A13	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.08)
+PON3	RA-high	Unresolved	0	no_concordant_signal
+ID2	RA-high	Mixed	7.41103791462008	atrialCM(t=+7.19); fibroblast(t=+7.41); immune(t=+2.31)
+SLCO2A1	RA-high	endothelial_or_vascular	2.16911879940131	endothelial_or_vascular(t=+2.17)
+LEFTY2	RA-high	Unresolved	0	no_concordant_signal
+LINC00693	RA-high	Unresolved	0	no_concordant_signal
+MEGF10	RA-high	Mixed	3.06626960388311	atrialCM(t=+3.07); fibroblast(t=+2.55)
+GNAL	RA-high	Mixed	4.82200254195878	atrialCM(t=+3.97); fibroblast(t=+4.82)
+LST1	RA-high	Unresolved	0	best_concordant=immune(t=+0.08)
+SRRM4	RA-high	atrialCM	4.01504272948081	atrialCM(t=+4.02)
+A2ML1	RA-high	atrialCM	2.15815208056393	atrialCM(t=+2.16)
+IL5RA	RA-high	atrialCM	2.5300492282527	atrialCM(t=+2.53)
+PLVAP	RA-high	Mixed	3.61465860950378	fibroblast(t=+2.91); endothelial_or_vascular(t=+3.61)
+MAPK4	RA-high	Mixed	3.90625928119731	atrialCM(t=+3.91); fibroblast(t=+2.58); endothelial_or_vascular(t=+1.38)
+MTMR11	RA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=+0.89)
+UG0898H09	RA-high	Unresolved	0	no_concordant_signal
+PLP1	RA-high	Unresolved	0	no_concordant_signal
+HK3	RA-high	immune	3.05839176021959	immune(t=+3.06)
+ADAMTSL1	RA-high	Mixed	4.36361589030308	fibroblast(t=+4.36); endothelial_or_vascular(t=+1.97)
+FAM84B	RA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=+0.66)
+KIAA1755	RA-high	endothelial_or_vascular	1.83854351983096	endothelial_or_vascular(t=+1.84)
+EYA4	RA-high	Mixed	2.78786325019079	atrialCM(t=+2.79); immune(t=+1.67)
+IGFBP5	RA-high	atrialCM	5.20182663051659	atrialCM(t=+5.20)
+LOC650368	RA-high	Unresolved	0	no_concordant_signal
+KCNJ4	RA-high	atrialCM	4.11948140671756	atrialCM(t=+4.12)
+GNA14	RA-high	Mixed	3.25983449906323	atrialCM(t=+2.11); endothelial_or_vascular(t=+3.26)
+RHAG	RA-high	atrialCM	2.87790744074055	atrialCM(t=+2.88)
+FAM180A	RA-high	Unresolved	0	best_concordant=fibroblast(t=+0.24)
+RANBP3L	RA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=+0.91)
+FAM81B	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.20)
+ABCG2	RA-high	atrialCM	3.14887360529598	atrialCM(t=+3.15)
+CAPS	RA-high	fibroblast	2.8306262332818	fibroblast(t=+2.83)
+CD9	RA-high	Mixed	5.63295796099686	fibroblast(t=+5.63); endothelial_or_vascular(t=+1.85)
+EYA2	RA-high	Mixed	7.01690445076211	atrialCM(t=+7.02); endothelial_or_vascular(t=+2.89)
+LOC283143	RA-high	Unresolved	0	no_concordant_signal
+MASP1	RA-high	Mixed	1.99728755936043	fibroblast(t=+2.00); endothelial_or_vascular(t=+1.30)
+TMEM108	RA-high	endothelial_or_vascular	1.89421962354271	endothelial_or_vascular(t=+1.89)
+RGS6	RA-high	atrialCM	3.34015135134602	atrialCM(t=+3.34)
+MYO1F	RA-high	Mixed	2.5708867104125	atrialCM(t=+2.37); immune(t=+2.57)
+FXYD3	RA-high	Unresolved	0	no_concordant_signal
+PTPRN2	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.54)
+PTGIR	RA-high	endothelial_or_vascular	1.35500172403986	endothelial_or_vascular(t=+1.36)
+FOXC1	RA-high	fibroblast	4.0393810455471	fibroblast(t=+4.04)
+PABPC5	RA-high	Unresolved	0	no_concordant_signal
+THRB	RA-high	atrialCM	3.7817323379819	atrialCM(t=+3.78)
+GPM6B	RA-high	Unresolved	0	best_concordant=fibroblast(t=+1.19)
+RND2	RA-high	Unresolved	0	no_concordant_signal
+HCN2	RA-high	atrialCM	2.48381852300162	atrialCM(t=+2.48)
+GJA5	RA-high	Mixed	3.0105058004555	atrialCM(t=+3.01); endothelial_or_vascular(t=+2.04)
+SCD5	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.52)
+TMEM30B	RA-high	Unresolved	0	no_concordant_signal
+ITGA2	RA-high	Mixed	2.57541826746853	fibroblast(t=+2.58); endothelial_or_vascular(t=+1.88)
+RASL11A	RA-high	atrialCM	2.82913441812645	atrialCM(t=+2.83)
+MUM1L1	RA-high	atrialCM	3.0111587805804	atrialCM(t=+3.01)
+CLEC5A	RA-high	Unresolved	0	no_concordant_signal
+TRAM1L1	RA-high	Unresolved	0	no_concordant_signal
+RAB39B	RA-high	Unresolved	0	no_concordant_signal
+LXN	RA-high	fibroblast	4.23087925883666	fibroblast(t=+4.23)
+AK5	RA-high	endothelial_or_vascular	1.2714798002498	endothelial_or_vascular(t=+1.27)
+LMO3	RA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=+0.90)
+LMX1B	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.63)
+MAP7D2	RA-high	Mixed	2.96230870537624	atrialCM(t=+2.96); fibroblast(t=+2.03)
+GFRA3	RA-high	Unresolved	0	no_concordant_signal
+UCHL1	RA-high	Mixed	3.4160301258389	atrialCM(t=+2.23); fibroblast(t=+3.42)
+LIN9	RA-high	atrialCM	2.69604349489155	atrialCM(t=+2.70)
+TECTA	RA-high	fibroblast	3.06072122136337	fibroblast(t=+3.06)
+SUSD5	RA-high	Unresolved	0	no_concordant_signal
+COL16A1	RA-high	Mixed	4.59236598971931	atrialCM(t=+4.59); fibroblast(t=+3.02); endothelial_or_vascular(t=+2.95)
+EDNRB	RA-high	endothelial_or_vascular	1.26046781831891	endothelial_or_vascular(t=+1.26)
+GALNT5	RA-high	Unresolved	0	no_concordant_signal
+TMC6	RA-high	Mixed	6.11735865640796	atrialCM(t=+6.12); endothelial_or_vascular(t=+1.33); immune(t=+1.97)
+TFAP2A	RA-high	Unresolved	0	no_concordant_signal
+MATN2	RA-high	fibroblast	2.79399317181474	fibroblast(t=+2.79)
+P2RX1	RA-high	Mixed	6.50802052009645	atrialCM(t=+3.38); fibroblast(t=+6.51)
+OMD	RA-high	Unresolved	0	no_concordant_signal
+ACRC	RA-high	Unresolved	0	no_concordant_signal
+ESRP1	RA-high	atrialCM	3.39494389848654	atrialCM(t=+3.39)
+SPON1	RA-high	Mixed	2.72307215600081	fibroblast(t=+2.61); endothelial_or_vascular(t=+2.72)
+CYP27C1	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.13)
+PITPNM3	RA-high	atrialCM	2.78361297130779	atrialCM(t=+2.78)
+FOXL1	RA-high	Unresolved	0	no_concordant_signal
+IMPG2	RA-high	endothelial_or_vascular	2.12577969377011	endothelial_or_vascular(t=+2.13)
+COL9A3	RA-high	Unresolved	0	no_concordant_signal
+IGFBP7	RA-high	Mixed	4.78324362586023	atrialCM(t=+4.78); fibroblast(t=+4.64)
+LRRC4	RA-high	Unresolved	0	best_concordant=atrialCM(t=+0.47)
+FAM181B	RA-high	Unresolved	0	no_concordant_signal
+CNTN1	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.48)
+LEPREL1	RA-high	Unresolved	0	no_concordant_signal
+LINC00340	RA-high	Unresolved	0	no_concordant_signal
+CUBN	RA-high	atrialCM	2.34065259849931	atrialCM(t=+2.34)
+NEGR1	RA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=+1.00)
+HPCAL4	RA-high	Unresolved	0	no_concordant_signal
+ITGA9	RA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=+1.05)
+ELFN1	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.59)
+SHCBP1	RA-high	atrialCM	3.24509943092898	atrialCM(t=+3.25)
+WFIKKN2	RA-high	Unresolved	0	no_concordant_signal
+SOX9	RA-high	Unresolved	0	best_concordant=atrialCM(t=+0.45)
+NAP1L3	RA-high	Unresolved	0	no_concordant_signal
+C7	RA-high	endothelial_or_vascular	2.26340783830068	endothelial_or_vascular(t=+2.26)
+LDB2	RA-high	Mixed	3.46250603620131	atrialCM(t=+2.06); endothelial_or_vascular(t=+3.46)
+HSPA2	RA-high	Mixed	3.84730591055767	atrialCM(t=+3.45); fibroblast(t=+3.85); endothelial_or_vascular(t=+1.27)
+BMP6	RA-high	atrialCM	2.65527365409783	atrialCM(t=+2.66)
+ADAMTS2	RA-high	Mixed	2.98340555967351	fibroblast(t=+2.98); endothelial_or_vascular(t=+1.95); immune(t=+2.03)
+SNED1	RA-high	Mixed	3.5622686810615	atrialCM(t=+3.40); fibroblast(t=+3.56); endothelial_or_vascular(t=+3.32); immune(t=+3.28)
+LYZ	RA-high	Unresolved	0	best_concordant=immune(t=+0.97)
+ARSJ	RA-high	atrialCM	4.57569678495957	atrialCM(t=+4.58)
+RASSF5	RA-high	fibroblast	2.52246390836819	fibroblast(t=+2.52)
+FMO2	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.67)
+LY75	RA-high	Unresolved	0	no_concordant_signal
+CDHR1	RA-high	Unresolved	0	no_concordant_signal
+LILRB1	RA-high	immune	3.00134729127201	immune(t=+3.00)
+FZD2	RA-high	Unresolved	0	no_concordant_signal
+GLI1	RA-high	Unresolved	0	no_concordant_signal
+ADAMTSL3	RA-high	atrialCM	4.44454164107351	atrialCM(t=+4.44)
+CYGB	RA-high	fibroblast	3.55798784085208	fibroblast(t=+3.56)
+ITLN2	RA-high	Unresolved	0	no_concordant_signal
+FRZB	RA-high	Unresolved	0	best_concordant=atrialCM(t=+0.81)
+MPZ	RA-high	Unresolved	0	no_concordant_signal
+LAYN	RA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=+0.23)
+MSC	RA-high	Unresolved	0	best_concordant=fibroblast(t=+0.85)
+PRCD	RA-high	Unresolved	0	best_concordant=fibroblast(t=+1.63)
+ACER2	RA-high	Mixed	4.14493118870539	fibroblast(t=+2.72); endothelial_or_vascular(t=+4.14)
+RAB36	RA-high	Unresolved	0	no_concordant_signal
+ITGA2B	RA-high	atrialCM	2.4687820425172	atrialCM(t=+2.47)
+RFX8	RA-high	endothelial_or_vascular	2.86008959544205	endothelial_or_vascular(t=+2.86)
+LY86	RA-high	Unresolved	0	best_concordant=immune(t=+0.75)
+ORC6	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.56)
+LEPR	RA-high	Unresolved	0	best_concordant=fibroblast(t=+1.74)
+SDK2	RA-high	Mixed	2.34460760063394	atrialCM(t=+2.28); fibroblast(t=+2.34); endothelial_or_vascular(t=+1.58); immune(t=+2.23)
+FBXO41	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.19)
+ADAMTS10	RA-high	Mixed	3.17147330493288	atrialCM(t=+3.17); fibroblast(t=+2.85); endothelial_or_vascular(t=+2.09); immune(t=+1.47)
+AMIGO2	RA-high	endothelial_or_vascular	1.81344788976847	endothelial_or_vascular(t=+1.81)
+EPB41L3	RA-high	Mixed	3.87263477318486	atrialCM(t=+3.87); fibroblast(t=+1.93); immune(t=+3.25)
+PDK4	RA-high	Mixed	3.87929868291026	atrialCM(t=+3.88); fibroblast(t=+2.60); immune(t=+2.38)
+AMICA1	RA-high	Unresolved	0	no_concordant_signal
+NTRK2	RA-high	atrialCM	5.24540523953232	atrialCM(t=+5.25)
+GCNT2	RA-high	endothelial_or_vascular	2.71574270377357	endothelial_or_vascular(t=+2.72)
+CCDC34	RA-high	fibroblast	1.97427921738274	fibroblast(t=+1.97)
+PRKD1	RA-high	Mixed	6.55303009912638	atrialCM(t=+6.55); fibroblast(t=+3.30)
+SELP	RA-high	endothelial_or_vascular	3.0755261087248	endothelial_or_vascular(t=+3.08)
+ALDH1A1	RA-high	Unresolved	0	best_concordant=atrialCM(t=+0.15)
+ZSCAN12P1	RA-high	Unresolved	0	no_concordant_signal
+RELT	RA-high	Mixed	4.05893446721075	atrialCM(t=+4.06); fibroblast(t=+3.09); immune(t=+1.51)
+UNC5C	RA-high	atrialCM	2.3152322956147	atrialCM(t=+2.32)
+CES4A	RA-high	Mixed	3.81564529794338	atrialCM(t=+3.82); endothelial_or_vascular(t=+2.06)
+BGN	RA-high	Unresolved	0	no_concordant_signal
+PRR16	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.69)
+SPINT2	RA-high	atrialCM	2.35408760856133	atrialCM(t=+2.35)
+FBLN2	RA-high	Mixed	2.34054691314278	fibroblast(t=+2.34); endothelial_or_vascular(t=+1.69); immune(t=+1.48)
+DIRC3	RA-high	Mixed	3.15038525198304	atrialCM(t=+3.15); immune(t=+2.32)
+LINC00672	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.68)
+KLHL6	RA-high	atrialCM	4.34192653061273	atrialCM(t=+4.34)
+PROS1	RA-high	Mixed	3.0292514639475	atrialCM(t=+3.03); fibroblast(t=+2.76)
+TRPC4	RA-high	atrialCM	4.28634192666145	atrialCM(t=+4.29)
+LUM	RA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=+0.07)
+TNFAIP8L3	RA-high	Mixed	3.88231201176329	atrialCM(t=+3.88); fibroblast(t=+2.90); immune(t=+2.47)
+HAAO	RA-high	Unresolved	0	no_concordant_signal
+ADORA2A-AS1	RA-high	atrialCM	3.39646970179588	atrialCM(t=+3.40)
+MIR100HG	RA-high	Unresolved	0	no_concordant_signal
+COL19A1	RA-high	Mixed	6.99135287317092	atrialCM(t=+6.99); fibroblast(t=+4.25); endothelial_or_vascular(t=+2.46); immune(t=+2.78)
+NGF	RA-high	Mixed	3.49125275395982	fibroblast(t=+2.06); endothelial_or_vascular(t=+3.49)
+KIAA1377	RA-high	Unresolved	0	no_concordant_signal
+PDE8B	RA-high	Mixed	3.18604784601549	atrialCM(t=+3.19); fibroblast(t=+3.08)
+DDX12P	RA-high	Unresolved	0	no_concordant_signal
+LOC100130581	RA-high	Unresolved	0	no_concordant_signal
+CPT1C	RA-high	fibroblast	2.01986881811761	fibroblast(t=+2.02)
+LOC100506990	RA-high	Unresolved	0	no_concordant_signal
+NGFR	RA-high	Unresolved	0	best_concordant=fibroblast(t=+1.03)
+SLC2A12	RA-high	Unresolved	0	best_concordant=atrialCM(t=+0.40)
+PLA1A	RA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=+0.12)
+SLC35F2	RA-high	fibroblast	3.16230740363582	fibroblast(t=+3.16)
+PPFIA3	RA-high	endothelial_or_vascular	2.80127104108259	endothelial_or_vascular(t=+2.80)
+MIAT	RA-high	Mixed	3.07410886534147	endothelial_or_vascular(t=+2.44); immune(t=+3.07)
+INSC	RA-high	Unresolved	0	no_concordant_signal
+BOC	RA-high	Mixed	3.08980324046435	atrialCM(t=+3.09); endothelial_or_vascular(t=+1.28)
+TPPP3	RA-high	Unresolved	0	best_concordant=fibroblast(t=+0.90)
+PCSK2	RA-high	Unresolved	0	best_concordant=fibroblast(t=+0.53)
+THSD7A	RA-high	endothelial_or_vascular	3.17195433920814	endothelial_or_vascular(t=+3.17)
+DUOX1	RA-high	Unresolved	0	best_concordant=fibroblast(t=+0.34)
+PRELP	RA-high	Mixed	2.54725329379143	fibroblast(t=+2.29); endothelial_or_vascular(t=+1.52); immune(t=+2.55)
+C1orf162	RA-high	Unresolved	0	best_concordant=immune(t=+1.01)
+UPB1	RA-high	atrialCM	4.39084621858981	atrialCM(t=+4.39)
+RBP7	RA-high	Unresolved	0	best_concordant=atrialCM(t=+0.55)
+MID1	RA-high	Mixed	5.20932842181304	atrialCM(t=+5.21); fibroblast(t=+2.44); endothelial_or_vascular(t=+2.28)
+NCKIPSD	RA-high	atrialCM	3.11494824969814	atrialCM(t=+3.11)
+MAP1A	RA-high	Unresolved	0	best_concordant=atrialCM(t=+0.83)
+PAK1	RA-high	atrialCM	3.69607397502767	atrialCM(t=+3.70)
+TNFRSF10D	RA-high	Mixed	5.28775753530409	fibroblast(t=+3.47); endothelial_or_vascular(t=+3.15); immune(t=+5.29)
+PRRT1	RA-high	Unresolved	0	no_concordant_signal
+MRO	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.13)
+PDZD4	RA-high	Unresolved	0	best_concordant=fibroblast(t=+0.89)
+ERBB3	RA-high	atrialCM	2.56016354648818	atrialCM(t=+2.56)
+ANKRD20A12P	RA-high	Unresolved	0	no_concordant_signal
+ROR1	RA-high	Mixed	5.12668344891971	atrialCM(t=+5.13); endothelial_or_vascular(t=+2.19)
+GRK5	RA-high	Mixed	5.16079654275295	atrialCM(t=+4.77); endothelial_or_vascular(t=+3.16); immune(t=+5.16)
+C6	RA-high	Unresolved	0	best_concordant=atrialCM(t=+0.97)
+DNAJC5G	RA-high	endothelial_or_vascular	1.45317119018569	endothelial_or_vascular(t=+1.45)
+NME5	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.11)
+SERPINE2	RA-high	immune	2.12874713986844	immune(t=+2.13)
+TMEM139	RA-high	Unresolved	0	no_concordant_signal
+PLA2G4A	RA-high	Mixed	2.59225042029907	atrialCM(t=+2.59); endothelial_or_vascular(t=+1.23)
+CALCRL	RA-high	Mixed	2.1732992107083	atrialCM(t=+2.17); endothelial_or_vascular(t=+1.54)
+FLVCR2	RA-high	endothelial_or_vascular	2.18120322139575	endothelial_or_vascular(t=+2.18)
+NRGN	RA-high	immune	2.52932039005879	immune(t=+2.53)
+CNRIP1	RA-high	atrialCM	3.6578155053989	atrialCM(t=+3.66)
+STK17A	RA-high	Mixed	4.17187938089097	atrialCM(t=+4.17); endothelial_or_vascular(t=+1.54)
+HSD17B14	RA-high	Mixed	4.96916496311466	atrialCM(t=+2.52); fibroblast(t=+4.97)
+FLJ43663	RA-high	Unresolved	0	no_concordant_signal
+GRAMD1C	RA-high	Mixed	3.09669397869464	atrialCM(t=+3.10); endothelial_or_vascular(t=+1.90)
+WISP1	RA-high	Mixed	2.88147417818544	atrialCM(t=+2.03); fibroblast(t=+2.88)
+C1QTNF6	RA-high	Unresolved	0	best_concordant=fibroblast(t=+0.01)
+CRNDE	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.07)
+B3GNT9	RA-high	Unresolved	0	best_concordant=fibroblast(t=+0.52)
+HYDIN	RA-high	Mixed	3.75785393840292	atrialCM(t=+3.76); fibroblast(t=+3.61); endothelial_or_vascular(t=+2.27)
+EPHA7	RA-high	Mixed	2.05517679246955	atrialCM(t=+2.06); fibroblast(t=+2.03)
+MECOM	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.05)
+PDGFD	RA-high	Unresolved	0	no_concordant_signal
+ST8SIA5	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.65)
+GGT1	RA-high	Mixed	2.72134952222803	atrialCM(t=+2.45); fibroblast(t=+2.72)
+DHX35	RA-high	atrialCM	2.195782452112	atrialCM(t=+2.20)
+WDFY3-AS2	RA-high	Unresolved	0	no_concordant_signal
+LRRC16A	RA-high	Unresolved	0	no_concordant_signal
+MFAP4	RA-high	atrialCM	2.31702446949613	atrialCM(t=+2.32)
+LOC100505875	RA-high	Unresolved	0	no_concordant_signal
+COL8A1	RA-high	Mixed	4.05317677412202	atrialCM(t=+4.05); endothelial_or_vascular(t=+2.39)
+FLJ42289	RA-high	Unresolved	0	no_concordant_signal
+ANGPTL7	RA-high	Unresolved	0	best_concordant=atrialCM(t=+0.30)
+TCF24	RA-high	endothelial_or_vascular	1.81649405062414	endothelial_or_vascular(t=+1.82)
+USP6	RA-high	Mixed	2.65018728436891	fibroblast(t=+2.65); endothelial_or_vascular(t=+2.34)
+SLC9A1	RA-high	Mixed	2.51760118302238	atrialCM(t=+2.02); endothelial_or_vascular(t=+2.52)
+RASGEF1B	RA-high	Mixed	2.44999113266947	atrialCM(t=+2.25); fibroblast(t=+2.00); endothelial_or_vascular(t=+1.58); immune(t=+2.45)
+IRF6	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.12)
+SOX10	RA-high	Unresolved	0	no_concordant_signal
+RAD54B	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.54)
+PPAP2A	RA-high	Unresolved	0	no_concordant_signal
+FZD7	RA-high	Unresolved	0	best_concordant=atrialCM(t=+0.51)
+VANGL2	RA-high	Unresolved	0	best_concordant=fibroblast(t=+1.40)
+TMEM45A	RA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=+0.25)
+BCL2L11	RA-high	immune	2.38682665205293	immune(t=+2.39)
+KCNJ5	RA-high	atrialCM	2.59551207037943	atrialCM(t=+2.60)
+CDH19	RA-high	immune	1.71123263930875	immune(t=+1.71)
+MARCKSL1	RA-high	Unresolved	0	best_concordant=fibroblast(t=+0.58)
+IL18R1	RA-high	Mixed	3.41360003220772	fibroblast(t=+3.41); endothelial_or_vascular(t=+2.45)
+CHMP4C	RA-high	Unresolved	0	no_concordant_signal
+SOBP	RA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=+0.54)
+ID3	RA-high	Mixed	4.82316678758914	fibroblast(t=+4.82); immune(t=+2.70)
+LOX	RA-high	fibroblast	3.1452426548231	fibroblast(t=+3.15)
+ASPG	RA-high	Mixed	4.30535135500637	atrialCM(t=+4.31); fibroblast(t=+2.08)
+PTPRS	RA-high	Mixed	3.08410322509669	atrialCM(t=+3.08); fibroblast(t=+2.86)
+PRX	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.46)
+TOR4A	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.49)
+PGPEP1L	RA-high	Unresolved	0	no_concordant_signal
+GSE1	RA-high	Mixed	4.03041418684715	atrialCM(t=+2.73); fibroblast(t=+4.03); endothelial_or_vascular(t=+2.52)
+MYH11	RA-high	Mixed	7.46826403504439	atrialCM(t=+7.47); endothelial_or_vascular(t=+2.44)
+RAMP2-AS1	RA-high	Unresolved	0	best_concordant=fibroblast(t=+0.54)
+ZNF578	RA-high	Unresolved	0	best_concordant=atrialCM(t=+0.62)
+VIPR1	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.53)
+GULP1	RA-high	endothelial_or_vascular	1.31533953502476	endothelial_or_vascular(t=+1.32)
+TMEM100	RA-high	endothelial_or_vascular	1.87706138374007	endothelial_or_vascular(t=+1.88)
+LOC100131096	RA-high	Unresolved	0	no_concordant_signal
+GRB10	RA-high	Mixed	3.23640234195431	fibroblast(t=+3.24); endothelial_or_vascular(t=+2.53); immune(t=+1.65)
+KCNH2	RA-high	atrialCM	2.51553874267939	atrialCM(t=+2.52)
+LOC100129858	RA-high	Unresolved	0	no_concordant_signal
+OTOGL	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.36)
+FZD8	RA-high	fibroblast	2.86396816175838	fibroblast(t=+2.86)
+EMCN	RA-high	Mixed	2.41917370404797	atrialCM(t=+2.42); endothelial_or_vascular(t=+1.95); immune(t=+1.52)
+ROBO1	RA-high	Mixed	3.69702728675171	atrialCM(t=+3.47); endothelial_or_vascular(t=+3.70)
+SELM	RA-high	Unresolved	0	no_concordant_signal
+PRDM16	RA-high	Mixed	3.54190560483497	fibroblast(t=+3.54); endothelial_or_vascular(t=+2.73)
+OGN	RA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=+0.88)
+LOC440300	RA-high	Unresolved	0	no_concordant_signal
+FBLN5	RA-high	endothelial_or_vascular	1.6294489781189	endothelial_or_vascular(t=+1.63)
+NOSTRIN	RA-high	Mixed	4.260297612741	fibroblast(t=+4.23); endothelial_or_vascular(t=+4.26)
+LBH	RA-high	Mixed	5.13352410745165	atrialCM(t=+5.13); endothelial_or_vascular(t=+1.33)
+GAL3ST4	RA-high	Unresolved	0	no_concordant_signal
+INPP5J	RA-high	atrialCM	3.50758763388258	atrialCM(t=+3.51)
+ENAM	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.11)
+MYOZ3	RA-high	fibroblast	2.34672959030662	fibroblast(t=+2.35)
+ST6GALNAC3	RA-high	Mixed	3.5871982387043	atrialCM(t=+2.52); endothelial_or_vascular(t=+1.21); immune(t=+3.59)
+UNC5B	RA-high	fibroblast	3.2513283623951	fibroblast(t=+3.25)
+TLE1	RA-high	Mixed	4.68265846669621	atrialCM(t=+4.68); immune(t=+4.45)
+SEPT6	RA-high	Mixed	3.19573949450212	atrialCM(t=+3.20); immune(t=+1.82)
+HEY2	RA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=+0.91)
+FN1	RA-high	Mixed	3.10517128671065	endothelial_or_vascular(t=+2.70); immune(t=+3.11)
+HERC5	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.92)
+VGLL4	RA-high	endothelial_or_vascular	1.75477288602989	endothelial_or_vascular(t=+1.75)
+HRASLS	RA-high	Unresolved	0	no_concordant_signal
+CRYM	RA-high	Unresolved	0	no_concordant_signal
+FBLN1	RA-high	fibroblast	2.06705069974209	fibroblast(t=+2.07)
+ROBO3	RA-high	endothelial_or_vascular	1.63417452503914	endothelial_or_vascular(t=+1.63)
+CACNA2D3	RA-high	atrialCM	2.25805744326407	atrialCM(t=+2.26)
+ZNF423	RA-high	Mixed	4.28375046819791	atrialCM(t=+2.36); fibroblast(t=+4.28); endothelial_or_vascular(t=+1.72)
+VAV3	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.80)
+FZD1	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.01)
+PDE1A	RA-high	atrialCM	2.25478682788324	atrialCM(t=+2.25)
+CALHM2	RA-high	endothelial_or_vascular	1.6823848587985	endothelial_or_vascular(t=+1.68)
+BLM	RA-high	Unresolved	0	best_concordant=fibroblast(t=+1.37)
+ZNF850	RA-high	Unresolved	0	no_concordant_signal
+IL1R1	RA-high	Mixed	6.12853947281969	atrialCM(t=+3.34); fibroblast(t=+5.44); endothelial_or_vascular(t=+2.99); immune(t=+6.13)
+LRRC17	RA-high	Unresolved	0	no_concordant_signal
+DERL3	RA-high	Unresolved	0	no_concordant_signal
+UBXN11	RA-high	immune	2.88546884348742	immune(t=+2.89)
+VCAN	RA-high	Mixed	4.1298691017653	atrialCM(t=+3.05); fibroblast(t=+3.61); endothelial_or_vascular(t=+1.39); immune(t=+4.13)
+PRRX1	RA-high	atrialCM	3.03778487454833	atrialCM(t=+3.04)
+SLC16A3	RA-high	immune	2.87895709700868	immune(t=+2.88)
+SIPA1L2	RA-high	Mixed	4.5671890044916	atrialCM(t=+4.57); fibroblast(t=+2.27); immune(t=+3.42)
+BST1	RA-high	fibroblast	1.93909376573323	fibroblast(t=+1.94)
+SMAD3	RA-high	Mixed	3.60016123382277	fibroblast(t=+3.60); endothelial_or_vascular(t=+1.30); immune(t=+1.78)
+LDLRAD4	RA-high	Mixed	3.08935983605453	atrialCM(t=+3.01); fibroblast(t=+3.09)
+B3GALTL	RA-high	Unresolved	0	no_concordant_signal
+SLC2A9	RA-high	endothelial_or_vascular	1.64142536886876	endothelial_or_vascular(t=+1.64)
+COL23A1	RA-high	Mixed	2.56797937103478	atrialCM(t=+2.57); fibroblast(t=+2.42); endothelial_or_vascular(t=+1.22)
+FLRT2	RA-high	Mixed	2.79877843881488	atrialCM(t=+2.38); fibroblast(t=+2.06); endothelial_or_vascular(t=+1.28); immune(t=+2.80)
+TLR4	RA-high	Unresolved	0	no_concordant_signal
+LRRC37A3	RA-high	Unresolved	0	no_concordant_signal
+FLJ23867	RA-high	Unresolved	0	no_concordant_signal
+TSPYL2	RA-high	Mixed	2.22637258225421	atrialCM(t=+2.23); fibroblast(t=+2.15); endothelial_or_vascular(t=+1.81); immune(t=+2.06)
+USP35	RA-high	Unresolved	0	best_concordant=fibroblast(t=+0.02)
+SETBP1	RA-high	Mixed	3.11453737613632	atrialCM(t=+3.11); endothelial_or_vascular(t=+1.53)
+BIRC3	RA-high	Mixed	2.71442367973419	fibroblast(t=+2.71); immune(t=+2.39)
+SLC6A1	RA-high	Unresolved	0	best_concordant=atrialCM(t=+0.58)
+KATNAL2	RA-high	atrialCM	2.29103327790531	atrialCM(t=+2.29)
+GLI2	RA-high	atrialCM	2.11766360298961	atrialCM(t=+2.12)
+FREM1	RA-high	Unresolved	0	best_concordant=atrialCM(t=+0.60)
+VILL	RA-high	Unresolved	0	no_concordant_signal
+COX10-AS1	RA-high	Unresolved	0	no_concordant_signal
+NOX4	RA-high	endothelial_or_vascular	1.29122635523598	endothelial_or_vascular(t=+1.29)
+SLC22A5	RA-high	Mixed	3.0097192879719	atrialCM(t=+3.01); fibroblast(t=+2.41)
+IFFO2	RA-high	Mixed	4.89083686599934	atrialCM(t=+4.89); endothelial_or_vascular(t=+1.94)
+HFE	RA-high	Unresolved	0	best_concordant=atrialCM(t=+0.82)
+PLEKHA6	RA-high	Unresolved	0	best_concordant=immune(t=+1.18)
+SLC16A4	RA-high	Unresolved	0	no_concordant_signal
+YAP1	RA-high	atrialCM	4.87191806288138	atrialCM(t=+4.87)
+FRRS1	RA-high	atrialCM	2.69673653205124	atrialCM(t=+2.70)
+NFYB	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.00)
+TRPV3	RA-high	Unresolved	0	best_concordant=atrialCM(t=+1.83)
+CAPN5	RA-high	Unresolved	0	best_concordant=atrialCM(t=+0.29)
+PRKXP1	RA-high	Unresolved	0	no_concordant_signal
+AQP4	RA-high	Unresolved	0	no_concordant_signal
+LPAR1	RA-high	Unresolved	0	best_concordant=endothelial_or_vascular(t=+0.61)

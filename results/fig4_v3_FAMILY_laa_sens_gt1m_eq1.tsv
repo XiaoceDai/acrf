@@ -1,0 +1,17 @@
+analysis	n_samples	rho_spearman	p_perm	bootstrap_ci_lo	bootstrap_ci_hi	family_id	direction	family_source
+laa_gt1m_eq1	16	0.137884	0.605639	-0.429041	0.637956	1	LA-biased	baseline
+laa_gt1m_eq1	16	-0.428480	0.096190	-0.826611	0.138811	2	LA-biased	baseline
+laa_gt1m_eq1	16	0.467028	0.073993	-0.089952	0.852477	3	LA-biased	baseline
+laa_gt1m_eq1	16	-0.004448	0.985401	-0.537759	0.570221	4	LA-biased	baseline
+laa_gt1m_eq1	16	-0.106749	0.698230	-0.589559	0.487962	5	LA-biased	baseline
+laa_gt1m_eq1	16	-0.151228	0.568043	-0.638136	0.374832	6	LA-biased	baseline
+laa_gt1m_eq1	16	-0.265391	0.318268	-0.700995	0.236643	7	LA-biased	baseline
+laa_gt1m_eq1	16	0.155676	0.559944	-0.396237	0.636369	8	LA-biased	baseline
+laa_gt1m_eq1	16	-0.428480	0.097590	-0.841952	0.136979	9	RA-biased	baseline
+laa_gt1m_eq1	16	-0.259460	0.329567	-0.752855	0.338558	10	RA-biased	baseline
+laa_gt1m_eq1	16	-0.428480	0.092091	-0.797638	0.096136	11	RA-biased	baseline
+laa_gt1m_eq1	16	-0.010378	0.971003	-0.592306	0.536566	12	LA-biased	new_v3
+laa_gt1m_eq1	16	0.257977	0.330167	-0.357342	0.722117	13	LA-biased	new_v3
+laa_gt1m_eq1	16	0.160124	0.550245	-0.436374	0.677100	14	LA-biased	new_v3
+laa_gt1m_eq1	16	-0.210533	0.430757	-0.632673	0.337000	15	RA-biased	new_v3
+laa_gt1m_eq1	16	-0.065236	0.800620	-0.633637	0.517531	16	RA-biased	new_v3

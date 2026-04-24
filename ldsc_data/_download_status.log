@@ -1,0 +1,33 @@
+=== LDSC download started: 2026-04-23T23:17:22+08:00
+PID: 142241
+
+--- 2026-04-23T23:17:22+08:00  w_hm3.snplist ---
+https://alkesgroup.broadinstitute.org/LDSCORE/w_hm3.snplist:
+2026-04-23 23:17:23 ERROR 404: Not Found.
+  status: 8  size: 0
+
+--- 2026-04-23T23:17:23+08:00  1000G_Phase3_weights_hm3_no_MHC.tgz ---
+https://alkesgroup.broadinstitute.org/LDSCORE/1000G_Phase3_weights_hm3_no_MHC.tgz:
+2026-04-23 23:17:25 ERROR 404: Not Found.
+  status: 8  size: 0
+
+--- 2026-04-23T23:17:25+08:00  1000G_Phase3_baselineLD_v2.2_ldscores.tgz ---
+https://alkesgroup.broadinstitute.org/LDSCORE/1000G_Phase3_baselineLD_v2.2_ldscores.tgz:
+2026-04-23 23:17:25 ERROR 404: Not Found.
+  status: 8  size: 0
+
+--- 2026-04-23T23:17:25+08:00  1000G_Phase3_plinkfiles.tgz ---
+https://alkesgroup.broadinstitute.org/LDSCORE/1000G_Phase3_plinkfiles.tgz:
+2026-04-23 23:17:27 ERROR 404: Not Found.
+  status: 8  size: 0
+
+=== LDSC download finished: 2026-04-23T23:17:27+08:00 ===
+Final inventory:
+total 12
+drwxrwxr-x  2 bio bio 4096 Apr 23 23:17 .
+drwxrwxr-x 18 bio bio 4096 Apr 23 21:51 ..
+-rw-rw-r--  1 bio bio    0 Apr 23 23:17 1000G_Phase3_baselineLD_v2.2_ldscores.tgz
+-rw-rw-r--  1 bio bio    0 Apr 23 23:17 1000G_Phase3_plinkfiles.tgz
+-rw-rw-r--  1 bio bio    0 Apr 23 23:17 1000G_Phase3_weights_hm3_no_MHC.tgz
+-rw-rw-r--  1 bio bio  965 Apr 23 23:17 _download_status.log
+-rw-rw-r--  1 bio bio    0 Apr 23 23:17 w_hm3.snplist

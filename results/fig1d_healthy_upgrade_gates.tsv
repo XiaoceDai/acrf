@@ -1,0 +1,7 @@
+criterion	rule	observed	pass	overall_decision
+Panel continuity	overlap_fraction_vs_v2 >= 0.80	0.8333333333333334	True	upgrade-ready
+Direction balance	ra_count_v3 >= 8 and ra_gain >= 2	RA 8 (gain +2)	True	upgrade-ready
+Redundancy control	mean_pairwise_jaccard_v3 <= 0.025 and delta <= 0.005	0.0217 (delta +0.0004)	True	upgrade-ready
+Bootstrap robustness	median inclusion freq >= 0.99	1.0	True	upgrade-ready
+High-stability share	share(inclusion_freq >= 0.8) >= 0.70	0.7	True	upgrade-ready
+Upgrade gain	v3 median and >=0.8 share >= v2	median 0.994->1.000; share 0.667->0.700	True	upgrade-ready

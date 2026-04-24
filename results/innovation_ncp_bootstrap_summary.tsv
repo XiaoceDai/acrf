@@ -1,0 +1,2 @@
+n_runs	target_k	mean_selected_per_run	mean_ra_per_run	n_path_very_stable_freq_ge_0_8	n_path_stable_freq_ge_0_5	top_path_freq	median_path_freq
+400	30	30.0	7.95	26	30	1.0	0.0

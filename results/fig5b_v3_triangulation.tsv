@@ -1,0 +1,17 @@
+family_id	short	HealthyBias	PriorityScore	PriorityClass	PriorityStars	ChamberDriver	LA_carrier	pooled_g	replication_class	L1_supportive	state_consensus	dScore_at_carrier	p_perm_carrier	fidelity_class	L2_supportive	rho_primary	p_perm_primary	chronicity_class	L3_supportive	n_supportive
+15	NTRK2 / TrkB signalli…	RA-biased	93.3000	high	***	LA-driven	fibroblast	1.2491	high	1	Attenuated	-0.0041	0.4879	Relay	1	-0.3853	0.2146	Weak_trend	1	3
+11	BMP signalling	RA-biased	93.3000	high	***	LA-driven	endothelial	0.8505	high	1	Attenuated	-0.0060	0.6187	Below_detection	0	-0.1996	0.5374	Stable	0	1
+9	HS-GAG metabolism	RA-biased	92.9000	high	***	LA-driven	fibroblast	0.7906	high	1	Attenuated	0.0001	0.9770	Below_detection	0	-0.4203	0.1790	Strong_trend	1	2
+10	TGF-beta signalling (Hal…	RA-biased	78.7000	high	***	LA-driven	fibroblast	0.6841	high	1	Preserved	0.0067	0.0607	Below_detection	0	-0.2207	0.4830	Weak_trend	1	2
+16	Keratan sulfate biosy…	RA-biased	57.1000	medium	**	LA-driven	fibroblast	0.3151	moderate	0	Attenuated	0.0207	0.0049	Extension	1	0.0841	0.7938	Stable	0	1
+3	TG metabolism	LA-biased	52.7000	medium	**	LA-driven	adipocyte	0.2271	moderate	0	Preserved	0.0020	0.6814	Below_detection	0	0.3257	0.2981	Weak_trend	1	1
+14	Eukaryotic translatio…	LA-biased	47.2000	low	*	Bilateral	endothelial	0.1183	moderate	0	Attenuated	0.0013	0.9243	Below_detection	0	0.1471	0.6522	Stable	0	0
+2	Mito Ca2+ transport	LA-biased	46.8000	low	*	Bilateral	atrialCM	0.1089	moderate	0	Preserved	-0.0023	0.5345	Below_detection	0	-0.5639	0.0590	Strong_trend	1	1
+12	rRNA processing	LA-biased	46.6000	low	*	Bilateral	Mixed/Unresolved	0.1053	moderate	0	Attenuated			Below_detection	0	0.0280	0.9333	Stable	0	0
+1	Ribosome QC (RQC)	LA-biased	45.0000	low	*	Bilateral	endothelial	0.0724	moderate	0	Attenuated	0.0007	0.9490	Below_detection	0	0.1261	0.6930	Stable	0	0
+5	tRNA aminoacylation	LA-biased	44.4000	low	*	Bilateral	lymphocyte	-0.0615	moderate	0	Preserved	0.0196	0.4348	Below_detection	0	0.1226	0.7137	Stable	0	0
+4	BCAA catabolism	LA-biased	41.1000	low	*	Bilateral	adipocyte	0.0764	moderate	0	Attenuated	0.0046	0.5033	Below_detection	0	-0.0280	0.9338	Stable	0	0
+13	Amino-acid metabolism	LA-biased	39.9000	low	*	Bilateral	endothelial	0.1053	moderate	0	Amplified	-0.0001	0.9840	Below_detection	0	0.2347	0.4667	Weak_trend	1	1
+7	TCA cycle	LA-biased	33.2000	low	*	RA-driven	Mixed/Unresolved	-0.1193	low	0	Reversed			Below_detection	0	-0.2977	0.3458	Weak_trend	1	1
+8	Complex I biogenesis	LA-biased	31.7000	low	*	RA-driven	endothelial	-0.1798	low	0	Amplified	0.0045	0.5945	Below_detection	0	0.2452	0.4472	Weak_trend	1	1
+6	Mito protein import	LA-biased	26.1000	low	*	RA-driven	Mixed/Unresolved	-0.0678	low	0	Amplified			Below_detection	0	0.1121	0.7263	Stable	0	0

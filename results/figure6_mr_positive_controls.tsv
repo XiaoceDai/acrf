@@ -1,0 +1,5 @@
+anchor	tissue	axis	n_eqtl	lead_eqtl_p	gate_passed	n_gwas	n_overlap	gwas_min_p	coloc_PP0	coloc_PP1	coloc_PP2	coloc_PP3	coloc_PP4	verdict	reason
+PITX2	atrial_appendage	positive_control	7160	0.000797352	FALSE	42694	6820	1e-305	0	0	0.569322199490257	0.375790787335577	0.0548870131739546	not supported	gate=FALSE PP4=0.05
+PITX2	whole_blood	positive_control	0		FALSE									not supported	no eQTL rows for gene_id in window
+KCNN3	atrial_appendage	positive_control	4498	9.44229e-05	FALSE	38341	4280	4.83e-258	1.61811866266888e-255	1.42551408991332e-255	0.470218635670775	0.414132889628713	0.115648474700467	not supported	gate=FALSE PP4=0.12
+KCNN3	whole_blood	positive_control	0		FALSE									not supported	no eQTL rows for gene_id in window

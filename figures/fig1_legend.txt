@@ -1,0 +1,47 @@
+Figure 1. Healthy LA/RA chamber programs and their baseline cellular carriers.
+
+Color convention (all Figure 1 panels):
+  - LA = red (#D6604D)
+  - RA = blue (#4393C3)
+
+(a) PCA (healthy paired bulk RNA-seq; GSE112339).
+    Each point is one sample (LA or RA); paired chambers from the same donor
+    are connected by a thin line. This panel visualizes global donor-level
+    and chamber-level transcriptomic structure.
+
+(b1) Volcano (paired LA vs RA differential expression).
+    x-axis: logFC (LA - RA); y-axis: -log10(FDR). Significant genes
+    (FDR < 0.05) are colored by direction (LA-high red, RA-high blue),
+    and representative genes are labeled.
+
+(b2) Heatmap (top paired DE genes).
+    Top chamber-biased genes (selected from paired DE statistics) are shown
+    as row-z-scored voom logCPM across donor-paired samples. The top strip
+    marks chamber identity for each column.
+
+(c) Dual-method pathway selection (curated primitive).
+    Candidate pathways are plotted by signed GSEA NES (x) and GSVA paired
+    logFC (y). Point shade indicates leave-one-donor-out stability count
+    (0/8 to 8/8). Highlighted points are the final NCP_v2 pathways selected
+    by dual-method consistency, high stability, and Jaccard redundancy control;
+    the selected pathway list is shown in the right subpanel.
+
+(d) Donor-level aCAI primitive at healthy baseline.
+    For each NCP_v2 program and donor, aCAI = mean log2(LA) - mean log2(RA).
+    Heatmap cells show per-donor aCAI; adjacent bars show mean aCAI across
+    donors; n/8 indicates sign concordance across donors (green 8/8 means
+    fully direction-consistent).
+
+(e) Baseline axis families from cross-donor aCAI patterns.
+    Programs are clustered using distance = 1 - Pearson correlation with
+    average linkage, with LA- and RA-biased programs clustered separately.
+    Tree cut at h = 0.35 defines axis families, summarized by family ID,
+    representative pathway, and number of programs.
+
+(f) Cell-compartment attribution at healthy baseline (GSE255612 Ctrl donors).
+    For each NCP_v2 program, member-gene mean expression is computed per
+    compartment and row-z-scored across reliable compartments.
+    Black boxes mark the dominant carrier (max row z-score) per program, and
+    the right column reports the dominant compartment plus z-score.
+    Compartments with n_ctrl < 5 are shown as N/A (grey) and excluded from
+    row-z computation.

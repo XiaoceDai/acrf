@@ -1,0 +1,71 @@
+cohort	donor_id	rhythm	sex	age	disease_background
+GSE128188	12b	SR	male		
+GSE128188	14	AF	male		
+GSE128188	20	SR	male		
+GSE128188	25	AF	male		
+GSE128188	27	SR	male		
+GSE128188	28	AF	male		
+GSE128188	30	SR	male		
+GSE128188	31	AF	male		
+GSE128188	5	AF	male		
+GSE128188	7	SR	male		
+GSE79768	14	AF	female	53.0	
+GSE79768	15	SR	male	60.0	
+GSE79768	19	AF	female	47.0	
+GSE79768	20	AF	male	46.0	
+GSE79768	22	SR	female	77.0	
+GSE79768	29	AF	female	46.0	
+GSE79768	32	AF	female	32.0	
+GSE79768	33	AF	male	71.0	
+GSE79768	34	AF	male	43.0	
+GSE79768	39	SR	male	33.0	
+GSE79768	42	SR	female	74.0	
+GSE79768	76	SR	female	62.0	
+GSE79768	92	SR	female	76.0	
+GSE115574	AF01	AF			severe_mitral_regurgitation
+GSE115574	AF02	AF			severe_mitral_regurgitation
+GSE115574	AF03	AF			severe_mitral_regurgitation
+GSE115574	AF04	AF			severe_mitral_regurgitation
+GSE115574	AF05	AF			severe_mitral_regurgitation
+GSE115574	AF06	AF			severe_mitral_regurgitation
+GSE115574	AF07	AF			severe_mitral_regurgitation
+GSE115574	AF08	AF			severe_mitral_regurgitation
+GSE115574	AF09	AF			severe_mitral_regurgitation
+GSE115574	AF10	AF			severe_mitral_regurgitation
+GSE115574	AF11	AF			severe_mitral_regurgitation
+GSE115574	AF12	AF			severe_mitral_regurgitation
+GSE115574	AF13	AF			severe_mitral_regurgitation
+GSE115574	AF14	AF			severe_mitral_regurgitation
+GSE115574	AF15	AF			severe_mitral_regurgitation
+GSE115574	SR01	SR			severe_mitral_regurgitation
+GSE115574	SR02	SR			severe_mitral_regurgitation
+GSE115574	SR03	SR			severe_mitral_regurgitation
+GSE115574	SR04	SR			severe_mitral_regurgitation
+GSE115574	SR05	SR			severe_mitral_regurgitation
+GSE115574	SR06	SR			severe_mitral_regurgitation
+GSE115574	SR07	SR			severe_mitral_regurgitation
+GSE115574	SR08	SR			severe_mitral_regurgitation
+GSE115574	SR09	SR			severe_mitral_regurgitation
+GSE115574	SR10	SR			severe_mitral_regurgitation
+GSE115574	SR11	SR			severe_mitral_regurgitation
+GSE115574	SR12	SR			severe_mitral_regurgitation
+GSE115574	SR13	SR			severe_mitral_regurgitation
+GSE115574	SR14	SR			severe_mitral_regurgitation
+GSE115574	SR15	SR			severe_mitral_regurgitation
+GSE115574	SR16	SR			severe_mitral_regurgitation
+GSE41177	N1	SR	female	62.0	
+GSE41177	N10	AF	male	56.0	
+GSE41177	N11	AF	male	66.0	
+GSE41177	N12	AF	male	36.0	
+GSE41177	N13	AF	male	51.0	
+GSE41177	N14	AF	female	65.0	
+GSE41177	N15	AF	female	59.0	
+GSE41177	N16	AF	female	59.0	
+GSE41177	N2	SR	male	43.0	
+GSE41177	N3	SR	male	55.0	
+GSE41177	N4	AF	female	71.0	
+GSE41177	N5	AF	female	32.0	
+GSE41177	N6	AF	male	64.0	
+GSE41177	N7	AF	female	32.0	
+GSE41177	N8	AF	male	43.0	
+GSE41177	N9	AF	female	65.0	

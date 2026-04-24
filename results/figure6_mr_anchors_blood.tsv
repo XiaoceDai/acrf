@@ -1,0 +1,5 @@
+anchor	axis	n_eqtl	lead_eqtl_p	gate_passed	coloc_PP4	blood_verdict	reason
+PRELP	matrix	6728	0.000428995	FALSE	0.02337968403175	not supported	gate=FALSE PP4=0.02
+OMD	matrix	0		FALSE		not supported	no rows for gene
+IDH2	metabolic	8257	0.00070798	FALSE	0.0148414311183118	not supported	gate=FALSE PP4=0.01
+NDUFA8	metabolic	6976	6.55942e-05	FALSE	0.0127795043233445	not supported	gate=FALSE PP4=0.01

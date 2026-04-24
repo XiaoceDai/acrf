@@ -1,0 +1,5 @@
+cohort	axis	axis_levels	n_donors	n_paired_complete	n_unpaired	n_AF_donors	n_SR_donors	n_other_donors
+GSE128188	chamber	LA,RA	10	10	0	5	5	0
+GSE79768	chamber	LA,RA	13	13	0	7	6	0
+GSE115574	chamber	LA,RA	31	28	3	15	16	0
+GSE41177	tissue	LAA,LAPV	16	16	0	16	0	0

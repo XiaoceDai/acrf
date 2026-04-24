@@ -1,0 +1,146 @@
+======== X integer check ========
+  sampled rows: 5000
+  dtype: float32
+  shape: (5000, 33538)
+  n nonzero: 6,317,003
+  min/max: 1.0 / 6131.0
+  mean/std: 2.2585 / 23.0680
+  fraction integer-valued: 1.000000
+  first 20 nonzero: [1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 2. 1. 1. 1. 1. 1. 1. 1. 1.]
+
+======== modality per donor x region ========
+  LA+RA cells total: 114,237
+  cell_source levels: ['Harvard-Nuclei', 'Sanger-CD45', 'Sanger-Cells', 'Sanger-Nuclei']
+  source levels:      ['CD45+', 'Cells', 'Nuclei']
+
+  donor x region -> cell_source counts (LA/RA only):
+cell_source   Harvard-Nuclei  Sanger-CD45  Sanger-Cells  Sanger-Nuclei
+donor region                                                          
+D1    LA                   0            0             0           1067
+D2    LA                   0            0             0           8501
+      RA                   0            0             0           4712
+D3    LA                   0            0          1751           1752
+      RA                   0            0             0           6438
+D4    LA                   0            0           670           4446
+      RA                   0            0           467           3296
+D5    LA                   0            0          2297           2755
+      RA                   0            0          1505           3649
+D6    LA                   0        12525          1045           4041
+      RA                   0         1951          1458           1190
+D7    LA                   0         1253           759           3387
+      RA                   0         1602           469           3039
+D11   LA                   0         2774           267            528
+      RA                   0            0           268            225
+H2    LA                3143            0             0              0
+      RA                1111            0             0              0
+H3    LA                5754            0             0              0
+      RA                2246            0             0              0
+H4    LA                2413            0             0              0
+      RA                2138            0             0              0
+H5    LA                2188            0             0              0
+      RA                1948            0             0              0
+H6    LA                2535            0             0              0
+      RA                2300            0             0              0
+H7    LA                6883            0             0              0
+      RA                1491            0             0              0
+
+  distribution of #cell_source per donor-region (n=27):
+1    16
+2     6
+3     5
+
+======== Used flag ========
+  overall Used value_counts:
+Used
+Yes    452136
+No      33998
+
+  Used Yes within LA+RA, by cell_type:
+Used                         No    Yes
+cell_type                             
+Adipocytes                    0   2211
+Atrial_Cardiomyocyte          0  23483
+Endothelial                   0  22756
+Fibroblast                    0  21306
+Lymphoid                      0   6395
+Mesothelial                   0    659
+Myeloid                       0   7871
+Neuronal                      0   1901
+NotAssigned                6487      0
+Pericytes                     0  15982
+Smooth_muscle_cells           0   4989
+Ventricular_Cardiomyocyte     0      0
+doublets                      0    197
+
+======== mapping to 4 top cell types (Used=Yes, LA|RA) ========
+  after filter n=81,811
+
+  cells per (donor x region x top_ct):
+region                           LA    RA
+top_ct                  donor            
+atrial_cardiomyocyte    D1      404     0
+                        D2     1228  1214
+                        D3      859  1797
+                        D4     1700   621
+                        D5     1307  1190
+                        D6     1896   220
+                        D7     1325  1450
+                        D11     274    58
+                        H2      257    94
+                        H3      965   427
+                        H4      342   258
+                        H5      368   360
+                        H6      576   824
+                        H7     3271   198
+endothelial_or_vascular D1       51     0
+                        D2      754   579
+                        D3      871  1258
+                        D4      423   728
+                        D5     1080  1217
+                        D6     6620  1858
+                        D7     1127  1023
+                        D11    1618   200
+                        H2      302   124
+                        H3      637   238
+                        H4      215   298
+                        H5      253   276
+                        H6      219   239
+                        H7      328   220
+fibroblast              D1      355     0
+                        D2     3982  1764
+                        D3      243  1999
+                        D4      822  1309
+                        D5      704  1722
+                        D6      996   484
+                        D7      640   851
+                        D11      91   118
+                        H2      500   276
+                        H3      721   234
+                        H4      357   353
+                        H5      306   388
+                        H6      593   602
+                        H7      607   289
+immune                  D1       22     0
+                        D2      581   226
+                        D3      303   308
+                        D4      178   233
+                        D5      136   274
+                        D6     3014  1193
+                        D7     1129  1193
+                        D11     577    19
+                        H2      975   324
+                        H3      523   733
+                        H4      395   360
+                        H5      323   209
+                        H6      172   154
+                        H7      456   256
+
+  combos passing n_cells >= 30:
+  passed=106  dropped=2
+
+  paired-donor count per top_ct (has both LA and RA with n>=30):
+top_ct
+atrial_cardiomyocyte       13
+endothelial_or_vascular    13
+fibroblast                 13
+immune                     12

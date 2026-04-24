@@ -1,0 +1,17 @@
+analysis	n_samples	rho_spearman	p_perm	bootstrap_ci_lo	bootstrap_ci_hi	family_id	direction	family_source
+lapv_sensitivity	12	0.280211	0.380262	-0.390009	0.784173	1	LA-biased	baseline
+lapv_sensitivity	12	0.196147	0.542146	-0.488889	0.631769	2	LA-biased	baseline
+lapv_sensitivity	12	0.119089	0.712629	-0.541234	0.808528	3	LA-biased	baseline
+lapv_sensitivity	12	-0.182137	0.568743	-0.709237	0.474829	4	LA-biased	baseline
+lapv_sensitivity	12	-0.084063	0.791421	-0.709467	0.560536	5	LA-biased	baseline
+lapv_sensitivity	12	-0.189142	0.543146	-0.695652	0.421454	6	LA-biased	baseline
+lapv_sensitivity	12	-0.175132	0.583942	-0.721433	0.462414	7	LA-biased	baseline
+lapv_sensitivity	12	-0.126095	0.691531	-0.656940	0.486374	8	LA-biased	baseline
+lapv_sensitivity	12	-0.161121	0.608739	-0.793595	0.505580	9	RA-biased	baseline
+lapv_sensitivity	12	-0.238179	0.452255	-0.795458	0.485784	10	RA-biased	baseline
+lapv_sensitivity	12	0.143608	0.649635	-0.446839	0.670252	11	RA-biased	baseline
+lapv_sensitivity	12	0.584940	0.046495	-0.021435	0.944373	12	LA-biased	new_v3
+lapv_sensitivity	12	-0.052539	0.872713	-0.664235	0.652482	13	LA-biased	new_v3
+lapv_sensitivity	12	0.542908	0.068293	-0.107143	0.883645	14	LA-biased	new_v3
+lapv_sensitivity	12	-0.185640	0.565143	-0.729994	0.494587	15	RA-biased	new_v3
+lapv_sensitivity	12	-0.031524	0.926107	-0.742899	0.583949	16	RA-biased	new_v3

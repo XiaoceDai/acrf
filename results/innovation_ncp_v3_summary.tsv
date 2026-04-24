@@ -1,0 +1,2 @@
+n_total_candidates	n_quality_candidates	n_panel_v3	n_panel_v2	n_overlap_with_v2	overlap_fraction_vs_v2	la_count_v3	ra_count_v3	median_consensus_v3	mean_pairwise_jaccard_v3
+80	38	30	30	25	0.8333	22	8	0.764	0.0217

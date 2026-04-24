@@ -1,0 +1,49 @@
+family_id	cohort	direction	n_SR	n_AF	mean_aCAI_SR	mean_aCAI_AF	aligned_SR	aligned_AF	reference_aligned_SR	reference_source	af_over_ref	state	short
+1	GSE128188	LA-biased	5	5	0.0118	0.039	0.0118	0.039	0.02	floor	1.9485	Amplified	Translation (cyto)
+1	GSE79768	LA-biased	6	7	-0.0216	0.0009	-0.0216	0.0009	0.02	floor	0.0471	Attenuated	Translation (cyto)
+1	GSE115574	LA-biased	15	13	0.0256	-0.0026	0.0256	-0.0026	0.0256	cohort_SR	-0.1024	Attenuated	Translation (cyto)
+2	GSE128188	LA-biased	5	5	0.1925	0.2058	0.1925	0.2058	0.1925	cohort_SR	1.069	Preserved	Mito Ca2+ transport
+2	GSE79768	LA-biased	6	7	-0.0652	-0.0052	-0.0652	-0.0052	0.0749	pooled_SR	-0.0689	Attenuated	Mito Ca2+ transport
+2	GSE115574	LA-biased	15	13	0.0917	0.0618	0.0917	0.0618	0.0917	cohort_SR	0.6747	Preserved	Mito Ca2+ transport
+3	GSE128188	LA-biased	5	5	0.1573	0.1727	0.1573	0.1727	0.1573	cohort_SR	1.0985	Preserved	TG metabolism
+3	GSE79768	LA-biased	6	7	-0.0761	0.1185	-0.0761	0.1185	0.0587	pooled_SR	2.0175	Amplified	TG metabolism
+3	GSE115574	LA-biased	15	13	0.0798	0.0894	0.0798	0.0894	0.0798	cohort_SR	1.1193	Preserved	TG metabolism
+4	GSE128188	LA-biased	5	5	0.1094	0.1663	0.1094	0.1663	0.1094	cohort_SR	1.5209	Amplified	BCAA catabolism
+4	GSE79768	LA-biased	6	7	-0.0919	-0.0004	-0.0919	-0.0004	0.0532	pooled_SR	-0.0083	Attenuated	BCAA catabolism
+4	GSE115574	LA-biased	15	13	0.0926	0.0068	0.0926	0.0068	0.0926	cohort_SR	0.0731	Attenuated	BCAA catabolism
+5	GSE128188	LA-biased	5	5	0.1237	0.1476	0.1237	0.1476	0.1237	cohort_SR	1.1934	Preserved	tRNA aminoacylation
+5	GSE79768	LA-biased	6	7	-0.0017	-0.0086	-0.0017	-0.0086	0.0787	pooled_SR	-0.1087	Attenuated	tRNA aminoacylation
+5	GSE115574	LA-biased	15	13	0.0959	0.0655	0.0959	0.0655	0.0959	cohort_SR	0.683	Preserved	tRNA aminoacylation
+6	GSE128188	LA-biased	5	5	0.0745	0.1272	0.0745	0.1272	0.0745	cohort_SR	1.7079	Amplified	Mito translation
+6	GSE79768	LA-biased	6	7	-0.0624	-0.0362	-0.0624	-0.0362	0.0504	pooled_SR	-0.7194	Reversed	Mito translation
+6	GSE115574	LA-biased	15	13	0.0874	0.0022	0.0874	0.0022	0.0874	cohort_SR	0.0255	Attenuated	Mito translation
+7	GSE128188	LA-biased	5	5	0.1192	0.1806	0.1192	0.1806	0.1192	cohort_SR	1.515	Amplified	TCA cycle
+7	GSE79768	LA-biased	6	7	-0.0843	-0.0241	-0.0843	-0.0241	0.0692	pooled_SR	-0.3488	Reversed	TCA cycle
+7	GSE115574	LA-biased	15	13	0.1139	-0.0255	0.1139	-0.0255	0.1139	cohort_SR	-0.2236	Reversed	TCA cycle
+8	GSE128188	LA-biased	5	5	0.1203	0.1917	0.1203	0.1917	0.1203	cohort_SR	1.5932	Amplified	Complex I biogenesis
+8	GSE79768	LA-biased	6	7	-0.0572	-0.0485	-0.0572	-0.0485	0.0688	pooled_SR	-0.7052	Reversed	Complex I biogenesis
+8	GSE115574	LA-biased	15	13	0.102	-0.01	0.102	-0.01	0.102	cohort_SR	-0.0978	Attenuated	Complex I biogenesis
+12	GSE128188	LA-biased	5	5	-0.0038	0.0004	-0.0038	0.0004	0.02	floor	0.018	Attenuated	rRNA processing
+12	GSE79768	LA-biased	6	7	-0.0109	0.0057	-0.0109	0.0057	0.02	floor	0.2871	Attenuated	rRNA processing
+12	GSE115574	LA-biased	15	13	0.0073	0.0169	0.0073	0.0169	0.02	floor	0.8469	Preserved	rRNA processing
+13	GSE128188	LA-biased	5	5	0.0427	0.0794	0.0427	0.0794	0.0427	cohort_SR	1.8595	Amplified	Amino-acid metabolism
+13	GSE79768	LA-biased	6	7	-0.0005	0.0232	-0.0005	0.0232	0.0256	pooled_SR	0.9076	Preserved	Amino-acid metabolism
+13	GSE115574	LA-biased	15	13	0.0303	0.0056	0.0303	0.0056	0.0303	cohort_SR	0.1848	Attenuated	Amino-acid metabolism
+14	GSE128188	LA-biased	5	5	-0.0186	0.0016	-0.0186	0.0016	0.02	floor	0.08	Attenuated	Eukaryotic translation …
+14	GSE79768	LA-biased	6	7	-0.0048	0.0227	-0.0048	0.0227	0.02	floor	1.1336	Preserved	Eukaryotic translation …
+14	GSE115574	LA-biased	15	13	0.0013	0.0011	0.0013	0.0011	0.02	floor	0.0538	Attenuated	Eukaryotic translation …
+9	GSE128188	RA-biased	5	5	-0.1689	-0.1455	0.1689	0.1455	0.1689	cohort_SR	0.8619	Preserved	HS-GAG metabolism
+9	GSE79768	RA-biased	6	7	-0.0713	-0.0077	0.0713	0.0077	0.0713	cohort_SR	0.1083	Attenuated	HS-GAG metabolism
+9	GSE115574	RA-biased	15	13	-0.1081	-0.0392	0.1081	0.0392	0.1081	cohort_SR	0.3628	Attenuated	HS-GAG metabolism
+10	GSE128188	RA-biased	5	5	-0.1458	-0.161	0.1458	0.161	0.1458	cohort_SR	1.1046	Preserved	GAG metabolism diseases
+10	GSE79768	RA-biased	6	7	-0.1441	0.014	0.1441	-0.014	0.1441	cohort_SR	-0.0971	Attenuated	GAG metabolism diseases
+10	GSE115574	RA-biased	15	13	-0.1123	0.025	0.1123	-0.025	0.1123	cohort_SR	-0.2222	Reversed	GAG metabolism diseases
+11	GSE128188	RA-biased	5	5	-0.5434	-0.4712	0.5434	0.4712	0.5434	cohort_SR	0.8671	Preserved	BMP signalling
+11	GSE79768	RA-biased	6	7	-0.3075	-0.1607	0.3075	0.1607	0.3075	cohort_SR	0.5227	Attenuated	BMP signalling
+11	GSE115574	RA-biased	15	13	-0.366	-0.1799	0.366	0.1799	0.366	cohort_SR	0.4916	Attenuated	BMP signalling
+15	GSE128188	RA-biased	5	5	-0.1295	-0.0702	0.1295	0.0702	0.1295	cohort_SR	0.5425	Attenuated	NTRK2 / TrkB signalling
+15	GSE79768	RA-biased	6	7	-0.1297	0.0339	0.1297	-0.0339	0.1297	cohort_SR	-0.261	Reversed	NTRK2 / TrkB signalling
+15	GSE115574	RA-biased	15	13	-0.1241	0.0173	0.1241	-0.0173	0.1241	cohort_SR	-0.1394	Attenuated	NTRK2 / TrkB signalling
+16	GSE128188	RA-biased	5	5	-0.2031	-0.1469	0.2031	0.1469	0.2031	cohort_SR	0.723	Preserved	Keratan sulfate biosynt…
+16	GSE79768	RA-biased	6	7	-0.0753	-0.0239	0.0753	0.0239	0.0753	cohort_SR	0.3175	Attenuated	Keratan sulfate biosynt…
+16	GSE115574	RA-biased	15	13	-0.0331	0.0146	0.0331	-0.0146	0.0331	cohort_SR	-0.4419	Attenuated	Keratan sulfate biosynt…

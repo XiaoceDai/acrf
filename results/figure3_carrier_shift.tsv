@@ -1,0 +1,11 @@
+program_id	program_label	program_order	baseline_direction	healthy_dominant_CT	healthy_dominant_attribution_strength	healthy_top_expressor_CT	healthy_top_expressor_score	AF_major_carrier_CT	AF_major_carrier_dScore	AF_major_carrier_q_perm	carrier_shift_flag_vs_top_expressor	carrier_shift_flag_vs_dominant
+HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	OXPHOS	1	1	endothelial_or_vascular	1.302	atrialCM	0.3153573634568285	Unresolved				
+REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	Respiratory ETC	2	1	endothelial_or_vascular	1.675	atrialCM	0.29181761786600496	Unresolved				
+REACTOME__REACTOME_AEROBIC_RESPIRATION_AND_RESPIRATORY_ELECTRON_TRANSPORT	Aerobic Resp. & ETC	3	1	endothelial_or_vascular	1.479	atrialCM	0.30405217677944946	Unresolved				
+REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	Mito. Translation	4	1	atrialCM	1.286	atrialCM	0.25772622414962115	Unresolved				
+REACTOME__REACTOME_TRANSLATION	Cytoplasmic Translation	5	1	endothelial_or_vascular	0.7479	atrialCM	0.2519169043066984	Unresolved				
+REACTOME__REACTOME_RUNX2_REGULATES_BONE_DEVELOPMENT	RUNX2 Bone Dev.	6	-1	unresolved	0.0	fibroblast	0.3049080692691137	Unresolved				
+REACTOME__REACTOME_DISEASES_ASSOCIATED_WITH_GLYCOSAMINOGLYCAN_METABOLISM	ECM proteoglycans	7	-1	immune	0.6922	fibroblast	0.29607740430411184	Unresolved				
+REACTOME__REACTOME_HS_GAG_BIOSYNTHESIS	HS-GAG Biosynthesis	8	-1	endothelial_or_vascular	1.055	atrialCM	0.18899832389395216	Unresolved				
+REACTOME__REACTOME_SIGNALING_BY_BMP	BMP Signalling	9	-1	atrialCM	1.73	atrialCM	0.15942908051421584	Unresolved				
+REACTOME__REACTOME_HEPARAN_SULFATE_HEPARIN_HS_GAG_METABOLISM	HS-GAG Metabolism	10	-1	fibroblast	0.7922	fibroblast	0.21086282832147243	Unresolved				

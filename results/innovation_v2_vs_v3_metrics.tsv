@@ -1,0 +1,2 @@
+panel_size_v2	panel_size_v3	overlap_n	overlap_fraction_vs_v2	overlap_fraction_vs_v3	la_count_v2	ra_count_v2	la_count_v3	ra_count_v3	mean_pairwise_jaccard_v2	mean_pairwise_jaccard_v3
+30	30	25	0.8333	0.8333	24	6	22	8	0.0213	0.0217

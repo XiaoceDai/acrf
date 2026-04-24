@@ -1,0 +1,153 @@
+file: /home/bio/Project_P02/global_raw.h5ad  (5.07 GB)
+
+======== HDF5 top-level layout ========
+  /X            group
+  /obs          group
+  /obsm         group
+  /uns          group
+  /var          group
+  root attrs: {}
+  /X (sparse): keys=['data', 'indices', 'indptr'], attrs={'encoding-type': 'csr_matrix', 'encoding-version': '0.1.0', 'shape': array([486134,  33538])}
+    /X/data: shape=(612809665,) dtype=float32
+    /X/indices: shape=(612809665,) dtype=int32
+    /X/indptr: shape=(486135,) dtype=int32
+  /obsm keys: ['X_pca', 'X_umap']
+  /uns keys: ['cell_type_colors']
+
+======== anndata backed='r' ========
+  shape: n_obs=486,134  n_vars=33,538
+  X file-backed: type=_CSRDataset
+
+======== obs.columns (name | dtype | n_unique | sample values) ========
+  - NRP                            category        nunique=2  sample=['No', 'Yes']
+  - age_group                      category        nunique=7  sample=['50-55', '40-45', '45-50', '55-60', '60-65', '70-75']
+  - cell_source                    category        nunique=4  sample=['Harvard-Nuclei', 'Sanger-Nuclei', 'Sanger-Cells', 'Sanger-CD45']
+  - cell_type                      category        nunique=13  sample=['Smooth_muscle_cells', 'Ventricular_Cardiomyocyte', 'Pericytes', 'NotAssigned', 'Endothelial', 'Fibroblast']
+  - donor                          category        nunique=14  sample=['H5', 'H6', 'H3', 'H2', 'H7', 'H4']
+  - gender                         category        nunique=2  sample=['Female', 'Male']
+  - n_counts                       float32         nunique=13810  sample=[np.float32(688.0), np.float32(3216.0), np.float32(3182.0), np.float32(1202.0), np.float32(3804.0), np.float32(3529.0)]
+  - n_genes                        int64           nunique=4690  sample=[np.int64(480), np.int64(1365), np.int64(1521), np.int64(726), np.int64(1584), np.int64(1796)]
+  - percent_mito                   float32         nunique=162754  sample=[np.float32(0.0043604653), np.float32(0.0009328358), np.float32(0.0009428033), np.float32(0.00083194673), np.float32(0.00026288116), np.float32(0.0017001984)]
+  - percent_ribo                   float32         nunique=149397  sample=[np.float32(0.0029069767), np.float32(0.0012437811), np.float32(0.0021998743), np.float32(0.0), np.float32(0.0013144059), np.float32(0.0011334656)]
+  - region                         category        nunique=6  sample=['AX', 'LA', 'LV', 'RA', 'RV', 'SP']
+  - sample                         category        nunique=147  sample=['H0015_apex', 'H0015_LA_new', 'H0015_LV', 'H0015_RA', 'H0015_RV', 'H0015_septum']
+  - scrublet_score                 float64         nunique=128  sample=[np.float64(0.035916824196597356), np.float64(0.14712153518123666), np.float64(0.18575063613231552), np.float64(0.10806174957118353), np.float64(0.13934426229508196), np.float64(0.10299003322259136)]
+  - source                         category        nunique=3  sample=['Nuclei', 'Cells', 'CD45+']
+  - type                           category        nunique=2  sample=['DBD', 'DCD']
+  - version                        category        nunique=2  sample=['V3', 'V2']
+  - cell_states                    category        nunique=67  sample=['SMC1_basic', 'vCM1', 'PC2_atria', 'vCM2', 'PC4_CMC-like', 'nan']
+  - Used                           category        nunique=2  sample=['Yes', 'No']
+
+======== var.columns ========
+  - gene_ids-Harvard-Nuclei        object         
+  - feature_types-Harvard-Nuclei   category       
+  - gene_ids-Sanger-Nuclei         object         
+  - feature_types-Sanger-Nuclei    int8           
+  - gene_ids-Sanger-Cells          object         
+  - feature_types-Sanger-Cells     int8           
+  - gene_ids-Sanger-CD45           object         
+  - feature_types-Sanger-CD45      int8           
+  var.index (first 10): ['MIR1302-2HG', 'FAM138A', 'OR4F5', 'AL627309.1', 'AL627309.3', 'AL627309.2', 'AL627309.4', 'AL732372.1', 'OR4F29', 'AC114498.1']
+  n_vars (genes/features): 33,538
+
+======== obsm / varm / uns / layers keys ========
+  obsm:   ['X_pca', 'X_umap']
+  varm:   []
+  layers: []
+  uns:    ['cell_type_colors']
+
+======== value_counts on candidate metadata columns ========
+  candidate columns: ['cell_type', 'donor', 'region', 'sample']
+
+  -- cell_type  (nunique=13) --
+     'Ventricular_Cardiomyocyte'                  125289
+     'Endothelial'                                100579
+     'Pericytes'                                   77856
+     'Fibroblast'                                  59341
+     'NotAssigned'                                 33998
+     'Atrial_Cardiomyocyte'                        23483
+     'Myeloid'                                     23028
+     'Lymphoid'                                    17217
+     'Smooth_muscle_cells'                         16242
+     'Neuronal'                                     3961
+     'Adipocytes'                                   3799
+     'Mesothelial'                                   718
+     'doublets'                                      623
+
+  -- donor  (nunique=14) --
+     'D6'                                          79650
+     'D11'                                         48930
+     'D2'                                          43143
+     'H5'                                          38401
+     'D7'                                          36134
+     'H3'                                          32458
+     'H7'                                          32336
+     'D4'                                          28898
+     'D5'                                          28799
+     'D3'                                          27022
+     'H6'                                          26934
+     'H4'                                          25816
+     'H2'                                          22216
+     'D1'                                          15397
+
+  -- region  (nunique=6) --
+     'LV'                                         107261
+     'AX'                                          98251
+     'RV'                                          84519
+     'SP'                                          81866
+     'LA'                                          72734
+     'RA'                                          41503
+
+  -- sample  (nunique=147) --
+     (top 20 of 147)
+     'HCAHeart7844001'                             12525
+     'H0020_LV'                                    11874
+     'HCAHeart8102862'                             11638
+     'HCAHeart7844004'                             10908
+     'H0025_LV'                                    10522
+     'HCAHeart8102861'                             10011
+     'H0035_RV'                                     9349
+     'H0015_LV'                                     9319
+     'H0015_apex'                                   9035
+     'H0015_septum'                                 8944
+     'H0037_LV'                                     7638
+     'H0035_LV'                                     7264
+     'H0015_RV'                                     6967
+     'H0035_LA'                                     6883
+     'H0026_LV_V3'                                  6636
+     'HCAHeart7843999'                              6270
+     'HCAHeart7905328'                              6150
+     'H0037_septum'                                 5813
+     'H0025_LA'                                     5754
+     'H0025_RV'                                     5666
+
+======== region × cell_type cross-tab (if identifiable) ========
+  picked:  region='region'  cell_type='cell_type'  donor='donor'  modality=None
+
+  crosstab region × cell_type (shape=(6, 13)):
+cell_type  Adipocytes  Atrial_Cardiomyocyte  Endothelial  Fibroblast  Lymphoid  Mesothelial  Myeloid  Neuronal  NotAssigned  Pericytes  Smooth_muscle_cells  Ventricular_Cardiomyocyte  doublets
+region                                                                                                                                                                                          
+AX                876                     0        27633       10370      3361            6     4888       431         6418      16730                 3462                      23991        85
+LA               1549                 14772        14498       10917      3622          431     5162      1072         3971      13195                 3413                          0       132
+LV                160                     0        17911       10315      2410           30     3296       728         7920      19501                 3139                      41699       152
+RA                662                  8711         8258       10389      2773          228     2709       829         2516       2787                 1576                          0        65
+RV                406                     0        14909        9690      2291           20     3100       473         6679      13552                 2361                      30915       123
+SP                146                     0        17370        7660      2760            3     3873       428         6494      12091                 2291                      28684        66
+
+  crosstab donor × region (shape=(14, 6)):
+region     AX     LA     LV    RA     RV     SP
+donor                                          
+D1       3220   1067   7690     0   3420      0
+D2       8909   8501   7490  4712   6450   7081
+D3       5031   3503   7605  6438   1970   2475
+D4       5354   5116   4331  3763   5493   4841
+D5       4371   5052   6415  5154   4259   3548
+D6      19610  17611  12491  4599  13192  12147
+D7       7074   5399   4542  5110   8427   5582
+D11     18529   3569   3444   493   7437  15458
+H2       3261   3143   6636  1111   5578   2487
+H3       2744   5754  10522  2246   5666   5526
+H4       4185   2413   7638  2138   3629   5813
+H5       9035   2188   9319  1948   6967   8944
+H6       3441   2535  11874  2300   2682   4102
+H7       3487   6883   7264  1491   9349   3862

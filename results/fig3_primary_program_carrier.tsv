@@ -1,0 +1,31 @@
+program_id	program_label	program_order	family_id	baseline_direction	AF_major_carrier_CT	AF_major_carrier_dScore	AF_major_carrier_q_perm
+HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	OXPHOS	1	7	1	Unresolved		
+REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	ETC	2	7	1	Unresolved		
+REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	Mito translation	3	6	1	Unresolved		
+REACTOME__REACTOME_TRANSLATION	Translation (cyto)	4	1	1	Unresolved		
+REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	mitochondrial protein degradat	5	4	1	Unresolved		
+REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	complex i biogenesis	6	8	1	Unresolved		
+REACTOME__REACTOME_CITRIC_ACID_CYCLE_TCA_CYCLE	citric acid cycle tca cycle	7	7	1	Unresolved		
+REACTOME__REACTOME_PROTEIN_LOCALIZATION	protein localization	8	4	1	Unresolved		
+REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	mitochondrial protein import	9	6	1	Unresolved		
+HALLMARK__HALLMARK_ADIPOGENESIS	adipogenesis	10	3	1	Unresolved		
+REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_ELONGATION	eukaryotic translation elongat	11	1	1	Unresolved		
+REACTOME__REACTOME_RIBOSOME_ASSOCIATED_QUALITY_CONTROL	ribosome associated quality co	12	1	1	Unresolved		
+REACTOME__REACTOME_MITOCHONDRIAL_FATTY_ACID_BETA_OXIDATION	mitochondrial fatty acid beta 	13	4	1	Unresolved		
+REACTOME__REACTOME_BRANCHED_CHAIN_AMINO_ACID_CATABOLISM	branched chain amino acid cata	14	4	1	Unresolved		
+HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	fatty acid metabolism	15	3	1	Unresolved		
+REACTOME__REACTOME_TRIGLYCERIDE_METABOLISM	triglyceride metabolism	16	3	1	Unresolved		
+REACTOME__REACTOME_HEPARAN_SULFATE_HEPARIN_HS_GAG_METABOLISM	HS-GAG metabolism	17	9	-1	Unresolved		
+REACTOME__REACTOME_SARS_COV_2_MODULATES_HOST_TRANSLATION_MACHINERY	sars cov 2 modulates host tran	18	1	1	Unresolved		
+REACTOME__REACTOME_COMPLEX_IV_ASSEMBLY	complex iv assembly	19	7	1	Unresolved		
+REACTOME__REACTOME_SIGNALING_BY_BMP	BMP signalling	20	11	-1	Unresolved		
+REACTOME__REACTOME_COMPLEX_III_ASSEMBLY	complex iii assembly	21	7	1	Unresolved		
+REACTOME__REACTOME_TRNA_AMINOACYLATION	trna aminoacylation	22	5	1	Unresolved		
+REACTOME__REACTOME_MITOCHONDRIAL_CALCIUM_ION_TRANSPORT	mitochondrial calcium ion tran	23	2	1	Unresolved		
+HALLMARK__HALLMARK_PEROXISOME	peroxisome	24	3	1	Unresolved		
+REACTOME__REACTOME_DISEASES_ASSOCIATED_WITH_GLYCOSAMINOGLYCAN_METABOLISM	GAG metabolism	25	10	-1	Unresolved		
+REACTOME__REACTOME_RUNX2_REGULATES_BONE_DEVELOPMENT	RUNX2 / bone dev	26	9	-1	Unresolved		
+HALLMARK__HALLMARK_TGF_BETA_SIGNALING	tgf beta signaling	27	10	-1	Unresolved		
+REACTOME__REACTOME_CLASS_B_2_SECRETIN_FAMILY_RECEPTORS	class b 2 secretin family rece	28	9	-1	Unresolved		
+REACTOME__REACTOME_PEROXISOMAL_PROTEIN_IMPORT	peroxisomal protein import	29	4	1	Unresolved		
+REACTOME__REACTOME_HOST_INTERACTIONS_OF_HIV_FACTORS	host interactions of hiv facto	30	3	1	Unresolved		

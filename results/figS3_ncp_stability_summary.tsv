@@ -1,0 +1,11 @@
+program_order	program_id	program	short	direction	axis	n_LE_total	n_LE_in_stab	LE_mean_stability_runs	LE_frac_stable_in_all_runs	program_consistent_runs
+1	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	Oxidative Phosphorylation	Oxidative Phosphorylation	LA-biased		120	120	8.0	1.0	8
+2	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	Respiratory Electron Transport	Respiratory Electron Tran…	LA-biased		104	104	8.0	1.0	8
+3	REACTOME__REACTOME_AEROBIC_RESPIRATION_AND_RESPIRATORY_ELECTRON_TRANSPORT	Aerobic Respiration and Respiratory Electron Transport	Aerobic Respiration and R…	LA-biased		110	110	8.0	1.0	8
+4	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	Mitochondrial Translation	Mitochondrial Translation	LA-biased		56	56	8.0	1.0	8
+5	REACTOME__REACTOME_TRANSLATION	Translation	Translation	LA-biased		218	218	8.0	1.0	8
+6	REACTOME__REACTOME_HEPARAN_SULFATE_HEPARIN_HS_GAG_METABOLISM	Heparan Sulfate Heparin Hs Gag Metabolism	Heparan Sulfate Heparin H…	RA-biased		12	12	8.0	1.0	8
+7	REACTOME__REACTOME_SIGNALING_BY_BMP	Signaling by Bmp	Signaling by Bmp	RA-biased		6	6	8.0	1.0	8
+8	REACTOME__REACTOME_DISEASES_ASSOCIATED_WITH_GLYCOSAMINOGLYCAN_METABOLISM	Diseases Associated with Glycosaminoglycan Metabolism	Diseases Associated with …	RA-biased		14	14	8.0	1.0	8
+9	REACTOME__REACTOME_HS_GAG_BIOSYNTHESIS	Hs Gag Biosynthesis	Hs Gag Biosynthesis	RA-biased		9	9	8.0	1.0	8
+10	REACTOME__REACTOME_RUNX2_REGULATES_BONE_DEVELOPMENT	Runx2 Regulates Bone Development	Runx2 Regulates Bone Deve…	RA-biased		13	13	8.0	1.0	8

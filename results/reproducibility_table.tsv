@@ -1,0 +1,35 @@
+figure	script	input	output
+Fig 1A	scripts/fig1a_pca.py	bulk/Project_P01/qc/qc_pca.tsv	figures/fig1a_pca_la_vs_ra.pdf
+Fig 1B	scripts/fig1b_volcano_heatmap.py	bulk/Project_P01/normal_chamber_genes_full.tsv + bulk/logcpm_voom.tsv + bulk/sample_meta.tsv	figures/fig1b_volcano_heatmap.pdf
+Fig 1C	scripts/fig1c_bulk_programs.py	normal_chamber_programs.tsv	figures/fig1c_bulk_programs.pdf
+Fig 1D	scripts/fig1d_program_attribution.py	results/normal_chamber_program_attribution.tsv	figures/fig1d_program_attribution.pdf
+Fig 2A	scripts/fig2a_schematic.py	(schematic, no data input)	figures/fig2a_schematic.pdf
+Fig 2B	scripts/fig2b_rewiring_heatmap.py	Project_P1/program_scores_long.tsv	figures/fig2b_rewiring_heatmap.pdf
+Fig 2C	scripts/fig2c_rewiring_classes.py	results/af_chamber_rewiring_programs.tsv	figures/fig2c_rewiring_classes.pdf
+Fig 2D	scripts/fig2d_representative_dots.py	Project_P1/program_scores_long.tsv	figures/fig2d_representative_dots.pdf
+Fig 2E	scripts/fig2e_replication_lollipop.py	results/af_chamber_rewiring_consensus.tsv	figures/fig2e_replication_lollipop.pdf
+Fig 3A	scripts/fig3a_schematic.py	(schematic)	figures/fig3a_schematic.pdf
+Fig 3B	scripts/fig3b_delta_heatmap.py	results/af_la_program_celltype_delta.tsv	figures/fig3b_delta_heatmap.pdf
+Fig 3C	scripts/fig3c_carrier_shift.py	results/figure3_carrier_shift.tsv	figures/fig3c_carrier_shift.pdf
+Fig 3D	scripts/fig3d_representative_dots.py	results/af_la_program_celltype_delta.tsv	figures/fig3d_representative_dots.pdf
+Fig 3E	scripts/fig3e_anchor_genes.py	Project_P3/GSE255612/pseudobulk/<compartment>/expr.tsv	figures/fig3e_anchor_genes.pdf
+Fig 4A	scripts/fig4a_schematic.py	(schematic)	figures/fig4a_schematic.pdf
+Fig 4B	scripts/fig4b_duration_summary.py	Project_P4/GSE41177/results/duration_trend_laa_primary.tsv	figures/fig4b_duration_summary.pdf
+Fig 4C	scripts/fig4c_representative_scatter.py	Project_P4/GSE41177/program_scores.tsv + sample_metadata.tsv	figures/fig4c_representative_scatter.pdf
+Fig 4D	scripts/fig4d_laa_vs_lapv_sensitivity.py	Project_P4/GSE41177/results/duration_trend_*.tsv	figures/fig4d_laa_vs_lapv_sensitivity.pdf
+Fig 5A	scripts/fig5a_triangulation.py	results/figure3_program_panel.tsv + figure3_carrier_shift.tsv + Project_P4/GSE41177/results/duration_trend_laa_primary.tsv	figures/fig5a_triangulation.pdf + results/figure5_triangulation_table.tsv
+Fig 5B	scripts/fig5b_design_overview.py	(schematic, no data)	figures/fig5b_design_overview.pdf
+Fig 5C	scripts/fig5c_localization_inset.py	Project_P5/GSE261363/roi_scores.tsv	figures/fig5c_localization_inset.pdf
+Fig 5D	scripts/fig5d_dual_axis_mechanism.py	(schematic, no data)	figures/fig5d_dual_axis_mechanism.pdf
+Fig 6A	scripts/h2_meta_axis.R + scripts/fig6a_axis_forest.py	results/figure6_axis_composite_long.tsv (from h1_axis_composite.R)	figures/fig6a_axis_forest.pdf + results/figure6_meta_axis.tsv
+Fig 6B	scripts/h3_meta_program.R + scripts/fig6b_program_pooled.py	Project_P1/program_scores_long.tsv + figure3_program_panel.tsv	figures/fig6b_program_pooled.pdf + results/figure6_meta_program.tsv
+Fig 6C	scripts/h4_mr_coloc_anchors.R + h4b_mr_coloc_blood.R + scripts/fig6c_mr_plausibility.py	AF GWAS GCST90624411 (tabix HTTP) + eQTL Catalogue QTD000251/QTD000356 (tabix HTTP)	figures/fig6c_mr_plausibility.pdf + results/figure6_mr_anchors.tsv + figure6_mr_anchors_blood.tsv
+Fig 6D	scripts/fig6d_synthesis.py	(schematic, references Fig 6A/B/C narratively)	figures/fig6d_synthesis.pdf
+Graphical abstract	scripts/graphical_abstract.py	(schematic)	figures/graphical_abstract.pdf
+Fig S5	scripts/figS5_multiome_delta_heatmap.py	Project_P5/GSE238242/results/figure5_program_delta_main.tsv	figures/figS5_multiome_delta_heatmap.pdf
+Fig S6	scripts/f5b_program_singscore_mural.R + scripts/figS6_mural_sensitivity.py	Project_P5/GSE238242/pseudobulk/gse238242_pseudobulk_counts_supp_mural.rds	figures/figS6_mural_sensitivity.pdf
+Fig S7	scripts/figS7_loco_sensitivity.py	results/figure6_meta_axis_loco.tsv	figures/figS7_loco_sensitivity.pdf
+Fig S8	scripts/h5_falsification.R + h9_lopo_axis.R + scripts/figS8_falsification.py	Project_P1/program_scores_long.tsv + cohort expression matrices + MSigDB GMT files	figures/figS8_falsification.pdf + results/figure_s8a_size_matched.tsv + figure_s8b_axis_perm.tsv + figure_s8c_negative_controls.tsv + figure_s8d_lopo_axis.tsv
+Fig S9	scripts/h6_reduced_axis.R + scripts/figS9_reduced_axis.py	Project_P1/<cohort>/expr_symbol.tsv + sample_metadata.tsv + Project_P4/GSE41177/expr_symbol_LAA.tsv + figure5_program_sets.tsv	figures/figS9_reduced_axis.pdf + results/figure_s9_*.tsv
+Fig S10	scripts/h7_methodology_audit.R + scripts/figS10_methodology_audit.py	Project_P1/<cohort>/expr_symbol.tsv + bulk/logcpm_voom.tsv	figures/figS10_methodology_audit.pdf + results/methodology_audit_program.tsv + methodology_audit_axis_g.tsv
+Fig S11	scripts/h8_methodology_p5.R + scripts/figS11_method_p5.py	Project_P1/program_scores_long.tsv + cohort expression matrices	figures/figS11_method_p5.pdf + results/method_p5_simulation.tsv + method_p5_bootstrap_axis.tsv + method_p5_classical_vs_framework.tsv

@@ -1,0 +1,50 @@
+# --- Python / build ---
+.venv/
+venv/
+.env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+pip-wheel-metadata/
+
+# --- IDE ---
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# LaTeX build noise under figures/
+figures/*.aux
+figures/*.log
+
+# --- Large local / raw data (do not push to GitHub) ---
+global_raw.h5ad
+Project_P1/
+Project_P2/
+Project_P3/
+Project_P4/
+Project_P5/
+Project_P6/
+
+# Raw bulk mirrors (restore from GEO per FIGURE*_WORKFLOW.md)
+bulk/
+
+# LDSC third-party clone (large test fixtures); install separately if needed
+tools/ldsc/
+
+# --- Downloaded QTL / GWAS tabix caches at repo root ---
+/QTD*
+/GCST*
+*.tmp_*
+
+# --- Optional: uncomment for code-only mirror ---
+# results/
+# figures/
+# pseudobulk/
+
+# --- Local manuscript working trees ---
+manuscript_drafts/
+Manuscript_outputs/

@@ -1,0 +1,5 @@
+top_ct	n_paired	paired_donors
+atrial_cardiomyocyte	13	D11,D2,D3,D4,D5,D6,D7,H2,H3,H4,H5,H6,H7
+endothelial_or_vascular	12	D2,D3,D4,D5,D6,D7,H2,H3,H4,H5,H6,H7
+fibroblast	13	D11,D2,D3,D4,D5,D6,D7,H2,H3,H4,H5,H6,H7
+immune	12	D2,D3,D4,D5,D6,D7,H2,H3,H4,H5,H6,H7

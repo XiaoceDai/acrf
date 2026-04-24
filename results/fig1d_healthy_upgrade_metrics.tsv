@@ -1,0 +1,2 @@
+panel_size_v2	panel_size_v3	shared_n	v2_only_n	v3_only_n	overlap_fraction_vs_v2	overlap_fraction_vs_v3	la_count_v2	ra_count_v2	la_count_v3	ra_count_v3	ra_gain	mean_pairwise_jaccard_v2	mean_pairwise_jaccard_v3	jaccard_delta_v3_minus_v2	median_inclusion_freq_v2set	median_inclusion_freq_v3set	share_ge_0_8_v2set	share_ge_0_8_v3set	share_ge_0_5_v2set	share_ge_0_5_v3set
+30	30	25	5	5	0.833333	0.833333	24	6	22	8	2	0.021347	0.021744	0.000397	0.993750	1.000000	0.666667	0.700000	0.766667	0.833333

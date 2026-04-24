@@ -1,0 +1,17 @@
+family_id	direction	rho_primary	p_perm_primary	ci_lo_primary	ci_hi_primary	n_samples_primary	chronicity_class	sens_same_sign_n	sens_total_n	rho_gt1m_eq1	rho_ordinal	rho_lapv
+2	LA-biased	-0.5639	0.0590	-0.9220	0.1183	12	Strong_trend	3	4	-0.4285	-0.5423	0.1961
+9	RA-biased	-0.4203	0.1790	-0.8914	0.3162	12	Strong_trend	4	4	-0.4285	-0.2169	-0.1611
+3	LA-biased	0.3257	0.2981	-0.3728	0.8220	12	Weak_trend	4	4	0.4670	0.2712	0.1191
+7	LA-biased	-0.2977	0.3458	-0.8717	0.4194	12	Weak_trend	4	4	-0.2654	-0.0271	-0.1751
+8	LA-biased	0.2452	0.4472	-0.4256	0.7834	12	Weak_trend	3	4	0.1557	0.0813	-0.1261
+10	RA-biased	-0.2207	0.4830	-0.7936	0.4965	12	Weak_trend	4	4	-0.2595	-0.0542	-0.2382
+13	LA-biased	0.2347	0.4667	-0.5293	0.7956	12	Weak_trend	3	4	0.2580	0.0542	-0.0525
+15	RA-biased	-0.3853	0.2146	-0.7843	0.2842	12	Weak_trend	4	4	-0.2105	-0.0271	-0.1856
+1	LA-biased	0.1261	0.6930	-0.5349	0.6989	12	Stable	3	4	0.1379	0.0000	0.2802
+4	LA-biased	-0.0280	0.9338	-0.6847	0.7420	12	Stable	3	4	-0.0044	0.1898	-0.1821
+5	LA-biased	0.1226	0.7137	-0.4854	0.8071	12	Stable	1	4	-0.1067	-0.2169	-0.0841
+6	LA-biased	0.1121	0.7263	-0.4536	0.5643	12	Stable	1	4	-0.1512	-0.1356	-0.1891
+11	RA-biased	-0.1996	0.5374	-0.8175	0.5390	12	Stable	3	4	-0.4285	-0.1898	0.1436
+12	LA-biased	0.0280	0.9333	-0.6667	0.6264	12	Stable	2	4	-0.0104	-0.2712	0.5849
+14	LA-biased	0.1471	0.6522	-0.5740	0.7420	12	Stable	3	4	0.1601	-0.0271	0.5429
+16	RA-biased	0.0841	0.7938	-0.5914	0.6809	12	Stable	2	4	-0.0652	0.1627	-0.0315

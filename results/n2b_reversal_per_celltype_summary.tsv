@@ -1,0 +1,5 @@
+compartment	n_genes_evaluated	mean_delta_aligned	median_delta_aligned	frac_genes_aligned_pos	n_genes_ra2la	mean_delta_aligned_ra2la	frac_aligned_pos_ra2la	n_genes_la2ra	mean_delta_aligned_la2ra
+atrialCM	24	0.00938	0.0014	0.75	21	0.00649	0.714	3	0.02959
+fibroblast	24	0.04225	0.00694	0.75	21	0.04491	0.714	3	0.02368
+endothelial_or_vascular	24	0.00884	0.00156	0.625	21	0.00571	0.571	3	0.03081
+immune	24	0.02309	0.00271	0.667	21	0.02212	0.619	3	0.02988

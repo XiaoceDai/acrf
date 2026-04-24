@@ -1,0 +1,49 @@
+family_id	cohort	direction	n_AF	n_SR	delta_LA	delta_RA	delta_aCAI	asymmetry_index_LA	short
+1	GSE115574	LA-biased	13	15	0.0344	0.0626	-0.0282	0.355	Ribosome QC (RQC)
+1	GSE128188	LA-biased	5	5	0.0251	-0.0021	0.0272	0.921	Ribosome QC (RQC)
+1	GSE79768	LA-biased	7	6	0.0546	0.032	0.0225	0.63	Ribosome QC (RQC)
+2	GSE115574	LA-biased	13	15	0.028	0.0578	-0.0298	0.326	Mito Ca2+ transport
+2	GSE128188	LA-biased	5	5	0.0084	-0.0048	0.0133	0.637	Mito Ca2+ transport
+2	GSE79768	LA-biased	7	6	0.1478	0.0878	0.06	0.627	Mito Ca2+ transport
+3	GSE115574	LA-biased	13	15	0.0362	0.0266	0.0095	0.576	TG metabolism
+3	GSE128188	LA-biased	5	5	-0.0499	-0.0654	0.0155	0.433	TG metabolism
+3	GSE79768	LA-biased	7	6	0.1509	-0.0437	0.1946	0.775	TG metabolism
+4	GSE115574	LA-biased	13	15	0.0148	0.1006	-0.0858	0.128	BCAA catabolism
+4	GSE128188	LA-biased	5	5	0.0254	-0.0316	0.057	0.445	BCAA catabolism
+4	GSE79768	LA-biased	7	6	0.1786	0.0871	0.0915	0.672	BCAA catabolism
+5	GSE115574	LA-biased	13	15	0.0958	0.1262	-0.0304	0.432	tRNA aminoacylation
+5	GSE128188	LA-biased	5	5	0.0112	-0.0127	0.0239	0.467	tRNA aminoacylation
+5	GSE79768	LA-biased	7	6	0.0269	0.0338	-0.0069	0.443	tRNA aminoacylation
+6	GSE115574	LA-biased	13	15	0.0098	0.095	-0.0852	0.093	Mito protein import
+6	GSE128188	LA-biased	5	5	-0.0074	-0.0601	0.0527	0.11	Mito protein import
+6	GSE79768	LA-biased	7	6	0.1193	0.0931	0.0261	0.561	Mito protein import
+7	GSE115574	LA-biased	13	15	-0.0278	0.1116	-0.1394	0.199	TCA cycle
+7	GSE128188	LA-biased	5	5	-0.0131	-0.0745	0.0614	0.15	TCA cycle
+7	GSE79768	LA-biased	7	6	0.1767	0.1165	0.0602	0.603	TCA cycle
+8	GSE115574	LA-biased	13	15	-0.0436	0.0684	-0.112	0.389	Complex I biogenesis
+8	GSE128188	LA-biased	5	5	-0.0583	-0.1296	0.0713	0.31	Complex I biogenesis
+8	GSE79768	LA-biased	7	6	0.1113	0.1027	0.0086	0.52	Complex I biogenesis
+9	GSE115574	RA-biased	13	15	0.0446	-0.0243	0.0689	0.647	HS-GAG metabolism
+9	GSE128188	RA-biased	5	5	-0.0098	-0.0331	0.0233	0.228	HS-GAG metabolism
+9	GSE79768	RA-biased	7	6	0.0594	-0.0041	0.0636	0.935	HS-GAG metabolism
+10	GSE115574	RA-biased	13	15	0.1439	0.0067	0.1372	0.956	TGF-beta signalling (Hal…
+10	GSE128188	RA-biased	5	5	0.108	0.1232	-0.0152	0.467	TGF-beta signalling (Hal…
+10	GSE79768	RA-biased	7	6	0.0896	-0.0684	0.158	0.567	TGF-beta signalling (Hal…
+11	GSE115574	RA-biased	13	15	0.0944	-0.0917	0.1861	0.507	BMP signalling
+11	GSE128188	RA-biased	5	5	0.0406	-0.0315	0.0722	0.563	BMP signalling
+11	GSE79768	RA-biased	7	6	0.0586	-0.0881	0.1467	0.4	BMP signalling
+12	GSE115574	LA-biased	13	15	0.0416	0.032	0.0096	0.565	rRNA processing
+12	GSE128188	LA-biased	5	5	0.0395	0.0353	0.0043	0.528	rRNA processing
+12	GSE79768	LA-biased	7	6	0.0081	-0.0086	0.0167	0.487	rRNA processing
+13	GSE115574	LA-biased	13	15	0.0181	0.0428	-0.0247	0.297	Amino-acid metabolism
+13	GSE128188	LA-biased	5	5	-0.009	-0.0457	0.0367	0.165	Amino-acid metabolism
+13	GSE79768	LA-biased	7	6	0.0358	0.0121	0.0237	0.748	Amino-acid metabolism
+14	GSE115574	LA-biased	13	15	0.0647	0.0649	-0.0002	0.499	Eukaryotic translatio…
+14	GSE128188	LA-biased	5	5	0.058	0.0378	0.0202	0.605	Eukaryotic translatio…
+14	GSE79768	LA-biased	7	6	0.0218	-0.0057	0.0275	0.794	Eukaryotic translatio…
+15	GSE115574	RA-biased	13	15	0.1042	-0.0371	0.1413	0.737	NTRK2 / TrkB signalli…
+15	GSE128188	RA-biased	5	5	0.0466	-0.0126	0.0592	0.787	NTRK2 / TrkB signalli…
+15	GSE79768	RA-biased	7	6	0.2344	0.0709	0.1635	0.768	NTRK2 / TrkB signalli…
+16	GSE115574	RA-biased	13	15	0.1199	0.0722	0.0477	0.624	Keratan sulfate biosy…
+16	GSE128188	RA-biased	5	5	0.2247	0.1684	0.0563	0.572	Keratan sulfate biosy…
+16	GSE79768	RA-biased	7	6	0.0169	-0.0344	0.0514	0.33	Keratan sulfate biosy…

@@ -1,0 +1,7 @@
+criterion	rule	observed	pass	overall_decision
+Panel continuity	overlap_fraction_vs_v2 >= 0.80	0.8333	True	upgrade-ready
+Direction balance (RA coverage)	ra_count_v3 >= 8	8.0	True	upgrade-ready
+Redundancy control	jaccard_increase <= 0.005	0.0004	True	upgrade-ready
+No cohort sign flip (all-program delta)	n_sign_flip == 0	0.0	True	upgrade-ready
+Transferability (delta stability)	mean_abs_delta_shift <= 0.02	0.0038	True	upgrade-ready
+Transferability (effect-size stability)	mean_abs_g_shift <= 0.20	0.0871	True	upgrade-ready

@@ -1,0 +1,12 @@
+anchor	family	role	source	tissue	n_clusters_tested	n_clusters_skipped_low_signal	n_clusters_eligible	lead_junction_id	lead_eqtl_p	lead_PP4	lead_PP3	PP4_max	PP3_at_max	n_overlap_at_max	reason
+PRELP	F10	matrix	sqtl_v3_extension	atrial_appendage	0	0	0								no sQTL rows for gene_id
+OMD	F10	matrix	sqtl_v3_extension	atrial_appendage	0	0	0								no sQTL rows for gene_id
+IDH2	Metabolic	metabolic	sqtl_v3_extension	atrial_appendage	0	0	0								no sQTL rows for gene_id
+NDUFA8	F8	metabolic	sqtl_v3_extension	atrial_appendage	0	0	0								no sQTL rows for gene_id
+NTRK2	F15	receptor	sqtl_v3_extension	atrial_appendage	0	0	0								no sQTL rows for gene_id
+NTF3	F15	ligand	sqtl_v3_extension	atrial_appendage	0	0	0								no sQTL rows for gene_id
+FRS2	F15	adaptor	sqtl_v3_extension	atrial_appendage	0	0	0								no sQTL rows for gene_id
+BMP10	F11	ligand	sqtl_v3_extension	atrial_appendage	0	0	0								no sQTL rows for gene_id
+SMAD9	F11	R-SMAD	sqtl_v3_extension	atrial_appendage	0	0	0								no sQTL rows for gene_id
+SMAD6	F11	i-SMAD	sqtl_v3_extension	atrial_appendage	0	0	0								no sQTL rows for gene_id
+PITX2	calibrator	calibrator	sqtl_v3_extension	atrial_appendage	0	0	0								no sQTL rows for gene_id

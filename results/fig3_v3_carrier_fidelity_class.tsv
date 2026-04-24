@@ -1,0 +1,17 @@
+family_id	direction	baseline_LA_carrier	n_sig_cts	sig_compartments	fidelity_class
+1	LA-biased	endothelial	0		Below_detection
+2	LA-biased	atrialCM	0		Below_detection
+3	LA-biased	adipocyte	0		Below_detection
+4	LA-biased	adipocyte	0		Below_detection
+5	LA-biased	lymphocyte	0		Below_detection
+6	LA-biased	Mixed/Unresolved	0		Below_detection
+7	LA-biased	Mixed/Unresolved	0		Below_detection
+8	LA-biased	endothelial	0		Below_detection
+9	RA-biased	fibroblast	0		Below_detection
+10	RA-biased	fibroblast	0		Below_detection
+11	RA-biased	endothelial	0		Below_detection
+12	LA-biased	Mixed/Unresolved	0		Below_detection
+13	LA-biased	endothelial	0		Below_detection
+14	LA-biased	endothelial	0		Below_detection
+16	RA-biased	fibroblast	2	atrialCM,fibroblast	Extension
+15	RA-biased	fibroblast	2	endothelial,lymphocyte	Relay

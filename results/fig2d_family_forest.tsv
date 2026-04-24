@@ -1,0 +1,65 @@
+family_id	direction	cohort	n_AF	n_SR	g	var_g	ci_lo	ci_hi	short
+1	LA-biased	GSE128188	5	5	0.3028	0.4046	-0.9439	1.5495	Ribosome QC (RQC)
+1	LA-biased	GSE79768	7	6	0.3299	0.3137	-0.7679	1.4277	Ribosome QC (RQC)
+1	LA-biased	GSE115574	13	15	-0.1276	0.1439	-0.8711	0.6159	Ribosome QC (RQC)
+1	LA-biased	POOLED	25	26	0.0724	0.0793	-0.4795	0.6244	Ribosome QC (RQC)
+2	LA-biased	GSE128188	5	5	0.0947	0.4004	-1.1456	1.335	Mito Ca2+ transport
+2	LA-biased	GSE79768	7	6	0.6395	0.3253	-0.4783	1.7573	Mito Ca2+ transport
+2	LA-biased	GSE115574	13	15	-0.1208	0.1439	-0.8642	0.6226	Mito Ca2+ transport
+2	LA-biased	POOLED	25	26	0.1089	0.0799	-0.4451	0.6628	Mito Ca2+ transport
+3	LA-biased	GSE128188	5	5	0.0708	0.4003	-1.1692	1.3108	TG metabolism
+3	LA-biased	GSE79768	7	6	0.7502	0.3312	-0.3778	1.8781	TG metabolism
+3	LA-biased	GSE115574	13	15	0.0564	0.1436	-0.6864	0.7993	TG metabolism
+3	LA-biased	POOLED	25	26	0.2271	0.0801	-0.3277	0.7819	TG metabolism
+4	LA-biased	GSE128188	5	5	0.4044	0.4082	-0.8478	1.6567	BCAA catabolism
+4	LA-biased	GSE79768	7	6	0.8343	0.3363	-0.3023	1.971	BCAA catabolism
+4	LA-biased	GSE115574	13	15	-0.37	0.146	-1.119	0.379	BCAA catabolism
+4	LA-biased	POOLED	25	26	0.0764	0.0815	-0.4831	0.6359	BCAA catabolism
+5	LA-biased	GSE128188	5	5	0.2001	0.402	-1.0426	1.4428	tRNA aminoacylation
+5	LA-biased	GSE79768	7	6	-0.1106	0.31	-1.2018	0.9807	tRNA aminoacylation
+5	LA-biased	GSE115574	13	15	-0.1323	0.1439	-0.8758	0.6112	tRNA aminoacylation
+5	LA-biased	POOLED	25	26	-0.0615	0.079	-0.6123	0.4893	tRNA aminoacylation
+6	LA-biased	GSE128188	5	5	0.3916	0.4077	-0.8599	1.643	Mito protein import
+6	LA-biased	GSE79768	7	6	0.1934	0.311	-0.8996	1.2864	Mito protein import
+6	LA-biased	GSE115574	13	15	-0.3545	0.1458	-1.1029	0.394	Mito protein import
+6	LA-biased	POOLED	25	26	-0.0678	0.0798	-0.6216	0.486	Mito protein import
+7	LA-biased	GSE128188	5	5	0.3305	0.4055	-0.9175	1.5786	TCA cycle
+7	LA-biased	GSE79768	7	6	0.4096	0.316	-0.6922	1.5113	TCA cycle
+7	LA-biased	GSE115574	13	15	-0.5332	0.1487	-1.2889	0.2225	TCA cycle
+7	LA-biased	POOLED	25	26	-0.1193	0.0809	-0.6769	0.4383	TCA cycle
+8	LA-biased	GSE128188	5	5	0.3531	0.4062	-0.8961	1.6023	Complex I biogenesis
+8	LA-biased	GSE79768	7	6	0.056	0.3096	-1.0346	1.1467	Complex I biogenesis
+8	LA-biased	GSE115574	13	15	-0.4863	0.1478	-1.2398	0.2673	Complex I biogenesis
+8	LA-biased	POOLED	25	26	-0.1798	0.0803	-0.7351	0.3755	Complex I biogenesis
+9	RA-biased	GSE128188	5	5	0.1465	0.4011	-1.0948	1.3877	HS-GAG metabolism
+9	RA-biased	GSE79768	7	6	1.037	0.3509	-0.124	2.1981	HS-GAG metabolism
+9	RA-biased	GSE115574	13	15	0.9344	0.1592	0.1524	1.7164	HS-GAG metabolism
+9	RA-biased	POOLED	25	26	0.7906	0.086	0.2157	1.3654	HS-GAG metabolism
+10	RA-biased	GSE128188	5	5	-0.0727	0.4003	-1.3127	1.1673	TGF-beta signalling (Hal…
+10	RA-biased	GSE79768	7	6	1.3306	0.3776	0.1262	2.5351	TGF-beta signalling (Hal…
+10	RA-biased	GSE115574	13	15	0.7114	0.1526	-0.0543	1.4771	TGF-beta signalling (Hal…
+10	RA-biased	POOLED	25	26	0.6841	0.0855	0.1111	1.2572	TGF-beta signalling (Hal…
+11	RA-biased	GSE128188	5	5	0.3526	0.4062	-0.8966	1.6018	BMP signalling
+11	RA-biased	GSE79768	7	6	0.6432	0.3254	-0.4749	1.7613	BMP signalling
+11	RA-biased	GSE115574	13	15	1.1628	0.1677	0.3601	1.9655	BMP signalling
+11	RA-biased	POOLED	25	26	0.8505	0.087	0.2724	1.4285	BMP signalling
+12	LA-biased	GSE128188	5	5	0.0567	0.4002	-1.1832	1.2965	rRNA processing
+12	LA-biased	GSE79768	7	6	0.2397	0.3117	-0.8546	1.3341	rRNA processing
+12	LA-biased	GSE115574	13	15	0.0607	0.1437	-0.6822	0.8035	rRNA processing
+12	LA-biased	POOLED	25	26	0.1053	0.079	-0.4455	0.656	rRNA processing
+13	LA-biased	GSE128188	5	5	0.4933	0.4122	-0.765	1.7516	Amino-acid metabolism
+13	LA-biased	GSE79768	7	6	0.3913	0.3154	-0.7095	1.4921	Amino-acid metabolism
+13	LA-biased	GSE115574	13	15	-0.161	0.1441	-0.9049	0.5829	Amino-acid metabolism
+13	LA-biased	POOLED	25	26	0.1053	0.0798	-0.4483	0.6589	Amino-acid metabolism
+14	LA-biased	GSE128188	5	5	0.1834	0.4017	-1.0589	1.4256	Eukaryotic translatio…
+14	LA-biased	GSE79768	7	6	0.3284	0.3137	-0.7693	1.4262	Eukaryotic translatio…
+14	LA-biased	GSE115574	13	15	-0.0012	0.1436	-0.7439	0.7415	Eukaryotic translatio…
+14	LA-biased	POOLED	25	26	0.1183	0.0791	-0.433	0.6695	Eukaryotic translatio…
+15	RA-biased	GSE128188	5	5	0.8761	0.4384	-0.4216	2.1738	NTRK2 / TrkB signalli…
+15	RA-biased	GSE79768	7	6	1.8537	0.4417	0.5511	3.1563	NTRK2 / TrkB signalli…
+15	RA-biased	GSE115574	13	15	1.1623	0.1677	0.3597	1.965	NTRK2 / TrkB signalli…
+15	RA-biased	POOLED	25	26	1.2491	0.0952	0.6445	1.8538	NTRK2 / TrkB signalli…
+16	RA-biased	GSE128188	5	5	0.2576	0.4033	-0.9871	1.5023	Keratan sulfate biosy…
+16	RA-biased	GSE79768	7	6	0.4284	0.3166	-0.6744	1.5312	Keratan sulfate biosy…
+16	RA-biased	GSE115574	13	15	0.2838	0.145	-0.4626	1.0302	Keratan sulfate biosy…
+16	RA-biased	POOLED	25	26	0.3151	0.0798	-0.2386	0.8687	Keratan sulfate biosy…
