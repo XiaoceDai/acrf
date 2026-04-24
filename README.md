@@ -38,6 +38,24 @@ Raw arrays and large matrices are **not** in this repository. Restore cohorts un
 - Run order and deliverables are frozen in the `FIGURE*_WORKFLOW.md` files.
 - Generated tables and figures: `results/`, `figures/` (included in git unless you uncomment those lines in `.gitignore` for a slimmer mirror).
 
+## Third-party tools
+
+- **LDSC**: the `tools/ldsc/` tree is **not** tracked (large upstream test data). Clone [bulik/ldsc](https://github.com/bulik/ldsc) into `tools/ldsc` if you run stratified LD-score steps. Reference panels under `ldsc_data/` may be empty placeholders; download per your `_ldsc_download.sh` / Zenodo mirrors.
+
+## GitHub
+
+Repository was initialised with `git`; large paths are listed in `.gitignore` (see below). To publish:
+
+```bash
+# on GitHub: create an empty repo (no README), then:
+git remote add origin https://github.com/<you>/<repo>.git
+git push -u origin main
+```
+
 ## License
 
-Specify a `LICENSE` file before public release (e.g. MIT for code; data remain under original GEO terms).
+See [`LICENSE`](LICENSE) (MIT for code in this repo). **GEO / eQTL Catalogue / GWAS** data stay under their original terms; this repository does not redistribute raw cohort matrices.
+
+### What is excluded from git (must be restored locally)
+
+`Project_P1`–`P6`, `bulk/`, `global_raw.h5ad`, root-level `QTD*` / `GCST*` caches, `tools/ldsc/`. Paths match your frozen workflows and `PACKAGING.md`.
