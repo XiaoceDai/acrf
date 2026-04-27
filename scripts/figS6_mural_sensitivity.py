@@ -2,7 +2,7 @@
 """
 Figure S6 — Mural (Pericyte + VSMC) compartment sensitivity for the 6
 frozen support programs.  Reported as supplementary; not part of the
-4-compartment main analysis (FIGURE5_WORKFLOW.md).
+4-compartment main analysis (locked multiome support panel).
 
 Reads:
   Project_P5/GSE238242/results/figure5_program_delta_mural.tsv

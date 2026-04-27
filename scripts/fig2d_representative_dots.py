@@ -2,7 +2,7 @@
 """
 Figure 2D - donor-level aCAI_rel dot plots for representative programs.
 
-Selection rule (FIGURE2_WORKFLOW.md §6.4):
+Selection rule (representative donor dots; script header):
   For each class in {Amplified, Attenuated, Reversed, Preserved}:
     candidates = programs whose consensus_class == class or class-weak
     - class != Preserved:  pick argmin of min(q_perm_128188, q_perm_79768)

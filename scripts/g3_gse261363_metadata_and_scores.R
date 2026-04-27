@@ -7,7 +7,7 @@
 #            - canonical fibroblast  (small explicit panel, NOT a new signature)
 #       3) Minimal QC: distributions of the two scores.
 #
-# Subordinate-only (FIGURE5_WORKFLOW.md §5D):
+# Subordinate spatial inset only (non-primary panel):
 #   - no causal claim
 #   - no new cell-type inference
 #   - no new program panel

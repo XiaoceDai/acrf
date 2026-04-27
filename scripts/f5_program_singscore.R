@@ -3,7 +3,7 @@
 # F5 — TMM + logCPM (per compartment) + singscore for the 6 frozen support
 #       programs from Figure 5 (3 STRUCTURAL + 3 METABOLIC).
 #
-# Frozen rules (FIGURE5_WORKFLOW.md):
+# Frozen rules (six-program support grid for multiome):
 #   - main compartments only: atrialCM, fibroblast, endothelial_or_vascular, immune
 #   - donor-level outputs (no cell-level)
 #   - this script: program score only, NO regulator / ATAC layer

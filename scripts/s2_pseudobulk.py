@@ -1,7 +1,7 @@
 """
 S2 — build donor x chamber x top_ct pseudobulk.
 
-Filters (per RULES.md + decision A):
+Filters (per locked pseudobulk spec + decision A):
   - source == "Nuclei"                     (Harvard-Nuclei + Sanger-Nuclei)
   - region in {LA, RA}
   - Used == "Yes"

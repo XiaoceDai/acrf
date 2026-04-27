@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 """
-Build three end-of-study summary tables for the supplement / Methods:
+Build three summary tables from existing `results/` and `scripts/` artifacts:
 
   P-2 Power table              results/power_table.tsv
   P-3 Multi-test correction    results/mtc_summary.tsv
   P-4 Reproducibility table    results/reproducibility_table.tsv
 
-All sources are existing files in `results/` and `scripts/`.  No
-re-analysis; this is documentation tabling only.
+No re-analysis; tabling only. `spec_source` points at implementing scripts.
 """
 from __future__ import annotations
 
@@ -53,14 +52,14 @@ def build_mtc_table() -> None:
          "per-cohort, per-program",
          "permutation; q_perm BH within cohort",
          "q_perm < 0.10 for class assignment",
-         "FIGURE2_WORKFLOW.md"),
+         "scripts/p4_acai_classify.py"),
         ("Fig 3 LA-arm Δsingscore",
          "permutation Δsingscore (AF − Ctrl)",
          "10 programs × 4 main compartments = 40 cells",
          "per program (across the 4 compartments)",
          "BH-FDR within program",
          "q_perm < 0.10 to assign AF major carrier (Unresolved otherwise)",
-         "FIGURE3_WORKFLOW.md"),
+         "scripts/r4_delta_classify.py"),
         ("Fig 4 LAA duration ρ",
          "Spearman ρ + Monte-Carlo permutation",
          "10 programs × 4 statistical conditions "
@@ -69,7 +68,7 @@ def build_mtc_table() -> None:
          "10 programs per family",
          "BH-FDR per region per condition",
          "q_perm < 0.10 for `sig_marker = .`; q_perm < 0.05 for `*`",
-         "FIGURE4_WORKFLOW.md"),
+         "scripts/d4_duration_correlate.py"),
         ("Fig 5A triangulation class",
          "rule-based composite (no p-value)",
          "10 programs",
@@ -82,8 +81,8 @@ def build_mtc_table() -> None:
          "6 programs × 4 main compartments = 24 cells",
          "n/a (gate is a pre-registered direction call)",
          "no FDR (effect-size + direction)",
-         "moderate / strong support tier (FIGURE5_WORKFLOW.md §5A)",
-         "FIGURE5_WORKFLOW.md"),
+         "moderate / strong support tier (locked support-gate)",
+         "scripts/figS5_multiome_delta_heatmap.py"),
         ("Fig 6A axis pooled meta",
          "Hedges' g (AF − SR) per cohort + REML / Hartung–Knapp pool",
          "2 axes (STRUCTURAL, METABOLIC); k = 3 cohorts",
@@ -91,14 +90,14 @@ def build_mtc_table() -> None:
          "(framework reports g, CI, I², τ², p_HK individually)",
          "Hartung–Knapp variance adjustment",
          "consistency-check framing; not a high-powered pooled discovery",
-         "FIGURE6_WORKFLOW.md §3"),
+         "scripts/h2_meta_axis.R"),
         ("Fig 6B per-program meta",
          "Hedges' g per program + REML / HK pool",
          "10 programs",
          "no MTC (descriptive consistency summary)",
          "Hartung–Knapp",
          "I² + p_HK reported per program",
-         "FIGURE6_WORKFLOW.md §5"),
+         "scripts/h3_meta_program.R"),
         ("Fig 6C cis-eQTL × AF GWAS coloc",
          "coloc.abf default priors (p1=p2=1e-4, p12=1e-5)",
          "4 anchors × 2 tissues (GTEx Atrial Appendage primary; "
@@ -107,7 +106,7 @@ def build_mtc_table() -> None:
          "verdict bins: supported / inconclusive / not supported",
          "PP4 ≥ 0.7 supported; PP4 ∈ [0.3, 0.7) inconclusive; "
          "PP4 < 0.3 or cis-eQTL gate p ≥ 5e-8 → not supported",
-         "FIGURE6_WORKFLOW.md §6.7"),
+         "scripts/fig6c_mr_plausibility.py"),
         ("Fig S8a size-matched perms",
          "size-matched random gene-set pooled g",
          "6 frozen support programs × 1000 perms each",
@@ -115,28 +114,28 @@ def build_mtc_table() -> None:
          "two-sided empirical p_emp",
          "p_emp reported; no multi-program adjustment "
          "(specificity check, not a discovery screen)",
-         "FIGURE_S8_FALSIFICATION_SPEC.md §1"),
+         "scripts/figS8_falsification.py (size-matched)"),
         ("Fig S8b axis-membership perm",
          "axis-membership permutation pooled |g|",
          "6 frozen IDs randomly partitioned 3+3 × 1000 perms",
          "per axis",
          "two-sided empirical p_emp",
          "p_emp reported per axis",
-         "FIGURE_S8_FALSIFICATION_SPEC.md §2"),
+         "scripts/figS8_falsification.py (axis-membership)"),
         ("Fig S8c negative controls",
          "pooled g + I² + LAA ρ for 6 pre-registered control pathways",
          "6 controls × 3 statistics",
          "n/a (descriptive comparison)",
          "no MTC; comparison is qualitative",
          "values reported alongside real frozen programs",
-         "FIGURE_S8_FALSIFICATION_SPEC.md §3"),
+         "scripts/figS8_falsification.py (negative controls)"),
         ("Fig S8d LOPO axis robustness",
          "pooled g for axis with each component program removed",
          "2 axes × 3 LOPO removals",
          "per axis",
          "no MTC (direction-preservation tag)",
          "label: robust / partially-sensitive / single-program-dependent",
-         "FIGURE_S8_FALSIFICATION_SPEC.md §4"),
+         "scripts/h9_lopo_axis.R + scripts/figS8_falsification.py"),
         ("Fig S10 methodology audit",
          "NCP self-recovery; donor-level direction; cross-method ρ; "
          "cross-method axis pooled g",
@@ -145,14 +144,14 @@ def build_mtc_table() -> None:
          "no MTC",
          "self-recovery + 8/8 direction stability + "
          "cross-method ρ ≥ 0.5",
-         "METHODOLOGY_AUDIT_REPORT.md"),
+         "scripts/h7_methodology_audit.R"),
         ("Fig S11 P5 method validity",
          "simulation; bootstrap; classical limma comparison",
          "various",
          "n/a",
          "no MTC; cross-validation framing",
-         "see METHOD_VALIDITY_P5_REPORT.md",
-         "METHOD_VALIDITY_P5_REPORT.md"),
+         "see scripts/h8_methodology_p5.R",
+         "scripts/h8_methodology_p5.R"),
     ]
     cols = ["figure", "statistic", "count", "family", "correction",
             "threshold_or_call", "spec_source"]

@@ -3,7 +3,7 @@
 # H2 — Per-cohort Hedges' g + REML/Hartung–Knapp random-effects meta on the
 #       2 axis composites computed by H1.
 #
-# Spec: FIGURE6_WORKFLOW.md §2, §3.
+# Axis-level REML / Hartung–Knapp pooling on cohort g estimates.
 #   - g = J(df) * (mean_AF - mean_SR) / s_pooled        (AF - SR convention)
 #   - Var(g) = (nAF+nSR)/(nAF*nSR) + g^2/(2*(nAF+nSR))
 #   - Pooled: rma(method="REML", test="knha")

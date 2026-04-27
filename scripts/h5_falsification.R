@@ -7,7 +7,7 @@
 #   B  axis-membership permutation                (1000)
 #   C  negative-control pathways                  (6 pre-registered)
 #
-# Spec: FIGURE_S8_FALSIFICATION_SPEC.md
+# Spec: locked falsification / specificity protocol (this pipeline + figS8_falsification.py)
 #
 # Component selectable via CLI:   Rscript scripts/h5_falsification.R [A|B|C|all]
 # Defaults: B then C then A   (cheapest first).

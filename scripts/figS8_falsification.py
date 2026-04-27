@@ -399,7 +399,7 @@ def main() -> None:
              fontsize=10, fontweight="bold", ha="left", va="top",
              transform=fig.transFigure)
     fig.text(0.5, 0.012,
-             "Pre-registered controls (FIGURE_S8_FALSIFICATION_SPEC.md):  "
+             "Pre-registered controls (falsification pipeline; this script):  "
              "A) size-matched random gene sets · B) axis-membership permutation · "
              "C) six negative-control pathways (axis-specificity vs unrelated) · "
              "D) leave-one-program-out (LOPO) — both axes remain direction-preserved.",

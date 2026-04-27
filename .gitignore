@@ -29,13 +29,13 @@ QTD*.cc.tsv.gz.tbi
 results/figure6_ldsc/
 ldsc_data/
 
-# Manuscript + submission materials (keep locally; not published on public GitHub)
-docs/manuscript/
-docs/submission/
+# Prose / specs / submission tree (optional local copy; not versioned here)
+docs/
+
+# Root manuscript symlinks / drafts (if kept locally)
 MANUSCRIPT_*.md
 manuscript_drafts
 SUBMISSION_PACK.md
-docs/specs/RESULTS_DETAILED_OUTLINE.md
 
 # Local project trees (optional: remove lines below if you want them versioned)
 Manuscript_outputs/

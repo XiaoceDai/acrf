@@ -2,7 +2,7 @@
 # ---------------------------------------------------------------------------
 # H9 — Leave-one-program-out (LOPO) robustness of the dual-axis meta.
 #
-# For STRUCTURAL and METABOLIC axes (FIGURE5_WORKFLOW.md §6 / §3):
+# For STRUCTURAL and METABOLIC axes (dual-axis support programs):
 #   For each axis, in turn remove one of its 3 frozen support programs and
 #   recompute donor-level axis composite + cohort-level Hedges' g + REML/
 #   Hartung-Knapp pool, exactly as in Fig 6A (h2_meta_axis.R).

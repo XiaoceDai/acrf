@@ -4,7 +4,7 @@
 #       chamber programs.  Inputs and method follow H2 §2/§3:
 #         g  = J(df) * (mean_AF - mean_SR) / s_pooled   (Hedges, AF - SR)
 #         RE pooled: rma(method="REML", test="knha")
-# Spec: FIGURE6_WORKFLOW.md §5 (program-level only).
+# Program-level pooled meta only (no axis mixing in this step).
 #
 # Outputs:
 #   results/figure6_meta_program.tsv

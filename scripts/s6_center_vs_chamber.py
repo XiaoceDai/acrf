@@ -1,5 +1,5 @@
 """
-S6 — center effect vs chamber effect, descriptive only (no DA test, per RULES.md).
+S6 — center effect vs chamber effect, descriptive only (no DA test).
 
 Per top-4 cell type: each donor contributes a paired (LA, RA) dot, connected
 by a line. Donors coloured by center: D-prefix = Sanger, H-prefix = Harvard.
@@ -162,7 +162,7 @@ def main() -> None:
              "Each dot = one donor × chamber. Lines connect paired LA/RA within a "
              "donor. Short dashes = center means. Slope = chamber effect; vertical "
              "offset between Sanger and Harvard = center effect. Descriptive only; "
-             "no statistical testing (RULES.md).",
+             "no statistical testing (descriptive-only panel).",
              fontsize=5.5, color="#444")
 
     out = FIG_DIR / "fig_center_vs_chamber.pdf"

@@ -22,7 +22,7 @@ the 10 panel programs (spec §3.5: LAA / LAPV families are separated; the
 three LAA analyses above are also BH'd independently so their decision
 boundaries do not leak into each other).
 
-Spec: FIGURE4_WORKFLOW.md §3.4 / §3.5.
+Spec: duration vs program score trends (LAA-centric primary + sensitivities).
 """
 from __future__ import annotations
 

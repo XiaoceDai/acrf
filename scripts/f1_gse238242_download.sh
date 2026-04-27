@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # F1 — Download GSE238242 (LAA snRNA + snATAC) supplementary files from NCBI GEO.
-# Spec: FIGURE5_WORKFLOW.md; data for multiome regulatory layer.
+# GSE238242 multiome download (RNA-side support / regulatory layer).
 #
 # Primary files (HTTPS):
 #   GSE238242_snAF.metadata.tsv.gz  (~73K)

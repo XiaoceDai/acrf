@@ -189,7 +189,7 @@ SECTIONS: list[tuple[str, list[str]]] = [
             "To localise the rewiring at single-cell resolution, we "
             "aggregated GSE255612 cells into donor × compartment "
             "pseudobulks across the four main compartments specified "
-            "in RULES.md (Fig. 3a). Per program × compartment "
+            "in the LA pseudobulk design (Fig. 3a). Per program × compartment "
             "Δsingscore (AF − Ctrl) showed modest absolute "
             "magnitudes that were broadly distributed across "
             "compartments rather than concentrated in any single "

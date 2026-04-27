@@ -14,7 +14,7 @@
 #     Normalise via edgeR::cpm(... log = TRUE, prior.count = 3) to match
 #     Fig 2's voom-like log-CPM handling, then rankGenes + singscore.
 #
-# Program panel (FIGURE3_WORKFLOW.md §3.1): union of
+# Program panel (frozen leading-edge unions): union of
 #     (strict consensus != NA) U (115574 strict in {Amp, Att, Rev}) U
 #     (any discovery trend_class != Preserved)
 # with selection_reason recorded per program.

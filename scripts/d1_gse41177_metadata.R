@@ -6,7 +6,7 @@
 # plus sample_title to produce the authoritative per-sample metadata for
 # Figure 4.  Title pattern is "{Sinus rhythm|AF}_{LAA|LAPV}_{donor_number}".
 #
-# Outputs (FIGURE4_WORKFLOW.md §5):
+# Outputs (duration-cohort sample table + program scores):
 #   Project_P4/GSE41177/sample_metadata.tsv
 #
 # Columns (locked schema):

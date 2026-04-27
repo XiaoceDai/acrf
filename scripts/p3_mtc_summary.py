@@ -331,7 +331,7 @@ ROWS: list[list[str]] = [
      "internal-consistency tests (no DE / association call)",
      "4 tests",
      "None (consistency check)",
-     "Pre-stated thresholds in METHODOLOGY_AUDIT_REPORT.md",
+     "Pre-stated thresholds in scripts/h7_methodology_audit.R",
      "All 4 tests pass; framework internally consistent."],
 
     ["Supp. Fig. S11", "a–c",
@@ -340,7 +340,7 @@ ROWS: list[list[str]] = [
      "external-style validations",
      "3 sub-panels",
      "None (validation, not discovery)",
-     "Pre-stated thresholds in METHOD_VALIDITY_P5_REPORT.md",
+     "Pre-stated thresholds in scripts/h8_methodology_p5.R",
      "Power ≥ 92 % at true effect = 0.3; bootstrap CIs ⊂ HK CIs; "
      "limma direction concordance 25 / 30 cells."],
 

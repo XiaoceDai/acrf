@@ -11,7 +11,7 @@
 # All three files are meant to be the ONLY handoff from metadata to r2
 # (r2 never re-reads the raw MetaData.txt.gz).
 #
-# Frozen decisions (FIGURE3_WORKFLOW.md §3.2 + prompt confirmations):
+# Frozen decisions (pseudobulk compartments + QC flags):
 #   Main 4 compartments: atrialCM / fibroblast / endothelial_or_vascular / immune
 #   Pericytes, Vascular_Smooth_Muscle: keep_for_main=FALSE, flagged_for_supp=TRUE
 #   Mast_Cells: immune, keep_for_main=TRUE

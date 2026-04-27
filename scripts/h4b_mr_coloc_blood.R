@@ -5,7 +5,7 @@
 #       n = 670).  Reported as a sensitivity column in fig 6C; verdicts
 #       remain those of the tissue-matched primary (atrial appendage).
 #
-# Spec note: FIGURE6_WORKFLOW.md §7 prefers eQTLGen for blood sensitivity;
+# Spec note: blood sensitivity prefers eQTLGen-style blood panel when available;
 # eQTLGen is not in the eQTL Catalogue tabix infrastructure, so GTEx whole
 # blood (also tabix-indexed and accessible) is used as the cross-tissue
 # sensitivity proxy.  This substitution is documented in the figure caption.

@@ -8,7 +8,7 @@ and renders a 7-column evidence matrix per anchor:
 
   Anchor | Axis | cis-eQTL primary | cis-eQTL blood | AF GWAS | coloc PP4 | Verdict
 
-Verdict bins (locked, FIGURE6_WORKFLOW.md §6.7):
+Verdict bins (locked colocalisation thresholds):
   supported     #1B7837 (green)
   inconclusive  #9E9E9E (grey)
   not supported #B2182B (red)

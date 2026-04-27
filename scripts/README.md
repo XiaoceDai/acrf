@@ -7,7 +7,7 @@
 
 ## v3 primary chain (sixteen families)
 
-Entry points align with `RESULTS_OUTLINE_V3.md` (repo root symlink) and `figures/*_v3*.pdf`.
+Primary v3 drivers target `figures/*_v3*.pdf` outputs under this repository layout.
 
 | Area | Scripts under `scripts/v3/` (representative) |
 |------|-----------------------------------------------|

@@ -4,7 +4,7 @@ Figure S5 — Δsingscore (AF − SR) heatmap on GSE238242 LAA snRNA pseudobulks
 
 6 frozen support programs × 4 main compartments (atrialCM, fibroblast,
 endothelial_or_vascular, immune).  Honest negative finding: the
-pre-registered support cells (locked in FIGURE5_WORKFLOW.md) are
+pre-registered support cells (locked program × compartment grid) are
 **marked**, and none reaches "moderate / strong" direction support.
 This panel is therefore a **Supplementary** sanity table, NOT a main
 mechanism figure.
@@ -185,7 +185,7 @@ def main() -> None:
     )
     fig.text(0.5, 0.025,
              "AF n=3, SR n=4 (LAA, valvular surgery cohort).  "
-             "By the locked support-gate rule (FIGURE5_WORKFLOW.md), no expected "
+             "By the locked support-gate rule (this script), no expected "
              "cell reaches moderate/strong support;\nthe multiome regulatory "
              "layer is therefore not pursued in the main figure.",
              ha="center", va="bottom", fontsize=5.0, color="#444444",

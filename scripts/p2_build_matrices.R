@@ -13,7 +13,7 @@
 #
 #   Project_P1/<cohort>/qc_pca.pdf
 #
-# Rules locked by FIGURE2_WORKFLOW.md:
+# Rules locked for paired-chamber aCAI / aCAI_rel construction:
 #   * GSE128188  edgeR::filterByExpr + voom -> logCPM
 #   * GSE79768   affy::ReadAffy + rma       -> log2
 #   * GSE115574  affy::ReadAffy + rma       -> log2

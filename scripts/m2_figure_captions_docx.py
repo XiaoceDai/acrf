@@ -127,7 +127,7 @@ MAIN_FIGURES: list[tuple[str, list[tuple[str, str]], str | None]] = [
         [
             ("a", "Pseudobulk schematic. GSE255612 cells were mapped to "
              "four main compartments (atrialCM, fibroblast, "
-             "endothelial_or_vascular, immune; RULES.md) and aggregated by "
+             "endothelial_or_vascular, immune; locked cell-type buckets) and aggregated by "
              "donor × compartment."),
             ("b", "AF-associated LA-arm Δsingscore is modest in absolute "
              "magnitude and distributed across compartments (per program × "
@@ -314,7 +314,7 @@ SUPP_FIGURES: list[tuple[str, str]] = [
         "Supplementary Figure S5 | Multiome RNA-side support gate (negative)",
         "GSE238242 LAA snRNA pseudobulk Δsingscore (AF − SR) on the six "
         "frozen support programs × four main compartments. The "
-        "pre-registered support gate (FIGURE5_WORKFLOW.md §5A) is not met: "
+        "locked multiome support-gate rule is not met: "
         "no expected (program × compartment) cell reaches moderate or "
         "strong support, and the HS-GAG programs even trend in the "
         "opposite direction (Δscore = −0.03 to −0.04). Multiome "
@@ -337,7 +337,8 @@ SUPP_FIGURES: list[tuple[str, str]] = [
     (
         "Supplementary Figure S8 | Specificity and falsification supplement",
         "Four-component specificity supplement "
-        "(FIGURE_S8_FALSIFICATION_SPEC.md). a Size-matched random "
+        "(locked falsification protocol; scripts/figS8_falsification.py). "
+        "a Size-matched random "
         "gene-set permutations (1,000 per program; ECM proteoglycans "
         "empirical p = 0.10). b Axis-membership permutation of the six "
         "frozen support programs (1,000 partitions; |g_STRUCT| empirical "
@@ -364,7 +365,7 @@ SUPP_FIGURES: list[tuple[str, str]] = [
     ),
     (
         "Supplementary Figure S10 | Methodology audit",
-        "Internal-consistency tests (METHODOLOGY_AUDIT_REPORT.md). a NCP "
+        "Internal-consistency tests (scripts/h7_methodology_audit.R). a NCP "
         "self-recovery (mean aCAIrel ≈ 1 for 10/10 programs in the "
         "healthy bulk reference). b Donor-level direction stability (8/8 "
         "healthy donors with aCAI > 0 for every program). c singscore vs "
@@ -374,7 +375,7 @@ SUPP_FIGURES: list[tuple[str, str]] = [
     ),
     (
         "Supplementary Figure S11 | Method-validity supplement (P5)",
-        "External-style validations (METHOD_VALIDITY_P5_REPORT.md). a "
+        "External-style validations (scripts/h8_methodology_p5.R). a "
         "Simulation power (≥ 92% detection at a true effect of 0.3 in "
         "aCAIrel units, cohort-matched donor counts). b Cohort-donor "
         "bootstrap (B = 2,000) of the dual-axis pooled g; intervals are "

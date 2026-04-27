@@ -8,7 +8,7 @@
 #     --disable-threading; already installed for Fig 2)
 #   - collapse probesets -> gene symbols via max-IQR-per-symbol rule
 #
-# Outputs (FIGURE4_WORKFLOW.md §5):
+# Outputs (duration-cohort expression matrices):
 #   Project_P4/GSE41177/expr_symbol_LAA.tsv
 #   Project_P4/GSE41177/expr_symbol_LAPV.tsv
 #   Project_P4/GSE41177/qc_pca.pdf           (coloured by rhythm, shaped by tissue)

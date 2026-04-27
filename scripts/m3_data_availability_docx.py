@@ -111,24 +111,14 @@ def main() -> None:
     )
     add_body(
         doc,
-        "The repository organises analyses under the locked specification "
-        "documents. MANUSCRIPT_FRAMEWORK.md is the single source of truth "
-        "for the Chamber-aware Rewiring Framework, the aCAIrel formula, "
-        "the rewiring and triangulation classes, and the two "
-        "program-defined phenotypes (PRFS, MA-aCM). FIGURE1_WORKFLOW.md "
-        "through FIGURE6_WORKFLOW.md are the per-figure pre-registered "
-        "specifications (panel maps, colour conventions, forbidden items, "
-        "and gates). FIGURE_S8_FALSIFICATION_SPEC.md is the pre-registered "
-        "specificity / falsification supplement (negative-control "
-        "pathway list and leave-one-program-out rules). "
-        "SUPPLEMENTARY_INDEX.md links each main and supplementary figure "
-        "to its source script and to its results/*.tsv deliverables. "
-        "METHODOLOGY_AUDIT_REPORT.md and METHOD_VALIDITY_P5_REPORT.md "
-        "are the internal-consistency and external-style validation "
-        "reports that support Supplementary Fig. S10 and Supplementary "
-        "Fig. S11, respectively. ILLUSTRATOR_MUSTFIX.md lists the "
-        "post-matplotlib editorial polish to be applied in vector-editing "
-        "software; that step has no effect on numerical results.",
+        "Portable definitions and column contracts for the Chamber-aware "
+        "Rewiring Framework live in the installable Python package "
+        "(`import crf`, module `crf.schema`). Analytical decisions are "
+        "implemented in versioned scripts under `scripts/` (including "
+        "`scripts/v3/` for the NCP_v3 primary chain). Falsification and "
+        "robustness panels are driven by `scripts/figS8_falsification.py`, "
+        "`scripts/h9_lopo_axis.R`, `scripts/h7_methodology_audit.R`, and "
+        "`scripts/h8_methodology_p5.R` alongside their figure drivers.",
     )
     add_body(
         doc,

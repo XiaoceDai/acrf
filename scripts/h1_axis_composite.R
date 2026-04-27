@@ -9,7 +9,7 @@
 #   STRUCTURAL_axis_d = mean over S of aCAI_rel[d,p]
 #   METABOLIC_axis_d  = mean over M of aCAI_rel[d,p]
 #
-# Spec: FIGURE6_WORKFLOW.md §1, §4.  Equal weight, no cohort z-scoring.
+# Axis composite: equal weight, no cohort z-scoring.
 # Donor-level NA if fewer than 2/3 of the axis programs are present.
 #
 # Outputs:

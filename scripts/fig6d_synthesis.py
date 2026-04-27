@@ -12,7 +12,7 @@ Three-input → one-output synthesis of Figure 6:
 
 This panel reuses the colour and shape discipline of 6A / 6B / 6C; no new
 data is plotted.  The previous "exposome upstream framing" is moved to the
-Graphical Abstract / Discussion (FIGURE6_WORKFLOW.md revision log).
+Graphical Abstract / Discussion schematic (narrative companion to meta + MR panels).
 """
 from __future__ import annotations
 

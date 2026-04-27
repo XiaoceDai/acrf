@@ -1,9 +1,9 @@
 #!/usr/bin/env Rscript
 # ---------------------------------------------------------------------------
 # H4 — Genetic plausibility (cis-eQTL × AF GWAS coloc) for the four
-#       pre-registered anchors of FIGURE6_WORKFLOW.md §6.
+#       pre-registered cis-eQTL × GWAS anchors (small frozen set).
 #
-# Sources (locked, FIGURE6_WORKFLOW.md §7):
+# Sources (locked tissue priority for primary vs blood sensitivity):
 #   AF GWAS  : GCST90624411 (Miyazawa 2023 multi-ancestry, harmonised tabix)
 #   eQTL     : eQTL Catalogue dataset QTD000251
 #              (GTEx, heart_atrial_appendage, n=372, gene-level)

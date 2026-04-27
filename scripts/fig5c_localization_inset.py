@@ -2,7 +2,7 @@
 """
 Figure 5C — ROI-level localization of fibroblast-associated ECM signal.
 
-Subordinate panel (FIGURE5_WORKFLOW.md §5D):
+Subordinate spatial inset panel (non-primary):
   - LEFT  : ECM proteoglycans score in AA ROIs, x = area (border / distal),
             colored by rhythm (AF / SR), area effect only.
   - MIDDLE: fibroblast (canonical) vs ECM proteoglycans scatter (24 AA ROIs),

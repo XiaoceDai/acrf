@@ -2,7 +2,7 @@
 """
 R4 - Δsinglescore per (program, cell_type) with donor-level permutation.
 
-Spec: FIGURE3_WORKFLOW.md §3.3 - §3.7.
+Spec: LA pseudobulk Δsingscore carrier classification (this module).
 
 For GSE255612 (18 AF + 16 Ctrl donors), exact permutation requires
 C(34, 18) ≈ 2.3e9 enumerations — far above the PERM_EXACT_LIMIT = 20,000,
@@ -28,7 +28,7 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parent.parent
 
-# Locked constants (FIGURE3_WORKFLOW.md §3.5 / §3.7).
+# Locked constants (carrier / permutation gates).
 PERM_EXACT_LIMIT = 20_000
 N_MC_PERM        = 10_000
 MC_SEED          = 20_260_418

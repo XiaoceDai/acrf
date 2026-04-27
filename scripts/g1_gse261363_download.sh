@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # G1 — Download GSE261363 (NanoString GeoMx DSP, EAT + atrial appendage) supplementary files.
-# Spec: FIGURE5_WORKFLOW.md §Data sources; spatial inset for ECM proteoglycans × fibroblast.
+# GSE261363 spatial download (GeoMx ROI / inset cohort).
 #
 # Files (HTTPS):
 #   GSE261363_All_Data_WTA_1_7_22.xlsx  (~8.7M, normalized WTA matrix)

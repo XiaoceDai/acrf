@@ -2,7 +2,7 @@
 """
 R5 - 3C carrier shift table (three columns).
 
-Spec: FIGURE3_WORKFLOW.md §3.8.
+Spec: carrier-shift summary (paired with r4_delta_classify outputs).
 
 Column 1  healthy_dominant_CT         (Fig 1D signed-attribution argmax)
 Column 2  healthy_top_expressor_CT    (argmax over cell types of

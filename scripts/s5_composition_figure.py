@@ -1,7 +1,7 @@
 """
 S5 — Cell/Nature-style LA vs RA atrial composition figures (PDF).
 
-Purely descriptive (no DA testing, per RULES.md).
+Purely descriptive (no differential-abundance testing).
 Slice: source=="Nuclei" & Used=="Yes" & region in {LA, RA}   (matches DE).
 Excludes: doublets, NotAssigned, Ventricular_Cardiomyocyte.
 

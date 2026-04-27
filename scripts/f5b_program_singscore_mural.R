@@ -1,7 +1,7 @@
 #!/usr/bin/env Rscript
 # F5b — TMM/logCPM + singscore on the GSE238242 mural-supp pseudobulk for the
 #       6 frozen support programs.  Mural compartment (PC + SMC) is reported
-#       as a sensitivity layer (FIGURE5_WORKFLOW.md), not part of the main
+#       as a sensitivity layer (mural carve-out), not part of the main
 #       4-compartment analysis.
 #
 # Output:

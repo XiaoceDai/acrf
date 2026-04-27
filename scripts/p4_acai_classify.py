@@ -9,10 +9,10 @@ from P3, and produces:
   results/af_chamber_rewiring_consensus.tsv   consensus subset + 115574 rep
   results/figure2_source_data.tsv             long, one row per (cohort, donor, program)
 
-All statistics are computed on aCAI_rel (fraction-of-healthy), per
-FIGURE2_WORKFLOW.md §3.
+All statistics are computed on aCAI_rel (fraction-of-healthy), following
+the locked gates in this module.
 
-Permutation strategy (spec §3.3):
+Permutation strategy:
   * ≤ 20 000 combinations -> exact enumeration
   * else                  -> Monte Carlo, 10 000 draws, seed 20260418
 """
@@ -29,7 +29,7 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parent.parent
 
-# Locked thresholds (see FIGURE2_WORKFLOW.md §3.4/§3.5).
+# Locked thresholds (permutation q and effect-size floors).
 EPS = 0.30          # baseline support threshold on aCAI_rel
 DELTA = 0.30        # shift gate on |dCAI_rel|
 AMP_RATIO = 1.25    # aCAI_rel_AF / aCAI_rel_SR lower bound for Amplified

@@ -5,7 +5,7 @@
 # Input matrix is log-normalized per-cell expression (author-processed in
 # GEO, not raw counts).  For Figure 3 we only feed these pseudobulks into
 # singscore (rank-based), so the sample-level aggregator must be
-# rank-preserving within a sample.  Choice (FIGURE3_WORKFLOW.md §3.3):
+# rank-preserving within a sample.  Choice (pseudobulk normalisation note in header):
 #
 #   pseudobulk_{donor,ct}(gene) = mean over cells in (donor, ct) of the
 #                                 log-normalized expression

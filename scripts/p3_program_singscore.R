@@ -15,7 +15,7 @@
 # bias that plagues absolute singscore magnitudes (OXPHOS with 120 genes
 # has much smaller absolute aCAI than BMP Signalling with 6 genes).
 #
-# Spec: FIGURE2_WORKFLOW.md §3.1 / §3.1b / §3.2.
+# Spec: bulk program singscores for rewiring inputs.
 #
 # Inputs
 # ------
@@ -79,7 +79,7 @@ load_programs <- function() {
   df$le_genes <- lapply(df$le_genes, function(x) unique(trimws(x)))
   df$n_LE_total <- vapply(df$le_genes, length, integer(1))
 
-  # Short label map: hand-curated to match FIGURE2_WORKFLOW.md §5.
+  # Short label map: hand-curated for plot legends.
   short_label_map <- c(
     "HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION"                             = "OXPHOS",
     "REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT"                        = "Respiratory ETC",
