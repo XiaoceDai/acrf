@@ -8,11 +8,8 @@ Atrial **Chamber-aware Rewiring Framework (CRF)** analysis repository.
 
 | Path | Purpose |
 |------|---------|
-| **`docs/`** | Manuscript + specs + audit (**`docs/INDEX.md`**); **投稿清单** **`docs/submission/PLOS_CB_SUBMISSION_PACK.md`**（根目录 **`SUBMISSION_PACK.md`** symlink） |
-| `MANUSCRIPT_FRAMEWORK.md` | Symlink → **`docs/manuscript/`**; CRF terminology |
-| `MANUSCRIPT_METHODS.md` | Symlink → **`docs/manuscript/`**; Methods (v3 figures) |
+| **`docs/`** | Specs + audit (**`docs/INDEX.md`**); manuscript and submission materials are **local-only** (not in this public repo) |
 | `RESULTS_OUTLINE_V3.md` | Symlink → **`docs/specs/`**; Results ↔ `figures/*_v3*.pdf` |
-| `manuscript_drafts/` | Symlink → **`docs/manuscript/drafts/`** (Word + Markdown) |
 | `src/crf/` | Installable **acrf** method core (`import crf`) |
 | `scripts/` | Pipelines, legacy figures, helpers (`plot_style.py`) |
 | **`scripts/v3/`** | **NCP_v3** primary figure drivers |

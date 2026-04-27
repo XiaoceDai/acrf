@@ -1,7 +1,7 @@
 """
 Chamber-aware Rewiring Framework (CRF) — portable method core.
 
-Re-exports definitions aligned with `MANUSCRIPT_FRAMEWORK.md` and auditable
+Re-exports portable CRF definitions (see `crf.schema`) and auditable
 implementations in `scripts/fig2c_chamber_decomposition.py`, the v3
 integrative panels `scripts/v3/fig5b_v3_triangulation_heatmap.py` /
 `scripts/v3/fig5c_v3_cross_axis_consistency.py`, and the legacy ten-program

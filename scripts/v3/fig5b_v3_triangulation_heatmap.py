@@ -461,7 +461,7 @@ def render_pdf(df: pd.DataFrame) -> None:
              "Stage-grouped layout:  L0 HCA carrier  \u2192  L1 bulk  \u2192  L2 snRNA  \u2192  L3 duration  \u2192  Atlas",
              fontsize=6.8, color="#444444", style="italic")
 
-    # ---- Compact bottom caption (full legend lives in MANUSCRIPT_FIGURE_CAPTIONS) ----
+    # ---- Compact bottom caption (full legend in figure caption / local manuscript) ----
     fig.text(0.005, 0.022,
              "Stage-grouped layout: L0 HCA carrier  \u2192  L1 bulk  \u2192  L2 snRNA  \u2192  L3 duration  \u2192  Atlas.  "
              "Continuous cells: BrBG palette (white = 0; deep red = positive / LA-ward; deep blue = negative).  "

@@ -1,5 +1,5 @@
 """
-Aligned chamber asymmetry: CAI, aCAI, aCAI_rel (MANUSCRIPT_FRAMEWORK §2.2).
+Aligned chamber asymmetry: CAI, aCAI, aCAI_rel (see `crf.schema` and package docstring).
 """
 
 from __future__ import annotations
