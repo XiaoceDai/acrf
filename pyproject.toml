@@ -16,7 +16,8 @@ dependencies = []
 dev = ["pytest>=7.0"]
 
 [project.urls]
-Homepage = "https://example.invalid/acrf"
+Homepage = "https://github.com/XiaoceDai/acrf"
+Repository = "https://github.com/XiaoceDai/acrf"
 
 [tool.setuptools.packages.find]
 where = ["src"]
