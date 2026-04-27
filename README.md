@@ -2,6 +2,8 @@
 
 Atrial **Chamber-aware Rewiring Framework (CRF)** analysis repository.
 
+**GitHub:** [github.com/XiaoceDai/acrf](https://github.com/XiaoceDai/acrf)
+
 ## Repository layout
 
 | Path | Purpose |
