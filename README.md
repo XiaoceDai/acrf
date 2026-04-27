@@ -1,4 +1,4 @@
-# Project_P02
+# acrf
 
 Atrial **Chamber-aware Rewiring Framework (CRF)** analysis repository.
 
