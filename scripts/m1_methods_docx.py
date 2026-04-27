@@ -324,8 +324,8 @@ SECTIONS: list[tuple[str, list[str]]] = [
             "Knapp variance adjustment as the default, implemented in "
             "metafor 4.8.0. Multiple-testing correction families and "
             "thresholds are specified per figure in Supplementary "
-            "Table S2 (mtc_summary.tsv) and in the per-figure workflow "
-            "documents. Colocalisation analyses used coloc 5.2.3 with "
+            "Table S2 (mtc_summary.tsv) and in the header comments of each "
+            "figure script. Colocalisation analyses used coloc 5.2.3 with "
             "default priors (Fig. 6c). All software versions are listed "
             "in the Code Availability section.",
         ],

@@ -3,7 +3,8 @@
 Build three summary tables from existing `results/` and `scripts/` artifacts:
 
   P-2 Power table              results/power_table.tsv
-  P-3 Multi-test correction    results/mtc_summary.tsv
+  P-3 Multi-test correction    results/mtc_summary_pipeline.tsv
+     (Supplementary-style 8-column table: run scripts/p3_mtc_summary.py → results/mtc_summary.tsv)
   P-4 Reproducibility table    results/reproducibility_table.tsv
 
 No re-analysis; tabling only. `spec_source` points at implementing scripts.
@@ -156,8 +157,9 @@ def build_mtc_table() -> None:
     cols = ["figure", "statistic", "count", "family", "correction",
             "threshold_or_call", "spec_source"]
     df = pd.DataFrame(rows, columns=cols)
-    df.to_csv(RES / "mtc_summary.tsv", sep="\t", index=False)
-    print(f"\nwrote results/mtc_summary.tsv  ({len(df)} rows)")
+    out = RES / "mtc_summary_pipeline.tsv"
+    df.to_csv(out, sep="\t", index=False)
+    print(f"\nwrote {out.relative_to(ROOT)}  ({len(df)} rows)")
 
 
 # ---------------------------------------------------------------------------
