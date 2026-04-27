@@ -18,7 +18,7 @@ Atrial **Chamber-aware Rewiring Framework (CRF)** analysis repository.
 | **`scripts/v3/`** | **NCP_v3** primary figure drivers |
 | `results/` | TSV outputs consumed by figures and manuscript |
 | `figures/` | PDFs and TeX compositing |
-| `FIGURE*_WORKFLOW.md` | Symlinks → **`docs/specs/`** (pre-v3 rows may apply; v3 lock in `RESULTS_OUTLINE_V3.md`) |
+| `FIGURE*_WORKFLOW.md` | Symlinks → **`docs/specs/`**；**从哪读起：** **`WORKFLOWS_INDEX.md`** |
 | `Project_P3/`, `Project_P4/`, `Project_P5/`, `bulk/` | Cohort-specific working trees |
 
 ## Python package (method core)
