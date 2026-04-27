@@ -60,10 +60,10 @@ def main() -> None:
         "--panel", "results/innovation_ncp_v3_panel.tsv",
         "--tag", "innovation_ncp_v3",
     ])
-    run([py, "scripts/innovation_v2_vs_v3_benchmark.py"])
+    run([py, "scripts/v3/innovation_v2_vs_v3_benchmark.py"])
 
     # 3) Fig2 v3 pack
-    run([py, "scripts/innovation_generate_fig2_v3_pack.py"])
+    run([py, "scripts/v3/innovation_generate_fig2_v3_pack.py"])
 
     output_files = [
         ("result", "results/innovation_ncp_consensus_long.tsv"),

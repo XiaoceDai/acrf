@@ -4,8 +4,8 @@ Figure 1e (REBUILD, baseline-only) — Hierarchical clustering of the 30
 NCP_v2 programs by their cross-donor aCAI patterns identifies the
 baseline AXIS FAMILIES of healthy chamber asymmetry.
 
-Input  : results/fig1d_baseline_donor_aCAI.tsv  (30 programs x 8 healthy
-         donors aCAI matrix produced by fig1d_baseline_donor_aCAI.py)
+Input  : results/fig1b_baseline_donor_aCAI.tsv  (30 programs x 8 healthy
+         donors aCAI matrix produced by fig1b_baseline_donor_aCAI.py)
 Method : pairwise distance = 1 - Pearson correlation of each program's
          cross-donor aCAI vector; agglomerative hierarchical clustering
          with average linkage; cut the tree at a distance threshold to
@@ -52,7 +52,7 @@ mpl.rcParams.update({
 LA_COLOR = "#D6604D"
 RA_COLOR = "#4393C3"
 
-IN  = ROOT / "results" / "fig1d_baseline_donor_aCAI.tsv"
+IN  = ROOT / "results" / "fig1b_baseline_donor_aCAI.tsv"
 OUT_TSV = ROOT / "results" / "fig1e_baseline_axis_families.tsv"
 FIG_OUT = ROOT / "figures" / "fig1e_baseline_axis_families.pdf"
 

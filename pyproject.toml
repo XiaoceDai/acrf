@@ -1,30 +1,26 @@
 [build-system]
-requires = ["setuptools>=61", "wheel"]
+requires = ["setuptools>=64", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "chamber-rewiring-workflow"
+name = "acrf"
 version = "0.1.0"
-description = "Reproducible pipeline for bi-atrial chamber program rewiring in AF (Project P02)."
+description = "Chamber-aware Rewiring Framework (CRF) — method core: aCAI_rel, classification rules, I/O column contracts."
 readme = "README.md"
 requires-python = ">=3.10"
-authors = [{ name = "Project P02 authors" }]
-dependencies = [
-  "pandas>=1.5",
-  "numpy>=1.23",
-  "matplotlib>=3.7",
-  "scipy>=1.10",
-]
+license = { text = "Proprietary" }
+authors = [{ name = "CRF project" }]
+dependencies = []
 
 [project.optional-dependencies]
-full = [
-  "scikit-learn>=1.2",
-  "statsmodels>=0.14",
-]
-dev = ["pytest>=7.0", "ruff>=0.1"]
+dev = ["pytest>=7.0"]
 
-[project.scripts]
-chamber-rewiring = "chamber_rewiring.cli:main"
+[project.urls]
+Homepage = "https://example.invalid/acrf"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+include = ["crf"]
+
+[tool.setuptools.package-data]
+crf = ["py.typed"]

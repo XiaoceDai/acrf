@@ -14,7 +14,7 @@ The full per-donor heatmap version is kept as supplementary
 
 Inputs:
     results/fig1e_baseline_axis_families.tsv   (cached by fig1e_baseline_axis_families.py)
-    results/fig1d_baseline_donor_aCAI.tsv      (per-donor aCAI matrix; needed
+    results/fig1b_baseline_donor_aCAI.tsv      (per-donor aCAI matrix; needed
                                                  to recompute Pearson distance
                                                  -> dendrogram for the panel)
 
@@ -61,7 +61,7 @@ FAMILY_PALETTE = [
 ]
 
 FAM_TSV  = ROOT / "results" / "fig1e_baseline_axis_families.tsv"
-ACAI_TSV = ROOT / "results" / "fig1d_baseline_donor_aCAI.tsv"
+ACAI_TSV = ROOT / "results" / "fig1b_baseline_donor_aCAI.tsv"
 OUT      = ROOT / "figures" / "fig1e_summary.pdf"
 
 

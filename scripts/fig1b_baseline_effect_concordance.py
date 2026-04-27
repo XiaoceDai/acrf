@@ -36,7 +36,7 @@ mpl.rcParams.update(
     }
 )
 
-IN_TSV = ROOT / "results" / "fig1d_baseline_donor_aCAI.tsv"
+IN_TSV = ROOT / "results" / "fig1b_baseline_donor_aCAI.tsv"
 OUT_TSV = ROOT / "results" / "fig1b_baseline_effect_concordance.tsv"
 OUT_PDF = ROOT / "figures" / "fig1b_baseline_effect_concordance.pdf"
 
@@ -52,7 +52,7 @@ def main() -> None:
     df = pd.read_csv(IN_TSV, sep="\t")
     donor_cols = [c for c in df.columns if c.startswith("aCAI_")]
     if not donor_cols:
-        raise ValueError("No donor columns found in fig1d_baseline_donor_aCAI.tsv")
+        raise ValueError("No donor columns found in fig1b_baseline_donor_aCAI.tsv")
 
     if "mean_aCAI" not in df.columns:
         df["mean_aCAI"] = df[donor_cols].mean(axis=1)

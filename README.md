@@ -1,61 +1,41 @@
-# Project P02 — Bi-atrial chamber program rewiring in atrial fibrillation
+# Project_P02
 
-Computational pipeline linking **healthy LA/RA program asymmetry** (`aCAI`), **AF bulk rewiring**, **single-nucleus pseudobulk carriers**, **duration associations**, **cross-layer synthesis**, and **genetic colocalization** on pre-registered anchors. Figure builds follow strict **forward-only dependencies** (`RULES.md`).
+Atrial **Chamber-aware Rewiring Framework (CRF)** analysis repository.
 
-## Biology analysis design (summary)
+## Repository layout
 
-| Stage | Question | Design highlights |
-|--------|-----------|-------------------|
-| **Fig 1** | How is a reproducible healthy chamber-asymmetry reference built? | Donor-level `aCAI`, frozen gene-set panel **NCP v3** (vs internal v2 benchmark), robustness checks |
-| **Fig 2** | How are those programs rewired in AF in paired bi-atrial bulk? | Same LE genes as Fig 1; multi-cohort; rewiring classes + replication lollipop |
-| **Fig 3** | Which LA cell classes carry AF-associated shifts? | Donor-aware **pseudobulk** (no new clustering); scope = LA arm (explicit boundary) |
-| **Fig 4** | Do shifts relate to AF duration in persistent AF? | Spearman vs duration; cohort-specific caveats documented |
-| **Fig 5** | Do layers triangulate to a narratable dual-axis model? | Triangulation table; multiome gate **honoured when not met** (supplementary negative panel) |
-| **Fig 6** | External robustness + genetic plausibility | Meta / coloc; Plan C eGene eligibility; locus architecture; schematic synthesis |
+| Path | Purpose |
+|------|---------|
+| **`docs/`** | Manuscript + specs + audit (**`docs/INDEX.md`**); **投稿清单** **`docs/submission/PLOS_CB_SUBMISSION_PACK.md`**（根目录 **`SUBMISSION_PACK.md`** symlink） |
+| `MANUSCRIPT_FRAMEWORK.md` | Symlink → **`docs/manuscript/`**; CRF terminology |
+| `MANUSCRIPT_METHODS.md` | Symlink → **`docs/manuscript/`**; Methods (v3 figures) |
+| `RESULTS_OUTLINE_V3.md` | Symlink → **`docs/specs/`**; Results ↔ `figures/*_v3*.pdf` |
+| `manuscript_drafts/` | Symlink → **`docs/manuscript/drafts/`** (Word + Markdown) |
+| `src/crf/` | Installable **acrf** method core (`import crf`) |
+| `scripts/` | Pipelines, legacy figures, helpers (`plot_style.py`) |
+| **`scripts/v3/`** | **NCP_v3** primary figure drivers |
+| `results/` | TSV outputs consumed by figures and manuscript |
+| `figures/` | PDFs and TeX compositing |
+| `FIGURE*_WORKFLOW.md` | Symlinks → **`docs/specs/`** (pre-v3 rows may apply; v3 lock in `RESULTS_OUTLINE_V3.md`) |
+| `Project_P3/`, `Project_P4/`, `Project_P5/`, `bulk/` | Cohort-specific working trees |
 
-**Strengths:** pre-registered gates, explicit negatives, orthogonal colour semantics per figure, stage lock against circular reasoning.  
-**Main caveats:** bulk eQTL vs cell-type-specific regulation; modest n in some layers; genetic layer is associational (coloc PP interpretation as in frozen spec).
+## Python package (method core)
 
-Full machine-readable specs: `FIGURE1_WORKFLOW.md` … `FIGURE6_WORKFLOW.md`, `INNOVATION_WORKFLOW.md`, `RULES.md`.
-
-## Install (Python package)
-
-See [`PACKAGING.md`](PACKAGING.md). Quick start:
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -e .
-chamber-rewiring --help
-```
-
-## Data
-
-Raw arrays and large matrices are **not** in this repository. Restore cohorts under `Project_P1/` (and related paths) per each figure workflow (GEO accessions listed there). Optional bulk mirror layout is described in `FIGURE2_WORKFLOW.md` (`bulk/Project_P01/`, …).
-
-## Reproducibility
-
-- Run order and deliverables are frozen in the `FIGURE*_WORKFLOW.md` files.
-- Generated tables and figures: `results/`, `figures/` (included in git unless you uncomment those lines in `.gitignore` for a slimmer mirror).
-
-## Third-party tools
-
-- **LDSC**: the `tools/ldsc/` tree is **not** tracked (large upstream test data). Clone [bulik/ldsc](https://github.com/bulik/ldsc) into `tools/ldsc` if you run stratified LD-score steps. Reference panels under `ldsc_data/` may be empty placeholders; download per your `_ldsc_download.sh` / Zenodo mirrors.
-
-## GitHub
-
-Repository was initialised with `git`; large paths are listed in `.gitignore` (see below). To publish:
+The installable distribution **acrf** (*Atrial Chamber Rewiring Framework*; `pip install acrf` or editable `-e .`; import **`crf`**) exposes portable definitions, scales,
+and classification rules used in the paper pipeline:
 
 ```bash
-# on GitHub: create an empty repo (no README), then:
-git remote add origin https://github.com/<you>/<repo>.git
-git push -u origin main
+python3 -m venv .venv && source .venv/bin/activate   # if pip refuses system-wide (PEP 668)
+pip install -e '.[dev]'
+pytest -q tests/test_crf_core.py
+python -c "import crf; print(crf.__version__)"
 ```
 
-## License
+Import `crf` for `aCAI` / `aCAI_rel`, Fig 2C trend classes, and legacy
+ten-program triangulation helpers. **Fig. 5B–5C v3** integration is implemented
+in `scripts/v3/fig5b_v3_triangulation_heatmap.py` and
+`scripts/v3/fig5c_v3_cross_axis_consistency.py`. Column name contracts live in
+`crf.schema`.
 
-See [`LICENSE`](LICENSE) (MIT for code in this repo). **GEO / eQTL Catalogue / GWAS** data stay under their original terms; this repository does not redistribute raw cohort matrices.
-
-### What is excluded from git (must be restored locally)
-
-`Project_P1`–`P6`, `bulk/`, `global_raw.h5ad`, root-level `QTD*` / `GCST*` caches, `tools/ldsc/`. Paths match your frozen workflows and `PACKAGING.md`.
+Project-specific figure scripts remain under `scripts/`; they can gradually
+switch to `import crf` for duplicated logic.

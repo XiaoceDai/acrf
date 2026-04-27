@@ -12,10 +12,10 @@ What this panel shows, for each NCP_v2 program:
     - pathway short name on the right
 
 The full per-donor heatmap is kept as a supplementary figure
-(fig1d_baseline_donor_aCAI.pdf).
+(fig1b_baseline_donor_aCAI.pdf).
 
 Inputs:
-    results/fig1d_baseline_donor_aCAI.tsv   (cached by fig1d_baseline_donor_aCAI.py)
+    results/fig1b_baseline_donor_aCAI.tsv   (cached by fig1b_baseline_donor_aCAI.py)
 
 Output:
     figures/fig1d_summary.pdf
@@ -50,7 +50,7 @@ mpl.rcParams.update({
 LA_COLOR = "#D6604D"   # LA = red (new convention)
 RA_COLOR = "#4393C3"   # RA = blue
 
-IN  = ROOT / "results" / "fig1d_baseline_donor_aCAI.tsv"
+IN  = ROOT / "results" / "fig1b_baseline_donor_aCAI.tsv"
 OUT = ROOT / "figures" / "fig1d_summary.pdf"
 
 

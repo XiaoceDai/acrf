@@ -1,50 +1,39 @@
-# --- Python / build ---
 .venv/
-venv/
-.env/
+*.egg-info/
 __pycache__/
 *.py[cod]
-*.egg-info/
-.eggs/
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
 dist/
 build/
-pip-wheel-metadata/
-
-# --- IDE ---
-.idea/
-.vscode/
-*.swp
+*.egg
 .DS_Store
+*.log
 
-# LaTeX build noise under figures/
-figures/*.aux
-figures/*.log
-
-# --- Large local / raw data (do not push to GitHub) ---
+# Large / downloadable inputs (use GEO + scripts; do not commit)
 global_raw.h5ad
+*.h5ad
+*.tbi
+*.tbi.tmp*
+*.tbi.tmp_*
+GCST*.h.tsv.gz
+GCST*.h.tsv.gz.tbi
+QTD*.all.tsv.gz
+QTD*.all.tsv.gz.tbi
+QTD*.cc.tsv.gz
+QTD*.cc.tsv.gz.tbi
+
+# LDSC / munge intermediates (single files can exceed GitHub 100MB limit)
+results/figure6_ldsc/
+ldsc_data/
+
+# Local project trees (optional: remove lines below if you want them versioned)
+Manuscript_outputs/
 Project_P1/
 Project_P2/
 Project_P3/
 Project_P4/
 Project_P5/
 Project_P6/
-
-# Raw bulk mirrors (restore from GEO per FIGURE*_WORKFLOW.md)
-bulk/
-
-# LDSC third-party clone (large test fixtures); install separately if needed
-tools/ldsc/
-
-# --- Downloaded QTL / GWAS tabix caches at repo root ---
-/QTD*
-/GCST*
-*.tmp_*
-
-# --- Optional: uncomment for code-only mirror ---
-# results/
-# figures/
-# pseudobulk/
-
-# --- Local manuscript working trees ---
-manuscript_drafts/
-Manuscript_outputs/
