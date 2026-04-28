@@ -1,8 +1,9 @@
 cohort	role	platform	tissue	n_donors	n_AF_donors	n_SR_donors	age	sex	background
+GSE112339	Fig 1 Normal Chamber Prior (healthy bulk reference)	Illumina HiSeq RNA-seq, paired-end (GEO GSE112339)	LAA + RAA	8	0	0	n/a	n/a	healthy paired LA/RA donors; chamber reference for aCAI_bulk and NCP panel construction
 GSE128188	Fig 2 paired discovery (RNA-seq)	Illumina HiSeq, paired chamber	LAA + RAA	10	5	5	n/a	M=10	primary AF
 GSE79768	Fig 2 paired discovery (microarray)	Affy HG-U133 Plus 2.0, paired chamber	LAA + RAA	13	7	6	55 ± 15  (range 32–77)	M=5  F=8	primary AF
 GSE115574	Fig 2 replication (MR background)	Affy HG-U133 Plus 2.0, paired chamber	LAA + RAA	31	15	16	n/a	M=0  NA=31	severe_mitral_regurgitation
-GSE41177	Fig 4 LAA + LAPV duration cohort	Affy HG-U133 Plus 2.0, valvular AF	LAA + LAPV	16	13	3	54 ± 12  (range 32–71)	M=8  F=8	primary AF; AF duration n=12, median=72 mo (range 10–150)
 GSE255612	Fig 3 LA-arm snRNA pseudobulk	10x Chromium snRNA-seq	LA + RA	34	18	16	n/a (per-cell metadata)	M=13  F=21	primary AF; donor-level QC retained
+GSE41177	Fig 4 LAA + LAPV duration cohort	Affy HG-U133 Plus 2.0, valvular AF	LAA + LAPV	16	13	3	54 ± 12  (range 32–71)	M=8  F=8	primary AF; AF duration n=12, median=72 mo (range 10–150)
 GSE238242	Fig S5 multiome RNA pseudobulk (gate)	10x Multiome (snRNA + snATAC)	LAA	7	3	4	n/a (per-cell metadata)	M=5  F=2	persistent AF (NCR 2025); AF all male, SR mixed
 GSE261363	Fig 5C ROI-level localization (GeoMx)	NanoString GeoMx DSP	atrial appendage + EAT	4	—	—	n/a	n/a	valvular AF + SR controls; n_ROIs (AF / SR) = 24 / 24; n_AA segments = 24

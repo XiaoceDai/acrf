@@ -12,8 +12,9 @@ Panels:
   c — sex composition per cohort, stacked male / female / NA
   d — disease background composition per cohort
 
-This figure summarises the 71-donor / 8-cohort study population and
-matches Table 1 (cohort_demographics_table.tsv).
+This figure summarises the study population across eight GEO cohorts
+(including GSE112339 healthy reference) and matches
+results/cohort_demographics_table.tsv (Supplementary Table S1 source).
 """
 from __future__ import annotations
 

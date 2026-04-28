@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 """
-Build the cohort-demographics master table (Table 1) from the per-cohort
-sample_metadata.tsv files plus the GSE238242 metadata.
+Build the cohort-demographics master table (Supplementary Table S1 / Table 1).
 
-Output: results/cohort_demographics_table.tsv  (Table 1 source)
-        results/cohort_demographics_long.tsv   (per-donor row)
+Includes GSE112339 healthy bulk reference plus discovery, replication, scRNA,
+multiome, and GeoMx cohorts — eight GEO-linked resources when all rows present.
+
+Output: results/cohort_demographics_table.tsv  (cohort-level; versioned source)
+        results/cohort_demographics_long.tsv   (per-donor; Fig S1 input)
+
+DOCX: run scripts/m_supp_table_s1_cohort_demographics.py after this script.
 """
 from __future__ import annotations
 
@@ -16,6 +20,12 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parent.parent
 OUT  = ROOT / "results" / "cohort_demographics_table.tsv"
 OUT_LONG = ROOT / "results" / "cohort_demographics_long.tsv"
+
+# Same ordering as scripts/figS1_cohort_overview.cohort_order (manuscript flow).
+COHORT_SORT_ORDER = [
+    "GSE112339", "GSE128188", "GSE79768", "GSE115574",
+    "GSE255612", "GSE41177", "GSE238242", "GSE261363",
+]
 
 COHORTS = [
     {"id": "GSE128188", "role": "Fig 2 paired discovery (RNA-seq)",
@@ -58,6 +68,54 @@ def fmt_sex(values):
 
 rows = []
 long_rows = []
+
+
+def append_gse112339_healthy_reference() -> None:
+    """Healthy paired-chamber bulk reference (Normal Chamber Prior)."""
+    bulk_meta = ROOT / "bulk" / "sample_meta.tsv"
+    alt_meta = ROOT / "Project_P1" / "GSE112339" / "sample_metadata.tsv"
+    n_donors = 8
+    donor_ids: list[str] = []
+
+    if bulk_meta.exists():
+        sm = pd.read_csv(bulk_meta, sep="\t")
+        if "donor" in sm.columns:
+            donor_ids = sm["donor"].drop_duplicates().astype(str).tolist()
+            n_donors = len(donor_ids)
+    elif alt_meta.exists():
+        md = pd.read_csv(alt_meta, sep="\t")
+        if "donor_id" in md.columns:
+            donor_ids = md["donor_id"].drop_duplicates().astype(str).tolist()
+            n_donors = len(donor_ids)
+
+    rows.append({
+        "cohort": "GSE112339",
+        "role": "Fig 1 Normal Chamber Prior (healthy bulk reference)",
+        "platform": "Illumina HiSeq RNA-seq, paired-end (GEO GSE112339)",
+        "tissue": "LAA + RAA",
+        "n_donors": n_donors,
+        "n_AF_donors": 0,
+        "n_SR_donors": 0,
+        "age": "n/a",
+        "sex": "n/a",
+        "background": (
+            "healthy paired LA/RA donors; chamber reference for aCAI_bulk and "
+            "NCP panel construction"
+        ),
+    })
+    for did in donor_ids:
+        long_rows.append({
+            "cohort": "GSE112339",
+            "donor_id": did,
+            "rhythm": "healthy_chamber",
+            "sex": None,
+            "age": np.nan,
+            "disease_background": "healthy reference",
+        })
+
+
+append_gse112339_healthy_reference()
+
 for c in COHORTS:
     p = ROOT / c["path"]
     if not p.exists():
@@ -170,11 +228,21 @@ if roi_meta.exists():
         "background": f"valvular AF + SR controls; n_ROIs (AF / SR) = {n_af} / {n_sr}; n_AA segments = {n_aa}",
     })
 
+order_map = {c: i for i, c in enumerate(COHORT_SORT_ORDER)}
 table = pd.DataFrame(rows)
+table["_sort"] = table["cohort"].map(lambda x: order_map.get(x, 999))
+table = table.sort_values("_sort").drop(columns=["_sort"])
+
 OUT.parent.mkdir(parents=True, exist_ok=True)
 table.to_csv(OUT, sep="\t", index=False)
-pd.DataFrame(long_rows).to_csv(OUT_LONG, sep="\t", index=False)
 
-print(f"wrote {OUT.relative_to(ROOT)}  ({len(rows)} cohort rows)")
+long_df = pd.DataFrame(long_rows)
+if len(long_df) > 0:
+    long_df["_sort"] = long_df["cohort"].map(lambda x: order_map.get(x, 999))
+    long_df = long_df.sort_values("_sort").drop(columns=["_sort"])
+long_df.to_csv(OUT_LONG, sep="\t", index=False)
+
+print(f"wrote {OUT.relative_to(ROOT)}  ({len(table)} cohort rows)")
+print(f"wrote {OUT_LONG.relative_to(ROOT)}  ({len(long_df)} donor rows)")
 print()
 print(table.to_string(index=False))

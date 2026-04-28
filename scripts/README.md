@@ -5,6 +5,8 @@
 - **`scripts/v3/`** — NCP_v3 primary figure drivers (`*_v3*.py`), Fig 2 pack, v2→v3 benchmark, integrated atlas builder.
 - **`scripts/`** (root) — legacy / cohort pipelines, pre-v3 figures, manuscript DOCX helpers, shared **`plot_style.py`** / **`_pathway_labels.py`**.
 
+**Supporting tables (submission):** `p1_demographics_table.py` → `results/cohort_demographics_table.tsv`; then `m_supp_table_s1_cohort_demographics.py` → `manuscript_drafts/Supplementary_Table_S1_cohort_demographics.docx` (export PDF in Word if required). **S6 anchor matrix:** `m10_supp_table_s6_anchor_matrix.py` → `manuscript_drafts/Supplementary_Table_S6_anchor_matrix.docx` from `results/figure6_mr_anchors_v3_consolidated.tsv`.
+
 ## v3 primary chain (sixteen families)
 
 Primary v3 drivers target `figures/*_v3*.pdf` outputs under this repository layout.

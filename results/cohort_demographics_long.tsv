@@ -1,4 +1,12 @@
 cohort	donor_id	rhythm	sex	age	disease_background
+GSE112339	1479_2	healthy_chamber			healthy reference
+GSE112339	1545_1	healthy_chamber			healthy reference
+GSE112339	1545_2	healthy_chamber			healthy reference
+GSE112339	1546_1	healthy_chamber			healthy reference
+GSE112339	1546_2	healthy_chamber			healthy reference
+GSE112339	1547_2	healthy_chamber			healthy reference
+GSE112339	1548_2	healthy_chamber			healthy reference
+GSE112339	1550_1	healthy_chamber			healthy reference
 GSE128188	12b	SR	male		
 GSE128188	14	AF	male		
 GSE128188	20	SR	male		
