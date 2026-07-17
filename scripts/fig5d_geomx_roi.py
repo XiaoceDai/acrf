@@ -1,31 +1,5 @@
 #!/usr/bin/env python3
-"""
-Figure 5D  GeoMx AA ROI corroboration of multi-family carrier patterns.
-
-A 4-panel composite that strengthens the original ECM × fibroblast
-sanity scatter by adding:
-
-    a  Heatmap of all signature scores across the 24 AA cardiac ROIs
-        (rows = 5 programs + 5 cell-type panels; cols = 24 ROIs ordered
-         by area then rhythm), centred + scaled per row to highlight
-         spatial / contextual variation.
-
-    b  Program × cell-type Spearman ρ matrix (5 × 5).  Programs that
-        co-vary with which cells across the 24 ROIs.  This is the
-        core finding panel: ECM / GAG / BMP family signatures track
-        fibroblast and lymphatic-endothelial markers, while OXPHOS
-        and Mito Ca²⁺ track atrialCM.
-
-    c  AF − SR Δ per signature with 95 % CI (Welch).
-
-    d  Border − Distal Δ per signature with 95 % CI (Welch).
-
-Inputs:
-    Project_P5/GSE261363/roi_scores_v2.tsv     (g3b output)
-
-Output:
-    figures/fig5d_geomx_roi.pdf
-"""
+"""Figure 5D  GeoMx AA ROI corroboration of multi-family carrier patterns."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -162,7 +136,6 @@ def main() -> None:
     # native scales are comparable).
     Wz = W.sub(W.mean(axis=1), axis=0).div(W.std(axis=1, ddof=1), axis=0)
 
-    # ---- figure layout ---------------------------------------------------
     MM = 1.0 / 25.4
     fig = plt.figure(figsize=(200 * MM, 180 * MM))
     grid = fig.add_gridspec(
@@ -177,9 +150,7 @@ def main() -> None:
         "(n = 24 cardiac DNA+ ROIs)",
         fontsize=8.8, fontweight="bold", y=0.97, x=0.02, ha="left")
 
-    # ===================================================================
     # Panel a: signature × ROI heatmap (z-scored per row)
-    # ===================================================================
     ax_a = fig.add_subplot(grid[0, 0])
     K, C = Wz.shape
     vmax = float(np.nanmax(np.abs(Wz.values)))
@@ -238,9 +209,7 @@ def main() -> None:
         "a    Signature × ROI heatmap   (z-scored per row)",
         loc="left", fontsize=8.0, fontweight="bold", pad=14)
 
-    # ===================================================================
     # Panel b: program × cell-type Spearman ρ matrix  (the core finding)
-    # ===================================================================
     ax_b = fig.add_subplot(grid[0, 1])
     progs = [s for s in SIG_ORDER if SIG_TYPES[s].endswith("program")]
     cells = [s for s in SIG_ORDER if SIG_TYPES[s] == "cell"]
@@ -309,9 +278,7 @@ def main() -> None:
         "b    Program × cell-type ρ across 24 AA cardiac ROIs",
         loc="left", fontsize=8.0, fontweight="bold", pad=4)
 
-    # ===================================================================
     # Panel c: AF − SR Δ per signature (Welch t)
-    # ===================================================================
     ax_c = fig.add_subplot(grid[1, 0])
     rows_c = []
     for s in SIG_ORDER:
@@ -348,9 +315,7 @@ def main() -> None:
     ax_c.set_title("c    Rhythm effect (AF − SR)",
                      loc="left", fontsize=8.0, fontweight="bold", pad=4)
 
-    # ===================================================================
     # Panel d: Border − Distal Δ per signature
-    # ===================================================================
     ax_d = fig.add_subplot(grid[1, 1])
     rows_d = []
     for s in SIG_ORDER:

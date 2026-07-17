@@ -1,23 +1,5 @@
 #!/usr/bin/env python3
-"""
-Figure 5A  Triangulation analytical schematic.
-
-Integrates Fig 2 (bulk cohorts), Fig 3 (LA snRNA), and Fig 4 (LAA
-duration) into a per-family evidence class at Fig 5B / 5C.
-
-Five-stage flow (mirrors Fig 3A / 4A layout):
-    1. 11 axis families  (from Fig 1c-e, shared across Fig 2/3/4)
-    2. Three evidence streams in parallel:
-            L1  Fig 2D  pooled Hedges' g (AF − SR, 3 cohorts)
-            L2  Fig 3B  LA-snRNA  max-sig Δ (AF − Ctrl)
-            L3  Fig 4B  LAA primary  ρ vs AF duration
-    3. Per-family support rules (CI / p_perm gates)
-    4. Evidence-class assignment
-            CONVERGENT  /  BULK-LED  /  SNRNA-LED  /  DURATION-LED  /  SILENT
-    5. Downstream Fig 5B / 5C / 5D / 5E panels
-
-Output:  figures/fig5a_schematic.pdf
-"""
+"""Figure 5A  Triangulation analytical schematic."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -95,7 +77,6 @@ def main() -> None:
     ax = fig.add_axes([0.0, 0.0, 1.0, 1.0])
     ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
 
-    # ---- title ----
     fig.text(0.025, 0.965,
               "Fig 5A  Per-family triangulation design",
               fontsize=9.0, fontweight="bold", ha="left", va="center")
@@ -106,9 +87,7 @@ def main() -> None:
               fontsize=7.5, color=GREY_DARK, ha="left", va="center",
               style="italic")
 
-    # ===================================================================
     # ROW 1   STAGE 1 (families)  →  STAGE 2 (three streams in parallel)
-    # ===================================================================
     s1_x, s1_w = 0.025, 0.185
     s2_x, s2_w = 0.235, 0.425   # wide three-panel strip
     s3_x, s3_w = 0.680, 0.300
@@ -118,7 +97,6 @@ def main() -> None:
     add_stage_header(ax, s2_x, row_top, 2, "Three evidence streams")
     add_stage_header(ax, s3_x, row_top, 3, "Per-family support")
 
-    # ---- Cards ----
     card_y, card_h = 0.500, 0.360
     # families card
     add_box(ax, s1_x - 0.005, card_y, s1_w + 0.010, card_h, "",
@@ -130,7 +108,6 @@ def main() -> None:
     add_box(ax, s3_x - 0.005, card_y, s3_w + 0.010, card_h, "",
               fc=BG_GREEN, ec=HL_GREEN, lw=0.9, radius=0.012)
 
-    # ---- STAGE 1  : families ----
     ax.text(s1_x + s1_w / 2, 0.830,
              "11 axis families",
              fontsize=8.0, fontweight="bold", ha="center")
@@ -173,7 +150,6 @@ def main() -> None:
              fontsize=6.0, ha="center", va="center", color=GREY_MID,
              style="italic")
 
-    # ---- STAGE 2 : three streams ----
     # Three vertical sub-columns with their own icon
     sub_w = (s2_w - 0.020) / 3
     sub_xs = [s2_x + 0.010 + k * (sub_w + 0.0) for k in range(3)]
@@ -260,7 +236,6 @@ def main() -> None:
                 s3_x - 0.005, 0.700,
                 color=GREY_DARK, lw=1.0)
 
-    # ---- STAGE 3 : support rules ----
     ax.text(s3_x + s3_w / 2, 0.830,
              "Per-family support rules",
              fontsize=8.0, fontweight="bold", ha="center",
@@ -283,7 +258,6 @@ def main() -> None:
                  fontsize=6.2, color=GREY_DARK, ha="left", va="center",
                  style="italic")
 
-    # ---- Evidence class rule card (inside STAGE 3) ----
     cls_x = s3_x + 0.010
     cls_y = 0.550
     cls_w = s3_w - 0.020
@@ -301,9 +275,7 @@ def main() -> None:
              fontsize=5.7, ha="center", va="center",
              color=GREY_DARK, style="italic")
 
-    # ===================================================================
     # ROW 2   STAGE 4 + STAGE 5
-    # ===================================================================
     add_stage_header(ax, 0.025, 0.455, 4,
                        "Family × class matrix  ·  STAGE 5  downstream panels")
 
@@ -412,7 +384,6 @@ def main() -> None:
                 pan_x - 0.005, tab_y + tab_h / 2,
                 color=GREY_DARK, lw=1.0)
 
-    # ---- bottom notation ----
     fig.text(0.025, 0.035,
               "Notation:  L1 / L2 / L3 = evidence layers;  "
               "g = pooled Hedges' g;  Δ = AF − Ctrl singscore change;  "

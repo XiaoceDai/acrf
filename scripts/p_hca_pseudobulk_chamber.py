@@ -1,34 +1,5 @@
 #!/usr/bin/env python3
-"""
-Build v3 chamber-resolved pseudobulk from the HCA Heart Cell Atlas
-(global_raw.h5ad, Litvinukova et al. 2020 Nature).
-
-Output one folder per (mapped) compartment under
-    Project_P3/HCA/pseudobulk_chamber/<compartment>/
-        expr.tsv      mean expression matrix (genes x donor_chamber sample_id)
-        samples.tsv   sample metadata (sample_id, donor, region, n_cells, source, ...)
-
-Aggregation:
-    donor x region (LA / RA only) x cell_type
-    weighted mean of raw counts -> sum(X) / n_cells (matches r2b_*.R style
-    so downstream singscore / row-z behaves identically to the GSE255612
-    pseudobulk_full pipeline).
-
-Filters:
-    - source == "Nuclei"            (Harvard-Nuclei + Sanger-Nuclei)
-    - region in {LA, RA}
-    - Used == "Yes"                 (HCA QC pass flag)
-    - cell_type in HCA_TO_V3 mapping
-    - n_cells per (compartment, donor, region) >= 30
-
-Outputs
--------
-    Project_P3/HCA/pseudobulk_chamber/<compartment>/expr.tsv
-    Project_P3/HCA/pseudobulk_chamber/<compartment>/samples.tsv
-    Project_P3/HCA/pseudobulk_chamber/summary.tsv
-    Project_P3/HCA/pseudobulk_chamber/paired_donors.tsv
-    Project_P3/HCA/pseudobulk_chamber/HCA_to_v3_compartment_map.tsv
-"""
+"""Build v3 chamber-resolved pseudobulk from the HCA Heart Cell Atlas"""
 from __future__ import annotations
 
 import sys

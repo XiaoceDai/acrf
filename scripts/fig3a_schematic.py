@@ -1,20 +1,5 @@
 #!/usr/bin/env python3
-"""
-Figure 3A  Single-cell carrier-attribution analytical schematic.
-
-Five-stage flow:
-    1. NCP_v2 panel        (30 programs in 11 axis families, from Fig 1c-e)
-    2. GSE255612 LA snRNA  (34 donors: 18 AF, 16 Ctrl;  13 cell types
-       passed the n ≥ 30 cells gate; 11 used here, B_cell + epicardial
-       excluded for n_Ctrl < 4)
-    3. Donor × cell-type pseudobulk  (mean log-norm expression per gene)
-    4. Per (donor, cell type, program) singscore on the program's
-       leading-edge genes  →  Δ singscore = mean_AF − mean_Ctrl
-    5. Family-level  &  program-level  Δ + permutation p_perm
-       feeding Figs 3B / 3C / 3D / 3E
-
-Output:  figures/fig3a_schematic.pdf
-"""
+"""Figure 3A  Single-cell carrier-attribution analytical schematic."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -95,7 +80,6 @@ def main() -> None:
     ax = fig.add_axes([0.0, 0.0, 1.0, 1.0])
     ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
 
-    # ---- title ----
     fig.text(0.025, 0.965,
               "Fig 3A  Cell-type carrier attribution of NCP_v2 rewiring "
               "in the LA snRNA arm",
@@ -107,9 +91,7 @@ def main() -> None:
               fontsize=7.5, color=GREY_DARK, ha="left", va="center",
               style="italic")
 
-    # ===================================================================
     # ROW 1   STAGE 1 → STAGE 4   (per-donor pipeline)
-    # ===================================================================
     s1_x, s1_w = 0.030, 0.180
     s2_x, s2_w = 0.235, 0.215
     s3_x, s3_w = 0.475, 0.215
@@ -139,7 +121,6 @@ def main() -> None:
     #   row C : main artwork   y = 0.620–0.770
     #   row D : caption        y = 0.555  (well inside card; card bottom = 0.510)
 
-    # ---- STAGE 1  panel ----
     ax.text(s1_x + s1_w / 2, 0.820,
              "30 NCP_v2 programs",
              fontsize=8.0, fontweight="bold", ha="center", va="center")
@@ -177,7 +158,6 @@ def main() -> None:
              fontsize=6.0, ha="center", va="center", color=GREY_DARK,
              style="italic")
 
-    # ---- STAGE 2  donors / cell types ----
     ax.text(s2_x + s2_w / 2, 0.820,
              "34 donors  ·  13 cell types",
              fontsize=8.0, fontweight="bold", ha="center")
@@ -221,7 +201,6 @@ def main() -> None:
     add_arrow(ax, s1_x + s1_w + 0.005, 0.690, s2_x - 0.005, 0.690,
                 color=GREY_DARK, lw=0.9)
 
-    # ---- STAGE 3  pseudobulk + singscore ----
     ax.text(s3_x + s3_w / 2, 0.820,
              "Donor × cell-type pseudobulk",
              fontsize=7.5, fontweight="bold", ha="center")
@@ -250,7 +229,6 @@ def main() -> None:
     add_arrow(ax, s2_x + s2_w + 0.005, 0.690, s3_x - 0.005, 0.690,
                 color=GREY_DARK, lw=0.9)
 
-    # ---- STAGE 4  Δ formula card (golden) ----
     ax.text(s4_x + s4_w / 2, 0.820,
              "Per-program × cell-type effect",
              fontsize=8.0, fontweight="bold", ha="center")
@@ -286,9 +264,7 @@ def main() -> None:
     add_arrow(ax, s3_x + s3_w + 0.005, 0.690, s4_x - 0.005, 0.690,
                 color=GREY_DARK, lw=0.9)
 
-    # ===================================================================
     # ROW 2  STAGE 5  family aggregation + downstream panels
-    # ===================================================================
     add_stage_header(ax, 0.030, 0.470, 5,
                        "Family aggregation  ·  feeds Fig 3B / 3C / 3D / 3E")
 
@@ -383,7 +359,6 @@ def main() -> None:
                 pan_x - 0.005, fam_y + fam_h / 2,
                 color=GREY_DARK, lw=1.0)
 
-    # ---- bottom notation ----
     fig.text(0.025, 0.030,
               "Notation:  i = donor;  k = NCP_v2 program;  "
               "c = cell type;  F = axis family;  LE = leading-edge gene set.",

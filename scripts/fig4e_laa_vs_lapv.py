@@ -94,7 +94,6 @@ def main() -> None:
             columns={"statistic": "rho_lapv", "p_perm": "p_lapv"}),
         on="family_id", how="inner")
 
-    # ---- figure : 2 panels (program + family) ------------------------
     MM = 1.0 / 25.4
     fig = plt.figure(figsize=(180 * MM, 100 * MM))
     grid = fig.add_gridspec(

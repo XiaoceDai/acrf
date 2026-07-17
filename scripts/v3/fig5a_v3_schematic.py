@@ -1,32 +1,5 @@
 #!/usr/bin/env python3
-"""
-Fig 5a v3 - Cross-figure synthesis schematic.
-
-A pure schematic explaining how Fig 5 integrates Fig 1F / Fig 2 / Fig 3 /
-Fig 4 evidence into a cross-axis convergence classification, then anchors
-the result with GeoMx ROI spatial support and a mechanism cartoon.
-
-Flow:
-    16 NCP axis family anchor
-        |
-        v
-    5 evidence streams in parallel
-        L0  HCA LA carrier  (Fig 1F)
-        L1  Bulk pooled g + state + replication  (Fig 2D / 2C / 2E)
-        L2  snRNA dScore at carrier + fidelity   (Fig 3)
-        L3  LAA duration rho + chronicity        (Fig 4)
-        Atlas  PriorityScore + Class             (atlas oncoprint)
-        |
-        v
-    Path A strict supportive criteria
-    (L1 = repl=high; L2 = fidelity != Below; L3 = chron != Stable)
-        |
-        v
-    Cross-axis convergence class  (Triple / Double / Single / Silent)
-        |     |     |
-        v     v     v
-    5b heatmap  5c bar+matrix  5d GeoMx (6-fam v3 LE)  5e cartoon
-"""
+"""Fig 5a v3 - Cross-figure synthesis schematic."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -97,7 +70,6 @@ def main():
     ax = fig.add_axes([0, 0, 1, 1])
     ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
 
-    # ---- title ----
     ax.text(0.025, 0.965,
               "Fig 5a  Cross-figure synthesis pipeline (NCP, 16 families)",
               fontsize=9.6, fontweight="bold", color="#1A1A1A")
@@ -106,14 +78,12 @@ def main():
               "and Fig 4 (duration trend) under a strict per-axis supportive criterion (Path A).",
               fontsize=6.5, color="#444444", style="italic")
 
-    # ---- Stage 0: anchor ----
     stage_box(ax, 0.025, 0.78, 0.18, 0.10,
               "0.  NCP axis family anchor",
               "16 axis families\nfrozen panel\n(Fig 1c-e)",
               color=BG_GOLD, edgecolor=ACCENT, body_align="left",
               title_fs=7.0, body_fs=5.7)
 
-    # ---- Stage 1: 5 evidence streams (horizontal row) ----
     stream_y = 0.55
     stream_h = 0.18
     stream_w = 0.17
@@ -165,7 +135,6 @@ def main():
     for x in stream_xs:
         arrow(ax, 0.115, 0.78, x + stream_w / 2.0, stream_y + stream_h)
 
-    # ---- Stage 2: Path A supportive criteria (centred wide box) ----
     stage_box(ax, 0.150, 0.355, 0.700, 0.135,
               "2.  Path A strict supportive criteria  (per-axis equal threshold)",
               "L1 supportive  =  replication_class = high  (CI excludes 0;  3 cohorts pooled)\n"
@@ -181,7 +150,6 @@ def main():
         arrow(ax, x + stream_w / 2.0, stream_y, 0.50, 0.49,
                 lw=0.5, color="#888", label=None)
 
-    # ---- Stage 3: Cross-axis convergence (4 outcome chips) ----
     chip_y = 0.305
     chip_h = 0.080
     chip_specs = [
@@ -221,7 +189,6 @@ def main():
     arrow(ax, 0.785, chip_y + chip_h / 2.0, 0.810, chip_y + chip_h / 2.0,
             lw=0.7)
 
-    # ---- Stage 4: GeoMx spatial corroboration row ----
     stage_box(ax, 0.025, 0.175, 0.45, 0.105,
                 "5d  Spatial corroboration  (support-only, NOT discovery)",
                 "GSE261363 GeoMx WTA\n"
@@ -233,7 +200,6 @@ def main():
                 color="#EAF1F7", edgecolor=RA_DEEP, body_align="left",
                 title_fs=6.6, body_fs=5.3)
 
-    # ---- Stage 5: cartoon / asymmetry banner ----
     stage_box(ax, 0.495, 0.175, 0.480, 0.105,
                 "5e  Mechanism cartoon  (asymmetric, integrative layout)",
                 "Banner:  All 4 *** Priority families are LA-driven (4 / 4)\n"
@@ -245,7 +211,6 @@ def main():
                 color="#F2EAEA", edgecolor=LA_DEEP, body_align="left",
                 title_fs=6.6, body_fs=5.3)
 
-    # ---- footer banner (3 framing lines) ----
     ax.add_patch(mpatches.Rectangle((0.025, 0.020), 0.95, 0.135,
                                      facecolor="#FFF8F0", edgecolor=ACCENT, linewidth=0.6))
     ax.text(0.040, 0.140, "Integrative framing:",

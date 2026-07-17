@@ -218,7 +218,6 @@ def render_case(delta, key, cfg):
     _draw_panel(ax_left, left_df, left_ct, COMPARTMENT_SHORT[left_ct] + "  AF\u2212Ctrl")
     _draw_panel(ax_right, right_df, right_ct, COMPARTMENT_SHORT[right_ct] + "  AF\u2212Ctrl")
 
-    # ---- header strip with class badge ----
     fig.text(
         0.10, 0.92,
         f"Fig {cfg['panel_letter']}  {cfg['label']}  \u2014  {cfg['class_name']}",
@@ -235,7 +234,6 @@ def render_case(delta, key, cfg):
     fig.text(0.86, 0.925, cfg["class_name"], fontsize=enforce_font_floor(FS_TICK), fontweight="bold",
              color="white", ha="center", va="center")
 
-    # ---- footer with full caption (each line manually wrapped to fit 170mm width) ----
     footer_lines = [
         "Bars: per-gene \u0394 norm-rank (AF \u2212 Ctrl) on GSE255612 LA snRNA pseudobulk (n = 18 AF + 16 Ctrl donors).",
         "Red = AF > Ctrl (upshift), Blue = AF < Ctrl (downshift) \u2014 same convention as Fig 3b cells.",

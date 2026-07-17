@@ -1,19 +1,5 @@
 #!/usr/bin/env python3
-"""
-Fig 1 publication composite — Cell / Nature / Science style.
-3 × 2 grid; panels D / F aggregated to FAMILY level so heatmap cells
-are roughly square and the figure is compact.
-
-Layout:
-    a  PCA donors                  b  Volcano + chamber-biased gene cohort
-    c  Curated NCP selection       (continued)
-    d  Family-level aCAI heatmap   e  Axis family overview (dendrogram + list)
-    f  Family-level cell attribution
-
-All panels share fonts, line weights, colour palette.  Heat-maps follow
-Cell / Nature / Science conventions: continuous colour, no per-cell
-borders, no in-cell text, square-ish aspect, thin colour bars.
-"""
+"""Fig 1 publication composite — Cell / Nature / Science style."""
 from __future__ import annotations
 
 import sys
@@ -35,9 +21,7 @@ from _pathway_labels import short_pathway_label
 
 OUT = ROOT / "figures" / "fig1_composite.pdf"
 
-# ---------------------------------------------------------------------------
 # Style
-# ---------------------------------------------------------------------------
 MM = 1.0 / 25.4
 COL_DOUBLE = 183 * MM
 FIG_HEIGHT = 195 * MM      # 6 panels in 2 rows; row 1 compact, row 2 spacious
@@ -99,9 +83,7 @@ def panel_letter(fig, x, y, label):
     fig.text(x, y, label, transform=fig.transFigure, **PANEL_LETTER_KW)
 
 
-# ---------------------------------------------------------------------------
 # Panel A — PCA donors
-# ---------------------------------------------------------------------------
 def draw_panel_a(ax) -> None:
     qc = pd.read_csv(ROOT / "bulk" / "Project_P01" / "qc" / "qc_pca.tsv",
                       sep="\t")
@@ -130,9 +112,7 @@ def draw_panel_a(ax) -> None:
     strip_axes(ax)
 
 
-# ---------------------------------------------------------------------------
 # Panel B — Volcano
-# ---------------------------------------------------------------------------
 def draw_panel_b(ax) -> None:
     de = pd.read_csv(ROOT / "bulk" / "Project_P01" / "bulk_chamber_DE_full.tsv",
                       sep="\t")
@@ -176,9 +156,7 @@ def draw_panel_b(ax) -> None:
     strip_axes(ax)
 
 
-# ---------------------------------------------------------------------------
 # Panel C — Curated NCP deployment (no numbers; colour-only)
-# ---------------------------------------------------------------------------
 def draw_panel_c(ax_sc, ax_lst) -> None:
     long  = pd.read_csv(ROOT / "results" / "fig1c_pathway_selection_long.tsv",
                          sep="\t")
@@ -257,7 +235,6 @@ def draw_panel_c(ax_sc, ax_lst) -> None:
                   fontsize=7, fontweight="bold",
                   ha="left", va="bottom")
 
-    # ---- LA section header ----
     ax_lst.text(0.0,  0.45, f"LA-biased  ({n_la})",
                   fontsize=6.0, fontweight="bold",
                   color=LA_COLOR, ha="left", va="bottom")
@@ -278,7 +255,6 @@ def draw_panel_c(ax_sc, ax_lst) -> None:
                       ha="left", va="center", fontsize=5.5,
                       color="black")
 
-    # ---- RA section header (below LA block) ----
     ra_y0 = half + 1.5
     ax_lst.text(0.0, ra_y0 - 0.15, f"RA-biased  ({n_ra})",
                   fontsize=6.5, fontweight="bold",
@@ -294,9 +270,7 @@ def draw_panel_c(ax_sc, ax_lst) -> None:
                       color="black")
 
 
-# ---------------------------------------------------------------------------
 # Helpers — family-level aggregation
-# ---------------------------------------------------------------------------
 def load_family_membership():
     """Return df with one row per program: pathway, direction, family_id."""
     fam = pd.read_csv(ROOT / "results" / "fig1e_baseline_axis_families.tsv",
@@ -321,9 +295,7 @@ def family_summary():
     return summary, fam, donor_cols
 
 
-# ---------------------------------------------------------------------------
 # Panel D — Family-level aCAI heatmap (11 families × 8 donors, square cells)
-# ---------------------------------------------------------------------------
 def draw_panel_d(ax_main, ax_cbar) -> None:
     """Family-level baseline aCAI heatmap.
 
@@ -401,9 +373,7 @@ def draw_panel_d(ax_main, ax_cbar) -> None:
     cbar.outline.set_linewidth(0.5)
 
 
-# ---------------------------------------------------------------------------
 # Panel E — Axis families overview (dendrogram + family list)
-# ---------------------------------------------------------------------------
 def draw_panel_e(ax) -> None:
     """Compact axis-family overview: dendrogram with bullet+name leaves.
 
@@ -511,9 +481,7 @@ def draw_panel_e(ax) -> None:
         fontsize=7.5, pad=4, loc="left", fontweight="bold")
 
 
-# ---------------------------------------------------------------------------
 # Panel F — Family-level cell-compartment attribution
-# ---------------------------------------------------------------------------
 def draw_panel_f(ax_main, ax_cbar) -> None:
     """Family-level cell-compartment attribution heatmap.
 
@@ -622,9 +590,7 @@ def draw_panel_f(ax_main, ax_cbar) -> None:
     cbar.outline.set_linewidth(0.5)
 
 
-# ---------------------------------------------------------------------------
 # Master composite
-# ---------------------------------------------------------------------------
 def main() -> None:
     set_publication_style()
     fig = plt.figure(figsize=(COL_DOUBLE, FIG_HEIGHT))
@@ -638,7 +604,6 @@ def main() -> None:
         hspace=0.55,
     )
 
-    # ---- ROW 1 : a + b + c ---------------------------------------------
     row1 = outer[0].subgridspec(
         1, 4, width_ratios=[0.95, 1.00, 1.10, 1.30], wspace=0.55,
     )
@@ -653,7 +618,6 @@ def main() -> None:
     panel_letter(fig, 0.230, 0.985, "b")
     panel_letter(fig, 0.460, 0.985, "c")
 
-    # ---- ROW 2 : d + e + f, each with inline vertical colour bar -------
     row2 = outer[1].subgridspec(
         1, 3,
         width_ratios=[0.95, 1.00, 1.45],

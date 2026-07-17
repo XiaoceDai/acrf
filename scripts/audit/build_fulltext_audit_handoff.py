@@ -1,14 +1,5 @@
 #!/usr/bin/env python3
-"""Build read-only fulltext audit handoff for whole-manuscript reconciliation.
-
-Default output namespace (v1_1):
-  results/handoff/fulltext_audit_v1_1/
-  results/handoff/fulltext_audit_v1_1.zip(+.sha256)
-
-Does not overwrite results/handoff/fulltext_audit_v1/.
-Does not modify manuscript, figures, result tables, other scripts, routing,
-or submission-pack assets. Rerunnable and deterministic for a fixed snapshot.
-"""
+"""Build read-only fulltext audit handoff for whole-manuscript reconciliation."""
 from __future__ import annotations
 
 import hashlib
@@ -359,7 +350,6 @@ def canvas_mm(svg: Path) -> tuple[str, str]:
 
 
 def build_claims(claims: ClaimRegistry) -> None:
-    # ----- FIGURE 1 -----
     s1 = ROOT / "results/ncp_v3_singscore_reanalysis/fig1b_healthy_reference_direction_magnitude_summary.tsv"
     c1 = ROOT / "results/ncp_v3_singscore_reanalysis/fig1b_healthy_reference_concordance_summary.tsv"
     r = pd.read_csv(s1, sep="\t").iloc[0]
@@ -417,7 +407,6 @@ def build_claims(claims: ClaimRegistry) -> None:
                entity_ids="fallback", definition="Fallback-selected programs", interpretation_boundary="Selection provenance",
                authoritative_source_path=rel(sel), authoritative_source_sha256=sha256(sel))
 
-    # ----- FIGURE 2 -----
     f2a = ROOT / "results/ncp_v3_singscore_reanalysis/fig2a_bulk_deployment_summary.tsv"
     df2a = pd.read_csv(f2a, sep="\t")
     tot = df2a.loc[df2a["scope"].astype(str) == "total"].iloc[0]
@@ -475,7 +464,6 @@ def build_claims(claims: ClaimRegistry) -> None:
                interpretation_boundary="Fixed-effect IVW; tau2 not estimated",
                authoritative_source_path=rel(f2ds), authoritative_source_sha256=sha256(f2ds))
 
-    # ----- FIGURE 3 -----
     f3 = ROOT / "results/fig3c_family_fidelity_classes.tsv"
     f3b = ROOT / "results/fig3_v3_carrier_fidelity_class.tsv"
     df3 = pd.read_csv(f3, sep="\t")
@@ -548,7 +536,6 @@ def build_claims(claims: ClaimRegistry) -> None:
                interpretation_boundary="Do not interpret as genome-wide FDR hits",
                authoritative_source_path=rel(f3), authoritative_source_sha256=h3)
 
-    # ----- FIGURE 4 -----
     f4a = ROOT / "results/ncp_v3_singscore_reanalysis/fig4a_duration_design_summary.tsv"
     r4 = pd.read_csv(f4a, sep="\t").iloc[0]
     h4 = sha256(f4a)
@@ -608,7 +595,6 @@ def build_claims(claims: ClaimRegistry) -> None:
                interpretation_boundary="Display rounding does not redefine classes",
                authoritative_source_path=rel(f4qc), authoritative_source_sha256=sha256(f4qc))
 
-    # ----- FIGURE 5 -----
     f5canon = ROOT / "results/ncp_v3_singscore_reanalysis/figure5_triangulation_canonical.tsv"
     f5s = ROOT / "results/ncp_v3_singscore_reanalysis/fig5b_cross_layer_triangulation_summary.tsv"
     f5a = ROOT / "results/ncp_v3_singscore_reanalysis/fig5a_triangulation_contract_source.tsv"
@@ -727,7 +713,6 @@ def build_claims(claims: ClaimRegistry) -> None:
                    definition=f"GeoMx summary for {fam}", interpretation_boundary="Spatial evidence; not a Path A gate",
                    authoritative_source_path=rel(gsum), authoritative_source_sha256=hg)
 
-    # ----- FIGURE 6 -----
     gwas = ROOT / "results/provenance/gwas_gcst90624411/gwas_gcst90624411_provenance.tsv"
     gv = kv_tsv(gwas)
     hgwas = sha256(gwas)

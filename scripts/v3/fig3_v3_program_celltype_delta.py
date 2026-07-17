@@ -1,20 +1,5 @@
 #!/usr/bin/env python3
-"""
-Fig 3 v3 — program / family × compartment Δ-singscore on GSE255612 LA snRNA.
-
-Equivalence-gated lineage (post-correction):
-  - Leading edges: selection-time frozen LE from Figures 1–2
-    (`results/ncp_v3_singscore_reanalysis/frozen_program_metadata.tsv`).
-  - Scorer: validated Python exact_reference matching Bioconductor singscore
-    1.28.1 (rankGenes tiesMethod=min + simpleScore centerScore=TRUE).
-  - Family aggregation: equal-weight mean of program scores (program-first).
-  - Primary permutation: 10,000 MC (or exact), base seed 20260418, with
-    per-test deterministic seeds so display order cannot alter nominal p.
-  - Classification gate (downstream): family-level nominal p_perm < 0.05 only.
-  - HCA carrier prior is NOT used in AF–Ctrl testing.
-
-Recomputed bulk-DE/GSEA LE is written only as an audit mirror.
-"""
+"""Fig 3 v3 — program / family × compartment Δ-singscore on GSE255612 LA snRNA."""
 from __future__ import annotations
 
 import hashlib
@@ -511,7 +496,6 @@ def main() -> None:
     scores_df.to_csv(OUT_SCORES_TSV, sep="\t", index=False, float_format="%.10g")
     print(f"wrote {OUT_SCORES_TSV.relative_to(ROOT)} ({len(scores_df)} rows)")
 
-    # ---- Freeze computation test order (independent of display order) ----
     test_order_rows: list[dict] = []
 
     # Program × compartment tests

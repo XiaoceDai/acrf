@@ -51,7 +51,6 @@ DIV_CMAP = LinearSegmentedColormap.from_list(
 )
 
 
-# -------------------------------------------------------------------- IO
 def load_row_order() -> pd.DataFrame:
     df = pd.read_csv(ROOT / "normal_chamber_programs.tsv", sep="\t")
     for c in ("program", "program_id", "direction"):
@@ -66,7 +65,6 @@ def load_attribution() -> pd.DataFrame:
                        sep="\t")
 
 
-# -------------------------------------------------------------- SCORING
 def compute_signed_score_matrix(
     row_order: pd.DataFrame, attr: pd.DataFrame, ct_keys: list[str],
 ) -> np.ndarray:
@@ -114,7 +112,6 @@ def compute_sig_label_matrix(
     return lab
 
 
-# --------------------------------------------------------------- FIGURE
 def main() -> None:
     set_nature_style()
     row_order = load_row_order()

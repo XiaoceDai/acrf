@@ -391,7 +391,6 @@ def render() -> plt.Figure:
     for xc in gap_centers:
         bridge_arrow(title_ax, xc - GAP_MM * 0.38, xc + GAP_MM * 0.38, strip_cy)
 
-    # ---- Module 1: REFERENCE ----
     ax1 = add_column_axes(fig, xs[0], strip_y0, COL_W_MM[0], STRIP_H_MM)
     y = draw_kicker(ax1, pad_x, STRIP_H_MM, pad_y, "REFERENCE")
     lines1 = [
@@ -410,7 +409,6 @@ def render() -> plt.Figure:
             fontweight="semibold" if bold else "normal", clip_on=True,
         )
 
-    # ---- Module 2: LA DATA ----
     # Vertical stack only: facts → 3×3 grid → footnote (no text/grid overlap).
     ax2 = add_column_axes(fig, xs[1], strip_y0, COL_W_MM[1], STRIP_H_MM)
     y = draw_kicker(ax2, pad_x, STRIP_H_MM, pad_y, "LA DATA")
@@ -460,7 +458,6 @@ def render() -> plt.Figure:
         linespacing=1.05, clip_on=True,
     )
 
-    # ---- Module 3: LOCALIZATION TEST ----
     ax3 = add_column_axes(fig, xs[2], strip_y0, COL_W_MM[2], STRIP_H_MM)
     y = draw_kicker(ax3, pad_x, STRIP_H_MM, pad_y, "LOCALIZATION TEST")
     lines3 = [
@@ -496,7 +493,6 @@ def render() -> plt.Figure:
             ha="left", va="center", fontsize=5.5, color=FG_COLOR, zorder=3,
         )
 
-    # ---- Module 4: CARRIER-RELATIVE CLASS ----
     ax4 = add_column_axes(fig, xs[3], strip_y0, COL_W_MM[3], STRIP_H_MM)
     y = draw_kicker(ax4, pad_x, STRIP_H_MM, pad_y, "CARRIER-RELATIVE CLASS")
     ax4.text(

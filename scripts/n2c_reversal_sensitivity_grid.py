@@ -1,21 +1,5 @@
 #!/usr/bin/env python3
-"""
-N2c — Reversal-gene panel sensitivity analysis.
-
-Sweeps (MAG_HEALTHY × MAG_AF × MIN_COHORTS) and reports the resulting
-panel size for each combination, so the original 24-gene panel
-(MAG_HEALTHY=0.30, MAG_AF=0.15, MIN_COHORTS=2) can be located on a
-stability plateau.
-
-The af_reversed / sr_preserved flags are sign-only and threshold-
-invariant; only above_magnitude changes with MAG_HEALTHY / MAG_AF.
-We therefore recompute everything from results/n2_chamber_reversal_long.tsv
-without re-running the upstream per-donor aCAI computation.
-
-Outputs:
-    results/n2c_panel_sensitivity_grid.tsv   long table per grid cell
-    figures/figS_n2c_panel_sensitivity.pdf   3-panel heatmaps (one per MIN_COHORTS)
-"""
+"""N2c — Reversal-gene panel sensitivity analysis."""
 from __future__ import annotations
 
 import sys
@@ -109,7 +93,6 @@ def main() -> None:
     grid.to_csv(OUT_TSV, sep="\t", index=False)
     print(f"wrote {OUT_TSV.relative_to(ROOT)} ({len(grid)} cells)")
 
-    # ---- print key summary for the manuscript ----
     print("\n=== panel size at default thresholds ===")
     default = grid[(grid["MAG_HEALTHY"] == DEFAULT_MAG_HEALTHY)
                        & (grid["MAG_AF"] == DEFAULT_MAG_AF)
@@ -122,7 +105,6 @@ def main() -> None:
     print(sweep[["MIN_COHORTS", "n_panel", "n_RA_to_LA", "n_LA_to_RA"]] \
               .to_string(index=False))
 
-    # ---- figure: 3 panels (one per MIN_COHORTS), heatmap of n_panel ----
     fig = plt.figure(figsize=(190 / 25.4, 70 / 25.4))
     gs = fig.add_gridspec(1, 4, width_ratios=[1, 1, 1, 0.05],
                             wspace=0.30,

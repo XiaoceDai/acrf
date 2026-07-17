@@ -171,7 +171,6 @@ def main() -> None:
     cls_df.to_csv(OUT_TSV, sep="\t", index=False)
     print(f"wrote {OUT_TSV.relative_to(ROOT)}")
 
-    # ---- figure --------------------------------------------------------
     K = len(cls_df)
     MM = 1.0 / 25.4
     fig = plt.figure(figsize=(200 * MM, 135 * MM))

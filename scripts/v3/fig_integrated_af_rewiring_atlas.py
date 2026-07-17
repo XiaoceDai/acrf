@@ -1,23 +1,5 @@
 #!/usr/bin/env python3
-"""
-Integrated AF rewiring atlas (decision matrix).
-
-This script compresses evidence from Fig 1-2 into one family-level atlas:
-    Family | Dominant carrier | Healthy bias | AF rewiring state (consensus) |
-    Chamber driver | Replication support | Priority for validation
-
-Inputs:
-    results/fig1f_v3_baseline_attribution.tsv
-    results/fig2d_family_forest_v3.tsv
-    results/fig2e_replication_lollipop_v3.tsv
-
-Outputs:
-    results/fig_integrated_af_rewiring_atlas.tsv
-        Rows sorted by PriorityScore (high \u2192 low).  Leading manuscript columns:
-        family_label, priority_score, rank, components  document display ordering;
-        PriorityScore is not a Path A cross-layer support gate (see components text).
-    figures/fig_integrated_af_rewiring_atlas.pdf
-"""
+"""Integrated AF rewiring atlas (decision matrix)."""
 from __future__ import annotations
 
 import argparse

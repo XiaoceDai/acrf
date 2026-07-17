@@ -1,40 +1,5 @@
 #!/usr/bin/env python3
-"""
-Method innovation prototype:
-Direction-aware consensus scoring + diversity-aware panel selection.
-
-Motivation
-----------
-The current NCP selection uses hard gates (dual significance + 8/8 stability)
-and then picks cluster representatives by |NES|. This script proposes a more
-continuous evidence fusion strategy:
-
-1) Consensus score (0-1)
-   - fgsea significance
-   - GSVA significance
-   - fgsea effect size (|NES|)
-   - GSVA effect size (|logFC|)
-   - LOO stability fraction
-   - directional coherence penalty when NES and GSVA disagree
-
-2) Diversity-aware panel pruning
-   - greedy selection by consensus score
-   - reject pathways with high Jaccard overlap to already selected pathways
-   - run per direction (LA/RA), then merge with minimum per-direction quota
-
-Inputs
-------
-results/fig1c_pathway_selection_long.tsv
-results/fig1c_ncp_panel_v2.tsv                    (optional, for comparison)
-bulk/Project_P01/gene_sets/h.all.v2026.1.Hs.symbols.gmt
-bulk/Project_P01/gene_sets/c2.cp.reactome.v2026.1.Hs.symbols.gmt
-
-Outputs
--------
-results/innovation_ncp_consensus_long.tsv
-results/innovation_ncp_v3_panel.tsv
-results/innovation_ncp_v3_summary.tsv
-"""
+"""Method innovation prototype:"""
 from __future__ import annotations
 
 from dataclasses import dataclass

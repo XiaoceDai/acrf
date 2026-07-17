@@ -1,42 +1,5 @@
 #!/usr/bin/env python3
-"""Generate prose-facing Fig 6 MR / coloc tables from the pipeline-wide TSV.
-
-Reads ``results/figure6_mr_anchors_v3_pipeline_wide.tsv`` (engineering columns),
-optionally appends KCNN3 if missing, and writes:
-
-  - ``results/figure6_mr_anchors_v3_consolidated.tsv`` — manuscript evidence matrix
-    (anchor_gene, family_id, family_label, source, locus, cis / GWAS p, PP4/PP3,
-    verdict, notes).
-
-  - ``results/figure6_mr_coloc_gate_rules.tsv`` — locked gate / verdict rules.
-
-  - ``results/figure6_mr_calibration_genetics.tsv`` — PITX2 / KCNN3 calibration rows.
-
-  - ``results/fig6a_v3_locus_plot_windows.tsv`` — cis-window coordinates for Methods /
-    legend traceability (matches ``Project_P6/cache/eqtl_<gene>_chr*_*.tsv.gz``).
-
-FROZEN ANALYSIS ARTIFACTS
--------------------------
-The anchor-level colocalisation numbers in
-``results/figure6_mr_anchors_v3_pipeline_wide.tsv`` and the lead-variant offsets in
-``results/fig6a_v3_locus_zoom_summary.tsv`` are treated as **frozen analysis
-artifacts**. Downstream Fig 6A/6B panels and manuscript tables are regenerated
-directly from these released TSVs (see ``scripts/fig6a_anchor_coloc_calibration.py``
-and ``scripts/fig6b_pp3_pp4_leaddistance.py``). Full end-to-end re-derivation from
-tabix requires network access to the EBI FTP mirror (AF GWAS GCST90624411, eQTL
-Catalogue QTD000251 / QTD000356) via the ``scripts/h4*_mr_coloc*.R`` drivers.
-
-NOTE ON FILE NAMING: filenames and columns containing ``mr`` denote coloc-based
-anchor diagnostics and do NOT perform Mendelian randomization.
-
-Run after R coloc outputs exist (``h4*`` scripts) and after the pipeline-wide table
-is present (initially copied from prior consolidated output).
-
-Example::
-
-    cp results/figure6_mr_anchors_v3_pipeline_wide.tsv results/backup.tsv  # optional
-    python3 scripts/build_figure6_mr_v3_manuscript_tables.py
-"""
+"""Generate prose-facing Fig 6 MR / coloc tables from the pipeline-wide TSV."""
 from __future__ import annotations
 
 import shutil

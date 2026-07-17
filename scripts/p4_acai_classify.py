@@ -73,9 +73,7 @@ CONSENSUS_TABLE = {
 }
 
 
-# ----------------------------------------------------------------------
 # permutation on rhythm labels (donor-level, balanced by rhythm)
-# ----------------------------------------------------------------------
 
 def _stat(values: np.ndarray, is_af: np.ndarray) -> float:
     """mean(AF) - mean(SR)."""
@@ -123,9 +121,7 @@ def permutation_p(values: np.ndarray, is_af: np.ndarray,
     return (p, "mc", N_MC_PERM)
 
 
-# ----------------------------------------------------------------------
 # classification
-# ----------------------------------------------------------------------
 
 def _apply_effect_gates(mean_rel_sr: float, mean_rel_af: float,
                         dcai_rel: float) -> dict:
@@ -189,9 +185,7 @@ def classify(mean_rel_sr: float, mean_rel_af: float, dcai_rel: float,
     )
 
 
-# ----------------------------------------------------------------------
 # main
-# ----------------------------------------------------------------------
 
 def main() -> None:
     long_path = ROOT / "Project_P1" / "program_scores_long.tsv"
@@ -207,9 +201,7 @@ def main() -> None:
     ]]
     bulk = bulk.rename(columns={"mean_aCAI_bulk": "aCAI_bulk"})
 
-    # ------------------------------------------------------------------
     # figure2_source_data.tsv — long format, one row per (cohort, donor, program)
-    # ------------------------------------------------------------------
     src = long.merge(bulk[["program_id", "aCAI_bulk"]], on="program_id", how="left")
     # reorder columns to match spec §6.3
     col_order = [
@@ -225,9 +217,7 @@ def main() -> None:
     src.to_csv(src_out, sep="\t", index=False)
     print(f"wrote {src_out.relative_to(ROOT)}  ({len(src)} rows)")
 
-    # ------------------------------------------------------------------
     # per-program × per-cohort summary
-    # ------------------------------------------------------------------
     rng = np.random.default_rng(MC_SEED)
     cohorts = ["GSE128188", "GSE79768", "GSE115574"]
     programs = long[["program_id", "program_label", "program_order", "baseline_direction"]].drop_duplicates()
@@ -311,9 +301,7 @@ def main() -> None:
     for c in cohorts:
         tbl[f"q_perm_{c}"] = bh(tbl[f"p_perm_{c}"].to_numpy())
 
-    # ------------------------------------------------------------------
     # consensus (128188 × 79768) and 115574 replication
-    # ------------------------------------------------------------------
     def lookup_consensus(c1: str, c2: str) -> object:
         if c1 == "Low-support" or c2 == "Low-support":
             return pd.NA
@@ -392,7 +380,6 @@ def main() -> None:
     tbl_consensus.to_csv(cons_out, sep="\t", index=False)
     print(f"wrote {cons_out.relative_to(ROOT)}  ({len(tbl_consensus)} rows)")
 
-    # ---- stdout summary ----
     print("\n=== per-cohort rewiring class tally (strict §3.5) ===")
     for c in cohorts:
         col = f"rewiring_class_{c}"

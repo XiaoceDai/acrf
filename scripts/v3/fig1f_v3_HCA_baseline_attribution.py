@@ -1,31 +1,5 @@
 #!/usr/bin/env python3
-"""
-Fig 1F (v3, HCA) — chamber-resolved baseline cell-compartment attribution.
-
-Source data: Project_P3/HCA/pseudobulk_chamber/<comp>/{expr.tsv,samples.tsv}
-             (built by scripts/p_hca_pseudobulk_chamber.py from
-              global_raw.h5ad / Litvinukova et al. 2020).
-
-For every NCP pathway program / family we compute, separately for LA and RA:
-    (1) per-compartment mean expression averaged across paired donors,
-    (2) row z-score across reliable compartments,
-    (3) per-side dominant carrier (top z) and Mixed/Unresolved flag.
-
-The two sides are then combined into a per-family carrier consensus:
-    SHARED   - LA and RA both call the same dominant carrier
-    LA_ONLY  - only LA passes the dominance test
-    RA_ONLY  - only RA passes the dominance test
-    SPLIT    - LA and RA each call a different dominant carrier
-    MIXED    - neither side passes the dominance test
-
-Outputs
--------
-results/fig1f_v3_HCA_baseline_attribution.tsv
-    per-program (and per-family) z scores for every (compartment, region).
-results/fig1f_v3_HCA_family_carriers.tsv
-    one row per family: LA_carrier, RA_carrier, consensus class,
-    used by Fig 1F figure and Integrated Atlas.
-"""
+"""Fig 1F (v3, HCA) — chamber-resolved baseline cell-compartment attribution."""
 from __future__ import annotations
 
 from pathlib import Path

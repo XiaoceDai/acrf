@@ -1,21 +1,5 @@
 #!/usr/bin/env python3
-"""
-Figure 3C  RA-biased family AF rewiring decomposition by cell type.
-
-Three rows, one per RA-biased axis family (F9 HS-GAG, F10 TGF-β,
-F11 BMP).  In each row, an 11-bar plot of Δ singscore (AF − Ctrl) per
-LA-arm cell type, with 95 % CI bars derived from the per-donor SE.
-
-This is the "where in LA tissue does the RA-biased family signal land?"
-panel that links Fig 2D (the family-level forest of bulk aCAI rewiring)
-to single-cell carriers in GSE255612.
-
-Inputs:
-    results/fig3_primary_family_celltype_delta.tsv
-
-Output:
-    figures/fig3c_ra_family_decomposition.pdf
-"""
+"""Figure 3C  RA-biased family AF rewiring decomposition by cell type."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -101,7 +85,6 @@ def main() -> None:
     pad = max(0.005, (y_max - y_min) * 0.10)
     y_lo, y_hi = y_min - pad, y_max + pad
 
-    # ---- figure --------------------------------------------------------
     MM = 1.0 / 25.4
     fig = plt.figure(figsize=(180 * MM, 145 * MM))
     grid = fig.add_gridspec(
@@ -195,7 +178,6 @@ def main() -> None:
                 facecolor="none", edgecolor=RA_COLOR,
                 linewidth=1.2, linestyle="--", zorder=6))
 
-    # ---- caption ----
     fig.text(0.02, 0.020,
               "Bars: family-mean Δ singscore (AF − Ctrl).   "
               "Whiskers: 95 % CI from per-donor SE.   "

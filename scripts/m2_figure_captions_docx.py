@@ -21,10 +21,8 @@ OUT = ROOT / "manuscript_drafts" / "Figure_Captions.docx"
 OUT.parent.mkdir(parents=True, exist_ok=True)
 
 
-# ---------------------------------------------------------------------------
 # Caption content. Each entry: (figure_title, [(panel_letter, body), ...],
 # trailing_italic_note_or_None)
-# ---------------------------------------------------------------------------
 MAIN_FIGURES: list[tuple[str, list[str]]] = [
     (
         "Fig 1. A frozen healthy chamber reference defines the Normal Chamber Prior.",

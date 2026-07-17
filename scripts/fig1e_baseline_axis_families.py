@@ -148,7 +148,6 @@ def main() -> None:
     sorted_df[out_cols].to_csv(OUT_TSV, sep="\t", index=False)
     print(f"\nwrote {OUT_TSV.relative_to(ROOT)}")
 
-    # ---- Figure -----------------------------------------------------------
     # Build a per-row family label (representative pathway short name)
     fam_rep_map = dict(zip(fam_summary["family_id"],
                             fam_summary["representative"]))
@@ -168,7 +167,6 @@ def main() -> None:
                           wspace=0.05,
                           top=0.90, bottom=0.13, left=0.03, right=0.985)
 
-    # ---- left : combined dendrogram (LA on top, RA on bottom) -----------
     ax_dendro = fig.add_subplot(gs[0, 0])
     n_la = len(la_clu); n_ra = len(ra_clu)
 
@@ -205,7 +203,6 @@ def main() -> None:
                    fontsize=7.8, color=RA_COLOR, fontweight="bold",
                    ha="left", va="center", rotation=90)
 
-    # ---- centre : aCAI heatmap ----
     # Diverging colormap aligned with new chamber convention
     # (positive aCAI -> LA -> red,  negative -> RA -> blue).
     from matplotlib.colors import LinearSegmentedColormap
@@ -235,7 +232,6 @@ def main() -> None:
     ax.set_title("e  Axis families", loc="left", pad=6,
                  fontsize=10.0, fontweight="bold")
 
-    # ---- col 2 : family colour with F-id label ----
     ax_fam = fig.add_subplot(gs[0, 2], sharey=ax)
     fam_ids_seen = sorted(sorted_df["family_id"].unique())
     fam_color_map = {fid: FAMILY_PALETTE[i % len(FAMILY_PALETTE)]
@@ -260,7 +256,6 @@ def main() -> None:
     for s in ("top", "right", "left", "bottom"):
         ax_fam.spines[s].set_visible(False)
 
-    # ---- col 3 : family legend (representative names) ----
     ax_leg = fig.add_subplot(gs[0, 3])
     ax_leg.set_xlim(0, 1)
     K_total = len(fam_ids_seen)

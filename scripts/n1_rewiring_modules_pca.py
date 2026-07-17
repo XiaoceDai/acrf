@@ -90,7 +90,6 @@ def jaccard(a: set, b: set) -> float:
 
 
 def main() -> None:
-    # ---- 1. Build (gene x donor) aCAI matrix --------------------------------
     print("Loading healthy GSE112339 ...")
     h_expr, h_pairs = load_healthy_GSE112339()
     h_aCAI = per_donor_aCAI(h_expr, h_pairs)
@@ -145,7 +144,6 @@ def main() -> None:
           f"SR={(cohort_donor['rhythm']=='SR').sum()}, "
           f"AF={(cohort_donor['rhythm']=='AF').sum()})")
 
-    # ---- 2. Filter genes ----------------------------------------------------
     healthy_cols = cohort_donor[cohort_donor["rhythm"] == "healthy"].index.tolist()
     h_mean = M[healthy_cols].mean(axis=1)
     keep_mask = (h_mean.abs() >= MIN_ABS_HEALTHY_aCAI) \
@@ -155,7 +153,6 @@ def main() -> None:
           f"AND measured in >= {MIN_DONORS_PER_GENE} donors): "
           f"{M_keep.shape[0]} genes")
 
-    # ---- 3. PCA on the gene side --------------------------------------------
     print("Running PCA (gene-side, top-{0} PCs) ...".format(K_PCS))
     scaler = StandardScaler(with_mean=True, with_std=True)
     X = scaler.fit_transform(M_keep.values)        # gene x donor (centred & scaled)
@@ -176,13 +173,11 @@ def main() -> None:
     loadings_df.to_csv(OUT_LOAD, sep="\t", index_label="gene")
     print(f"wrote {OUT_LOAD.relative_to(ROOT)}")
 
-    # ---- 4. KMeans on PC loadings -------------------------------------------
     print(f"KMeans clustering (K = {K_MOD}) on top-{K_PCS} PC loadings ...")
     km = KMeans(n_clusters=K_MOD, n_init=20, random_state=RNG_SEED)
     cluster = km.fit_predict(loadings)
     loadings_df["module"] = cluster
 
-    # ---- 5. Annotate modules ------------------------------------------------
     progs = pd.read_csv(NCP_PROGRAM_PATH, sep="\t")
     progs.columns = [c.strip().strip('"') for c in progs.columns]
     progs["program_id"] = progs["program_id"].astype(str).str.strip().str.strip('"')
@@ -261,7 +256,6 @@ def main() -> None:
     n_novel     = (summary["annotation_class"] == "novel").sum()
     print(f"\ncanonical modules: {n_canonical}; novel modules: {n_novel}")
 
-    # ---- 6. Figure ----------------------------------------------------------
     fig = plt.figure(figsize=(COL_DOUBLE, 0.55 * COL_DOUBLE))
     gs = fig.add_gridspec(2, 3, hspace=0.55, wspace=0.50,
                           width_ratios=[1.2, 1.2, 1.0],

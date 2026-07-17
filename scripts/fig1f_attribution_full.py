@@ -1,41 +1,5 @@
 #!/usr/bin/env python3
-"""
-Figure 1f — Program × cell-type attribution at single-nucleus
-resolution, across the FULL 13-compartment cell-type taxonomy of
-GSE255612 (atrialCM, fibroblast, endothelial, lymphatic_endothelial,
-macrophage, lymphocyte, mast_cell, B_cell, pericyte,
-vascular_smooth_muscle, adipocyte, epicardial, neuronal).
-
-Two complementary attribution heatmaps:
-
-  Left panel: 10 NCP programs (Fig. 1c, curated primitive) ×
-              13 compartments
-              Per program, per compartment: mean expression of the
-              program's leading-edge genes in that compartment,
-              z-scored across compartments.
-
-  Right panel: 12 data-driven modules (Fig. 1d–e, data-driven
-               primitive; M0–M11) × 13 compartments
-               Same per-compartment z-score, evaluated on the gene
-               members of each module.
-
-Validation predictions (text-locked before plotting):
-  - Adipose module M7 (ADIPOQ, LEP, PLIN1, PCK1, CIDEC) should peak
-    in the adipocyte compartment.
-  - Mesothelial / PITX2 module M11 (PITX2, ITLN1, MSLN, KRT19, PRG4,
-    SLPI) should peak in the epicardial compartment.
-  - Atrial-CM module M8 (HAMP, BMP10) should peak in the atrialCM
-    compartment.
-
-Inputs:
-  Project_P3/GSE255612/pseudobulk_full/<compartment>/expr.tsv
-  bulk/Project_P01/normal_chamber_programs.tsv  (10 NCP programs)
-  results/n1_modules_long.tsv                   (gene -> module id)
-  results/n1_modules_summary.tsv                (module summary)
-
-Output:
-  figures/fig1f_attribution_full.pdf
-"""
+"""Figure 1f — Program × cell-type attribution at single-nucleus"""
 from __future__ import annotations
 
 import sys
@@ -159,7 +123,6 @@ def main() -> None:
     ]
     mod_z.index = mod_labels
 
-    # ---- figure -----------------------------------------------------------
     fig = plt.figure(figsize=(COL_DOUBLE, 0.75 * COL_DOUBLE))
     gs = fig.add_gridspec(1, 2, wspace=0.10, width_ratios=[1.0, 1.0])
 
@@ -236,7 +199,6 @@ def main() -> None:
     plt.close(fig)
     print(f"wrote {OUT.relative_to(ROOT)}")
 
-    # ---- console summary --------------------------------------------------
     print("\n=== NCP programs: dominant carrier per program (z-score) ===")
     for prog in ncp_z.index:
         j = int(np.nanargmax(ncp_z.loc[prog].values))

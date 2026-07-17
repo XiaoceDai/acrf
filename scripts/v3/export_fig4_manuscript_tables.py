@@ -1,43 +1,5 @@
 #!/usr/bin/env python3
-"""
-Emit manuscript-ready Fig 4 TSV bundles from locked v3 Fig 4 intermediates.
-
-Prerequisite pipeline:
-    scripts/v3/fig4_v3_duration_trend.py    → fig4_v3_* TSV + singscore long
-    scripts/v3/fig4_v3_chronicity_class.py  → fig4_v3_chronicity_class.tsv
-
-Outputs (results/)
-------------------
-fig4b_family_duration_correlations.tsv   family × region (LAA + LAPV): ρ, bootstrap CI,
-                                         permutation p, scipy Spearman p (nominal), BH q within region,
-                                         chronicity class from LAA primary thresholds.
-
-fig4c_chronicity_classes.tsv             per-family summary for Fig 4C prose counts.
-
-fig4c_chronicity_aggregate.tsv           counts + folded member lists per chronicity_class.
-
-fig4def_exemplar_scatter.tsv              Point-level data matching Fig 4d–f panels (PDF): SR anchors +
-                                         AF with finite duration_months only (excludes GEO '>1M' censored AF).
-                                         Column used_in_duration_correlation marks the n=12 AF primary subset.
-
-fig4def_exemplar_summary.tsv             selection rationale + ρ linkage (Fig 2–5 narrative hooks).
-
-fig4_lapv_sensitivity.tsv                LAA vs LAPV ρ/p comparison per family.
-
-fig4_duration_scores_long.tsv           sample_id × family mean singscore on Fig 3 LE sets (family-mean rank singscore).
-
-Notes
------
-Scores are rank-based singscores on pathway LE genes (Fig 3 pipeline); aggregated as mean across programs → family-mean singscore (not chamber aCAIrel — cohort GSE41177 is single-region bulk samples).
-
-SciPy Spearman p-values are asymptotic two-sided tests (nominal); permutation p_perm matches Fig 4 scripts (donor-label shuffle).
-
-q_value: Benjamini–Hochberg FDR across families within each region (LAA vs LAPV separately), applied to nominal p_spearman.
-
-fig4_lapv_sensitivity.tsv uses p_LAA / p_LAPV as the same permutation p-values as fig4_v3_FAMILY_* tables (not asymptotic Spearman).
-
-chronicity_class on LAPV rows in fig4b repeats the LAA-primary classification (thresholds are defined on LAA).
-"""
+"""Emit manuscript-ready Fig 4 TSV bundles from locked v3 Fig 4 intermediates."""
 from __future__ import annotations
 
 import sys

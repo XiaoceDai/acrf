@@ -1,30 +1,5 @@
 #!/usr/bin/env python3
-"""
-Fig 5c v3 - Cross-axis convergence classification (Path A strict).
-
-Inputs:
-    results/fig5b_v3_triangulation.tsv  (per-family rolled-up table from Fig 5b)
-
-Path A "supportive" definitions (strict, equal threshold per axis):
-    L1 supportive  =  replication_class == "high"          (CI excludes 0)
-    L2 supportive  =  fidelity_class != "Below_detection"
-    L3 supportive  =  chronicity_class != "Stable"
-
-Cross-axis convergence (n_supportive):
-    3  -> Triple-positive   (all three axes supportive)
-    2  -> Double-positive   (subtype shows which two: L1+L2, L1+L3 or L2+L3)
-    1  -> Single-axis       (subtype shows which: L1-only / L2-only / L3-only)
-    0  -> Silent            (no axis supportive)
-
-Layout:
-    a)  Top: horizontal stacked bar (Triple / Double / Single / Silent)
-    b)  Middle: family x [L1 L2 L3] supportive-bitmap (yellow = supportive)
-    c)  Bottom: per-class member list with rationale
-
-Outputs:
-    results/fig5c_v3_cross_axis.tsv   manuscript-first: bits + support_pattern + class
-    figures/fig5c_v3_cross_axis.pdf   (reads full fig5b join internally for layout)
-"""
+"""Fig 5c v3 - Cross-axis convergence classification (Path A strict)."""
 from __future__ import annotations
 
 import sys
@@ -145,7 +120,6 @@ def render_pdf(df: pd.DataFrame) -> None:
     ax_grid = fig.add_subplot(gs[1])
     ax_list = fig.add_subplot(gs[2])
 
-    # ========== a) horizontal stacked bar ==========
     ax_bar.set_xlim(0, n)
     ax_bar.set_ylim(0, 1.8)
     ax_bar.axis("off")
@@ -193,7 +167,6 @@ def render_pdf(df: pd.DataFrame) -> None:
 
     # "Path A" definition moved to global subtitle (see fig.text below)
 
-    # ========== b) family x [L1 L2 L3] supportive bitmap ==========
     ax_grid.set_xlim(-0.2, 7.5)
     ax_grid.set_ylim(0, n + 1.0)
     ax_grid.invert_yaxis()
@@ -265,7 +238,6 @@ def render_pdf(df: pd.DataFrame) -> None:
     for i in range(n + 1):
         ax_grid.plot([-0.2, 7.5], [i, i], color="#EEEEEE", lw=0.3, zorder=0)
 
-    # ========== c) per-class member list ==========
     ax_list.set_xlim(0, 1)
     ax_list.set_ylim(0, 1)
     ax_list.invert_yaxis()
@@ -313,7 +285,6 @@ def render_pdf(df: pd.DataFrame) -> None:
             y_cur += line_h * 0.75
         y_cur += line_h * 0.45
 
-    # ---- Title ----
     fig.text(0.06, 0.965,
               "Fig 5c  Cross-axis convergence classification  (Path A strict)",
               fontsize=enforce_font_floor(FS_PANEL_TITLE + 2), fontweight="bold", color="#1A1A1A")

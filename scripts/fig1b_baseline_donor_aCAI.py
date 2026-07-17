@@ -1,23 +1,5 @@
 #!/usr/bin/env python3
-"""
-Healthy-baseline donor-level aCAI table (GSE112339; not a main-text figure).
-
-For each deployed NCP pathway program and each healthy donor d:
-    aCAI_d(p) = mean(log2-CPM of program p member genes in LA donor d)
-              - mean(log2-CPM of program p member genes in RA donor d)
-
-The table feeds downstream aCAI_rel normalisation and plotting helpers
-(e.g. fig1d_summary.py, export_fig2b_donor_acairel_tables.py).
-
-Inputs:
-    results/innovation_ncp_v3_axis_families.tsv  (program_order, pathway, direction)
-    bulk/Project_P01/GSE112339/GSE112339_HTSeq_hg19_Ensembl.txt.gz
-    bulk/Project_P01/gene_sets/h.all.v2026.1.Hs.symbols.gmt
-    bulk/Project_P01/gene_sets/c2.cp.reactome.v2026.1.Hs.symbols.gmt
-
-Output:
-    results/fig1b_baseline_donor_aCAI.tsv  (program × donor aCAI matrix)
-"""
+"""Healthy-baseline donor-level aCAI table (GSE112339; not a main-text figure)."""
 from __future__ import annotations
 
 import sys

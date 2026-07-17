@@ -1,25 +1,5 @@
 #!/usr/bin/env python3
-"""
-Robustness check for innovation NCP selection.
-
-Goal
-----
-Quantify how stable each pathway's inclusion is under perturbations of:
-  - evidence fusion weights
-  - score threshold
-  - stability threshold
-  - significance thresholds
-
-Inputs
-------
-results/innovation_ncp_consensus_long.tsv
-
-Outputs
--------
-results/innovation_ncp_bootstrap_frequency.tsv
-results/innovation_ncp_bootstrap_summary.tsv
-figures/innovation_ncp_bootstrap_frequency.pdf
-"""
+"""Robustness check for innovation NCP selection."""
 from __future__ import annotations
 
 import sys

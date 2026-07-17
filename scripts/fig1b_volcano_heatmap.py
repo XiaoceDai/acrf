@@ -56,7 +56,6 @@ ZCMAP = LinearSegmentedColormap.from_list(
 NS_COLOR = "#BEBEBE"
 
 
-# ------------------------------------------------------------- data loading
 def _strip_quotes(s: pd.Series) -> pd.Series:
     return s.astype(str).str.strip('"')
 
@@ -94,7 +93,6 @@ def load_expr_meta():
     return expr, meta
 
 
-# --------------------------------------------------------------- volcano
 def draw_volcano(ax: plt.Axes, de: pd.DataFrame) -> None:
     color_map = {"LA": LA_FILL, "RA": RA_FILL, "NS": NS_COLOR}
     for cls in ("NS", "LA", "RA"):  # draw NS first so sig points sit on top
@@ -163,7 +161,6 @@ def draw_volcano(ax: plt.Axes, de: pd.DataFrame) -> None:
     ax.set_title("b1  Volcano", fontsize=7.6, pad=4)
 
 
-# -------------------------------------------------------- heatmap helpers
 def pick_top_keys(de: pd.DataFrame, expr_index: pd.Index) -> pd.DataFrame:
     """Pick top LA + RA genes (by |moderated_t|, FDR-filtered) that are
     present in the expression matrix."""
@@ -249,7 +246,6 @@ def draw_heatmap(ax: plt.Axes, strip_ax: plt.Axes,
         ax.spines[s].set_visible(False)
     ax.set_title("b2  Top DEG heatmap", fontsize=8, pad=16)
 
-    # --------- top strip: chamber colour band -----------
     for j, ch in enumerate(chamber_tags):
         rgba = LA_COLOR if ch == "LA" else RA_COLOR
         strip_ax.add_patch(Rectangle(
@@ -265,7 +261,6 @@ def draw_heatmap(ax: plt.Axes, strip_ax: plt.Axes,
         strip_ax.spines[s].set_visible(False)
     # Keep strip unlabeled to reduce panel text load.
 
-    # --------- colorbar ---------------------------------
     sm = ScalarMappable(norm=norm, cmap=ZCMAP)
     sm.set_array([])
     cbar = plt.colorbar(sm, cax=cbar_cax, orientation="horizontal")
@@ -322,7 +317,6 @@ def export_heatmap(de: pd.DataFrame, expr: pd.DataFrame, meta: pd.DataFrame) -> 
     print(f"wrote {OUT_HMAP.relative_to(ROOT)}  (size {fig_w:.2f} x {fig_h:.2f} in)")
 
 
-# ---------------------------------------------------------------- figure
 def main() -> None:
     set_nature_style()
     de = load_de()

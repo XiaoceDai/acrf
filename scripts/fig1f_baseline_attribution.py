@@ -1,29 +1,5 @@
 #!/usr/bin/env python3
-"""
-Figure 1f (REBUILD, baseline-only) — Cell-compartment attribution of the
-30 NCP_v2 programs on the HEALTHY (Ctrl) donor subset of GSE255612, at
-the full 13-compartment cell-type taxonomy.
-
-Forward analytical step from Fig. 1e (baseline axis families):
-    Question: at single-nucleus resolution, which compartment carries
-    each NCP_v2 program at the healthy baseline?
-    Method  : per program, per compartment, mean expression of program
-              gene members in healthy (Ctrl) donor pseudobulks; row
-              z-score across compartments; the compartment with the
-              largest row z-score is the candidate carrier.
-
-This panel is strictly healthy-baseline — AF biosamples are dropped.
-
-Inputs:
-    results/fig1c_ncp_panel_v2.tsv             (30 NCP_v2 programs)
-    results/fig1e_baseline_axis_families.tsv   (program -> family id)
-    bulk/Project_P01/gene_sets/h.all.v2026.1.Hs.symbols.gmt
-    bulk/Project_P01/gene_sets/c2.cp.reactome.v2026.1.Hs.symbols.gmt
-    Project_P3/GSE255612/pseudobulk_full/<compartment>/expr.tsv,samples.tsv
-Output:
-    figures/fig1f_baseline_attribution.pdf
-    results/fig1f_baseline_attribution.tsv  (program x compartment z-score)
-"""
+"""Figure 1f (REBUILD, baseline-only) — Cell-compartment attribution of the"""
 from __future__ import annotations
 
 import sys
@@ -123,7 +99,6 @@ def main() -> None:
     pathways = {**load_gmt(GMT_HALL, "HALLMARK"),
                 **load_gmt(GMT_REAC, "REACTOME")}
 
-    # ---- Per-compartment per-gene MEAN over healthy (Ctrl) donors only ----
     print("Computing per-compartment MEAN expression on Ctrl donors only ...")
     expr_means = {}
     n_donors_per_comp = {}
@@ -155,7 +130,6 @@ def main() -> None:
     print(f"  EXCLUDED  (n < {MIN_CTRL_DONORS}; shown as N/A in heatmap): "
           f"{excluded_comps}")
 
-    # ---- Per program: row-z mean expression of LE genes across reliable compartments ----
     rows = []
     for _, r in ncp.iterrows():
         gset = pathways.get(r["pathway"], [])
@@ -183,7 +157,6 @@ def main() -> None:
     z_df.to_csv(OUT_TSV, sep="\t", index=False)
     print(f"wrote {OUT_TSV.relative_to(ROOT)}")
 
-    # ---- Sort programs: by family_id (ordering matches Fig 1e ordering) ----
     fam_order = (fam.sort_values(["direction", "family_id",
                                     "leaf_order_within_dir"]
                                    if "leaf_order_within_dir" in fam.columns
@@ -201,7 +174,6 @@ def main() -> None:
     fam_color_map = {fid: FAMILY_PALETTE[i % len(FAMILY_PALETTE)]
                       for i, fid in enumerate(fam_ids_seen)}
 
-    # ---- Figure -----------------------------------------------------------
     fig = plt.figure(figsize=(COL_DOUBLE * 1.40, COL_DOUBLE * 1.18))
     gs = fig.add_gridspec(
         1, 5, width_ratios=[0.28, 0.30, 2.00, 4.90, 1.25], wspace=0.05,
@@ -221,7 +193,6 @@ def main() -> None:
     )
     cmap_div.set_bad("#D8D8D8")
 
-    # ---- col 0 : direction band with text (LA = red, RA = blue) ----
     ax_dir = fig.add_subplot(gs[0, 0])
     for i, d in enumerate(z_df["direction"]):
         ax_dir.add_patch(mpatches.Rectangle(
@@ -240,7 +211,6 @@ def main() -> None:
     for s in ("top", "right", "left", "bottom"):
         ax_dir.spines[s].set_visible(False)
 
-    # ---- col 1 : family colour band with F-id labels ----
     ax_fam = fig.add_subplot(gs[0, 1], sharey=ax_dir)
     for i in range(K):
         fid = z_df.iloc[i]["family_id"]
@@ -340,7 +310,6 @@ def main() -> None:
             ax_fam.axhline(i - 0.5, color="black", lw=0.4, ls="-",
                             alpha=0.6, clip_on=False)
 
-    # ---- col 4 : dominant carrier short-name strip ----
     ax_dom = fig.add_subplot(gs[0, 4], sharey=ax_dir)
     ax_dom.set_xlim(0, 1); ax_dom.set_ylim(K - 0.5, -0.5)
     ax_dom.axis("off")
@@ -368,7 +337,6 @@ def main() -> None:
         ax_dom.text(0.98, i, f"z={z_val:+.1f}",
                      fontsize=7.5, ha="right", va="center", color="#666")
 
-    # ---- shared colour bar at bottom ----
     cax = fig.add_axes([0.33, 0.05, 0.25, 0.017])
     cbar = fig.colorbar(im, cax=cax, orientation="horizontal")
     cbar.set_label("row z-score", fontsize=8.4)
@@ -398,7 +366,6 @@ def main() -> None:
     plt.close(fig)
     print(f"wrote {FIG_OUT.relative_to(ROOT)}")
 
-    # ---- console summary --------------------------------------------------
     print("\n=== Dominant carrier per program (z-score; reliable compartments only) ===")
     for _, r in z_df.iterrows():
         comp_vals = r[COMPARTMENTS].astype(float)

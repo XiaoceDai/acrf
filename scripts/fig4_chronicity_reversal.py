@@ -1,34 +1,5 @@
 #!/usr/bin/env python3
-"""
-Figure 4 (REPLACEMENT) — Matrix-invasion chamber-reversal signature
-intensifies with atrial fibrillation duration in the left atrial appendage.
-
-Concept:
-    The 24 chamber-identity reversal genes identified in Fig. 7
-    define a gene-level signature whose AF-specific reversal direction
-    is known per gene (RA -> LA for 21 genes, LA -> RA for 3 genes).
-    If matrix-invasion is a progressive process, the LA expression of
-    RA -> LA reversal genes should INCREASE with AF duration in LAA.
-
-Procedure:
-    1. Take GSE41177 LAA AF samples with numeric AF duration in months
-       (n = 12; duration 10-150 months).
-    2. Per gene, compute Spearman rho of LA expression vs AF duration.
-    3. Sign-align by expected AF direction:
-           RA -> LA (n = 21): positive rho = invasion intensifies
-           LA -> RA (n = 3) : negative rho = invasion intensifies
-       Aligned rho is positive when the chamber-reversal direction
-       intensifies with duration.
-    4. Composite signature rho = mean of sign-aligned rhos across the
-       24 reversal genes.
-    5. Empirical null: 1000 size-matched random gene-set permutations.
-    6. Report signature rho, empirical p, and per-gene contributions.
-
-Outputs:
-    results/figure4_reversal_chronicity_per_gene.tsv
-    results/figure4_reversal_chronicity_summary.tsv
-    figures/fig4_reversal_chronicity.pdf
-"""
+"""Figure 4 (REPLACEMENT) — Matrix-invasion chamber-reversal signature"""
 from __future__ import annotations
 
 import sys
@@ -170,7 +141,6 @@ def main() -> None:
     print(summary.to_string(index=False))
     print(f"wrote {OUT_SUMM.relative_to(ROOT)}")
 
-    # ---- figure -----------------------------------------------------------
     fig = plt.figure(figsize=(COL_DOUBLE, 0.5 * COL_DOUBLE))
     gs = fig.add_gridspec(2, 3, hspace=0.55, wspace=0.50,
                           height_ratios=[1.0, 1.0])

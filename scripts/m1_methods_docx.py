@@ -1,18 +1,5 @@
 #!/usr/bin/env python3
-"""
-Build the Nature Communications-style Methods Word document.
-
-Output: manuscript_drafts/Methods.docx
-
-Style:
-  - Times New Roman 11pt body
-  - Arial 11.5pt bold subheadings
-  - Double line-spacing
-  - Wide margins (2.5 cm)
-  - Hanging-indent for the data-availability list
-
-Source: METHODS_TEXT (single Python multiline string composed below).
-"""
+"""Build the Nature Communications-style Methods Word document."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -28,9 +15,7 @@ OUT_DIR.mkdir(parents=True, exist_ok=True)
 OUT = OUT_DIR / "Methods.docx"
 
 
-# ---------------------------------------------------------------------------
 # Methods text (publication-ready narrative).
-# ---------------------------------------------------------------------------
 SECTIONS: list[tuple[str, list[str]]] = [
     (
         'Ethical approval and public human data',
@@ -196,20 +181,16 @@ SECTIONS: list[tuple[str, list[str]]] = [
 ]
 
 
-# ---------------------------------------------------------------------------
 # Build the document.
-# ---------------------------------------------------------------------------
 def main() -> None:
     doc = Document()
 
-    # ---- Page setup ----
     for section in doc.sections:
         section.top_margin    = Cm(2.5)
         section.bottom_margin = Cm(2.5)
         section.left_margin   = Cm(2.5)
         section.right_margin  = Cm(2.5)
 
-    # ---- Default body style ----
     style = doc.styles["Normal"]
     style.font.name = "Times New Roman"
     style.font.size = Pt(11)
@@ -236,7 +217,6 @@ def main() -> None:
     pf2.space_before = Pt(14)
     pf2.space_after = Pt(4)
 
-    # ---- Title ----
     title = doc.add_heading("Methods", level=1)
     title.alignment = WD_ALIGN_PARAGRAPH.LEFT
 
@@ -250,7 +230,6 @@ def main() -> None:
             return True
         return False
 
-    # ---- Sections ----
     for header, paragraphs in SECTIONS:
         doc.add_heading(header, level=2)
         for p in paragraphs:

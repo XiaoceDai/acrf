@@ -1,31 +1,5 @@
 #!/usr/bin/env python3
-"""
-Fig 3 v3 carrier-fidelity classification at family level.
-
-Strict thresholds (locked):
-    sig             := family-level p_perm < 0.05  (BH q not enforced;
-                       Fig 3 single-cell power is limited and the panel uses
-                       nominal p as the visual indicator).
-    Fidelity        := the family's HCA baseline LA-carrier compartment is
-                       sig; AND no other compartment is sig.
-    Relay           := baseline carrier is NOT sig; at least one OTHER
-                       compartment is sig.
-    Extension       := baseline carrier IS sig AND at least one other
-                       compartment is sig with the SAME sign.
-    Below detection := no compartment is sig.
-
-Inputs
-------
-results/fig3_v3_family_celltype_delta.tsv
-results/fig1f_v3_HCA_family_carriers.tsv
-results/ncp_v3_family_labels.tsv
-
-Outputs
--------
-results/fig3_v3_carrier_fidelity_class.tsv    (internal minimal columns)
-results/fig3c_family_fidelity_classes.tsv      manuscript table: labels, prior,
-    supported compartments, evidence strength, below-detection reason
-"""
+"""Fig 3 v3 carrier-fidelity classification at family level."""
 from __future__ import annotations
 
 from pathlib import Path

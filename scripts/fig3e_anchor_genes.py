@@ -1,22 +1,5 @@
 #!/usr/bin/env python3
-"""
-Figure 3E  Anchor genes leading the strongest Fig 3D shifts.
-
-Three target program × cell-type contexts (one per row):
-    1. F10 GAG metabolism × LA fibroblast       (RA-biased program +; chamber-reversal carrier)
-    2. F11 BMP signalling × LA adipocyte         (RA-biased program +; chamber-reversal in LA fat)
-    3. F11 BMP signalling × LA lymphatic endo    (RA-biased program −; LA loss)
-
-For each context we compute the per-gene AF − Ctrl mean delta on the
-relevant LA snRNA pseudobulk, restricted to the program's leading-edge
-gene set, and show the top 10 ranked by direction-aligned shift (i.e.
-by signed contribution to the program-level Δ singscore).
-
-This panel is self-contained:  no downstream cross-reference (e.g. to
-Fig 6 reversal genes) is required.
-
-Output:  figures/fig3e_anchor_genes.pdf
-"""
+"""Figure 3E  Anchor genes leading the strongest Fig 3D shifts."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -182,7 +165,6 @@ def main() -> None:
             color=RA_COLOR, pad=4)
         ax.tick_params(axis="x", pad=2)
 
-    # ---- caption ----
     fig.text(0.02, 0.020,
               "Bars: per-gene AF − Ctrl mean of log-normalized snRNA "
               "pseudobulk in the named LA cell type, restricted to that "

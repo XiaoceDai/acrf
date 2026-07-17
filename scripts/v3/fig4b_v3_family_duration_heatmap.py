@@ -1,22 +1,5 @@
 #!/usr/bin/env python3
-"""
-Fig 4b v3 - 16 family x 4 sensitivity coding Spearman rho heatmap (LA chronicity).
-
-Layout:
-    [carrier] [state] [family label] [4-coding rho heatmap with rho text]
-    [sensitivity tally column] [legend column]
-
-4 sensitivity codings (left -> right):
-    Primary    : numeric duration_months (>1M dropped)
-    gt1m_eq1   : ">1M" coded as 1 month
-    Ordinal    : 3-tier (SR=0, short_AF=1, long_AF=2)
-    LAPV       : LAPV region sensitivity (numeric duration)
-
-Row order: atlas PriorityScore descending (cross-figure consistency with Fig 3b).
-Sig markers: yellow * for p<0.05, "." for p<0.10  (donor-permutation, n_perm = 10,000).
-Each cell shows Spearman rho text (2 decimals) for direct readability.
-Right tally: number of codings with same sign as primary.
-"""
+"""Fig 4b v3 - 16 family x 4 sensitivity coding Spearman rho heatmap (LA chronicity)."""
 from __future__ import annotations
 
 import sys

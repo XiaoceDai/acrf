@@ -1,22 +1,5 @@
 #!/usr/bin/env python3
-"""
-Figure 2A — Bridge from Fig1 locked v3 panel to AF rewiring quantification.
-
-Two-row layout:
-    Row 1  (per-donor primitive)
-        STAGE 1  donor + paired LA / RA biopsies
-        STAGE 2  per-chamber expression vector
-        STAGE 3  frozen NCP program panel from Fig1
-        STAGE 4  donor-level chamber contrast and normalized rewiring unit
-
-    Row 2  (AF-stage inference)
-        STAGE 5a  M_aCAI matrix (frozen programs × donors)
-        STAGE 5b  block by rhythm, pool 3 cohorts
-        STAGE 5c  per-family Hedges' g + fixed-effect IVW 95% CI
-                   (REML / Hartung–Knapp reserved for axis/program supplements)
-
-Output:  figures/fig2a_primitive_schematic.pdf
-"""
+"""Figure 2A — Bridge from Fig1 locked v3 panel to AF rewiring quantification."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -109,7 +92,6 @@ def main() -> None:
     ax = fig.add_axes([0.0, 0.0, 1.0, 1.0])
     ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
 
-    # ---- title (now wraps to fit 200mm width) ----
     fig.text(0.025, 0.965,
               "Fig 2A  Fig1->Fig2 bridge: frozen NCP panel to AF rewiring unit",
               fontsize=9.0, fontweight="bold", ha="left", va="center")
@@ -119,9 +101,7 @@ def main() -> None:
               fontsize=7.5, color=GREY_DARK, ha="left", va="center",
               style="italic")
 
-    # ===================================================================
     # ROW 1  STAGE 1 → STAGE 4   (per-donor primitive)
-    # ===================================================================
     row1_top = 0.86; row1_bot = 0.51
 
     # Stage column anchors
@@ -140,7 +120,6 @@ def main() -> None:
     add_stage_header(ax, s4_x, s4_x + s4_w, row1_top,
                        4, "Donor-level rewiring primitive")
 
-    # ---- containing card for each stage so caption is inside ----
     card_y = 0.555; card_h = 0.260
     for cx, cw in [(s1_x, s1_w), (s2_x, s2_w),
                      (s3_x, s3_w), (s4_x, s4_w)]:
@@ -148,7 +127,6 @@ def main() -> None:
                   "", fc="#FCFCFC", ec=GREY_LIGHT, lw=0.6,
                   radius=0.012)
 
-    # ---- STAGE 1  donor + LA / RA biopsies ----
     ax.text(s1_x + s1_w / 2, 0.785,
              "donor i",
              fontsize=7.5, fontweight="bold", ha="center", va="center")
@@ -169,7 +147,6 @@ def main() -> None:
              fontsize=6.3, color=GREY_DARK, ha="center", va="center",
              style="italic")
 
-    # ---- STAGE 2  expression vectors ----
     add_box(ax, s2_x, 0.700, s2_w, 0.080,
               "expr_LA  (gene-level)",
               fc=BG_LA, ec=LA_COLOR, fontsize=7.0, fontweight="bold")
@@ -188,7 +165,6 @@ def main() -> None:
                 s2_x - 0.002, 0.645,
                 color=RA_COLOR, lw=0.9)
 
-    # ---- STAGE 3  per-program score under locked v3 panel ----
     add_box(ax, s3_x, 0.700, s3_w, 0.080,
               r"$S_{ik}^{\mathrm{LA}}=\mathrm{NES}(P_k\mid\mathrm{LA}_i)$",
               fc=BG_LA, ec=LA_COLOR, fontsize=7.2)
@@ -207,7 +183,6 @@ def main() -> None:
                 s3_x - 0.002, 0.645,
                 color=RA_COLOR, lw=0.9)
 
-    # ---- STAGE 4  central equation card (overrides the light stage card) ----
     add_box(ax, s4_x - 0.005, card_y, s4_w + 0.010, card_h,
               "", fc="#FFFCF4", ec="black", lw=1.2, radius=0.014)
     ax.text(s4_x + s4_w / 2, 0.785,
@@ -245,9 +220,7 @@ def main() -> None:
                 s4_x - 0.007, 0.700,
                 color=RA_COLOR, lw=0.9)
 
-    # ===================================================================
     # ROW 2  STAGE 5  (cohort-stratified inference)
-    # ===================================================================
     row2_top = 0.46
     add_stage_header(ax, 0.030, 0.985, row2_top,
                        5, "AF-stage inference on fixed NCP object")
@@ -363,7 +336,6 @@ def main() -> None:
                 hk_x - 0.002, hk_y + hk_h / 2,
                 color=GREY_DARK, lw=1.0)
 
-    # ---- bottom notation ----
     fig.text(0.025, 0.030,
               "Notation:   i = donor;   k = NCP pathway program;   "
               "c = cohort;   P_k = program gene set;   "

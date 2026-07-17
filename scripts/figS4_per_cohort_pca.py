@@ -1,22 +1,5 @@
 #!/usr/bin/env python3
-"""
-Supplementary Figure S4 — Per-cohort PCA mini-grid.
-
-Shows the global expression structure of the five bulk cohorts that
-support Figs 1–4, demonstrating that donor / chamber structure is the
-dominant signal in the healthy reference and that the rhythm signal
-(AF vs SR) is a smaller-magnitude axis on top of it.
-
-For GSE112339 we re-use the precomputed PCA from
-`bulk/Project_P01/qc/qc_pca.tsv`; for the other four cohorts we
-recompute PCA on log2-CPM (RNA-seq) or RMA-normalised intensity
-(Affymetrix) of the top-variance 2,000 features, after
-sample-mean-centring.
-
-Outputs:
-  figures/figS4_per_cohort_pca.pdf
-  results/figS4_per_cohort_pca.tsv
-"""
+"""Supplementary Figure S4 — Per-cohort PCA mini-grid."""
 from __future__ import annotations
 
 import sys
@@ -49,9 +32,7 @@ HEALTHY_LA = LA_COLOR
 HEALTHY_RA = RA_COLOR
 
 
-# ---------------------------------------------------------------------------
 # PCA helper.
-# ---------------------------------------------------------------------------
 def top_variance_pca(expr: pd.DataFrame, n_features: int = 2_000,
                      log_transform: bool = False) -> tuple[pd.DataFrame, np.ndarray]:
     """Return DataFrame with PC1, PC2 per sample (columns of expr)."""
@@ -76,9 +57,7 @@ def top_variance_pca(expr: pd.DataFrame, n_features: int = 2_000,
             np.asarray(var_explained))
 
 
-# ---------------------------------------------------------------------------
 # Cohort plotters.
-# ---------------------------------------------------------------------------
 def plot_gse112339(ax: plt.Axes) -> tuple[str, list[dict]]:
     """Use precomputed PCA in qc_pca.tsv."""
     qc = pd.read_csv(ROOT / "bulk" / "Project_P01" / "qc" / "qc_pca.tsv",
@@ -195,7 +174,6 @@ def main() -> None:
         panel_label(ax, lab, x=-0.18, y=1.06)
         all_rows.extend(rows)
 
-    # ---- shared legend -----------------------------------------------------
     legend_ax = fig.add_subplot(gs[1, 2])
     legend_ax.axis("off")
     handles = [

@@ -1,15 +1,5 @@
 #!/usr/bin/env python3
-"""
-Figure 5D — Dual-axis mechanism cartoon (clean, NC-style).
-
-Three columns: Healthy chamber → AF rewiring → Distributed substrate.
-
-Design discipline (post-polish):
-  - No BioRender-style icons; just typographic boxes + colored chips.
-  - Strong vertical grid (3 conceptual rows: identity-LA, identity-RA, message).
-  - Single uniform arrow style.
-  - Colour codes consistent with Fig 1–6 (LA blue, RA red, axis green/brown).
-"""
+"""Figure 5D — Dual-axis mechanism cartoon (clean, NC-style)."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -67,7 +57,6 @@ def main() -> None:
     ax.set_axis_off()
     ax.set_xlim(0, 1); ax.set_ylim(0, 1)
 
-    # ============ LEFT COLUMN — healthy chamber identity ============
     _round(ax, 0.04, 0.18, 0.22, 0.74, "white", "#CCCCCC", lw=0.5)
     ax.text(0.15, 0.875, "Healthy chamber identity",
             ha="center", va="center", fontsize=6.6, fontweight="bold",
@@ -103,7 +92,6 @@ def main() -> None:
             ha="center", va="center", fontsize=4.7, color="#444444",
             style="italic")
 
-    # ============ MIDDLE COLUMN — AF rewiring ============
     ax.text(0.475, 0.875, "AF chamber rewiring",
             ha="center", va="center", fontsize=6.6, fontweight="bold",
             color="#A55F00")
@@ -152,7 +140,6 @@ def main() -> None:
     _arr(ax, (0.246, 0.355), (0.295, 0.36),
          color=RA_COLOR, lw=0.85, alpha=0.45)
 
-    # ============ RIGHT COLUMN — chronic substrate ============
     _round(ax, 0.69, 0.555, 0.275, 0.275, "#F1F8EE", C_FIB_LINE,
            lw=0.55, alpha=0.45)
     ax.text(0.827, 0.79,

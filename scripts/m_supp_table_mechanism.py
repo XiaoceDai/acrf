@@ -1,25 +1,5 @@
 #!/usr/bin/env python3
-"""
-Supplementary Table  Sub-mechanism inventory underlying Fig 5E dual-axis
-                      mechanism map.
-
-For each sub-mechanism (SM-1 to SM-7) we list:
-    axis        RA / LA / cross
-    name        short biological label
-    family      involved NCP_v2 family / gene panel
-    cell carrier dominant cell type (or "diffuse" / "n/a")
-    bulk evidence       (Fig 2D pooled g + CI)
-    snRNA evidence      (Fig 3B Δ + p_perm at carrier)
-    spatial evidence    (Fig 5D ROI ρ + p)
-    duration evidence   (Fig 4B family ρ + p)
-    gene-level evidence (Fig 6B/6C reversal panel + carrier Δ_aligned)
-    statistical test    (N2d test name + p)
-    interpretation      one-sentence biological mechanism
-
-Output:
-    results/n2d_sub_mechanism_table.tsv     (raw long table)
-    Manuscript_outputs/Supplementary_Table_Sub_Mechanisms.docx
-"""
+"""Supplementary Table  Sub-mechanism inventory underlying Fig 5E dual-axis"""
 from __future__ import annotations
 
 from pathlib import Path

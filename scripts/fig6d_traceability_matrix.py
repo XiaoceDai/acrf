@@ -1,16 +1,5 @@
 #!/usr/bin/env python3
-"""
-Figure 6D — Integrated G-tier traceability / interpretation matrix.
-
-Reads:
-  results/figure6_g_tier_traceability.tsv
-  results/fig6a_anchor_coloc_calibration.tsv (optional display fields)
-  results/fig6a_v3_locus_zoom_summary.tsv (locus callout distances)
-
-Outputs:
-  figures/fig6d_traceability_matrix.pdf
-  results/fig6d_traceability_matrix.tsv
-"""
+"""Figure 6D — Integrated G-tier traceability / interpretation matrix."""
 from __future__ import annotations
 
 import sys

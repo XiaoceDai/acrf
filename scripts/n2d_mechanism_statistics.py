@@ -1,28 +1,5 @@
 #!/usr/bin/env python3
-"""
-N2d  Three quantitative statistics supporting the dual-axis sub-mechanism
-       claims in Fig 5E:
-
-    Test 1  Directional asymmetry of chamber-reversal panel.
-            H0:  RA→LA  : LA→RA  =  1 : 1  among 24 reversal genes.
-            stats.binomtest(min(n_RA→LA, n_LA→RA), n_total, p=0.5)
-
-    Test 2  Small leucine-rich proteoglycan (SLRP) family enrichment in
-            the 24-gene reversal panel.
-            Universe: all genes with a per-cohort aCAI estimate
-                       (results/n2_chamber_reversal_long.tsv).
-            Foreground: 24 reversal-panel genes.
-            Test: Fisher's exact (one-sided, alternative='greater').
-
-    Test 3  BMP signalling bidirectionality across cells.
-            Per-donor Δ singscore (AF − Ctrl) of F11 BMP in adipocyte
-            vs the same in lymphatic endothelial.  Tested with
-            (i) paired sign of Δ_adipo vs Δ_lymph
-            (ii) Welch t-test of the two Δ distributions across donors
-
-Outputs:
-    results/n2d_mechanism_statistics.tsv   wide table of all 3 tests
-"""
+"""N2d  Three quantitative statistics supporting the dual-axis sub-mechanism"""
 from __future__ import annotations
 
 from pathlib import Path

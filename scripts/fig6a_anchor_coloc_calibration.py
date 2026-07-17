@@ -1,19 +1,5 @@
 #!/usr/bin/env python3
-"""
-Figure 6A — Two-column anchor-level AF GWAS / atrial cis-eQTL calibration.
-
-Frozen numerical input only (no coloc recomputation; no anchor-table rebuild):
-  results/figure6_mr_anchors_v3_pipeline_wide.tsv
-
-GWAS provenance (asserted, not drawn on panel):
-  results/provenance/gwas_gcst90624411/gwas_gcst90624411_provenance.tsv
-
-Outputs:
-  figures/fig6a_anchor_coloc_calibration.{pdf,svg,png}
-  results/fig6a_anchor_coloc_calibration_source.tsv
-  results/fig6a_anchor_coloc_calibration_manifest.tsv
-  results/fig6a_anchor_coloc_calibration_qc.md
-"""
+"""Figure 6A — Two-column anchor-level AF GWAS / atrial cis-eQTL calibration."""
 from __future__ import annotations
 
 import hashlib
@@ -379,7 +365,6 @@ def render(df: pd.DataFrame, counts: dict[str, int]) -> plt.Figure:
     x_right = x_mat_r + GUTTER
     x_right_r = x_right + RIGHT_W
 
-    # ---- Title + source (shared A/B two-line title contract) ----
     from figure6_composite_geometry import AB_LINE2_Y, AB_TITLE_Y
     ax.text(
         x_left, AB_TITLE_Y, TITLE, fontsize=FS_TITLE, fontweight="bold",
@@ -390,7 +375,6 @@ def render(df: pd.DataFrame, counts: dict[str, int]) -> plt.Figure:
         ha="left", va="top", color=MUTED_COLOR, clip_on=False,
     )
 
-    # ---- Matrix uses shared A/B anchor-row geometry ----
     n_row = len(df)
     n_framework = int((df["anchor_type"] == "framework").sum())
     head_h = AB_HEAD_H
@@ -542,7 +526,6 @@ def render(df: pd.DataFrame, counts: dict[str, int]) -> plt.Figure:
             color="#8A8580", lw=0.7, zorder=3,
         )
 
-    # ---- Right column: CALIBRATION READOUT ----
     ry = matrix_top
     ax.text(
         x_right, ry, "CALIBRATION READOUT",
@@ -597,7 +580,6 @@ def render(df: pd.DataFrame, counts: dict[str, int]) -> plt.Figure:
             )
             ry -= 1.4
 
-    # ---- Footer (under matrix, left-aligned) ----
     ax.text(
         x_left, 4.4,
         f"{SYM_YES} criterion met     {SYM_NO} evaluated, gate not met",

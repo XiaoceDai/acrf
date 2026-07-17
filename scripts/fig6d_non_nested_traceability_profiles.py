@@ -1,28 +1,5 @@
 #!/usr/bin/env python3
-"""
-Figure 6D — Non-nested genetic traceability profiles (publication panel).
-
-Synthesis panel of independent evidence flags for 10 framework anchors and
-2 AF calibration controls. Not a new statistical analysis; not a Path A gate.
-
-Authoritative inputs (frozen; read-only):
-  results/fig6a_anchor_coloc_calibration_source.tsv
-  results/fig6b_posterior_lead_distance_source.tsv
-  results/provenance/figure6_external_gene_sets_manifest.tsv
-  results/external_af_gene_sets.tsv
-  results/ncp_v3_gene_universe.tsv
-
-Optional p-value enrichment (source table only; never display logic):
-  results/figure6_mr_anchors_v3_pipeline_wide.tsv  (lead_eqtl_p column)
-
-Outputs:
-  results/fig6d_non_nested_traceability_source.tsv
-  results/fig6d_non_nested_traceability_summary.tsv
-  results/fig6d_non_nested_traceability_manifest.tsv
-  results/fig6d_non_nested_traceability_qc.md
-  figures/fig6d_traceability_matrix.{pdf,svg,png}
-  figures/_pdf_preview/fig6d_traceability_matrix.png
-"""
+"""Figure 6D — Non-nested genetic traceability profiles (publication panel)."""
 from __future__ import annotations
 
 import hashlib
@@ -49,9 +26,7 @@ from plot_style import (  # noqa: E402
 )
 from _figure_export import save_figure_bundle  # noqa: E402
 
-# ---------------------------------------------------------------------------
 # Paths
-# ---------------------------------------------------------------------------
 FIG6A = ROOT / "results" / "fig6a_anchor_coloc_calibration_source.tsv"
 FIG6B = ROOT / "results" / "fig6b_posterior_lead_distance_source.tsv"
 MANIFEST_EXT = ROOT / "results" / "provenance" / "figure6_external_gene_sets_manifest.tsv"
@@ -70,9 +45,7 @@ OUT_PNG = ROOT / "figures" / "fig6d_traceability_matrix.png"
 OUT_PREVIEW = ROOT / "figures" / "_pdf_preview" / "fig6d_traceability_matrix.png"
 OUT_GRAY = ROOT / "figures" / "_pdf_preview" / "fig6d_traceability_matrix_grayscale.png"
 
-# ---------------------------------------------------------------------------
 # Geometry / style
-# ---------------------------------------------------------------------------
 WIDTH_MM = 90.0
 HEIGHT_MM = 74.0
 
@@ -194,9 +167,7 @@ def _status_from_bool(present: bool) -> str:
     return STATUS_PRESENT if present else STATUS_NO
 
 
-# ---------------------------------------------------------------------------
 # Load / build source
-# ---------------------------------------------------------------------------
 def load_manifest() -> pd.DataFrame:
     if not MANIFEST_EXT.is_file():
         _stop(f"missing external-set manifest: {MANIFEST_EXT}")
@@ -479,9 +450,7 @@ def build_source(
     return df, counts
 
 
-# ---------------------------------------------------------------------------
 # Render
-# ---------------------------------------------------------------------------
 def _family_groups(df: pd.DataFrame) -> list[tuple[str, list[int]]]:
     groups: list[tuple[str, list[int]]] = []
     cur_lab: str | None = None
@@ -828,9 +797,7 @@ def render(df: pd.DataFrame, counts: dict[str, int]) -> plt.Figure:
     return fig
 
 
-# ---------------------------------------------------------------------------
 # QC / outputs
-# ---------------------------------------------------------------------------
 def _pdf_page_mm(pdf: Path) -> tuple[float, float]:
     import subprocess
     info = subprocess.run(

@@ -1,20 +1,5 @@
 #!/usr/bin/env python3
-"""
-Figure 4C  Representative duration scatter plots.
-
-Three programs with strongest LAA primary trend (p < 0.06):
-    F7  OXPHOS                                ρ ≈ -0.58   LA-biased
-    F2  Mitochondrial Ca²⁺ transport          ρ ≈ -0.56   LA-biased
-    F9  Class B/2 Secretin family receptors   ρ ≈ -0.56   RA-biased
-
-For each program plot per-donor singscore against AF duration in months,
-restricted to LAA AF samples with numeric duration (n = 12 primary).
-Add a linear fit on AF-only with shaded 95 % CI band, plus SR samples
-shown as grey hollow markers anchored at x = 0 (visual reference, not
-fit).  In-panel text reports ρ, p_perm, n_AF.
-
-Output:  figures/fig4c_representative_scatter.pdf
-"""
+"""Figure 4C  Representative duration scatter plots."""
 from __future__ import annotations
 
 from pathlib import Path

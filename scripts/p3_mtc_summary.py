@@ -22,17 +22,14 @@ from docx import Document
 from m0_doc_style import apply_base_style, add_body, add_table
 
 
-# ---------------------------------------------------------------------------
 # Data — single source of truth for MTC strategy across the manuscript.
 # Each row = one statistical test family, NOT one p-value.
-# ---------------------------------------------------------------------------
 COLS = [
     "figure", "panel", "test_family", "test_method",
     "n_tests", "mtc_method", "threshold", "outcome_summary",
 ]
 
 ROWS: list[list[str]] = [
-    # ---- Figure 1 ----
     ["Fig. 1", "b",
      "Paired LA-vs-RA differential expression (GSE112339)",
      "donor-adjusted limma, moderated t",
@@ -75,7 +72,6 @@ ROWS: list[list[str]] = [
      "n / a",
      "Sixteen families and LA baseline carriers locked for Figs. 2–5."],
 
-    # ---- Figure 2 ----
     ["Fig. 2", "b–c",
      "Per family × cohort AF rewiring class",
      "donor-level aCAIrel, label-permutation gate",
@@ -93,7 +89,6 @@ ROWS: list[list[str]] = [
      "Direction concordance with discovery cohorts",
      "Direction-concordance check; not a discovery sample."],
 
-    # ---- Figure 3 ----
     ["Fig. 3", "b–c",
      "AF carrier-fidelity call per NCP axis family (LA-arm, GSE255612)",
      "per family × compartment Δsingscore vs perm null",
@@ -111,7 +106,6 @@ ROWS: list[list[str]] = [
      "Anchor genes are descriptive component support; no causal "
      "claim."],
 
-    # ---- Figure 4 ----
     ["Fig. 4", "a–c",
      "LAA AF-only Spearman ρ vs numeric AF duration (12 donors)",
      "Spearman correlation, label permutation (10,000 perms)",
@@ -128,7 +122,6 @@ ROWS: list[list[str]] = [
      "No inferential fit; LAPV ρ shown in facet annotation only",
      "Exemplar panel for narrative linkage to Fig. 2–3."],
 
-    # ---- Figure 5 ----
     ["Fig. 5", "a",
      "Cross-figure triangulation classification",
      "deterministic rule on Fig. 1–4 outputs",
@@ -157,7 +150,6 @@ ROWS: list[list[str]] = [
      "Localisation support only; mechanistic inference relies on "
      "cross-layer synthesis."],
 
-    # ---- Figure 6 ----
     ["Fig. 6", "a",
      "Cross-cohort dual-axis pooled effect",
      "Hedges' g (AF − SR) per cohort, REML + Hartung–Knapp pool",
@@ -220,7 +212,6 @@ ROWS: list[list[str]] = [
      "71 % of the 21 RA → LA matrix-invasion genes up-regulated in "
      "AF in fibroblasts."],
 
-    # ---- Supplementary Figures S1–S4 (cohort QC, no inferential MTC) ----
     ["Supp. Fig. S1", "a–d",
      "Cohort overview (donor counts, age, sex, disease background)",
      "descriptive cross-tabulation",
@@ -257,7 +248,6 @@ ROWS: list[list[str]] = [
      "Donor / chamber dominates the healthy reference; rhythm is a "
      "smaller axis on top of donor variation in the AF cohorts."],
 
-    # ---- Supplementary Figure S5 ----
     ["Supp. Fig. S5", "all",
      "Multiome RNA-side support (full 4-compartment heatmap)",
      "Δsingscore on 6 support programs × 4 compartments",
@@ -267,7 +257,6 @@ ROWS: list[list[str]] = [
      "Gate not met; HS-GAG programs trend in the opposite "
      "direction."],
 
-    # ---- Supplementary Figure S6 ----
     ["Supp. Fig. S6", "all",
      "Mural (pericyte + VSMC) compartment sensitivity (GSE238242)",
      "Δsingscore on 6 support programs × mural pseudobulk",
@@ -278,7 +267,6 @@ ROWS: list[list[str]] = [
      "Directionally consistent with the 4-compartment main panel; "
      "no claim of an independent mural arm."],
 
-    # ---- Supplementary Figure S7 ----
     ["Supp. Fig. S7", "all",
      "Leave-one-cohort-out sensitivity for the dual-axis pooled g",
      "REML + Hartung–Knapp on 2 cohorts at a time",
@@ -288,7 +276,6 @@ ROWS: list[list[str]] = [
      "Structural axis remains direction-preserved across all 3 "
      "LOCO removals."],
 
-    # ---- Supplementary Figure S9 ----
     ["Supp. Fig. S9", "all",
      "Reduced 5-gene panel readout per axis",
      "Spearman ρ between reduced-axis composite and full-axis "
@@ -300,7 +287,6 @@ ROWS: list[list[str]] = [
      "centroid direction; reduced metabolic panel does not replace "
      "OXPHOS for chronicity."],
 
-    # ---- Supplementary Figure S8 ----
     ["Supp. Fig. S8", "a",
      "Size-matched random gene-set permutation",
      "permutation null per program (1,000 random sets)",
@@ -337,7 +323,6 @@ ROWS: list[list[str]] = [
      "Direction preserved across all LOPO removals",
      "6 / 6 LOPO removals direction-preserved for both axes."],
 
-    # ---- Supplementary Figure S10 / S11 ----
     ["Supp. Fig. S10", "a–d",
      "Methodology audit (NCP self-recovery, donor stability, "
      "cross-method correlation, cross-method pooled g)",
@@ -390,7 +375,6 @@ def main() -> None:
     df.to_csv(out_tsv, sep="\t", index=False)
     print(f"wrote {out_tsv.relative_to(ROOT)}  ({len(df)} rows × {len(df.columns)} cols)")
 
-    # ---- Word version ----
     doc = Document()
     apply_base_style(doc)
 

@@ -1,19 +1,5 @@
 #!/usr/bin/env python3
-"""
-Figure 4A  AF-duration trend analytical schematic.
-
-Five-stage flow (mirrors Fig 3A layout):
-    1. NCP_v2 panel        (30 programs in 11 axis families, from Fig 1c-e)
-    2. GSE41177 LAA + LAPV  (RMA log2 expr; AF samples with numeric
-       duration_months;  primary n = 12 LAA + 12 LAPV;  sensitivity
-       analyses extend the LAA arm to n = 16 / 19)
-    3. singscore on bulk RMA  →  per-sample (donor, tissue, program)
-    4. Spearman ρ (or Kendall τ) of singscore vs AF duration in months;
-       10,000 MC permutation test;  BH q within each analysis
-    5. Family-level aggregation  →  feeds Fig 4B / 4C / 4D / 4E
-
-Output:  figures/fig4a_schematic.pdf
-"""
+"""Figure 4A  AF-duration trend analytical schematic."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -89,7 +75,6 @@ def main() -> None:
     ax = fig.add_axes([0.0, 0.0, 1.0, 1.0])
     ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
 
-    # ---- title ----
     fig.text(0.025, 0.965,
               "Fig 4A  AF-duration trend on the LA bulk arm",
               fontsize=9.0, fontweight="bold", ha="left", va="center")
@@ -99,9 +84,7 @@ def main() -> None:
               fontsize=7.5, color=GREY_DARK, ha="left", va="center",
               style="italic")
 
-    # ===================================================================
     # ROW 1   STAGE 1 → STAGE 4
-    # ===================================================================
     s1_x, s1_w = 0.030, 0.180
     s2_x, s2_w = 0.235, 0.215
     s3_x, s3_w = 0.475, 0.215
@@ -124,7 +107,6 @@ def main() -> None:
         add_box(ax, cx - 0.005, card_y, cw + 0.010, card_h,
                   "", fc=fc, ec=ec, lw=ec_lw, radius=0.012)
 
-    # ---- STAGE 1  panel (re-uses Fig 3A swatch layout) ----
     ax.text(s1_x + s1_w / 2, 0.820,
              "30 NCP_v2 programs",
              fontsize=8.0, fontweight="bold", ha="center", va="center")
@@ -162,7 +144,6 @@ def main() -> None:
              fontsize=6.0, ha="center", va="center", color=GREY_DARK,
              style="italic")
 
-    # ---- STAGE 2  GSE41177 cohort ----
     ax.text(s2_x + s2_w / 2, 0.820,
              "GSE41177  LAA + LAPV",
              fontsize=8.0, fontweight="bold", ha="center")
@@ -208,7 +189,6 @@ def main() -> None:
     add_arrow(ax, s1_x + s1_w + 0.005, 0.690, s2_x - 0.005, 0.690,
                 color=GREY_DARK, lw=0.9)
 
-    # ---- STAGE 3  pseudobulk + singscore ----
     ax.text(s3_x + s3_w / 2, 0.820,
              "Bulk RMA log2 expression",
              fontsize=7.5, fontweight="bold", ha="center")
@@ -237,7 +217,6 @@ def main() -> None:
     add_arrow(ax, s2_x + s2_w + 0.005, 0.690, s3_x - 0.005, 0.690,
                 color=GREY_DARK, lw=0.9)
 
-    # ---- STAGE 4  ρ formula card (golden) ----
     ax.text(s4_x + s4_w / 2, 0.820,
              "Per-program duration trend",
              fontsize=8.0, fontweight="bold", ha="center")
@@ -273,9 +252,7 @@ def main() -> None:
     add_arrow(ax, s3_x + s3_w + 0.005, 0.690, s4_x - 0.005, 0.690,
                 color=GREY_DARK, lw=0.9)
 
-    # ===================================================================
     # ROW 2  STAGE 5
-    # ===================================================================
     add_stage_header(ax, 0.030, 0.470, 5,
                        "Family aggregation  ·  feeds Fig 4B / 4C / 4D / 4E")
 
@@ -369,7 +346,6 @@ def main() -> None:
                 pan_x - 0.005, fam_y + fam_h / 2,
                 color=GREY_DARK, lw=1.0)
 
-    # ---- bottom notation ----
     fig.text(0.025, 0.030,
               "Notation:  i = donor;  k = NCP_v2 program;  "
               "t = tissue (LAA / LAPV);  F = axis family;  LE = leading-edge gene set.",

@@ -1,29 +1,5 @@
 #!/usr/bin/env python3
-"""
-D4 - AF-duration correlation with sensitivity sidecars.
-
-Writes four TSVs to Project_P4/GSE41177/results/ :
-
-  1. duration_trend_laa_primary.tsv
-       LAA, AF samples with numeric duration (n=12 expected)
-       statistic: Spearman rho
-  2. duration_trend_laa_sens_gt1m_eq1.tsv
-       LAA, AF samples with ">1M" coded as 1  (n=16 expected)
-       statistic: Spearman rho
-  3. duration_trend_laa_sens_ordinal.tsv
-       LAA, ALL samples; 3-tier ordinal SR / short_AF / long_AF
-       statistic: Kendall tau
-  4. duration_trend_lapv_sensitivity.tsv
-       LAPV, AF samples with numeric duration (n=12 expected)
-       statistic: Spearman rho   (mirrors analysis 1 on LAPV)
-
-Permutation: MC, 10 000 draws, seed 20260418; BH within each file across
-the sixteen NCP axis families (spec §3.5: LAA / LAPV families are separated; the
-three LAA analyses above are also BH'd independently so their decision
-boundaries do not leak into each other).
-
-Spec: duration vs program score trends (LAA-centric primary + sensitivities).
-"""
+"""D4 - AF-duration correlation with sensitivity sidecars."""
 from __future__ import annotations
 
 import math
@@ -43,9 +19,7 @@ N_MC_PERM = 10_000
 MC_SEED   = 20_260_418
 
 
-# ----------------------------------------------------------------------
 # permutation helpers
-# ----------------------------------------------------------------------
 
 def _spearman(x: np.ndarray, y: np.ndarray) -> float:
     if len(x) < 3 or np.std(x) == 0 or np.std(y) == 0:
@@ -108,9 +82,7 @@ def sig_marker(p: float) -> str:
     return ""
 
 
-# ----------------------------------------------------------------------
 # per-analysis engine
-# ----------------------------------------------------------------------
 
 def run_one(scores_df: pd.DataFrame, sample_df: pd.DataFrame,
             analysis_name: str,
@@ -174,9 +146,7 @@ def run_one(scores_df: pd.DataFrame, sample_df: pd.DataFrame,
     return df.sort_values("program_order").reset_index(drop=True)
 
 
-# ----------------------------------------------------------------------
 # main
-# ----------------------------------------------------------------------
 
 def main() -> None:
     scores = pd.read_csv(IN_DIR / "program_scores.tsv", sep="\t")

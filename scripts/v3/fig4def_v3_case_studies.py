@@ -1,19 +1,5 @@
 #!/usr/bin/env python3
-"""
-Fig 4 d/e/f v3 - per-family duration scatter case studies (LAA AF only).
-
-For each case family:
-    - LAA AF n=12 scatter (x = duration months, y = family singscore)
-    - Linear fit + Spearman rho + bootstrap 95% CI + p_perm in upper-right box
-    - SR samples shown as anchor at month=0 (visual only, not in fit)
-    - 4 sensitivity codings rho table inset
-    - Caption: case-specific biological interpretation
-
-Cases (3-panel batch):
-    4d  F9  HS-GAG metabolism      (Strong-trend, sensitivity 4/4 -- most robust)
-    4e  F2  Mito Ca-2+ transport   (Strong-trend, biological anchor)
-    4f  F15 NTRK2 / TrkB           (Weak-trend, cross-figure link to Fig 3D relay)
-"""
+"""Fig 4 d/e/f v3 - per-family duration scatter case studies (LAA AF only)."""
 from __future__ import annotations
 
 import sys
@@ -188,7 +174,6 @@ def render_case(scores_long, meta, cls_df, key, cfg):
     ax.spines["left"].set_linewidth(0.4)
     ax.spines["bottom"].set_linewidth(0.4)
 
-    # ---- compact horizontal legend in figure header strip (no plot overlap) ----
     legend_handles = [af_handle]
     legend_labels = [f"AF donors (n = {len(af)}, finite duration; fit + ρ)"]
     if sr_handle is not None:
@@ -210,7 +195,6 @@ def render_case(scores_long, meta, cls_df, key, cfg):
         va="top",
     )
 
-    # ---- top-right statistics box (highlight CI crossing 0 + marginal p) ----
     ci_crosses_zero = (ci_lo <= 0.0 <= ci_hi)
     ci_line = f"95% CI: [{ci_lo:+.2f}, {ci_hi:+.2f}]"
     if ci_crosses_zero:
@@ -245,7 +229,6 @@ def render_case(scores_long, meta, cls_df, key, cfg):
         ha="right", va="top", style="italic",
     )
 
-    # ---- Sensitivity codings inset (centre-bottom; reversers in grey italic) ----
     coding_label = {
         "primary":  "primary  (LAA, n = 12)",
         "gt1m_eq1": "gt1m_eq1 (LAA, n = 12)",
@@ -305,7 +288,6 @@ def render_case(scores_long, meta, cls_df, key, cfg):
     )
     ax.add_patch(rect)
 
-    # ---- header strip with class badge ----
     fig.text(
         0.05, 0.92,
         f"Fig {cfg['panel_letter']}  {cfg['label']}  \u2014  {cfg['class_name']}",
@@ -322,7 +304,6 @@ def render_case(scores_long, meta, cls_df, key, cfg):
     fig.text(0.85, 0.925, cfg["class_name"], fontsize=enforce_font_floor(FS_TICK), fontweight="bold",
              color="white", ha="center", va="center")
 
-    # ---- footer caption (structured: data block + paragraphs) ----
     y_cur = 0.34
     line_h = 0.022
     header_paragraph = (

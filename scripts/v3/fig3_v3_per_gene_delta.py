@@ -1,22 +1,5 @@
 #!/usr/bin/env python3
-"""
-Fig 3 v3 per-gene Delta helper.
-
-For the three case-study programs (F15 NTRK2, F16 Keratan, F4 BCAA), compute
-per-LE-gene Delta-rank between AF and Ctrl in each compartment, plus a
-healthy-LA baseline reference taken from HCA per-gene log1p-CPM.
-
-The Delta-rank metric matches the singscore primitive:
-    rank within sample (high expression = high rank) -> norm_rank in (0, 1]
-    Delta_rank(g, ct) = mean_AF(norm_rank[g]) - mean_Ctrl(norm_rank[g])
-
-Outputs
--------
-results/fig3_v3_per_gene_delta.tsv
-    long: program_id, gene, compartment, n_ctrl, n_af,
-          mean_norm_rank_ctrl, mean_norm_rank_af, dRank, p_perm,
-          baseline_LA_logcpm (HCA paired LA arm log1p-CPM in same compartment)
-"""
+"""Fig 3 v3 per-gene Delta helper."""
 from __future__ import annotations
 
 import math

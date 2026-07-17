@@ -1,20 +1,5 @@
 #!/usr/bin/env python3
-"""
-Supplementary Figure S2 — Donor pairing & sample-attribute heatmap.
-
-Visualises the donor × chamber / region structure of the four cohorts
-that drive Figs 2–4, plus the AF/SR, sex, and age covariates.
-
-Inputs:
-  Project_P1/GSE128188/sample_metadata.tsv
-  Project_P1/GSE79768/sample_metadata.tsv
-  Project_P1/GSE115574/sample_metadata.tsv
-  Project_P4/GSE41177/sample_metadata.tsv
-
-Output:
-  figures/figS2_pairing_attribute_heatmap.pdf
-  results/figS2_pairing_summary.tsv
-"""
+"""Supplementary Figure S2 — Donor pairing & sample-attribute heatmap."""
 from __future__ import annotations
 
 import sys
@@ -85,7 +70,6 @@ def draw_one(ax: plt.Axes, ax_cov: plt.Axes, cfg: dict,
     axis = cfg["axis"]
     axis_levels = cfg["axis_levels"]
 
-    # ---- order donors: SR then AF; within rhythm, ascending donor_id -------
     md = md.copy()
     md["_rhythm"] = md["rhythm"].fillna("NA")
     md["_sex"]    = md["sex"].apply(normalise_sex) if "sex" in md.columns else "NA"
@@ -120,7 +104,6 @@ def draw_one(ax: plt.Axes, ax_cov: plt.Axes, cfg: dict,
         if not pd.isna(row["_age"]):
             age_per_donor[d] = row["_age"]
 
-    # ---- main panel: pairing matrix (rhythm-coloured presence cells) ----
     for i, d in enumerate(donors):
         rh_col = AF_COLOR if rhythm_per_donor.get(d) == "AF" \
                  else SR_COLOR if rhythm_per_donor.get(d) == "SR" else NA_COLOR
@@ -144,7 +127,6 @@ def draw_one(ax: plt.Axes, ax_cov: plt.Axes, cfg: dict,
     if panel_letter:
         panel_label(ax, panel_letter, x=-0.45, y=1.04)
 
-    # ---- covariate panel : sex (col 0), age (col 1) -----------------------
     for i, d in enumerate(donors):
         # sex tile
         sx = sex_per_donor.get(d, "NA")
@@ -179,7 +161,6 @@ def draw_one(ax: plt.Axes, ax_cov: plt.Axes, cfg: dict,
     for s in ("top", "right", "left", "bottom"):
         ax_cov.spines[s].set_visible(False)
 
-    # ---- summary stats ------------------------------------------------------
     n_paired = int(np.sum(matrix.sum(axis=1) == n_l))
     n_unpaired = int(np.sum((matrix.sum(axis=1) > 0) & (matrix.sum(axis=1) < n_l)))
     n_af = int(sum(1 for d in donors if rhythm_per_donor.get(d) == "AF"))
@@ -214,7 +195,6 @@ def main() -> None:
             draw_one(ax_main, ax_cov, cfg, panel_letters[k])
         )
 
-    # ---- shared legend at the bottom --------------------------------------
     legend_handles = [
         mpatches.Patch(facecolor=SR_COLOR, edgecolor=PRESENT_BORDER, label="SR sample present"),
         mpatches.Patch(facecolor=AF_COLOR, edgecolor=PRESENT_BORDER, label="AF sample present"),

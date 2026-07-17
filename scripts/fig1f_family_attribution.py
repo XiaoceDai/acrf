@@ -1,23 +1,5 @@
 #!/usr/bin/env python3
-"""
-Figure 1f (REDESIGN, scheme 2): family-level cell-compartment attribution.
-
-Three rendering modes are produced for visual comparison:
-  - "plain": no extra strong-signal marker
-  - "dot"  : small inner dot on cells with |z| >= STRONG_Z (Nature style)
-  - "size" : per-cell rectangle size scales with |z| (modern style)
-
-Inputs
-------
-    results/fig1f_baseline_attribution.tsv     (program x compartment z-score)
-    results/fig1e_baseline_axis_families.tsv   (program -> family_id, direction)
-
-Outputs
--------
-    figures/fig1f_family_attribution.pdf
-    figures/fig1f_family_attribution_dot.pdf
-    figures/fig1f_family_attribution_size.pdf
-"""
+"""Figure 1f (REDESIGN, scheme 2): family-level cell-compartment attribution."""
 from __future__ import annotations
 
 import sys

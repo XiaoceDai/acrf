@@ -1,48 +1,5 @@
 #!/usr/bin/env python3
-"""
-Fig 5b v3 - Cross-figure triangulation heatmap (16 NCP axis families).
-
-Stage-grouped layout (left -> right = narrative time arrow):
-
-    [F-id + short]
-      L0 stage:  HCA LA carrier  (cell-type colour band)
-      L1 stage:  bulk pooled g (continuous, BrBG)  +  state band (Pre/Att/Rev/Amp)
-      L2 stage:  snRNA dScore at carrier compartment (continuous, PRGn)
-                 +  fidelity band (Fid/Relay/Ext/Below)
-      L3 stage:  duration rho_primary (continuous, BrBG)
-                 +  chronicity band (Strong/Weak/Stable)
-      Atlas:     PriorityScore (horizontal bar, with star marker)
-
-Continuous cells are labelled with the numeric value; discrete bands are
-solid colour with no in-cell text (legend on the right).  Cells that are
-"supportive" by the strict v3 criteria carry a yellow border:
-    L1 supportive  =  replication_class == high       (CI excludes 0)
-    L2 supportive  =  fidelity_class != Below_detection
-    L3 supportive  =  chronicity_class != Stable
-
-Row order:  Atlas PriorityScore descending  (cross-figure consistency).
-
-Inputs:
-    results/fig_integrated_af_rewiring_atlas.tsv     (row order, anchor)
-    results/fig1f_v3_HCA_family_carriers.tsv         (LA carrier)
-    results/fig2e_replication_lollipop_v3.tsv        (pooled g, repl class, state)
-    results/fig3_v3_family_celltype_delta.tsv        (snRNA dScore per ct)
-    results/fig3_v3_carrier_fidelity_class.tsv       (fidelity class)
-    results/fig4_v3_chronicity_class.tsv             (rho_primary, chronicity)
-
-Outputs:
-    results/fig5b_v3_triangulation.tsv               (per-family rolled-up table)
-        Manuscript-first columns (synonyms for prose):
-        family_label, axis_group, HCA_carrier (= LA carrier), bulk_replication_class,
-        dominant_bulk_state, snRNA_fidelity_class,
-        snRNA_supported_compartment (= comma-separated nominal-sig compartments from
-        Fig 3 carrier fidelity; empty if Below_detection — aligns with Fig 3C, distinct from HCA_carrier),
-        duration_class, duration_rho (LAA primary Spearman), atlas_priority_score,
-        cross_layer_support_flag (True iff n_supportive == 3 triple-positive, Path A).
-        Technical columns for Fig 5c/5e follow.
-
-    figures/fig5b_v3_triangulation_heatmap.pdf       (the heatmap)
-"""
+"""Fig 5b v3 - Cross-figure triangulation heatmap (16 NCP axis families)."""
 from __future__ import annotations
 
 import sys
@@ -301,7 +258,6 @@ def render_pdf(df: pd.DataFrame) -> None:
     cmap = diverging_cmap()
     row_h = 0.92  # height of each row inside the unit-spaced grid
 
-    # ---- header rows ----
     # Row A (stage banner) at y = -1.55, Row B (column names) at y = -0.55
     stage_y = -1.55
     col_y = -0.30
@@ -347,13 +303,11 @@ def render_pdf(df: pd.DataFrame) -> None:
     hdr_col((X["stars"][0] + X["stars"][1]) / 2.0, "Class")
     hdr_col((X["n_sup"][0] + X["n_sup"][1]) / 2.0, "n.sup")
 
-    # ---- vertical light separators between stages ----
     for x in [X["L0"][1] + 0.25, X["L1_state"][1] + 0.25,
               X["L2_fid"][1] + 0.25, X["L3_chro"][1] + 0.25,
               X["atlas"][1] + 0.20]:
         ax.plot([x, x], [-0.1, n + 0.05], color="#CCCCCC", lw=0.5, zorder=1)
 
-    # ---- per-row rendering ----
     for i, row in df.iterrows():
         y = i + 0.5  # cell centre
         y0 = i + 0.5 - row_h / 2.0
@@ -507,7 +461,6 @@ def render_pdf(df: pd.DataFrame) -> None:
                 fontsize=enforce_font_floor(FS_TICK), fontweight="bold",
                 color="#1A1A1A")
 
-    # ---- Title block ----
     fig.text(0.005, 0.965,
              "Fig 5b  Cross-figure triangulation  (16 NCP axis families)",
              fontsize=enforce_font_floor(FS_PANEL_TITLE + 2), fontweight="bold", color="#1A1A1A")
@@ -515,7 +468,6 @@ def render_pdf(df: pd.DataFrame) -> None:
              "Stage-grouped layout:  L0 HCA carrier  \u2192  L1 bulk  \u2192  L2 snRNA  \u2192  L3 duration  \u2192  Atlas",
              fontsize=enforce_font_floor(FS_TICK), color="#444444", style="italic")
 
-    # ---- Compact bottom caption (full legend in figure caption / local manuscript) ----
     fig.text(0.005, 0.022,
              "Stage-grouped layout: L0 HCA carrier  \u2192  L1 bulk  \u2192  L2 snRNA  \u2192  L3 duration  \u2192  Atlas.  "
              "Continuous cells: BrBG palette (white = 0; deep red = positive / LA-ward; deep blue = negative).  "

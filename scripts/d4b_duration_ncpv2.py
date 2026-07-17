@@ -1,24 +1,5 @@
 #!/usr/bin/env python3
-"""
-D4b - NCP_v2 program / family AF-duration correlation on GSE41177.
-
-Re-runs the four D4 analyses against the 30-program NCP_v2 panel and
-adds a parallel family-level layer (11 axis families) so Fig 4 can
-mirror Fig 3 (program-level + family-level + RA-family decomposition).
-
-Outputs (per-program):
-    Project_P4/GSE41177/results_primary/duration_trend_laa_primary.tsv
-    Project_P4/GSE41177/results_primary/duration_trend_laa_sens_gt1m_eq1.tsv
-    Project_P4/GSE41177/results_primary/duration_trend_laa_sens_ordinal.tsv
-    Project_P4/GSE41177/results_primary/duration_trend_lapv_sensitivity.tsv
-
-Outputs (per-family, NEW):
-    Project_P4/GSE41177/results_primary/duration_trend_FAMILY_laa_primary.tsv
-    Project_P4/GSE41177/results_primary/duration_trend_FAMILY_lapv_sensitivity.tsv
-
-Permutation: MC, 10 000 draws, seed 20260418; BH within each file
-across 30 programs (or 11 families).
-"""
+"""D4b - NCP_v2 program / family AF-duration correlation on GSE41177."""
 from __future__ import annotations
 
 import math
@@ -273,9 +254,7 @@ def main() -> None:
                 f"(n_families={len(df)} n_samples={int(df['n_samples'].iloc[0])} "
                 f"*={n_star} .={n_dot})")
 
-    # ------------------------------------------------------------------
     # console summary
-    # ------------------------------------------------------------------
     print("\n=== program-level LAA primary - sig hits ===")
     laa = collected[0][1]
     sig = laa[laa["p_perm"] < 0.10].sort_values("p_perm")

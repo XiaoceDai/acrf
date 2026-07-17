@@ -31,9 +31,7 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap
 
-# ----------------------------------------------------------------------
 # Page widths (Nature Medicine column geometry)
-# ----------------------------------------------------------------------
 MM = 1.0 / 25.4
 COL_SINGLE  = 89  * MM   # 3.5"
 COL_ONEHALF = 120 * MM   # 4.7"
@@ -41,11 +39,9 @@ COL_DOUBLE  = 183 * MM   # 7.2"
 PAGE_HEIGHT = 240 * MM   # max usable single-page height
 
 
-# ----------------------------------------------------------------------
 # Final composite cell sizes (locked).
 # Each panel is rendered at exactly this size (mm), saved with
 # `bbox_inches=None`, and composed into Figure 1 with NO further scaling.
-# ----------------------------------------------------------------------
 def _in(mm: float) -> float:
     return mm * MM
 
@@ -64,9 +60,7 @@ PANEL_D_SIZE = (_in(PANEL_D_MM[0]), _in(PANEL_D_MM[1]))
 PANEL_E_SIZE = (_in(PANEL_E_MM[0]), _in(PANEL_E_MM[1]))
 PANEL_F_SIZE = (_in(PANEL_F_MM[0]), _in(PANEL_F_MM[1]))
 
-# ----------------------------------------------------------------------
 # Color tokens — locked semantic palette
-# ----------------------------------------------------------------------
 
 # Chromatic axis (the ONLY use of red / blue in any panel)
 LA_COLOR = "#C97A74"   # muted warm red, LA
@@ -107,9 +101,7 @@ BG_COLOR    = "#F5F5F5"   # neutral panel fill
 HIGHLIGHT_COLOR = "#C8A076"   # muted warm orange — main emphasis
 SUPPORT_COLOR   = "#6E9B72"   # muted green — stability / agreement / "8/8" callouts
 
-# ----------------------------------------------------------------------
 # Diverging colormaps — each tied to a single semantic axis
-# ----------------------------------------------------------------------
 
 # (1) chamber-asymmetry (aCAI) — positive = LA = red, negative = RA = blue
 CHAMBER_CMAP = LinearSegmentedColormap.from_list(
@@ -175,9 +167,7 @@ DURATION_CMAP = [
     "#DEECDC", "#BDD6B9", "#92B892", "#6E9B72",
 ]
 
-# ----------------------------------------------------------------------
 # Typography (locked).  6.5 pt absolute floor; 7 pt default for main-text readability.
-# ----------------------------------------------------------------------
 FS_PANEL_LETTER = 10     # bold lowercase a, b, c…
 FS_PANEL_TITLE  = 9      # bold panel title (one line ideally)
 FS_AXIS_LABEL   = 8
@@ -196,9 +186,7 @@ LW_THIN = 0.4
 LW_BOLD = 0.8
 
 
-# ----------------------------------------------------------------------
 # Style entry point
-# ----------------------------------------------------------------------
 
 def set_nature_style() -> None:
     """Apply the unified Cell / Nature Medicine style to matplotlib."""
@@ -271,9 +259,7 @@ def set_nature_style() -> None:
     })
 
 
-# ----------------------------------------------------------------------
 # Helper utilities used across all panels
-# ----------------------------------------------------------------------
 
 def panel_letter(ax: plt.Axes, text: str,
                  x: float = -0.10, y: float = 1.06,
@@ -337,9 +323,7 @@ def shared_chamber_colorbar(fig: plt.Figure, im, *,
                color=LA_COLOR, fontweight="bold")
 
 
-# ----------------------------------------------------------------------
 # Layout helpers for readability (added 2026-07-09)
-# ----------------------------------------------------------------------
 
 def enforce_font_floor(size: float, *, main_text: bool = False) -> float:
     """Return the largest of the requested size and the locked floor.

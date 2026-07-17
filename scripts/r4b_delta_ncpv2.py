@@ -1,22 +1,5 @@
 #!/usr/bin/env python3
-"""
-R4b - NCP_v2 Δsinglescore on GSE255612 LA snRNA, with per-program and
-per-family aggregation.
-
-Inputs:
-    Project_P3/GSE255612/program_scores_primary.tsv      (R3b output)
-    results/fig3_primary_program_le.tsv                  (R3b output)
-
-Outputs:
-    results/fig3_primary_program_celltype_delta.tsv      30 programs × 4 main CTs
-    results/fig3_primary_family_celltype_delta.tsv       11 families × 4 main CTs
-    results/fig3_primary_program_carrier.tsv             per-program major carrier
-    results/fig3_primary_source_data.tsv                 long per-donor scores
-
-Permutation: 10 000 Monte-Carlo donor-label shuffles, fixed seed
-(matches Fig 2 / R4 convention).  BH q-value computed within each
-cell type across the 30 programs (or 11 families).
-"""
+"""R4b - NCP_v2 Δsinglescore on GSE255612 LA snRNA, with per-program and"""
 from __future__ import annotations
 
 import math
@@ -216,9 +199,7 @@ def main() -> None:
     src.to_csv(out_dir / "fig3_primary_source_data.tsv", sep="\t", index=False)
     print(f"wrote results/fig3_primary_source_data.tsv  ({len(src)} rows)")
 
-    # ------------------------------------------------------------------
     # per-program × cell-type
-    # ------------------------------------------------------------------
     rng = np.random.default_rng(MC_SEED)
     panel_for_prog = panel[["program_id", "program_label", "program_order",
                                  "family_id", "baseline_direction"]] \
@@ -255,9 +236,7 @@ def main() -> None:
                      sep="\t", index=False)
     print(f"wrote results/fig3_primary_program_carrier.tsv  ({len(car_df)} rows)")
 
-    # ------------------------------------------------------------------
     # per-family × cell-type (NEW — bridge to Fig 2D)
-    # ------------------------------------------------------------------
     fam_panel = (panel.dropna(subset=["family_id"])
                        .groupby("family_id", as_index=False)
                        .agg(family_label=("program_label",
@@ -287,9 +266,7 @@ def main() -> None:
     print(f"wrote results/fig3_primary_family_celltype_delta.tsv "
             f"({len(fam_tbl)} rows)")
 
-    # ------------------------------------------------------------------
     # stdout preview
-    # ------------------------------------------------------------------
     print("\n=== family × cell-type Δsinglescore (q_perm < 0.10) ===")
     for ct in MAIN_CTS:
         sub = fam_tbl[(fam_tbl["cell_type"] == ct)

@@ -1,15 +1,5 @@
 #!/usr/bin/env python3
-"""
-Fig 3c v3 - Cellular fidelity classification (16 family).
-
-Single horizontal stacked bar with 4 categories:
-    Cellular fidelity (carrier sig only)
-    Cellular relay    (non-carrier sig)
-    Cellular extension (carrier + neighbour, same direction)
-    Below detection   (no compartment p < 0.05)
-
-Plus methodological footnote and per-class family list.
-"""
+"""Fig 3c v3 - Cellular fidelity classification (16 family)."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -66,7 +56,6 @@ def main():
     ax_leg = fig.add_subplot(gs[0, 1])
     ax_fams = fig.add_subplot(gs[1, :])
 
-    # ---- stacked horizontal bar ----
     x_left = 0.0
     bar_y = 0.5
     bar_h = 0.55
@@ -94,7 +83,6 @@ def main():
         ax_bar.spines[s].set_visible(False)
     ax_bar.spines["bottom"].set_linewidth(0.4)
 
-    # ---- legend ----
     ax_leg.axis("off")
     ax_leg.set_xlim(0, 1); ax_leg.set_ylim(1, 0)
     y = 0.05
@@ -108,7 +96,6 @@ def main():
         )
         y += 0.24
 
-    # ---- per-class family list ----
     ax_fams.axis("off")
     ax_fams.set_xlim(0, 1); ax_fams.set_ylim(1, 0)
     ax_fams.text(0.0, 0.05, "Members per class", fontsize=7.0, fontweight="bold", color="#1A1A1A")

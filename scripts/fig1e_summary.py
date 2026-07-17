@@ -1,27 +1,5 @@
 #!/usr/bin/env python3
-"""
-Figure 1e (SUMMARY version, for the main composite Figure 1).
-
-Drops the per-donor aCAI heatmap to reduce visual fatigue across the
-Figure 1 panels.  Keeps the structural elements that carry the message:
-
-    - dendrogram (LA branch red, RA branch blue)
-    - thin family colour band with F1..FK labels
-    - family list with representative pathway and n_programs
-
-The full per-donor heatmap version is kept as supplementary
-(fig1e_baseline_axis_families.pdf).
-
-Inputs:
-    results/fig1e_baseline_axis_families.tsv   (cached by fig1e_baseline_axis_families.py)
-    results/fig1b_baseline_donor_aCAI.tsv      (per-donor aCAI matrix for the
-                                                 deployed NCP pathways; needed
-                                                 to recompute Pearson distance
-                                                 -> dendrogram for the panel)
-
-Output:
-    figures/fig1e_summary.pdf
-"""
+"""Figure 1e (SUMMARY version, for the main composite Figure 1)."""
 from __future__ import annotations
 
 import sys
@@ -126,14 +104,12 @@ def main() -> None:
                      for i, fid in enumerate(fam_ids_seen)}
     fam_dir_map = dict(zip(fam_summary["family_id"], fam_summary["direction"]))
 
-    # ---- Figure layout : dendrogram | family band | family list ----------
     fig = plt.figure(figsize=(COL_DOUBLE * 0.78, COL_DOUBLE * 0.85))
     gs = fig.add_gridspec(
         1, 3, width_ratios=[1.1, 0.32, 2.55], wspace=0.06,
         top=0.88, bottom=0.10, left=0.04, right=0.985,
     )
 
-    # ---- col 0 : combined dendrogram (LA top, RA bottom) -----------------
     ax_dendro = fig.add_subplot(gs[0, 0])
 
     def draw_dendro(Z, n, y_offset, color):
@@ -172,7 +148,6 @@ def main() -> None:
     ax_dendro.set_title("dendrogram\n(1 − Pearson r,\naverage linkage)",
                         fontsize=8, pad=2)
 
-    # ---- col 1 : family colour band with F-id ----------------------------
     ax_fam = fig.add_subplot(gs[0, 1], sharey=ax_dendro)
     for i in range(K):
         fid = sorted_df.iloc[i]["family_id"]
@@ -201,7 +176,6 @@ def main() -> None:
                             alpha=0.6, clip_on=False)
     ax_fam.axhline(n_la - 0.5, color="black", lw=1.0, zorder=5)
 
-    # ---- col 2 : family list (representative pathway, n_programs) -------
     ax_leg = fig.add_subplot(gs[0, 2])
     ax_leg.set_xlim(0, 1)
     K_total = len(fam_ids_seen)
@@ -230,7 +204,6 @@ def main() -> None:
                      fontsize=6.2, ha="left", va="center",
                      color="#666", style="italic")
 
-    # ---- title + footnote ------------------------------------------------
     n_la_fam = (fam_summary["direction"] == "LA-biased").sum()
     n_ra_fam = (fam_summary["direction"] == "RA-biased").sum()
     fig.suptitle(

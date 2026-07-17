@@ -293,9 +293,7 @@ def main():
               "Spatial layer is corroboration only; mechanistic causality is NOT inferred from 5d.",
               fontsize=6.0, color="#444444", style="italic")
 
-    # ===================================================================
     # Panel a: signature x ROI heatmap
-    # ===================================================================
     ax_a = fig.add_subplot(grid[0, 0])
     K, _ = Wz.shape
     vmax = float(np.nanmax(np.abs(Wz.values)))
@@ -348,9 +346,7 @@ def main():
     ax_a.set_title("a    Signature \u00d7 ROI heatmap   (z-scored per row)",
                      loc="left", fontsize=8.0, fontweight="bold", pad=14)
 
-    # ===================================================================
     # Panel b: family x cell-type Spearman rho
-    # ===================================================================
     ax_b = fig.add_subplot(grid[0, 1])
     fams = FAMILY_ORDER
     cells = CELL_ORDER
@@ -410,9 +406,7 @@ def main():
     ax_b.set_title("b    Family \u00d7 cell-type \u03c1 across 24 AA cardiac ROIs",
                      loc="left", fontsize=8.0, fontweight="bold", pad=4)
 
-    # ===================================================================
     # Panel c: AF - SR Delta per signature
-    # ===================================================================
     ax_c = fig.add_subplot(grid[1, 0])
     rows_c = []
     for s in ALL_SIG_ORDER:
@@ -452,9 +446,7 @@ def main():
     ax_c.set_title("c    Rhythm effect (AF \u2212 SR)",
                      loc="left", fontsize=8.0, fontweight="bold", pad=4)
 
-    # ===================================================================
     # Panel d: Border - Distal Delta
-    # ===================================================================
     ax_d = fig.add_subplot(grid[1, 1])
     rows_d = []
     for s in ALL_SIG_ORDER:

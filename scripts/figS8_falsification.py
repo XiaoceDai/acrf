@@ -1,17 +1,5 @@
 #!/usr/bin/env python3
-"""
-Figure S8 — Specificity / Falsification (4-panel supplement).
-
-S8a — Component A: size-matched random gene-set permutations.
-S8b — Component B: axis-membership permutation density of |g|.
-S8c — Component C: real frozen support programs vs pre-registered
-      negative controls on (pooled g, I², LAA duration ρ).
-S8d — Leave-one-program-out (LOPO) axis robustness:
-      remove each support program in turn and re-pool.
-      Inputs from `scripts/h9_lopo_axis.R`.
-
-Components A–C precomputed by `scripts/h5_falsification.R`.
-"""
+"""Figure S8 — Specificity / Falsification (4-panel supplement)."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -127,9 +115,7 @@ def panel_S8a(ax):
     ax.spines["bottom"].set_linewidth(0.5)
 
 
-# ---------------------------------------------------------------------
 # Panel S8b — axis-membership permutation density (component B)
-# ---------------------------------------------------------------------
 def panel_S8b(ax):
     summary = pd.read_csv(RES / "figure_s8b_axis_perm.tsv", sep="\t")
     perm = pd.read_csv(RES / "figure_s8b_axis_perm_distribution.tsv.gz",
@@ -178,9 +164,7 @@ def panel_S8b(ax):
               handlelength=1.0, handleheight=0.5)
 
 
-# ---------------------------------------------------------------------
 # Panel S8c — real vs negative controls on (g, I², ρ)
-# ---------------------------------------------------------------------
 def panel_S8c(ax_g, ax_I2, ax_rho):
     real = pd.read_csv(RES / "figure6_meta_program.tsv", sep="\t")
     real = real[(real["type"] == "pooled") &
@@ -284,9 +268,7 @@ def panel_S8c(ax_g, ax_I2, ax_rho):
         fontsize=6.8, pad=3, fontweight="bold", loc="left")
 
 
-# ---------------------------------------------------------------------
 # Composition
-# ---------------------------------------------------------------------
 def panel_S8d(ax):
     """Leave-one-program-out (LOPO) axis robustness."""
     df = pd.read_csv(ROOT / "results" / "figure_s8d_lopo_axis.tsv", sep="\t")

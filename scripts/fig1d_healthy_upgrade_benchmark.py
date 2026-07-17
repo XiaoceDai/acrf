@@ -1,15 +1,5 @@
 #!/usr/bin/env python3
-"""
-Figure 1D (healthy-only): v2 -> v3 upgrade benchmark and gate audit.
-
-This panel is intentionally restricted to baseline construction evidence:
-  - panel continuity
-  - direction balance
-  - redundancy control
-  - bootstrap robustness (same resampling universe)
-
-It does not use AF/SR disease-stage comparisons.
-"""
+"""Figure 1D (healthy-only): v2 -> v3 upgrade benchmark and gate audit."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -202,7 +192,6 @@ def main() -> None:
         OUT_MEMBERSHIP, sep="\t", index=False
     )
 
-    # ---------------- plot ----------------
     set_nature_style()
     fig, axs = plt.subplots(2, 2, figsize=(COL_DOUBLE * 1.14, COL_DOUBLE * 1.00))
     ax_a, ax_b, ax_c, ax_d = axs.ravel()

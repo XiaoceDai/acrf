@@ -1,24 +1,5 @@
 #!/usr/bin/env python3
-"""
-Supplementary Figure S1 — Cohort overview.
-
-Inputs : results/cohort_demographics_long.tsv   (one row per donor)
-Output : figures/figS1_cohort_overview.pdf
-         results/figS1_cohort_overview_summary.tsv
-
-Panels:
-  a — donor counts per cohort, stacked AF / SR
-  b — age distribution per cohort, split AF / SR
-  c — sex composition per cohort, stacked male / female / NA
-  d — disease background composition per cohort
-
-This figure summarises the study population across eight GEO cohorts
-(including GSE112339 healthy reference) and matches
-results/cohort_demographics_table.tsv (Supplementary Table S1 source). Chamber
-column matches paired LA/RA (or LA+LAPV, etc.) sampling layout; Fig 2 GEO cohorts are
-restricted to donors present in innovation_ncp_v3_acai_long.tsv when tables are
-regenerated via scripts/p1_demographics_table.py.
-"""
+"""Supplementary Figure S1 — Cohort overview."""
 from __future__ import annotations
 
 import sys
@@ -206,7 +187,6 @@ def main() -> None:
     plt.close(fig)
     print(f"wrote {OUT.relative_to(ROOT)}")
 
-    # ---- summary deliverable ------------------------------------------------
     summary_rows = []
     for c in cohorts:
         sub = df.query("cohort == @c")

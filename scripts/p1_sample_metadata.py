@@ -1,53 +1,5 @@
 #!/usr/bin/env python3
-"""
-P1 — Sample metadata 'identity cards' for the three AF chamber-rewiring cohorts.
-
-Writes one TSV per cohort plus a unioned master TSV. Every downstream
-step in the Figure 2 pipeline keys off these files, not off the raw
-GEO text, so the rebuilt pairing / rhythm / chamber assignments are the
-single source of truth.
-
-Cohorts
--------
-GSE128188  paired LAA/RAA bulk RNA-seq       5 SR + 5 AF donors (x 2 chambers = 20 samples)
-GSE79768   paired LA/RA  Affymetrix array    6 SR + 7 AF donors (x 2 chambers = 26 samples)
-GSE115574  biatrial Affymetrix array, MR bg — GEO registry 15 AF + 16 SR donors
-                                             (59 samples); Fig 2 / NCP panel analytical
-                                             totals are 13 AF + 15 SR (see innovation_ncp_v3_acai_long.tsv
-                                             and scripts/p1_demographics_table.py). Known sample-level
-                                             pairing gaps in GEO titles: AF14 (missing LA), AF15 (missing RA),
-                                             SR16 (missing LA).
-
-Sources (immutable, downloaded from NCBI GEO)
----------------------------------------------
-Project_P1/_meta/GSE128188_series_matrix.txt.gz
-Project_P1/_meta/GSE79768_series_matrix.txt.gz
-Project_P1/_meta/GSE115574_series_matrix.txt.gz
-
-Outputs
--------
-Project_P1/GSE128188/sample_metadata.tsv
-Project_P1/GSE79768/sample_metadata.tsv
-Project_P1/GSE115574/sample_metadata.tsv
-Project_P1/samples_union.tsv
-
-Schema (same columns across all three, NA where not applicable)
----------------------------------------------------------------
-gsm                   GEO sample accession, primary key within cohort
-cohort                GSE128188 / GSE79768 / GSE115574
-cohort_role           discovery / replication
-platform              bulk_rnaseq / affy_hgu133plus2
-donor_id              normalised donor id, unique within cohort
-chamber               LA / RA
-rhythm                SR / AF
-sex                   male / female / NA
-age                   int or NA
-disease_background    free text for 115574 (MR), NA otherwise
-cel_file              filename of CEL inside the raw tar (arrays only)
-count_column          column header in GSE128188 counts file (128188 only)
-is_paired             bool: does this donor have BOTH chambers in this cohort?
-donor_pair_mate_gsm   GSM of the other chamber for this donor, or NA if unpaired
-"""
+"""P1 — Sample metadata 'identity cards' for the three AF chamber-rewiring cohorts."""
 from __future__ import annotations
 
 import gzip
@@ -71,9 +23,7 @@ COLUMNS = [
 ]
 
 
-# ----------------------------------------------------------------------
 # series_matrix parser (minimal, only what we need)
-# ----------------------------------------------------------------------
 
 def parse_series_matrix(path: Path) -> pd.DataFrame:
     """Return a DataFrame with one row per sample, indexed by GSM.
@@ -115,10 +65,8 @@ def _extract(pattern: str, text: str, default: str | None = None) -> str | None:
     return m.group(1).strip() if m else default
 
 
-# ----------------------------------------------------------------------
 # cohort-specific parsers
 # Each returns a DataFrame with the full locked schema.
-# ----------------------------------------------------------------------
 
 def build_gse128188(series_matrix: Path) -> pd.DataFrame:
     """GSE128188 — titles are 'SR_LA_7', 'AF_RA_5' etc. Paired LAA/RAA bulk RNA-seq."""
@@ -252,9 +200,7 @@ def build_gse115574(series_matrix: Path) -> pd.DataFrame:
     return out
 
 
-# ----------------------------------------------------------------------
 # pairing annotation
-# ----------------------------------------------------------------------
 
 def annotate_pairing(df: pd.DataFrame) -> pd.DataFrame:
     """Fill is_paired and donor_pair_mate_gsm by (cohort, donor_id) aggregation."""
@@ -275,9 +221,7 @@ def annotate_pairing(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-# ----------------------------------------------------------------------
 # reporting
-# ----------------------------------------------------------------------
 
 def summarise(df: pd.DataFrame) -> str:
     lines = [f"--- {df['cohort'].iloc[0]} ({df['cohort_role'].iloc[0]}, {df['platform'].iloc[0]}) ---"]
@@ -306,9 +250,7 @@ def summarise(df: pd.DataFrame) -> str:
     return "\n".join(lines)
 
 
-# ----------------------------------------------------------------------
 # main
-# ----------------------------------------------------------------------
 
 def main() -> None:
     if not META.exists():

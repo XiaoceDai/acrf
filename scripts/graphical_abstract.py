@@ -1,18 +1,5 @@
 #!/usr/bin/env python3
-"""
-Graphical abstract — distributed dual-axis AF substrate framework.
-
-Top band:    environment (exposome) as dashed upstream modifier.
-Centre band: Healthy chamber → AF rewiring → Dual-axis substrate.
-Bottom band: clinical translation tagline.
-
-Colour discipline (consistent with Figs 1–6):
-  - LA blue / RA red    : healthy identity
-  - fibroblast green / cardiomyocyte mustard : axis identity
-  - PuOr semantic       : matrix axis = orange, metabolic axis = mustard/brown
-  - Dashed arrows       : hypothesised / upstream
-  - Solid arrows        : established within this study
-"""
+"""Graphical abstract — distributed dual-axis AF substrate framework."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -141,7 +128,6 @@ def main() -> None:
     ax.set_axis_off()
     ax.set_xlim(0, 1); ax.set_ylim(0, 1)
 
-    # ============ TOP BAND — environment / exposome ============
     _round(ax, 0.04, 0.86, 0.92, 0.08, "#F4F4F4", "#BBBBBB", lw=0.45,
            rounding=0.014, z=1)
     fig.text(0.06, 0.905, "Environmental modifiers",
@@ -155,7 +141,6 @@ def main() -> None:
         fig.text(x + 0.07, 0.900, lab, fontsize=5.4, color="#444444",
                  ha="center", va="center")
 
-    # ============ MIDDLE — three boxes ============
     # Left: healthy
     _round(ax, 0.04, 0.30, 0.24, 0.50, "white", "#BBBBBB", lw=0.6,
            rounding=0.014, z=1)
@@ -231,7 +216,6 @@ def main() -> None:
              ha="center", va="center", fontsize=4.6, color="#888888",
              style="italic")
 
-    # ============ Bottom merge box ============
     _round(ax, 0.34, 0.13, 0.32, 0.10, "#EFEFEF", "#444444", lw=0.7,
            rounding=0.014, z=2)
     fig.text(0.50, 0.18, "Distributed AF substrate",
@@ -242,7 +226,6 @@ def main() -> None:
              ha="center", va="center", fontsize=4.6, color="#555555",
              style="italic")
 
-    # ============ Arrows ============
     # environment → axes (dashed)
     for x_src in [0.37, 0.46, 0.54, 0.61]:
         _arrow(ax, (x_src, 0.875), (x_src + 0.10, 0.795),
@@ -263,7 +246,6 @@ def main() -> None:
     _arrow(ax, (0.74, 0.30), (0.55, 0.225),
            color=C_CM_DARK, lw=0.85, mut=8, curve=-0.10)
 
-    # ============ Bottom tagline ============
     fig.text(0.5, 0.06,
              "Substrate phenotyping beyond a binary AF / SR state",
              ha="center", va="center", fontsize=6.4, color="#1A1A1A",

@@ -136,7 +136,6 @@ def main() -> None:
     long.to_csv(OUT_LONG, sep="\t", index=False)
     print(f"wrote {OUT_LONG.relative_to(ROOT)}")
 
-    # ---- per-compartment summary ------------------------------------------
     for compartment in COMPARTMENTS:
         sub = long[long["compartment"] == compartment].dropna(subset=["delta_aligned"])
         if len(sub) == 0:
@@ -168,7 +167,6 @@ def main() -> None:
     print("\n=== compartment-level summary ===")
     print(summary.to_string(index=False))
 
-    # ---- figure -----------------------------------------------------------
     fig = plt.figure(figsize=(COL_DOUBLE, 0.55 * COL_DOUBLE))
     gs = fig.add_gridspec(2, 2, hspace=0.55, wspace=0.40,
                           height_ratios=[1.0, 1.1])

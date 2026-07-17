@@ -1,25 +1,5 @@
 #!/usr/bin/env python3
-"""
-Figure 6B — Aligned colocalisation posterior and lead-distance diagnostics.
-
-Left: paired PP3 / PP4 points for each anchor on a shared 0-1 scale.
-Right: lead GWAS-lead eQTL distance derived from absolute delta_bp / 1000.
-KCNN3 is displayed as N/A by panel specification.
-
-FROZEN INPUTS (see build_figure6_mr_v3_manuscript_tables.py):
-  results/figure6_mr_anchors_v3_pipeline_wide.tsv
-  results/fig6a_v3_locus_zoom_summary.tsv
-
-Filenames containing "mr" denote coloc-based diagnostics; no Mendelian
-randomization is performed.
-
-Outputs:
-  figures/fig6b_pp3_pp4_leaddistance.pdf
-  figures/fig6b_pp3_pp4_leaddistance.svg
-  figures/fig6b_pp3_pp4_leaddistance.png  (600 dpi)
-  results/fig6b_pp3_pp4_leaddistance.tsv
-  results/fig6b_pp3_pp4_leaddistance_qc.txt
-"""
+"""Figure 6B — Aligned colocalisation posterior and lead-distance diagnostics."""
 from __future__ import annotations
 
 import sys

@@ -1,36 +1,5 @@
 #!/usr/bin/env python3
-"""
-Fig 4 v3 - duration trend on GSE41177 (LAA + LAPV) for the NCP panel.
-
-Pipeline:
-    GSE41177 expr  ->  rank singscore on Fig3-derived LE genes per program
-                  ->  family-level aggregation (mean of program-level scores)
-                  ->  Spearman rho vs numeric AF duration (months)
-                       (AF-only, n=12 LAA donors with numeric duration; same for LAPV)
-                  ->  permutation p (10,000 sample-label shuffles)
-                  ->  bootstrap 95% CI (5,000 resamples)
-                  ->  3 sensitivity codings on LAA:
-                         primary    : numeric months (drop ">1M" rows)
-                         gt1m_eq1   : ">1M" -> 1 month
-                         ordinal    : 3-tier (SR=0, short<24, long>=24)
-
-Inputs
-------
-    Project_P4/GSE41177/expr_symbol_LAA.tsv
-    Project_P4/GSE41177/expr_symbol_LAPV.tsv
-    Project_P4/GSE41177/sample_metadata.tsv
-    results/fig3_v3_program_le.tsv      (LE genes per program; same as Fig 3)
-    results/innovation_ncp_v3_axis_families.tsv
-
-Outputs
--------
-    results/fig4_v3_singscore_per_sample.tsv
-    results/fig4_v3_PROGRAM_laa_primary.tsv
-    results/fig4_v3_FAMILY_laa_primary.tsv
-    results/fig4_v3_FAMILY_laa_sens_gt1m_eq1.tsv
-    results/fig4_v3_FAMILY_laa_sens_ordinal.tsv
-    results/fig4_v3_FAMILY_lapv_sensitivity.tsv
-"""
+"""Fig 4 v3 - duration trend on GSE41177 (LAA + LAPV) for the NCP panel."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -262,7 +231,6 @@ def main():
     long_all.to_csv(OUT_LONG, sep="\t", index=False, float_format="%.6f")
     print(f"wrote {OUT_LONG.relative_to(ROOT)} ({len(long_all)} rows)")
 
-    # ---- LAA primary (numeric months) ----
     laa_scores = scores_laa
     df_prog = compute_trend(laa_scores, "program", "duration_months", meta, "laa_primary", rng)
     df_prog.to_csv(OUT_PROG_PRIMARY, sep="\t", index=False, float_format="%.6f")
@@ -272,17 +240,14 @@ def main():
     df_fam.to_csv(OUT_FAM_PRIMARY, sep="\t", index=False, float_format="%.6f")
     print(f"wrote {OUT_FAM_PRIMARY.relative_to(ROOT)} ({len(df_fam)} rows)")
 
-    # ---- LAA sensitivity: gt1m_eq1 ----
     df_fam_gt1m = compute_trend(laa_scores, "family", "duration_gt1m_eq1", meta_gt1m, "laa_gt1m_eq1", rng)
     df_fam_gt1m.to_csv(OUT_FAM_GT1M, sep="\t", index=False, float_format="%.6f")
     print(f"wrote {OUT_FAM_GT1M.relative_to(ROOT)} ({len(df_fam_gt1m)} rows)")
 
-    # ---- LAA sensitivity: ordinal ----
     df_fam_ord = compute_trend(laa_scores, "family", "duration_ordinal", meta_ord, "laa_ordinal", rng)
     df_fam_ord.to_csv(OUT_FAM_ORD, sep="\t", index=False, float_format="%.6f")
     print(f"wrote {OUT_FAM_ORD.relative_to(ROOT)} ({len(df_fam_ord)} rows)")
 
-    # ---- LAPV sensitivity (region) ----
     df_fam_lapv = compute_trend(scores_lapv, "family", "duration_months", meta, "lapv_sensitivity", rng)
     df_fam_lapv.to_csv(OUT_FAM_LAPV, sep="\t", index=False, float_format="%.6f")
     print(f"wrote {OUT_FAM_LAPV.relative_to(ROOT)} ({len(df_fam_lapv)} rows)")

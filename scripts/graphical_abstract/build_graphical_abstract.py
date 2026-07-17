@@ -433,7 +433,6 @@ def build() -> Figure:
     c3 = column(fig, mm_rect(*_GEOM["col3"]), 3, "Prioritization and context", PURPLE)
     c3.set_label("column_3")
 
-    # ---- Column 1 ----
     text(
         c1,
         0.5,
@@ -546,7 +545,6 @@ def build() -> Figure:
         ha="center",
     )
 
-    # ---- Panel A ----
     bulk = fig.add_axes(mm_rect(*_GEOM["bulk"]))
     bulk.set_label("bulk_panel")
     base(bulk, fc=BG_BULK, ec=INNER_BORDER, lw=INNER_LW)
@@ -665,7 +663,6 @@ def build() -> Figure:
     )
     fig._panel_a_heatmap = {"x0": x0, "y0": y0, "cw": cw, "ch": ch}  # type: ignore[attr-defined]
 
-    # ---- Panel B ----
     sn = fig.add_axes(mm_rect(*_GEOM["snrna"]))
     sn.set_label("snrna_panel")
     base(sn, fc=BG_SNRNA, ec=INNER_BORDER, lw=INNER_LW)
@@ -765,7 +762,6 @@ def build() -> Figure:
         target=(0.02, 0.000, 0.96, 0.065),
     )
 
-    # ---- Panel C — three equal cards; thresholds below ----
     n_primary_af_laa = 12
     n_families = 16
     n_stable, n_weak, n_strong = 8, 6, 2
@@ -873,7 +869,6 @@ def build() -> Figure:
         "n_primary_af_laa": n_primary_af_laa,
     }
 
-    # ---- Path A ----
     path_a_h_mm = float(_GEOM["path_a"][3])
     pa = fig.add_axes(mm_rect(*_GEOM["path_a"]))
     pa.set_label("path_a_panel")
@@ -1017,7 +1012,6 @@ def build() -> Figure:
         "internal_pad_ok": True,
     }
 
-    # ---- GeoMx ----
     gm = fig.add_axes(mm_rect(*_GEOM["geomx"]))
     gm.set_label("geomx_panel")
     base(gm, fc=BG_GEOMX, ec=INNER_BORDER, lw=INNER_LW)
@@ -1027,7 +1021,6 @@ def build() -> Figure:
     text(gm, 0.08, 0.300, "No patient-clustered inference", fs=6.4, weight="normal", color=MID_GRAY, linespacing=1.14)
     text(gm, 0.08, 0.130, "Not a Path A gate", fs=6.6, weight="bold", color=BLUE)
 
-    # ---- Genetics ----
     ge = fig.add_axes(mm_rect(*_GEOM["genetics"]))
     ge.set_label("genetics_panel")
     base(ge, fc=BG_GENETICS, ec=INNER_BORDER, lw=INNER_LW)
@@ -1057,7 +1050,6 @@ def build() -> Figure:
         ha="center",
     )
 
-    # ---- Summary ----
     sm = fig.add_axes(mm_rect(*_GEOM["summary"]))
     sm.set_label("bottom_summary")
     base(sm, fc=LIGHT_GRAY, ec=OUTER_BORDER, lw=0.60)

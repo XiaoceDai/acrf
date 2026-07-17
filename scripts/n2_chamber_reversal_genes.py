@@ -1,44 +1,5 @@
 #!/usr/bin/env python3
-"""
-N2 — Discover chamber-identity REVERSAL genes.
-
-Conceptual contribution:
-    A reversal gene is a gene whose chamber-identity in healthy donors
-    (LA-biased or RA-biased) is *flipped* in atrial fibrillation (AF)
-    donors of paired-chamber cohorts, while sinus-rhythm (SR) donors
-    of the same cohorts preserve the healthy direction.
-
-    Sample-level limma cannot identify reversal genes because it does
-    not ask the chamber-direction question, and pathway-GSEA does not
-    expose the per-gene LA/RA flip.  This object class is uniquely
-    enabled by the donor-level chamber-aware metric of CRF.
-
-Inputs (gene-symbol space; log-scale or auto-logged here):
-    bulk/Project_P01/GSE112339/GSE112339_HTSeq_hg19_Ensembl.txt.gz
-        (healthy reference; 8 paired LA / RA donors)
-    Project_P1/GSE128188/expr_symbol.tsv  + sample_metadata.tsv
-    Project_P1/GSE79768/expr_symbol.tsv   + sample_metadata.tsv
-    Project_P1/GSE115574/expr_symbol.tsv  + sample_metadata.tsv
-
-Per-cohort, per-donor:
-    aCAI_g(d) = log2(score_LA(d, g)) - log2(score_RA(d, g))
-For a paired cohort, AF_dir(g) = sign(mean(aCAI_g | AF donors)),
-SR_dir(g) = sign(mean(aCAI_g | SR donors));
-Healthy_dir(g) = sign(mean(aCAI_g | 8 healthy donors)).
-
-Reversal call per gene per cohort:
-    af_reversed       : Healthy_dir x AF_dir < 0
-    sr_preserved      : Healthy_dir x SR_dir > 0   (excludes batch-only flips)
-    af_specific_flip  : af_reversed AND sr_preserved
-    above_magnitude   : |aCAI_healthy| >= MAG_HEALTHY AND |aCAI_AF| >= MAG_AF
-Final reversal gene call:
-    af_specific_flip AND above_magnitude in >= MIN_COHORTS / 3 cohorts.
-
-Outputs:
-    results/n2_chamber_reversal_long.tsv         (gene x cohort rows)
-    results/n2_chamber_reversal_genes.tsv        (filtered final list)
-    figures/figN2_chamber_reversal.pdf           (summary panel)
-"""
+"""N2 — Discover chamber-identity REVERSAL genes."""
 from __future__ import annotations
 
 import sys
@@ -75,9 +36,7 @@ MAG_AF      = 0.15
 MIN_COHORTS = 2       # require AF-specific reversal in >= 2 of 3 paired cohorts
 
 
-# ---------------------------------------------------------------------------
 # Loaders.
-# ---------------------------------------------------------------------------
 def load_healthy_GSE112339() -> tuple[pd.DataFrame, list[tuple[str, str]]]:
     """Return (gene x sample) log2 matrix and list of (LA_sample, RA_sample)
     paired donor tuples."""
@@ -143,9 +102,7 @@ def per_donor_aCAI(expr: pd.DataFrame,
     return pd.DataFrame(cols, index=expr.index)
 
 
-# ---------------------------------------------------------------------------
 # Core analysis.
-# ---------------------------------------------------------------------------
 def main() -> None:
     print("Loading healthy GSE112339 ...")
     h_expr, h_pairs = load_healthy_GSE112339()
@@ -269,7 +226,6 @@ def main() -> None:
           f"{(final['healthy_direction']=='LA-biased').sum()} LA→RA, "
           f"{(final['healthy_direction']=='RA-biased').sum()} RA→LA)")
 
-    # ---- summary figure --------------------------------------------------
     fig = plt.figure(figsize=(COL_DOUBLE, 0.55 * COL_DOUBLE))
     gs = fig.add_gridspec(2, 3, hspace=0.55, wspace=0.55,
                           width_ratios=[1.05, 1.05, 1.0])
@@ -366,7 +322,6 @@ def main() -> None:
     plt.close(fig)
     print(f"wrote {FIG_OUT.relative_to(ROOT)}")
 
-    # ---- console summary -------------------------------------------------
     print("\n=== N2 summary ===")
     print(f"genes in healthy GSE112339              : {len(h_aCAI)}")
     print(f"genes common across 4 cohorts            : {len(common)}")

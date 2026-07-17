@@ -1,14 +1,5 @@
 #!/usr/bin/env python3
-"""
-Build three summary tables from existing `results/` and `scripts/` artifacts:
-
-  P-2 Power table              results/power_table.tsv
-  P-3 Multi-test correction    results/mtc_summary_pipeline.tsv
-     (Supplementary-style 8-column table: run scripts/p3_mtc_summary.py → results/mtc_summary.tsv)
-  P-4 Reproducibility table    results/reproducibility_table.tsv
-
-No re-analysis; tabling only. `spec_source` points at implementing scripts.
-"""
+"""Build three summary tables from existing `results/` and `scripts/` artifacts:"""
 from __future__ import annotations
 
 from pathlib import Path
@@ -19,9 +10,7 @@ ROOT = Path(__file__).resolve().parent.parent
 RES = ROOT / "results"
 
 
-# ---------------------------------------------------------------------------
 # B2 Power table  (collapses h8 simulation + cohort sample sizes)
-# ---------------------------------------------------------------------------
 def build_power_table() -> None:
     sim = pd.read_csv(RES / "method_p5_simulation.tsv", sep="\t")
     rows = []
@@ -41,9 +30,7 @@ def build_power_table() -> None:
     print(df.to_string(index=False))
 
 
-# ---------------------------------------------------------------------------
 # B3 Multi-test correction summary  (one table; per figure where it applies)
-# ---------------------------------------------------------------------------
 def build_mtc_table() -> None:
     rows = [
         # (figure, statistic, count, family, correction, threshold, source spec)
@@ -164,9 +151,7 @@ def build_mtc_table() -> None:
     print(f"\nwrote {out.relative_to(ROOT)}  ({len(df)} rows)")
 
 
-# ---------------------------------------------------------------------------
 # B4 Reproducibility table  (figure → script → input → output)
-# ---------------------------------------------------------------------------
 def build_reproducibility_table() -> None:
     rows = [
         ("Fig 1", "scripts/assemble_figure1.py",

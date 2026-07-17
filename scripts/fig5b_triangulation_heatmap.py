@@ -87,7 +87,6 @@ def set_publication_style() -> None:
 def main() -> None:
     set_publication_style()
 
-    # ---- load layers ---------------------------------------------------
     f2 = pd.read_csv(FIG2D_TSV, sep="\t")
     f2 = f2[f2["cohort"] == "POOLED"][["family_id", "direction", "g",
                                             "ci_lo", "ci_hi"]] \
@@ -147,7 +146,6 @@ def main() -> None:
     tri.to_csv(OUT_TSV, sep="\t", index=False)
     print(f"wrote {OUT_TSV.relative_to(ROOT)}  ({len(tri)} families)")
 
-    # ---- figure --------------------------------------------------------
     K = len(fam_order); C = len(LAYER_ORDER)
     MM = 1.0 / 25.4
     fig = plt.figure(figsize=(160 * MM, 105 * MM))
@@ -276,7 +274,6 @@ def main() -> None:
     for s in ax_right.spines.values():
         s.set_visible(True); s.set_linewidth(0.4); s.set_color("#999")
 
-    # ---- top labels ---------------------------------------------------
     for j, lyr in enumerate(["bulk_g", "snrna_d"]):
         ax_top.plot([j + 0.5, j + 0.5], [0.0, 0.10],
                       color=GREY_MID, lw=0.7)
@@ -291,7 +288,6 @@ def main() -> None:
                    fontsize=6.8, fontweight="bold")
     ax_top2.set_xlim(0, 1); ax_top2.set_ylim(0, 1); ax_top2.axis("off")
 
-    # ---- left direction / family labels -------------------------------
     for i, fid in enumerate(fam_order):
         r = tri[tri["family_id"] == fid].iloc[0]
         d = r["direction_label"]
@@ -330,7 +326,6 @@ def main() -> None:
                         fontstyle="italic",
                         transform=ax_main.transData, clip_on=False)
 
-    # ---- colorbars ----
     cb1 = mpl.colorbar.ColorbarBase(
         ax_cbar1, cmap=cmap_brbg, norm=norms["bulk_g"],
         orientation="vertical")
@@ -345,7 +340,6 @@ def main() -> None:
     cb2.outline.set_linewidth(0.4)
     cb2.ax.tick_params(labelsize=6, length=2, width=0.4)
 
-    # ---- title ----
     fig.suptitle(
         "Fig 5B  Family-level triangulation across three evidence layers",
         fontsize=8.8, fontweight="bold", y=0.965, x=0.02, ha="left")

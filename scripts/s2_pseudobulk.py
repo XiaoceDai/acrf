@@ -1,29 +1,4 @@
-"""
-S2 — build donor x chamber x top_ct pseudobulk.
-
-Filters (per locked pseudobulk spec + decision A):
-  - source == "Nuclei"                     (Harvard-Nuclei + Sanger-Nuclei)
-  - region in {LA, RA}
-  - Used == "Yes"
-  - cell_type in {Atrial_Cardiomyocyte, Fibroblast, Endothelial, Myeloid, Lymphoid}
-
-Top cell type mapping:
-  Atrial_Cardiomyocyte      -> atrial_cardiomyocyte
-  Fibroblast                -> fibroblast
-  Endothelial               -> endothelial_or_vascular
-  Myeloid, Lymphoid         -> immune
-
-Aggregation: sum raw counts per donor x region x top_ct.
-
-Gating:
-  - drop combos with n_cells < 30
-  - cell type enters main analysis only if paired-donor count >= 4.
-
-Outputs (one folder per cell type):
-  pseudobulk/{ct}/counts.tsv    -> rows=gene symbols, cols=sample_id
-  pseudobulk/{ct}/samples.tsv   -> sample metadata (sample_id, donor, chamber, n_cells)
-  pseudobulk/summary.tsv        -> one row per (ct, donor, chamber), includes kept flag
-"""
+"""S2 — build donor x chamber x top_ct pseudobulk."""
 
 from __future__ import annotations
 

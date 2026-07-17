@@ -1,21 +1,5 @@
 #!/usr/bin/env python3
-"""
-Build manuscript-facing tables for NCP:
-
-  results/fig1c_ncp_v3_program_plotting_table.tsv
-      One row per deployed program; Fig 1C / composite plotting helper.
-
-  results/ncp_v3_selection_criteria.tsv
-      Frozen thresholds for Methods (discovery + NCP consensus pruning).
-
-Inputs:
-  results/innovation_ncp_v3_axis_families.tsv
-  results/fig1b_baseline_donor_aCAI.tsv   (n_genes_used on GSE112339)
-  results/ncp_v3_family_labels.tsv        (curated family names)
-
-The consensus hyper-parameters are re-exported from scripts/innovation_ncp_consensus.py
-via import so Methods tables stay aligned with code.
-"""
+"""Build manuscript-facing tables for NCP:"""
 from __future__ import annotations
 
 import sys

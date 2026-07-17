@@ -1,27 +1,5 @@
 #!/usr/bin/env python3
-"""
-Figure 3B  Family × cell-type Δsinglescore heatmap.
-
-Bridges Fig 2D (family-level forest of bulk aCAI rewiring) to Fig 3
-(cell-type carriers in GSE255612 LA snRNA arm).  Each cell of the
-heatmap is the mean shift of single-sample singscore between AF and
-Ctrl donors, averaged across programs in each axis family.
-
-Inputs:
-    results/fig3_primary_family_celltype_delta.tsv
-
-Output:
-    figures/fig3b_family_celltype_heatmap.pdf
-
-Visual conventions:
-    - rows: 11 axis families (LA-biased on top, RA-biased at bottom)
-    - cols: 4 main snRNA compartments (atrialCM, fibroblast,
-            endothelial_or_vascular, immune)
-    - cell colour: BrBG diverging  (+ brown = AF higher, - teal = AF lower)
-    - sig marker: '*' (p_perm < 0.05) or '.' (p_perm < 0.10) painted
-                    in cell
-    - left annotation column shows family direction badge (LA/RA, blue/red)
-"""
+"""Figure 3B  Family × cell-type Δsinglescore heatmap."""
 from __future__ import annotations
 
 import sys
@@ -98,7 +76,6 @@ def main() -> None:
     df = pd.read_csv(DELTA_TSV, sep="\t")
     df = df.dropna(subset=["dScore"])  # keep included cells
 
-    # ---- pretty family label : "F# DIR  representative pathway" --------
     long = pd.read_csv(ACAI_TSV, sep="\t")
     fam = pd.read_csv(FAM_TSV, sep="\t")[["pathway", "family_id"]].rename(
         columns={"pathway": "program_id"})
@@ -116,7 +93,6 @@ def main() -> None:
     df = df.merge(fam_rep[["family_id", "short"]], on="family_id",
                     how="left")
 
-    # ---- order families : LA-biased on top, RA-biased on bottom -------
     fam_meta = (df.drop_duplicates("family_id")
                     [["family_id", "direction_label", "n_programs", "short"]]
                     .copy())
@@ -128,7 +104,6 @@ def main() -> None:
     fam_order = la["family_id"].tolist() + ra["family_id"].tolist()
     n_la, n_ra = len(la), len(ra)
 
-    # ---- pivot to (family, ct) ---------------------------------------
     M = df.pivot_table(index="family_id", columns="cell_type",
                           values="dScore").reindex(
                               index=fam_order, columns=CT_ORDER)
@@ -139,7 +114,6 @@ def main() -> None:
                             values="q_perm").reindex(
                                 index=fam_order, columns=CT_ORDER)
 
-    # ---- figure --------------------------------------------------------
     K = len(fam_order); C = len(CT_ORDER)
     MM = 1.0 / 25.4
     fig = plt.figure(figsize=(185 * MM, 115 * MM))
@@ -207,7 +181,6 @@ def main() -> None:
     for s in ax_main.spines.values():
         s.set_visible(True); s.set_linewidth(0.4); s.set_color("#999")
 
-    # ---- top labels (cell types) ----
     # Two-row design: a thin coloured tick at column centre at the
     # bottom, and the rotated label anchored above so the text sits in
     # clean white space without crowding the heatmap top edge.
@@ -221,7 +194,6 @@ def main() -> None:
                       color="black")
     ax_top.set_xlim(0, C); ax_top.set_ylim(0, 1); ax_top.axis("off")
 
-    # ---- left direction badge ----
     for i, fid in enumerate(fam_order):
         d = "LA" if i < n_la else "RA"
         col = LA_COLOR if d == "LA" else RA_COLOR
@@ -233,7 +205,6 @@ def main() -> None:
                       fontsize=6.5, fontweight="bold", color=col)
     ax_dir.set_xlim(0, 1); ax_dir.set_ylim(K, 0); ax_dir.axis("off")
 
-    # ---- left family labels (figure-level text outside) ----
     for i, fid in enumerate(fam_order):
         meta = fam_meta[fam_meta["family_id"] == fid].iloc[0]
         lbl = f"F{int(fid)}  {meta['short']}  (n={int(meta['n_programs'])})"
@@ -246,14 +217,12 @@ def main() -> None:
                       transform=ax_dir.transData,
                       clip_on=False)
 
-    # ---- colorbar ----
     cb = mpl.colorbar.ColorbarBase(
         ax_cbar, cmap=cmap, norm=norm, orientation="vertical")
     cb.set_label("Δ singscore  (AF − Ctrl)", fontsize=6.8)
     cb.outline.set_linewidth(0.4)
     cb.ax.tick_params(labelsize=6, length=2, width=0.4)
 
-    # ---- title + caption ----
     fig.suptitle(
         f"Fig 3B  Family × cell-type AF rewiring shift "
         f"(LA snRNA arm, GSE255612)",

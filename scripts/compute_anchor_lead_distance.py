@@ -1,25 +1,5 @@
 #!/usr/bin/env python3
-"""
-Compute GWAS vs cis-eQTL lead-variant distance for Fig 6A/6B locus summaries.
-
-For each anchor, within the locked ±1 Mb cis window:
-  - GWAS lead  = variant with minimum AF-GWAS p-value
-  - eQTL lead  = variant with minimum cis-eQTL p-value for the anchor gene_id
-  - delta_bp   = |GWAS lead pos − eQTL lead pos|
-  - lead_*_kb  = offset from gene midpoint (hg38), for locus-zoom display
-
-Primary data source: on-disk tabix cache slices under Project_P6/cache/
-(``eqtl_<SYMBOL>_chr*`` / ``gwas_<SYMBOL>_chr*``). If cache is missing, the
-script aborts with instructions to run the h4* R drivers first.
-
-Usage
------
-  python3 scripts/compute_anchor_lead_distance.py KCNN3
-  python3 scripts/compute_anchor_lead_distance.py --all-missing
-  python3 scripts/compute_anchor_lead_distance.py KCNN3 --write
-
-With ``--write``, appends/updates rows in results/fig6a_v3_locus_zoom_summary.tsv.
-"""
+"""Compute GWAS vs cis-eQTL lead-variant distance for Fig 6A/6B locus summaries."""
 from __future__ import annotations
 
 import argparse

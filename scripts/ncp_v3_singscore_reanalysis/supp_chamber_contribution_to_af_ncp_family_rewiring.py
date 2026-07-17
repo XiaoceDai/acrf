@@ -1,15 +1,5 @@
 #!/usr/bin/env python3
-"""Supplementary figure: Chamber contribution to AF-associated NCP family rewiring.
-
-This panel migrates the corrected chamber-decomposition analysis (formerly the
-legacy main-text Figure 2D) to the supplementary figures. It visualises, for each
-frozen NCP family, how much the AF - SR family aCAIrel shift is contributed by
-the LA chamber score versus the RA chamber score.
-
-Inputs are read through the corrected Figure 2 manifest (same inputs as
-Figures 2A-D). No legacy effect or consistency table is read as a plotting input.
-The figure is not labelled as a mechanism-direction validation panel.
-"""
+"""Supplementary figure: Chamber contribution to AF-associated NCP family rewiring."""
 from __future__ import annotations
 
 import hashlib

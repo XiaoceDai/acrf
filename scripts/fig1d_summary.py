@@ -1,26 +1,5 @@
 #!/usr/bin/env python3
-"""
-Figure 1d (SUMMARY version, for the main composite Figure 1).
-
-Drops the 30 x 8 per-donor heatmap to reduce visual fatigue across the
-Figure 1 panels (Fig 1d / 1e / 1f all used 30-row heatmaps).
-
-What this panel shows, for each deployed NCP program (same pathways as
-results/innovation_ncp_v3_axis_families.tsv):
-    - mean_aCAI averaged over 8 healthy donors  (bar length / direction)
-    - sign-concordance n/8                       (text annotation)
-    - chamber direction tag (LA = red, RA = blue)
-    - pathway short name on the right
-
-The full per-donor heatmap is kept as a supplementary figure
-(same row order as results/fig1b_baseline_donor_aCAI.tsv).
-
-Inputs:
-    results/fig1b_baseline_donor_aCAI.tsv   (cached by fig1b_baseline_donor_aCAI.py)
-
-Output:
-    figures/fig1d_summary.pdf
-"""
+"""Figure 1d (SUMMARY version, for the main composite Figure 1)."""
 from __future__ import annotations
 
 import sys
@@ -78,7 +57,6 @@ def main() -> None:
         top=0.88, bottom=0.12, left=0.05, right=0.985,
     )
 
-    # ---- col 0 : LA / RA direction band -----------------------------------
     ax_dir = fig.add_subplot(gs[0, 0])
     for i, d in enumerate(sorted_df["direction"]):
         ax_dir.add_patch(mpatches.Rectangle(
@@ -97,7 +75,6 @@ def main() -> None:
     for s in ("top", "right", "left", "bottom"):
         ax_dir.spines[s].set_visible(False)
 
-    # ---- col 1 : mean aCAI bars + n/8 ------------------------------------
     ax2 = fig.add_subplot(gs[0, 1], sharey=ax_dir)
     colors = [LA_COLOR if d == "LA-biased" else RA_COLOR
               for d in sorted_df["direction"]]
@@ -124,7 +101,6 @@ def main() -> None:
                   fontsize=7, ha="left" if v > 0 else "right",
                   va="center", color=sc_color, fontweight=sc_weight)
 
-    # ---- col 2 : pathway names (coloured by chamber direction) -----------
     ax_lab = fig.add_subplot(gs[0, 2], sharey=ax_dir)
     for i, (_, r) in enumerate(sorted_df.iterrows()):
         col = LA_COLOR if r["direction"] == "LA-biased" else RA_COLOR
@@ -137,7 +113,6 @@ def main() -> None:
     for s in ("top", "right", "left", "bottom"):
         ax_lab.spines[s].set_visible(False)
 
-    # ---- title + summary stat ---------------------------------------------
     fig.suptitle(
         f"d  Donor-level aCAI primitive — {n_8of8}/{K} programs sign-concordant in 8/8 donors",
         x=0.05, y=0.96, ha="left", va="top",

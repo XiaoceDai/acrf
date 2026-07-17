@@ -1,22 +1,5 @@
 #!/usr/bin/env python3
-"""
-R4 - Δsinglescore per (program, cell_type) with donor-level permutation.
-
-Spec: LA pseudobulk Δsingscore carrier classification (this module).
-
-For GSE255612 (18 AF + 16 Ctrl donors), exact permutation requires
-C(34, 18) ≈ 2.3e9 enumerations — far above the PERM_EXACT_LIMIT = 20,000,
-so we always use Monte Carlo 10,000 draws with a fixed seed (per Fig 2
-convention).
-
-Inputs
-    Project_P3/GSE255612/program_scores.tsv     (R3)
-    results/figure3_program_panel.tsv           (R3)
-
-Outputs
-    results/af_la_program_celltype_delta.tsv    main stats table
-    results/figure3_source_data.tsv             long per-donor scores
-"""
+"""R4 - Δsinglescore per (program, cell_type) with donor-level permutation."""
 from __future__ import annotations
 
 import math
@@ -36,9 +19,7 @@ PVAL_THRESHOLD   = 0.10
 MIN_DONORS       = 4        # spec §3.6: ≥ 4 donors on each side per ct
 
 
-# ----------------------------------------------------------------------
 # permutation
-# ----------------------------------------------------------------------
 
 def _stat(values: np.ndarray, is_af: np.ndarray) -> float:
     return float(values[is_af].mean() - values[~is_af].mean())
@@ -97,9 +78,7 @@ def sig_marker(p: float) -> str:
     return ""
 
 
-# ----------------------------------------------------------------------
 # main
-# ----------------------------------------------------------------------
 
 def main() -> None:
     score_path = ROOT / "Project_P3" / "GSE255612" / "program_scores.tsv"
@@ -117,9 +96,7 @@ def main() -> None:
     assert stopifnot_cts == set(main_cts), (
         f"unexpected compartments in program_scores: {stopifnot_cts}")
 
-    # ------------------------------------------------------------------
     # figure3_source_data.tsv: long per-donor scores
-    # ------------------------------------------------------------------
     src_cols = [
         "donor_id", "biosample_id", "rhythm", "sex", "n_cells",
         "program_id", "program_label", "program_order", "baseline_direction",
@@ -131,9 +108,7 @@ def main() -> None:
     src.to_csv(src_out, sep="\t", index=False)
     print(f"wrote {src_out.relative_to(ROOT)}  ({len(src)} rows)")
 
-    # ------------------------------------------------------------------
     # per (program, cell_type) stats
-    # ------------------------------------------------------------------
     panel = panel.sort_values("program_order").reset_index(drop=True)
 
     # attach Fig 2 provenance so the wide table carries selection_reason
@@ -214,9 +189,7 @@ def main() -> None:
         return a / c
     tbl["ratio_af_over_ctrl"] = tbl.apply(_ratio, axis=1)
 
-    # ------------------------------------------------------------------
     # major_carrier (spec §3.7) -- computed at the program level
-    # ------------------------------------------------------------------
     def _pick_carrier(grp: pd.DataFrame) -> Tuple[str, float, float]:
         cand = grp[grp["cell_type_included"] & (grp["q_perm"] < PVAL_THRESHOLD)]
         if cand.empty:
@@ -250,9 +223,7 @@ def main() -> None:
         ))
     carrier_df = pd.DataFrame(carrier_rows).sort_values("program_order")
 
-    # ------------------------------------------------------------------
     # write outputs
-    # ------------------------------------------------------------------
     col_order = [
         "program_id", "program_label", "program_order", "baseline_direction",
         "selection_reason", "cell_type",
@@ -273,9 +244,7 @@ def main() -> None:
     carrier_df.to_csv(carrier_out, sep="\t", index=False)
     print(f"wrote {carrier_out.relative_to(ROOT)}  ({len(carrier_df)} rows)")
 
-    # ------------------------------------------------------------------
     # stdout preview
-    # ------------------------------------------------------------------
     print("\n=== major carrier per program ===")
     for _, r in carrier_df.iterrows():
         print(f"  {r['program_order']:2d} {r['program_label']:28s} "

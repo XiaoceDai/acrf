@@ -1,21 +1,5 @@
 #!/usr/bin/env python3
-"""
-Benchmark v2 vs v3 NCP panels.
-
-Inputs
-------
-results/fig1c_ncp_panel_v2.tsv
-results/innovation_ncp_v3_panel.tsv
-results/innovation_ncp_v2_acai_long.tsv
-results/innovation_ncp_v3_acai_long.tsv
-
-Outputs
--------
-results/innovation_v2_vs_v3_metrics.tsv
-results/innovation_v2_vs_v3_axis_effects.tsv
-results/innovation_v2_vs_v3_decision_table.tsv
-figures/figS13_prototype_vs_ncp_benchmark.pdf
-"""
+"""Benchmark v2 vs v3 NCP panels."""
 from __future__ import annotations
 
 import sys

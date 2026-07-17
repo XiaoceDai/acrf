@@ -1,29 +1,5 @@
 #!/usr/bin/env python3
-"""
-R5 - 3C carrier shift table (three columns).
-
-Spec: carrier-shift summary (paired with r4_delta_classify outputs).
-
-Column 1  healthy_dominant_CT         (Fig 1D signed-attribution argmax)
-Column 2  healthy_top_expressor_CT    (argmax over cell types of
-                                        mean singscore on Fig 1 pseudobulk,
-                                        AF-naive i.e. all 16-24 healthy LA+RA
-                                        pseudobulks)
-Column 3  AF_major_carrier_CT         (from R4, §3.7 with q_perm < 0.10)
-
-These three measure different quantities and must NOT be collapsed into
-one "dominant cell type" summary; R5 lays them side-by-side so the Fig
-3C panel can render them as three columns of a single row per program.
-
-Inputs
-    results/normal_chamber_program_attribution.tsv   (Fig 1D)
-    Project_P3/fig1_healthy_program_scores.tsv       (R3)
-    results/af_la_major_carrier_af.tsv               (R4)
-    results/figure3_program_panel.tsv                (R3)
-
-Output
-    results/figure3_carrier_shift.tsv                (per-program, §6.3 schema)
-"""
+"""R5 - 3C carrier shift table (three columns)."""
 from __future__ import annotations
 
 import math
@@ -39,7 +15,6 @@ def main() -> None:
     panel = pd.read_csv(ROOT / "results" / "figure3_program_panel.tsv", sep="\t")
     panel = panel.sort_values("program_order").reset_index(drop=True)
 
-    # ---- col 1: healthy_dominant_CT from Fig 1D attribution ----
     attr = pd.read_csv(ROOT / "results" / "normal_chamber_program_attribution.tsv",
                        sep="\t")
     attr_col1 = attr[["program_id", "dominant_cell_type", "attribution_strength"]].copy()
@@ -48,7 +23,6 @@ def main() -> None:
         "attribution_strength": "healthy_dominant_attribution_strength",
     })
 
-    # ---- col 2: healthy_top_expressor_CT from Fig 1 pseudobulk singscore ----
     fig1 = pd.read_csv(ROOT / "Project_P3" / "fig1_healthy_program_scores.tsv", sep="\t")
     # mean singscore per (program_id, compartment4) across all healthy samples
     mean_by_ct = (fig1.groupby(["program_id", "compartment4"], as_index=False)
@@ -64,14 +38,12 @@ def main() -> None:
     # reshape: apply may return MultiIndex in recent pandas, normalise
     col2 = col2.reset_index(drop=True)
 
-    # ---- col 3: AF_major_carrier_CT from R4 ----
     carrier = pd.read_csv(ROOT / "results" / "af_la_major_carrier_af.tsv", sep="\t")
     col3 = carrier[["program_id",
                     "AF_major_carrier_CT",
                     "AF_major_carrier_dScore",
                     "AF_major_carrier_q_perm"]].copy()
 
-    # ---- assemble ----
     out = panel[["program_id", "program_label", "program_order",
                  "baseline_direction"]].copy()
     out = (out.merge(attr_col1, on="program_id", how="left")

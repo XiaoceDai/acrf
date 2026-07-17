@@ -1,21 +1,5 @@
 #!/usr/bin/env python3
-"""
-Figure 3C - Carrier shift table (three orthogonal columns).
-
-Column 1  Fig 1D dominant_cell_type    (signed attribution argmax)
-Column 2  Fig 1 top-expressor          (AF-naive mean singscore argmax)
-Column 3  AF major carrier             (Fig 3 Δscore argmax under q_perm < 0.10)
-
-Each cell is filled by its compartment colour; if the value is
-"unresolved" / "Unresolved" it is rendered grey.  The three columns are
-NOT comparable one-for-one (different quantities), so this panel deliberately
-uses a side-by-side reading rather than a shift arrow; differences between
-columns are meant to be read as "these three metrics disagree, which is the
-biology".
-
-Hard rule: no LA/RA colours and no rewiring colours; only the discrete
-compartment palette from plot_style.COMPARTMENT_COLORS.
-"""
+"""Figure 3C - Carrier shift table (three orthogonal columns)."""
 from __future__ import annotations
 
 from pathlib import Path

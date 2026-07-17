@@ -1,33 +1,5 @@
 #!/usr/bin/env python3
-"""
-Figure 5A — Program triangulation heatmap.
-
-Compresses Figures 2/3/4 onto the 10 frozen panel programs and adds a
-synthesis "triangulation class" column.  This is the new main bridge
-panel for Figure 5 (Question → triangulation → mechanism).
-
-Columns (locked):
-  1. Healthy bias                  (LA-high / RA-high; identity strip)
-  2. Bulk rewiring (consensus)     (Fig 2 consensus_class with trend fallback)
-  3. LA-arm AF localization        (Fig 3 AF_major_carrier_CT; mostly Unresolved)
-  4. Duration trend (LAA primary)  (Fig 4 Spearman ρ)
-  5. Triangulation class           (Convergent / Structure-led / Metabolism-led / Fragmented)
-
-Rule for the triangulation class is locked here in the script header so the
-output is auditable:
-  - bulk_dir   = sign in {-2,-1,0,+1,+2} from consensus class
-  - dur_dir    = sign of LAA Spearman ρ if |ρ|>=0.30, else 0
-  - loc_layer  = AF major carrier compartment from Fig 3
-  - is_struct  = baseline_direction == -1  (RA-high; structural arm)
-  - is_metab   = baseline_direction == +1  (LA-high; metabolic arm)
-
-  Convergent       : bulk_dir != 0 AND dur_dir != 0 AND
-                     they agree on "score declines vs healthy LA/RA frame"
-  Structure-led    : is_struct AND bulk_dir <= -1 AND
-                     loc_layer in {fibroblast, fibroblast (healthy)}
-  Metabolism-led   : is_metab  AND dur_dir == -1
-  Fragmented       : layers conflict, or none of the above (incl. all-flat)
-"""
+"""Figure 5A — Program triangulation heatmap."""
 from __future__ import annotations
 
 from pathlib import Path

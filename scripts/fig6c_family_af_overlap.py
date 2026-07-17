@@ -1,30 +1,5 @@
 #!/usr/bin/env python3
-"""
-Figure 6C — Family overlap with external AF gene sets (publication panel).
-
-Sparse member-level overlap between the 16 frozen NCP families (Figure 1D
-order) and prespecified external AF gene sets. Genetic-traceability context
-layer only — not a Path A gate.
-
-Inputs (frozen; read-only):
-  results/provenance/figure6_external_gene_sets_manifest.tsv
-  results/ncp_v3_family_leading_edge_genes.tsv
-  results/ncp_v3_gene_universe.tsv
-  results/ncp_v3_family_labels.tsv
-  results/ncp_v3_canonical_display_order.tsv
-  results/external_af_gene_sets.tsv
-  results/fig6c_family_af_overlap_source.tsv  (locked stats; remapped if needed)
-
-Outputs:
-  results/fig6c_family_af_overlap_manifest.tsv
-  results/fig6c_family_af_overlap_qc.md
-  figures/fig6c_family_af_overlap.{pdf,svg,png}
-  figures/figS_family_af_overlap_full_matrix.{pdf,svg,png}  (optional full 16×4)
-  figures/_pdf_preview/fig6c_family_af_overlap.png
-
-Frozen source (not rewritten):
-  results/fig6c_family_af_overlap_source.tsv
-"""
+"""Figure 6C — Family overlap with external AF gene sets (publication panel)."""
 from __future__ import annotations
 
 import hashlib
@@ -55,9 +30,7 @@ from plot_style import (  # noqa: E402
 )
 from _figure_export import save_figure_bundle  # noqa: E402
 
-# ---------------------------------------------------------------------------
 # Paths
-# ---------------------------------------------------------------------------
 MANIFEST_EXT = ROOT / "results" / "provenance" / "figure6_external_gene_sets_manifest.tsv"
 FLE = ROOT / "results" / "ncp_v3_family_leading_edge_genes.tsv"
 UNI = ROOT / "results" / "ncp_v3_gene_universe.tsv"
@@ -78,9 +51,7 @@ OUT_SUPP_PDF = ROOT / "figures" / "figS_family_af_overlap_full_matrix.pdf"
 OUT_SUPP_SVG = ROOT / "figures" / "figS_family_af_overlap_full_matrix.svg"
 OUT_SUPP_PNG = ROOT / "figures" / "figS_family_af_overlap_full_matrix.png"
 
-# ---------------------------------------------------------------------------
 # Geometry — sparse main-text panel (3 nonzero families only)
-# ---------------------------------------------------------------------------
 WIDTH_MM = 84.0
 HEIGHT_MM = 74.0  # composite C/D shared outer height
 MARGIN_L = 1.3
@@ -201,9 +172,7 @@ def _sha256_text(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
-# ---------------------------------------------------------------------------
 # Load / preserve locked statistics
-# ---------------------------------------------------------------------------
 def load_manifest() -> pd.DataFrame:
     if not MANIFEST_EXT.is_file():
         _stop(f"missing external-set manifest: {MANIFEST_EXT}")
@@ -426,9 +395,7 @@ def load_locked_stats(
     return df
 
 
-# ---------------------------------------------------------------------------
 # Cell text
-# ---------------------------------------------------------------------------
 def cell_label(n_overlap: int, genes: list[str], evaluated: bool) -> str:
     if not evaluated:
         return "—"
@@ -568,9 +535,7 @@ def _column_geometry(n_cols: int) -> tuple[float, list[float], float, float]:
     return mat_w, col_x, col_w, x_mat
 
 
-# ---------------------------------------------------------------------------
 # Render — sparse main-text panel
-# ---------------------------------------------------------------------------
 def _header_font(fontsize: float, weight: str = "normal"):
     from matplotlib.font_manager import FontProperties
     return FontProperties(family=HEADER_FONT, size=fontsize, weight=weight)
@@ -1034,9 +999,7 @@ def render_supplement_full(
     return fig
 
 
-# ---------------------------------------------------------------------------
 # QC / export helpers
-# ---------------------------------------------------------------------------
 def _pdf_page_mm(pdf: Path) -> tuple[float, float]:
     raw = pdf.read_bytes()
     m = re.search(rb"/MediaBox\s*\[\s*([0-9.]+)\s+([0-9.]+)\s+([0-9.]+)\s+([0-9.]+)\s*\]", raw)

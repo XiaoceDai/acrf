@@ -1,19 +1,5 @@
 #!/usr/bin/env python3
-"""
-Figure 3D  Program × cell-type Δsinglescore heatmap (full 30 × 11).
-
-Provides the raw transparency layer underlying Fig 3B:  every NCP primary
-program's Δ singscore in every LA-arm cell type, blocked by axis
-family.  Significance markers as in Fig 3B (* p < 0.05, . p < 0.10).
-
-Inputs:
-    results/fig3_primary_program_celltype_delta.tsv
-    results/fig2_primary_axis_families.tsv
-    results/fig2_primary_acai_long.tsv
-
-Output:
-    figures/fig3d_program_celltype_heatmap.pdf
-"""
+"""Figure 3D  Program × cell-type Δsinglescore heatmap (full 30 × 11)."""
 from __future__ import annotations
 
 import sys
@@ -111,7 +97,6 @@ def main() -> None:
     # Pretty short labels for programs
     prog_short = {pid: short_pathway_label(pid, 26) for pid in program_order}
 
-    # ---- figure layout ------------------------------------------------
     MM = 1.0 / 25.4
     fig = plt.figure(figsize=(180 * MM, 180 * MM))
     grid = fig.add_gridspec(
@@ -135,7 +120,6 @@ def main() -> None:
                        (1.0, BRBG_BROWN)])
     norm = mcolors.TwoSlopeNorm(vmin=-vmax, vcenter=0.0, vmax=vmax)
 
-    # ---- heatmap cells ----
     for i, pid in enumerate(program_order):
         for j, ct in enumerate(CT_ORDER):
             v = M.iloc[i, j]
@@ -173,7 +157,6 @@ def main() -> None:
     for s in ax_main.spines.values():
         s.set_visible(True); s.set_linewidth(0.4); s.set_color("#999")
 
-    # ---- top labels (cell types) — anchored 45° rotation ----
     for j, ct in enumerate(CT_ORDER):
         ax_top.plot([j + 0.5, j + 0.5], [0.0, 0.10],
                       color=GREY_MID, lw=0.7, zorder=2)
@@ -184,7 +167,6 @@ def main() -> None:
                       color="black")
     ax_top.set_xlim(0, C); ax_top.set_ylim(0, 1); ax_top.axis("off")
 
-    # ---- left family colour bar ----
     fam_order = sorted(set(ordered["family_id"]))
     fam_to_color = {fid: FAMILY_PALETTE[k % len(FAMILY_PALETTE)]
                        for k, fid in enumerate(fam_order)}
@@ -204,7 +186,6 @@ def main() -> None:
                       color="white" if fid in (1, 9, 10, 11, 4) else "black")
     ax_fam.set_xlim(0, 1); ax_fam.set_ylim(K, 0); ax_fam.axis("off")
 
-    # ---- left program labels (figure-level) ----
     for i, pid in enumerate(program_order):
         fid = int(ordered.loc[ordered["program_id"] == pid,
                                   "family_id"].iloc[0])
@@ -219,20 +200,17 @@ def main() -> None:
                       transform=ax_fam.transData,
                       clip_on=False)
 
-    # ---- colorbar ----
     cb = mpl.colorbar.ColorbarBase(
         ax_cbar, cmap=cmap, norm=norm, orientation="vertical")
     cb.set_label("Δ singscore  (AF − Ctrl)", fontsize=6.8)
     cb.outline.set_linewidth(0.4)
     cb.ax.tick_params(labelsize=6, length=2, width=0.4)
 
-    # ---- title ----
     fig.suptitle(
         f"Fig 3D  Program × cell-type Δ singscore (LA snRNA arm, GSE255612) "
         f"— {K} NCP_v2 programs × {C} cell types",
         fontsize=8.5, fontweight="bold", y=0.99, x=0.02, ha="left")
 
-    # ---- caption ----
     fig.text(0.02, 0.022,
               "Cells: Δ singscore (AF − Ctrl) with 10 000 MC perm test.   "
               "Markers: black-filled  *  p_perm < 0.05;  white  .  p_perm < 0.10.   "

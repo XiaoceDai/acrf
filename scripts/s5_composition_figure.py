@@ -1,16 +1,4 @@
-"""
-S5 — Cell/Nature-style LA vs RA atrial composition figures (PDF).
-
-Purely descriptive (no differential-abundance testing).
-Slice: source=="Nuclei" & Used=="Yes" & region in {LA, RA}   (matches DE).
-Excludes: doublets, NotAssigned, Ventricular_Cardiomyocyte.
-
-Outputs (figures/, all PDF):
-    fig_composition_overall.pdf
-    fig_composition_per_donor.pdf
-    fig_composition_top4_paired.pdf
-    composition_LA_RA_table.tsv
-"""
+"""S5 — Cell/Nature-style LA vs RA atrial composition figures (PDF)."""
 
 from __future__ import annotations
 
@@ -96,7 +84,6 @@ def main() -> None:
     palette = {ct: CT_PALETTE[i % len(CT_PALETTE)] for i, ct in enumerate(ct_order)}
     pretty = {ct: ct.replace("_", " ") for ct in ct_order}
 
-    # -------- Fig 1: overall LA vs RA --------
     overall = (obs.groupby(["region", "cell_type"], observed=True).size()
                   .unstack("cell_type", fill_value=0).reindex(columns=ct_order)).loc[["LA", "RA"]]
     overall_pct = overall.div(overall.sum(axis=1), axis=0) * 100
@@ -131,7 +118,6 @@ def main() -> None:
     fig.savefig(FIG_DIR / "fig_composition_overall.pdf")
     plt.close(fig)
 
-    # -------- Fig 2: per-donor --------
     donors_all = sorted(obs["donor"].unique().tolist())
     has_la = obs.groupby("donor", observed=True)["region"].apply(lambda r: "LA" in set(r))
     has_ra = obs.groupby("donor", observed=True)["region"].apply(lambda r: "RA" in set(r))
@@ -183,7 +169,6 @@ def main() -> None:
     fig.savefig(FIG_DIR / "fig_composition_per_donor.pdf")
     plt.close(fig)
 
-    # -------- Fig 3: top-4 paired --------
     obs4 = obs.copy()
     obs4["top_ct"] = obs4["cell_type"].map(TOP4)
     obs4 = obs4[obs4["top_ct"].notna()]

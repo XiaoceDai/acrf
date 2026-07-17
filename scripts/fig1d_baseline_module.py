@@ -1,22 +1,5 @@
 #!/usr/bin/env python3
-"""
-Figure 1d (merged baseline module) - HORIZONTAL layout for composite assembly.
-
-Layout (top -> bottom, all sharing the program x-axis):
-  row 0: pathway short labels (rotated 90 deg)
-  row 1: LA / RA direction strip (with text)
-  row 2: donor x program aCAI heatmap (donors on y, programs on x)
-  row 3: family color band with F-id
-  row 4: mean aCAI bars + n/8 stability annotations
-
-Right side: a small horizontal colorbar at the bottom.
-
-Inputs:
-  results/fig1e_baseline_axis_families.tsv
-
-Output:
-  figures/fig1d_baseline_module.pdf
-"""
+"""Figure 1d (merged baseline module) - HORIZONTAL layout for composite assembly."""
 from __future__ import annotations
 
 import sys
@@ -90,7 +73,6 @@ def main() -> None:
     fam_cmap = {fid: FAMILY_PALETTE[i % len(FAMILY_PALETTE)]
                 for i, fid in enumerate(fam_ids)}
 
-    # ---- figure layout -------------------------------------------------------
     fig = plt.figure(figsize=(COL_DOUBLE * 1.55, COL_DOUBLE * 0.58))
     gs = fig.add_gridspec(
         5, 1,
@@ -205,7 +187,6 @@ def main() -> None:
     # leave a little headroom for rotated n/8 text
     ax_bar.set_ylim(-ymax_abs * 1.45, ymax_abs * 1.45)
 
-    # ---- colorbar at the very bottom right ----
     cax = fig.add_axes([0.78, 0.045, 0.18, 0.018])
     sm = mpl.cm.ScalarMappable(norm=norm, cmap=cmap)
     sm.set_array([])

@@ -1,20 +1,5 @@
 #!/usr/bin/env python3
-"""
-Build the cohort-demographics master table (Supplementary Table S1 / Table 1).
-
-Includes GSE112339 healthy bulk reference plus discovery, replication, scRNA,
-multiome, and GeoMx cohorts — eight GEO-linked resources when all rows present.
-
-Output: results/cohort_demographics_table.tsv  (cohort-level; versioned source)
-        results/cohort_demographics_long.tsv   (per-donor; Fig S1 input)
-
-For GSE128188 / GSE79768 / GSE115574, donor lists and counts are intersected with
-results/innovation_ncp_v3_acai_long.tsv when present so Table S1 / Fig S1 match Fig 2D
-sample sizes (n_AF / n_SR). GEO metadata may list additional donors omitted from the
-v3 NCP axis panel.
-
-DOCX: run scripts/m_supp_table_s1_cohort_demographics.py after this script.
-"""
+"""Build the cohort-demographics master table (Supplementary Table S1 / Table 1)."""
 from __future__ import annotations
 
 from pathlib import Path

@@ -1,21 +1,5 @@
 #!/usr/bin/env python3
-"""
-Figure 5C — ROI-level localization of fibroblast-associated ECM signal.
-
-Subordinate spatial inset panel (non-primary):
-  - LEFT  : ECM proteoglycans score in AA ROIs, x = area (border / distal),
-            colored by rhythm (AF / SR), area effect only.
-  - MIDDLE: fibroblast (canonical) vs ECM proteoglycans scatter (24 AA ROIs),
-            Spearman ρ printed in panel; rhythm + area encoded.
-  - RIGHT : one short callout sentence.
-
-Title constraint: do NOT advertise "spatial" — GeoMx provides ROI-level
-segments, not Visium/Xenium-style tissue heatmaps.
-
-Color discipline:
-  - AF / SR are encoded as low-saturation tints (not the saturated Fig 3 BrBG)
-  - border / distal are encoded as point shapes, not a fifth color axis.
-"""
+"""Figure 5C — ROI-level localization of fibroblast-associated ECM signal."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -53,7 +37,6 @@ def main() -> None:
     fig.subplots_adjust(left=0.075, right=0.98, top=0.80, bottom=0.22,
                         wspace=0.45)
 
-    # =================== LEFT: ECM by area, color = rhythm ===================
     ax_l = fig.add_subplot(1, 3, 1)
     areas = ["border", "distal"]
     rhythms = ["SR", "AF"]
@@ -92,7 +75,6 @@ def main() -> None:
         ax_l.spines[s].set_visible(False)
     ax_l.tick_params(axis="both", labelsize=6, pad=2)
 
-    # =================== MIDDLE: fibro vs ECM scatter ====================
     ax_m = fig.add_subplot(1, 3, 2)
     for r in rhythms:
         for a in areas:
@@ -119,7 +101,6 @@ def main() -> None:
         ax_m.spines[s].set_visible(False)
     ax_m.tick_params(axis="both", labelsize=6, pad=2)
 
-    # =================== RIGHT: callout ====================
     ax_r = fig.add_subplot(1, 3, 3)
     ax_r.set_axis_off()
     ax_r.text(
@@ -148,7 +129,6 @@ def main() -> None:
         color="#555555", style="italic", linespacing=1.5,
     )
 
-    # =================== Shared legend (bottom) ====================
     from matplotlib.lines import Line2D
     handles = [
         Line2D([], [], marker="o", linestyle="None", markersize=4.5,

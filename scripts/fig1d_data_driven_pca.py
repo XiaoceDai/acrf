@@ -1,23 +1,5 @@
 #!/usr/bin/env python3
-"""
-Figure 1d — Data-driven discovery primitive of the framework.
-
-PCA on the donor-level chamber asymmetry matrix M_aCAI (3,781
-chamber-biased genes x 59 paired chamber donors of the four cohorts;
-gene-wise centred and scaled).  Genes are coloured by k-means module
-assignment (k = 12).  Three modules are explicitly annotated:
-    M11 — PITX2-anchored mesothelial / LA-identity module
-    M7  — adipose-program module (ADIPOQ, LEP, PLIN1)
-    M8  — atrial-cardiomyocyte module (HAMP, BMP10)
-
-A small scree inset reports PC1 and the cumulative top-10 variance.
-
-Inputs:
-    results/n1_pc_loadings.tsv         (gene x PC + module column)
-    results/n1_modules_summary.tsv     (per-module direction + dAF-SR)
-Output:
-    figures/fig1d_data_driven_pca.pdf
-"""
+"""Figure 1d — Data-driven discovery primitive of the framework."""
 from __future__ import annotations
 
 import sys
@@ -61,12 +43,10 @@ def main() -> None:
     # attach module id from long table
     loadings["module"] = modlong["module_id"].reindex(loadings.index)
 
-    # ---- read variance-explained from N1 script (regenerated locally) ----
     # rather than reread, we hard-encode from the reported run:
     pc_var = [36.5, 6.6, 5.5, 5.0, 3.7, 3.1, 2.6, 2.3, 2.0, 1.8]
     pc_var_cum = np.cumsum(pc_var)
 
-    # ---- figure ---------------------------------------------------------
     fig = plt.figure(figsize=(COL_SINGLE * 1.10, COL_SINGLE * 0.95))
     ax = fig.add_axes([0.16, 0.18, 0.78, 0.74])
 
@@ -109,7 +89,6 @@ def main() -> None:
     strip_spines(ax)
     ax.legend(loc="lower left", frameon=False, fontsize=5)
 
-    # ---- inset scree ----------------------------------------------------
     ax_in = fig.add_axes([0.65, 0.66, 0.27, 0.20])
     x = np.arange(1, len(pc_var) + 1)
     ax_in.bar(x, pc_var, color="#444", edgecolor="white", linewidth=0.3)

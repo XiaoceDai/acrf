@@ -12,9 +12,7 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parent.parent
 
-# ---------------------------------------------------------------------------
 # Composite canvas (178 × 174 mm)
-# ---------------------------------------------------------------------------
 GUTTER_H_MM = 4.0
 GUTTER_V_MM = 4.0
 
@@ -41,9 +39,7 @@ PANEL_D = {
 COMPOSITE_W_MM = 178.0
 COMPOSITE_H_MM = PANEL_C["y"] + PANEL_C["h"]  # 174.0
 
-# ---------------------------------------------------------------------------
 # Typography (absolute pt; one system across A–D)
-# ---------------------------------------------------------------------------
 FS_LETTER = 10.5
 FS_TITLE = 8.5
 FS_SUB = 6.3
@@ -54,9 +50,7 @@ FS_FOOT = 5.15
 
 FONT_FAMILY = "DejaVu Sans"
 
-# ---------------------------------------------------------------------------
 # Evidence colors (type only — not validation)
-# ---------------------------------------------------------------------------
 ACCENT_GWAS = "#5C6B7A"
 ACCENT_EGENE = "#7A6554"
 ACCENT_PP3 = "#8A7348"
@@ -80,10 +74,8 @@ ANCHOR_ORDER = [
     "NTRK2", "NTF3", "FRS2", "PITX2", "KCNN3",
 ]
 
-# ---------------------------------------------------------------------------
 # A/B shared horizontal row geometry (mm from panel bottom-left)
 # Shared height 92 mm; A and B row centers match exactly.
-# ---------------------------------------------------------------------------
 AB_HEIGHT = 92.0
 AB_A_WIDTH = 72.0
 AB_B_WIDTH = 102.0
@@ -109,9 +101,7 @@ OUT_COMPOSITE_GEOM = ROOT / "results" / "figure6_composite_geometry.tsv"
 OUT_AB_GEOM_LEGACY = ROOT / "results" / "figure6ab_anchor_row_geometry.tsv"
 OUT_CD_GEOM_LEGACY = ROOT / "results" / "figure6cd_composite_geometry.tsv"
 
-# ---------------------------------------------------------------------------
 # C/D shared outer contract (height 78 mm)
-# ---------------------------------------------------------------------------
 CD_HEIGHT = 78.0
 CD_C_WIDTH = 70.0
 CD_D_WIDTH = 104.0

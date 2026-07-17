@@ -1,25 +1,5 @@
 #!/usr/bin/env python3
-"""
-Supplementary Figure S3 — NCP panel stability.
-
-Demonstrates that the 10 frozen NCP programs (program_order 1-10) are
-direction-stable across the GSE112339 healthy bulk resamplings, and
-that their leading-edge gene cores are themselves replicable at the
-gene level.
-
-Inputs:
-  bulk/Project_P01/normal_chamber_programs.tsv
-       -> stable_program flag and stability_consistent_runs (out of 8)
-  bulk/Project_P01/bulk_chamber_stability.tsv
-       -> per-gene stability_score (1-8, max 8 = significant in all
-          eight donor-resamplings)
-  results/figure5_program_sets.tsv
-       -> axis assignment (STRUCTURAL / METABOLIC) for axis-support programs
-
-Outputs:
-  figures/figS3_ncp_panel_stability.pdf
-  results/figS3_ncp_stability_summary.tsv
-"""
+"""Supplementary Figure S3 — NCP panel stability."""
 from __future__ import annotations
 
 import sys
@@ -119,7 +99,6 @@ def main() -> None:
     summary.to_csv(SUMM_OUT, sep="\t", index=False)
     print(f"wrote {SUMM_OUT.relative_to(ROOT)}")
 
-    # ---- figure -----------------------------------------------------------
     fig = plt.figure(figsize=(COL_DOUBLE, 0.5 * COL_DOUBLE))
     gs = fig.add_gridspec(1, 3, width_ratios=[1.4, 1.2, 1.0], wspace=0.55)
 

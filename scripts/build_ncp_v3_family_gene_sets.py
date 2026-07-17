@@ -1,31 +1,5 @@
 #!/usr/bin/env python3
-"""
-Prep for Fig 6C (NCP_v3 family x published AF risk-gene overlap).
-
-Derives, from frozen NCP_v3 program-level leading-edge results, the gene-level
-inputs needed for a later family-level enrichment/overlap analysis:
-
-  1. results/ncp_v3_family_leading_edge_genes.tsv  (long: one row per family x gene)
-  2. results/ncp_v3_family_gene_set_summary.tsv     (per-family gene-set sizes)
-  3. results/ncp_v3_gene_universe.tsv               (background universe)
-
-Background universe (locked choice, documented here so the hypergeometric /
-odds-ratio denominator is not arbitrary):
-
-  The union of expressed genes entering the bulk chamber pre-ranked FGSEA -
-  i.e. every gene_symbol in bulk/Project_P01/bulk_chamber_DE_full.tsv. NCP_v3
-  programs and their leading edges are defined from this bulk LA-vs-RA ranking,
-  so this is the correct set of genes that *could* have been called a
-  leading-edge gene. Do NOT use the whole genome (~20k) as the universe: that
-  inflates enrichment.
-
-Leading-edge genes are read from results/fig3_v3_program_le.tsv (program_id,
-family_id, leading_edge_genes) and aggregated to the family level as the union
-across member programs. Family labels come from results/ncp_v3_family_labels.tsv.
-
-This script performs no network access and no colocalisation. It only reshapes
-frozen internal tables so the external-reference overlap step can run later.
-"""
+"""Prep for Fig 6C (NCP_v3 family x published AF risk-gene overlap)."""
 from __future__ import annotations
 
 from pathlib import Path
