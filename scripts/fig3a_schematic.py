@@ -369,7 +369,7 @@ def main() -> None:
         ("Fig 3D",
          "full program × cell-type heatmap (30 × 11)"),
         ("Fig 3E",
-         "anchor genes  +  Fig 6c reversal-gene cross-mark"),
+         "anchor genes  +  Fig 7 reversal-gene cross-mark"),
     ]
     for k, (tag, desc) in enumerate(bullets):
         y = pan_y + pan_h - 0.075 - k * 0.058

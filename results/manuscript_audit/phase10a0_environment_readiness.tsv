@@ -1,0 +1,11 @@
+component	historical_production_status	current_runtime_version	declared_requirement	lock_status	used_in_final_lineage	final_release_requirement	can_freeze_without_reanalysis	output_hash_verification_required	owner_or_release_action	verdict	notes
+Python_runtime	exact historical pins unavailable	3.12.3	>=3.10 (pyproject)	UNFROZEN	YES	freeze release env	YES	YES	FREEZE_RELEASE_ENVIRONMENT	READY_TO_FREEZE	
+pip	unknown	24.0	n/a	UNFROZEN	YES	record	YES	YES	FREEZE_RELEASE_ENVIRONMENT	READY_TO_FREEZE	
+R_runtime	freeze logs 4.5.1; older Methods 4.4	4.5.1	release env record	RUNTIME_RECORDED	YES	record release R	YES	YES	FREEZE_RELEASE_ENVIRONMENT	READY_TO_FREEZE	
+coloc	UNRECOVERABLE exact production version	5.2.3	CURRENT_VERSION_ONLY	CURRENT_ONLY	YES	record release coloc without historical proof claim	YES	YES	RECORD_RELEASE_COLOC_VERSION	READY_TO_FREEZE	
+singscore	1.28.1	1.28.1	1.28.1	RUNTIME_RECORDED	YES	include	YES	YES	FREEZE_RELEASE_ENVIRONMENT	PASS	
+metafor	4.8.0	4.8.0	4.8.0	RUNTIME_RECORDED	YES	include	YES	YES	FREEZE_RELEASE_ENVIRONMENT	PASS	
+edgeR	4.6.3	4.6.3	4.6.3	RUNTIME_RECORDED	YES	include	YES	YES	FREEZE_RELEASE_ENVIRONMENT	PASS	
+limma	recorded	3.64.3	release record	RUNTIME_RECORDED	YES	include	YES	YES	FREEZE_RELEASE_ENVIRONMENT	PASS	
+Python_scientific_stack	exact historical pins unavailable	pandas 2.3.3; numpy 2.4.4; scipy 1.17.1; matplotlib 3.10.8	>=3.10 ecosystem	UNFROZEN	YES	pin in release lockfile	YES	YES	FREEZE_RELEASE_ENVIRONMENT	READY_TO_FREEZE	
+lockfiles	no renv/conda/requirements release freeze	ABSENT	final release env lock	MISSING	N/A	create at 10A2	YES	YES	FREEZE_RELEASE_ENVIRONMENT	READY_TO_FREEZE	

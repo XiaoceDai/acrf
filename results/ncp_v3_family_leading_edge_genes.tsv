@@ -1,0 +1,1298 @@
+family_id	family_label	short_label	axis_group	program_id	direction	gene	in_universe
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	AARS2	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	ABCE1	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	AIMP2	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	APEH	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	ASCC2	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	ASCC3	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	AURKAIP1	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	CARS2	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	CHCHD1	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	CUL2	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	DAP3	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	DARS2	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	DDOST	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	EARS2	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	EEF1A1	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	EEF1A2	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	EEF1B2	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	EEF1D	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	EEF1E1	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	EEF1G	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	EIF2B1	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	EIF2B3	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	EIF2B4	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	EIF2B5	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	EIF2S2	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	EIF3D	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	EIF3F	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	EIF3G	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	EIF3H	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	EIF3I	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	EIF3J	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	EIF3K	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	EIF3M	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	EIF4G1	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	EIF5	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	ERAL1	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	FARS2	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	FARSA	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	FARSB	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	FAU	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	GADD45GIP1	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	GFM1	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	GFM2	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	GSPT2	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	HBS1L	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	IARS2	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	LARS2	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	LTN1	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MALSU1	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MARS2	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL1	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL10	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL11	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL12	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL13	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL14	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL15	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL16	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL17	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL18	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL19	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL2	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL20	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL21	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL22	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL23	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL24	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL27	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL28	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL3	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL30	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL32	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL34	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL35	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL36	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL37	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL38	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL39	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL4	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL40	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL41	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL44	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL46	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL47	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL50	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL51	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL52	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL53	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPL54	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPS10	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPS11	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPS12	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPS15	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPS16	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPS17	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPS18A	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPS18B	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPS2	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPS21	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPS22	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPS25	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPS27	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPS30	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPS31	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPS33	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPS34	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPS35	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPS5	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPS7	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRPS9	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MRRF	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MTFMT	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	MTIF2	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	NARS2	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	NDUFAB1	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	OXA1L	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	PARS2	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	PPA1	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	PSMA2	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	PSMA4	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	PSMA5	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	PSMA7	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	PSMB3	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	PSMB4	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	PSMB5	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	PSMB6	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	PSMB7	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	PSMC3	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	PSMC4	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	PSMC5	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	PSMC6	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	PSMD1	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	PSMD13	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_RIBOSOME_ASSOCIATED_QUALITY_CONTROL	LA-biased	PSMD14	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	PSMD3	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	PSMD6	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	PSMD7	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	PTCD3	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RARS2	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RBX1	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RCHY1	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL10	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL10A	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL12	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL13	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL14	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL18A	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL19	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL22L1	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL23	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL23A	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL24	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL26	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL27	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL27A	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL29	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL30	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL32	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL35	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL35A	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL36	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL37	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL37A	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL38	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL39	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL39L	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL3L	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL4	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_RIBOSOME_ASSOCIATED_QUALITY_CONTROL	LA-biased	RPL41	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL6	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL7	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_RIBOSOME_ASSOCIATED_QUALITY_CONTROL	LA-biased	RPL7A	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL8	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPL9	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPLP0	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPLP1	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPLP2	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPN1	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPN2	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPS11	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPS12	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPS13	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPS14	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPS15	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPS15A	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPS16	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPS18	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPS19	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPS2	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPS20	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPS21	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPS24	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPS25	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPS26	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPS28	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPS3A	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPS4X	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPS4Y1	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPS5	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPS6	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPS7	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPS8	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_RIBOSOME_ASSOCIATED_QUALITY_CONTROL	LA-biased	RPS9	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	RPSA	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	SARS2	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	SEC11A	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	SEC11C	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	SEC61G	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	SPCS1	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	SPCS3	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	SRP19	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	SRP68	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	SRPRB	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	SSR2	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	SSR4	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	TARS2	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	TSFM	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	TUFM	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	UBA52	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_RIBOSOME_ASSOCIATED_QUALITY_CONTROL	LA-biased	UBE2D1	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	VARS2	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	VCP	True
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA	REACTOME__REACTOME_TRANSLATION	LA-biased	YARS2	True
+2	Mitochondrial calcium ion transport	Mito Ca²⁺ transport	LA	REACTOME__REACTOME_MITOCHONDRIAL_CALCIUM_ION_TRANSPORT	LA-biased	AFG3L2	True
+2	Mitochondrial calcium ion transport	Mito Ca²⁺ transport	LA	REACTOME__REACTOME_MITOCHONDRIAL_CALCIUM_ION_TRANSPORT	LA-biased	LETM1	True
+2	Mitochondrial calcium ion transport	Mito Ca²⁺ transport	LA	REACTOME__REACTOME_MITOCHONDRIAL_CALCIUM_ION_TRANSPORT	LA-biased	MCU	True
+2	Mitochondrial calcium ion transport	Mito Ca²⁺ transport	LA	REACTOME__REACTOME_MITOCHONDRIAL_CALCIUM_ION_TRANSPORT	LA-biased	MICU1	True
+2	Mitochondrial calcium ion transport	Mito Ca²⁺ transport	LA	REACTOME__REACTOME_MITOCHONDRIAL_CALCIUM_ION_TRANSPORT	LA-biased	PHB2	True
+2	Mitochondrial calcium ion transport	Mito Ca²⁺ transport	LA	REACTOME__REACTOME_MITOCHONDRIAL_CALCIUM_ION_TRANSPORT	LA-biased	PMPCA	True
+2	Mitochondrial calcium ion transport	Mito Ca²⁺ transport	LA	REACTOME__REACTOME_MITOCHONDRIAL_CALCIUM_ION_TRANSPORT	LA-biased	PMPCB	True
+2	Mitochondrial calcium ion transport	Mito Ca²⁺ transport	LA	REACTOME__REACTOME_MITOCHONDRIAL_CALCIUM_ION_TRANSPORT	LA-biased	SLC8A3	True
+2	Mitochondrial calcium ion transport	Mito Ca²⁺ transport	LA	REACTOME__REACTOME_MITOCHONDRIAL_CALCIUM_ION_TRANSPORT	LA-biased	SPG7	True
+2	Mitochondrial calcium ion transport	Mito Ca²⁺ transport	LA	REACTOME__REACTOME_MITOCHONDRIAL_CALCIUM_ION_TRANSPORT	LA-biased	STOML2	True
+2	Mitochondrial calcium ion transport	Mito Ca²⁺ transport	LA	REACTOME__REACTOME_MITOCHONDRIAL_CALCIUM_ION_TRANSPORT	LA-biased	VDAC1	True
+2	Mitochondrial calcium ion transport	Mito Ca²⁺ transport	LA	REACTOME__REACTOME_MITOCHONDRIAL_CALCIUM_ION_TRANSPORT	LA-biased	VDAC2	True
+2	Mitochondrial calcium ion transport	Mito Ca²⁺ transport	LA	REACTOME__REACTOME_MITOCHONDRIAL_CALCIUM_ION_TRANSPORT	LA-biased	VDAC3	True
+2	Mitochondrial calcium ion transport	Mito Ca²⁺ transport	LA	REACTOME__REACTOME_MITOCHONDRIAL_CALCIUM_ION_TRANSPORT	LA-biased	YME1L1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	REACTOME__REACTOME_TRIGLYCERIDE_METABOLISM	LA-biased	ABHD5	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	ACAA1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	ACAA2	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	ACADM	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	ACADS	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	ACADVL	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	ACLY	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	ACO2	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	ACOT2	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	ACSL1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	ACSS1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	ADH1C	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	ADIPOQ	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	ADSL	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	AIFM1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	ALDH9A1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	ALDOA	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	AQP7	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	ARAF	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	AUH	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	BCKDHA	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	BCL2L13	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	BPHL	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	C3	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	CA2	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	CA4	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	REACTOME__REACTOME_TRIGLYCERIDE_METABOLISM	LA-biased	CAV1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	CD36	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	CHCHD10	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	CIDEA	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	COL4A1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	COQ3	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	COQ5	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	COQ9	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	COX7B	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	COX8A	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	CPT1A	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	CPT2	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	CRAT	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	CS	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	CYC1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	CYP1A1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	CYP4B1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	DBT	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	DECR1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	DGAT1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	REACTOME__REACTOME_TRIGLYCERIDE_METABOLISM	LA-biased	DGAT2	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	DHRS7	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	DHRS7B	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	DLAT	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	DLD	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	DLST	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	DRAM2	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	ECH1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	ECHS1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	ECI2	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	ELOVL6	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	EPHX2	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	ESRRA	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	ESYT1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	ETFB	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	ETFDH	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	REACTOME__REACTOME_TRIGLYCERIDE_METABOLISM	LA-biased	FABP3	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	FABP4	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	REACTOME__REACTOME_TRIGLYCERIDE_METABOLISM	LA-biased	FABP5	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	FAH	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	FASN	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	FH	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	FMO1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	GCDH	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	GHITM	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	REACTOME__REACTOME_TRIGLYCERIDE_METABOLISM	LA-biased	GK	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	GLUL	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	GPAM	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	REACTOME__REACTOME_TRIGLYCERIDE_METABOLISM	LA-biased	GPAT2	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	GPD1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	GPD2	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	GPHN	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	GPX4	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	GRPEL1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	GSTZ1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	HMGCL	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	HSD17B10	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	IDH3A	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	IDH3B	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	IDH3G	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	IMMT	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	ITIH5	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	LAMA4	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	LEP	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	LGALS1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	LIPE	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	LPCAT3	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	REACTOME__REACTOME_TRIGLYCERIDE_METABOLISM	LA-biased	LPIN1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	LPL	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	MCCC1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	MDH1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	MDH2	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	MGLL	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	MGST3	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	MLYCD	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	MRPL15	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	MTCH2	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	NDUFAB1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	NDUFB7	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	NDUFS3	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	PCBD1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	PDHA1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	PDHB	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	PFKFB3	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	PHYH	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	REACTOME__REACTOME_TRIGLYCERIDE_METABOLISM	LA-biased	PLIN1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	PPARG	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	REACTOME__REACTOME_TRIGLYCERIDE_METABOLISM	LA-biased	PPP1CA	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	REACTOME__REACTOME_TRIGLYCERIDE_METABOLISM	LA-biased	PPP1CC	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	PRDX3	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	PREB	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	REACTOME__REACTOME_TRIGLYCERIDE_METABOLISM	LA-biased	PRKACA	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	PTCD3	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	PTGER3	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	PTS	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	RETSAT	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	S100A10	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	SAMM50	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	SCARB1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	SDHA	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	SDHB	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	SDHC	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	SDHD	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	SLC19A1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	SLC27A1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	SLC5A6	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	SNCG	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	SORBS1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	SSPN	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	SUCLA2	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	SUCLG1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	SUCLG2	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	TALDO1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	TOB1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	TST	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	UQCR10	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	UQCRC1	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	UQCRQ	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	LA-biased	UROD	True
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA	HALLMARK__HALLMARK_ADIPOGENESIS	LA-biased	VEGFB	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	ABCD3	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	ACAA1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_FATTY_ACID_BETA_OXIDATION	LA-biased	ACAA2	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_FATTY_ACID_BETA_OXIDATION	LA-biased	ACAD10	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	ACAD8	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_FATTY_ACID_BETA_OXIDATION	LA-biased	ACADM	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_FATTY_ACID_BETA_OXIDATION	LA-biased	ACADS	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_FATTY_ACID_BETA_OXIDATION	LA-biased	ACADVL	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	ACAT1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	ACO2	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_FATTY_ACID_BETA_OXIDATION	LA-biased	ACOT1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_FATTY_ACID_BETA_OXIDATION	LA-biased	ACOT11	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_FATTY_ACID_BETA_OXIDATION	LA-biased	ACOT13	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	ACOT2	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	ACOT4	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_FATTY_ACID_BETA_OXIDATION	LA-biased	ACOT7	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_FATTY_ACID_BETA_OXIDATION	LA-biased	ACOT9	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	ACOX1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	ACOX3	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	AFG3L2	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	AGPS	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	ALAS1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	ALDH1B1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	ALDH3A2	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_BRANCHED_CHAIN_AMINO_ACID_CATABOLISM	LA-biased	ALDH6A1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_BRANCHED_CHAIN_AMINO_ACID_CATABOLISM	LA-biased	AUH	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	BAG6	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_BRANCHED_CHAIN_AMINO_ACID_CATABOLISM	LA-biased	BCAT2	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_BRANCHED_CHAIN_AMINO_ACID_CATABOLISM	LA-biased	BCKDHA	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_BRANCHED_CHAIN_AMINO_ACID_CATABOLISM	LA-biased	BCKDK	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	BCS1L	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	BDH1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	CHCHD10	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	CHCHD2	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	CHCHD3	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	CHCHD7	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	CLPX	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	CMC2	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	COA4	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	COA6	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	COQ2	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	COX17	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	COX4I1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	COX5A	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	COX5B	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	CRAT	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	CS	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	CYB5A	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	CYC1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_FATTY_ACID_BETA_OXIDATION	LA-biased	DBI	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	DBT	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_FATTY_ACID_BETA_OXIDATION	LA-biased	DECR1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	DLD	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	DNAJC19	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	ECH1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_FATTY_ACID_BETA_OXIDATION	LA-biased	ECHS1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	ECI1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	ECI2	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	EHHADH	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	EMD	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	EPHX2	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	FECH	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	FH	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	FIS1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	FXN	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	GET4	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	GFER	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	GNPAT	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	GRPEL1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	GSTK1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	HACL1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_FATTY_ACID_BETA_OXIDATION	LA-biased	HADHA	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_FATTY_ACID_BETA_OXIDATION	LA-biased	HADHB	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_BRANCHED_CHAIN_AMINO_ACID_CATABOLISM	LA-biased	HIBADH	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	HMGCL	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	HSCB	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	HSD17B10	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	HSPA9	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	HTRA2	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	IARS2	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	IDE	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	IDH2	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	IDH3A	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	IDH3G	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_BRANCHED_CHAIN_AMINO_ACID_CATABOLISM	LA-biased	IVD	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	LDHD	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_BRANCHED_CHAIN_AMINO_ACID_CATABOLISM	LA-biased	MCCC1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_BRANCHED_CHAIN_AMINO_ACID_CATABOLISM	LA-biased	MCCC2	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	MDH2	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_FATTY_ACID_BETA_OXIDATION	LA-biased	MECR	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	MLYCD	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	MPV17	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	MRPL12	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	MRPS10	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	MRPS2	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	MTX1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	MTX2	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	NDUFA13	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	NDUFA2	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_FATTY_ACID_BETA_OXIDATION	LA-biased	NDUFAB1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	NDUFB6	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	NDUFB8	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	NDUFS1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	NDUFS3	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	NDUFV1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	NDUFV3	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	NUDT19	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	OGDH	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	OPA1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	OXCT1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_FATTY_ACID_BETA_OXIDATION	LA-biased	PCCA	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	PCCB	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_FATTY_ACID_BETA_OXIDATION	LA-biased	PCTP	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	PDHA1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	PDHB	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	PECR	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	PEX1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	PEX10	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	PEX11B	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	PEX14	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	PEX19	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	PEX3	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	PEX5	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	PEX7	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	PHYH	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	PITRM1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	PMPCA	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	PMPCB	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_BRANCHED_CHAIN_AMINO_ACID_CATABOLISM	LA-biased	PPM1K	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	PRKACA	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	PRNP	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	PXMP2	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	SAMM50	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	SEC61G	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	SHMT2	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	SLC25A4	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	SPG7	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	SUCLG2	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	TIMM10	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	TIMM17A	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	TIMM17B	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	TIMM21	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	TIMM22	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	TIMM23	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	TIMM44	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	TIMM50	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	TIMM8A	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	TIMM8B	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	TOMM22	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	TOMM40	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	TOMM5	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	TOMM6	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	TRIAP1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	TYSND1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	UBA52	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	UQCRC2	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	UQCRQ	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	USP9X	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_PROTEIN_LOCALIZATION	LA-biased	VDAC1	True
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	LA-biased	YME1L1	True
+5	tRNA aminoacylation	tRNA aminoacylation	LA	REACTOME__REACTOME_TRNA_AMINOACYLATION	LA-biased	AIMP2	True
+5	tRNA aminoacylation	tRNA aminoacylation	LA	REACTOME__REACTOME_TRNA_AMINOACYLATION	LA-biased	CARS2	True
+5	tRNA aminoacylation	tRNA aminoacylation	LA	REACTOME__REACTOME_TRNA_AMINOACYLATION	LA-biased	DARS2	True
+5	tRNA aminoacylation	tRNA aminoacylation	LA	REACTOME__REACTOME_TRNA_AMINOACYLATION	LA-biased	EARS2	True
+5	tRNA aminoacylation	tRNA aminoacylation	LA	REACTOME__REACTOME_TRNA_AMINOACYLATION	LA-biased	FARS2	True
+5	tRNA aminoacylation	tRNA aminoacylation	LA	REACTOME__REACTOME_TRNA_AMINOACYLATION	LA-biased	FARSA	True
+5	tRNA aminoacylation	tRNA aminoacylation	LA	REACTOME__REACTOME_TRNA_AMINOACYLATION	LA-biased	IARS2	True
+5	tRNA aminoacylation	tRNA aminoacylation	LA	REACTOME__REACTOME_TRNA_AMINOACYLATION	LA-biased	LARS2	True
+5	tRNA aminoacylation	tRNA aminoacylation	LA	REACTOME__REACTOME_TRNA_AMINOACYLATION	LA-biased	MARS2	True
+5	tRNA aminoacylation	tRNA aminoacylation	LA	REACTOME__REACTOME_TRNA_AMINOACYLATION	LA-biased	NARS2	True
+5	tRNA aminoacylation	tRNA aminoacylation	LA	REACTOME__REACTOME_TRNA_AMINOACYLATION	LA-biased	PARS2	True
+5	tRNA aminoacylation	tRNA aminoacylation	LA	REACTOME__REACTOME_TRNA_AMINOACYLATION	LA-biased	PPA1	True
+5	tRNA aminoacylation	tRNA aminoacylation	LA	REACTOME__REACTOME_TRNA_AMINOACYLATION	LA-biased	RARS2	True
+5	tRNA aminoacylation	tRNA aminoacylation	LA	REACTOME__REACTOME_TRNA_AMINOACYLATION	LA-biased	SARS2	True
+5	tRNA aminoacylation	tRNA aminoacylation	LA	REACTOME__REACTOME_TRNA_AMINOACYLATION	LA-biased	TARS2	True
+5	tRNA aminoacylation	tRNA aminoacylation	LA	REACTOME__REACTOME_TRNA_AMINOACYLATION	LA-biased	YARS2	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	ACO2	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	AURKAIP1	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	BCS1L	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	CHCHD1	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	CHCHD10	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	CHCHD2	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	CHCHD3	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	CHCHD7	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	CMC2	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	COA4	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	COA6	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	COQ2	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	COX17	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	CS	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	CYC1	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	DAP3	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	DNAJC19	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	ERAL1	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	FXN	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	GFER	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	GFM1	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	GRPEL1	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	HSCB	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	HSPA9	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	IDH3G	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	LDHD	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MALSU1	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPL1	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPL11	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPL12	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPL13	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPL14	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPL15	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPL16	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPL18	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPL2	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPL20	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPL21	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPL22	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPL27	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPL30	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPL34	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPL35	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPL36	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPL37	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPL38	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPL39	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPL4	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPL44	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPL46	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPL51	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPS10	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPS11	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPS15	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPS16	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPS18A	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPS18B	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPS2	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPS21	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPS22	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPS25	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPS27	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPS30	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPS31	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPS33	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPS35	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPS5	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPS7	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRPS9	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MRRF	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MTFMT	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	MTIF2	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	MTX1	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	NDUFAB1	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	NDUFB8	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	OXA1L	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	PMPCA	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	PMPCB	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	PTCD3	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	SAMM50	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	SLC25A4	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	TIMM17A	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	TIMM17B	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	TIMM21	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	TIMM22	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	TIMM23	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	TIMM44	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	TIMM50	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	TIMM8A	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	TIMM8B	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	TOMM22	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	TOMM40	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	TOMM6	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	TSFM	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	LA-biased	TUFM	True
+6	Mitochondrial translation and protein import	Mito translation / import	LA	REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	LA-biased	VDAC1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	ACAA1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	ACAA2	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	ACAD9	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	ACADM	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	ACADVL	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	ACAT1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	ACO2	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	AFG3L2	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	AIFM1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	ALAS1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	ALDH6A1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	ATP6AP1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	ATP6V0B	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	ATP6V1D	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	BCKDHA	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	BCS1L	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	COA1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	COA3	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	COX11	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_COMPLEX_IV_ASSEMBLY	LA-biased	COX14	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	COX15	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	COX16	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	COX17	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	COX18	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_COMPLEX_IV_ASSEMBLY	LA-biased	COX20	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	COX4I1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	COX5A	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	COX5B	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	COX6A2	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	COX6B1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	COX6C	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	COX7A1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	COX7A2L	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	COX7B	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	COX7C	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	COX8A	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	CPT1A	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	CS	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	CYB5A	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	CYC1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	CYCS	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	DLAT	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	DLD	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	DLST	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	ECH1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	ECHS1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	ECSIT	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	ETFA	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	ETFB	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	ETFDH	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	FH	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	FOXRED1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	FXN	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	GOT1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	GOT2	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	GPI	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	GPX4	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	GRPEL1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	HADHA	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	HCCS	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	HIGD1A	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	HIGD2A	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	HSCB	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	HSD17B10	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	HSPA9	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	HTRA2	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	IDH2	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	IDH3B	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	IDH3G	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	IMMT	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_CITRIC_ACID_CYCLE_TCA_CYCLE	LA-biased	ISCA2	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	LDHB	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	LETM1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	LRPPRC	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	LYRM7	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	MAOB	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	MDH1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	MDH2	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	MFN2	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	MGST3	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	MPC1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	MRPL11	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	MRPL15	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	MRPL34	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	MRPL35	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	MRPS11	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	MRPS15	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	MRPS22	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	MRPS30	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFA1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFA10	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFA12	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFA13	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFA2	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFA3	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFA6	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFA7	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFA8	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFA9	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFAB1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFAF1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFAF2	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFAF4	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFAF6	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFAF7	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFB1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFB10	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFB11	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFB2	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFB3	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFB4	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFB5	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFB6	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFB7	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFB8	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFB9	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFS1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFS2	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFS3	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFS4	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFS5	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFS6	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFS8	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFV1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFV2	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NDUFV3	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	NFS1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	NNT	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	NQO2	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	OGDH	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	OXA1L	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	PDHA1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	PDHB	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	PDHX	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	PHB2	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	PHYH	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	PMPCA	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	PRDX3	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	RETSAT	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	SCO1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	SDHA	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	SDHB	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	SDHC	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	SDHD	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	SFXN4	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	SLC25A11	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	SLC25A18	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	SLC25A3	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	SLC25A4	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	SUCLA2	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	SUCLG1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_CITRIC_ACID_CYCLE_TCA_CYCLE	LA-biased	SUCLG2	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	SURF1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	TACO1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	TIMM21	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	TIMM50	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	TIMM8B	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	TMEM126A	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	TMEM126B	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	TMEM177	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	TMEM186	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	TMEM223	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	TOMM22	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	TRAP1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	TTC19	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	UQCR10	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	UQCR11	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	UQCRB	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	UQCRC1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	UQCRC2	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	UQCRFS1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	UQCRH	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	LA-biased	UQCRQ	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	VDAC1	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	VDAC2	True
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA	HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	LA-biased	VDAC3	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	ACAD9	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	ECSIT	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	FOXRED1	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	HSPA9	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFA1	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFA10	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFA12	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFA13	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFA2	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFA3	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFA6	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFA7	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFA9	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFAB1	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFAF1	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFAF2	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFAF6	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFB1	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFB10	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFB11	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFB2	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFB3	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFB4	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFB5	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFB6	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFB8	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFB9	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFS1	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFS2	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFS3	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFS4	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFS5	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFS6	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFS8	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFV1	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFV2	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	NDUFV3	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	OXA1L	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	SFXN4	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	TMEM126A	True
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA	REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	LA-biased	TMEM186	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_CLASS_B_2_SECRETIN_FAMILY_RECEPTORS	RA-biased	ADM	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_RUNX2_REGULATES_BONE_DEVELOPMENT	RA-biased	AR	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_CLASS_B_2_SECRETIN_FAMILY_RECEPTORS	RA-biased	CALCRL	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_RUNX2_REGULATES_BONE_DEVELOPMENT	RA-biased	CBFB	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_CLASS_B_2_SECRETIN_FAMILY_RECEPTORS	RA-biased	CRHBP	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_HEPARAN_SULFATE_HEPARIN_HS_GAG_METABOLISM	RA-biased	EXTL3	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_CLASS_B_2_SECRETIN_FAMILY_RECEPTORS	RA-biased	FZD1	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_CLASS_B_2_SECRETIN_FAMILY_RECEPTORS	RA-biased	FZD2	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_CLASS_B_2_SECRETIN_FAMILY_RECEPTORS	RA-biased	FZD6	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_CLASS_B_2_SECRETIN_FAMILY_RECEPTORS	RA-biased	FZD7	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_CLASS_B_2_SECRETIN_FAMILY_RECEPTORS	RA-biased	FZD8	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_CLASS_B_2_SECRETIN_FAMILY_RECEPTORS	RA-biased	GHRH	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_RUNX2_REGULATES_BONE_DEVELOPMENT	RA-biased	GLI2	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_CLASS_B_2_SECRETIN_FAMILY_RECEPTORS	RA-biased	GNB4	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_CLASS_B_2_SECRETIN_FAMILY_RECEPTORS	RA-biased	GNG7	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_CLASS_B_2_SECRETIN_FAMILY_RECEPTORS	RA-biased	GNG8	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_CLASS_B_2_SECRETIN_FAMILY_RECEPTORS	RA-biased	GNGT2	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_HEPARAN_SULFATE_HEPARIN_HS_GAG_METABOLISM	RA-biased	GPC3	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_HEPARAN_SULFATE_HEPARIN_HS_GAG_METABOLISM	RA-biased	GPC6	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_RUNX2_REGULATES_BONE_DEVELOPMENT	RA-biased	HES1	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_RUNX2_REGULATES_BONE_DEVELOPMENT	RA-biased	HEY1	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_RUNX2_REGULATES_BONE_DEVELOPMENT	RA-biased	HEY2	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_HEPARAN_SULFATE_HEPARIN_HS_GAG_METABOLISM	RA-biased	HGSNAT	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_HEPARAN_SULFATE_HEPARIN_HS_GAG_METABOLISM	RA-biased	HS3ST1	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_HEPARAN_SULFATE_HEPARIN_HS_GAG_METABOLISM	RA-biased	HS3ST2	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_HEPARAN_SULFATE_HEPARIN_HS_GAG_METABOLISM	RA-biased	HS3ST3A1	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_HEPARAN_SULFATE_HEPARIN_HS_GAG_METABOLISM	RA-biased	HS6ST1	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_HEPARAN_SULFATE_HEPARIN_HS_GAG_METABOLISM	RA-biased	HS6ST3	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_HEPARAN_SULFATE_HEPARIN_HS_GAG_METABOLISM	RA-biased	IDS	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_HEPARAN_SULFATE_HEPARIN_HS_GAG_METABOLISM	RA-biased	IDUA	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_RUNX2_REGULATES_BONE_DEVELOPMENT	RA-biased	MAPK1	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_RUNX2_REGULATES_BONE_DEVELOPMENT	RA-biased	MAPK3	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_CLASS_B_2_SECRETIN_FAMILY_RECEPTORS	RA-biased	PTCH1	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_CLASS_B_2_SECRETIN_FAMILY_RECEPTORS	RA-biased	PTHLH	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_HEPARAN_SULFATE_HEPARIN_HS_GAG_METABOLISM	RA-biased	SDC3	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_RUNX2_REGULATES_BONE_DEVELOPMENT	RA-biased	SMAD4	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_RUNX2_REGULATES_BONE_DEVELOPMENT	RA-biased	SMAD6	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_CLASS_B_2_SECRETIN_FAMILY_RECEPTORS	RA-biased	SMO	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_RUNX2_REGULATES_BONE_DEVELOPMENT	RA-biased	SRC	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_CLASS_B_2_SECRETIN_FAMILY_RECEPTORS	RA-biased	VIPR1	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_CLASS_B_2_SECRETIN_FAMILY_RECEPTORS	RA-biased	WNT2	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_CLASS_B_2_SECRETIN_FAMILY_RECEPTORS	RA-biased	WNT5A	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_CLASS_B_2_SECRETIN_FAMILY_RECEPTORS	RA-biased	WNT9B	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_RUNX2_REGULATES_BONE_DEVELOPMENT	RA-biased	WWTR1	True
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA	REACTOME__REACTOME_RUNX2_REGULATES_BONE_DEVELOPMENT	RA-biased	YAP1	True
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA	REACTOME__REACTOME_DISEASES_ASSOCIATED_WITH_GLYCOSAMINOGLYCAN_METABOLISM	RA-biased	ACAN	True
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA	HALLMARK__HALLMARK_TGF_BETA_SIGNALING	RA-biased	ACVR1	True
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA	HALLMARK__HALLMARK_TGF_BETA_SIGNALING	RA-biased	ARID4B	True
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA	REACTOME__REACTOME_DISEASES_ASSOCIATED_WITH_GLYCOSAMINOGLYCAN_METABOLISM	RA-biased	B4GALT1	True
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA	HALLMARK__HALLMARK_TGF_BETA_SIGNALING	RA-biased	BCAR3	True
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA	REACTOME__REACTOME_DISEASES_ASSOCIATED_WITH_GLYCOSAMINOGLYCAN_METABOLISM	RA-biased	BGN	True
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA	REACTOME__REACTOME_DISEASES_ASSOCIATED_WITH_GLYCOSAMINOGLYCAN_METABOLISM	RA-biased	CHST3	True
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA	REACTOME__REACTOME_DISEASES_ASSOCIATED_WITH_GLYCOSAMINOGLYCAN_METABOLISM	RA-biased	CHSY1	True
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA	HALLMARK__HALLMARK_TGF_BETA_SIGNALING	RA-biased	CTNNB1	True
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA	HALLMARK__HALLMARK_TGF_BETA_SIGNALING	RA-biased	ENG	True
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA	REACTOME__REACTOME_DISEASES_ASSOCIATED_WITH_GLYCOSAMINOGLYCAN_METABOLISM	RA-biased	FMOD	True
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA	REACTOME__REACTOME_DISEASES_ASSOCIATED_WITH_GLYCOSAMINOGLYCAN_METABOLISM	RA-biased	GPC3	True
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA	REACTOME__REACTOME_DISEASES_ASSOCIATED_WITH_GLYCOSAMINOGLYCAN_METABOLISM	RA-biased	GPC6	True
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA	HALLMARK__HALLMARK_TGF_BETA_SIGNALING	RA-biased	ID2	True
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA	HALLMARK__HALLMARK_TGF_BETA_SIGNALING	RA-biased	ID3	True
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA	HALLMARK__HALLMARK_TGF_BETA_SIGNALING	RA-biased	LEFTY2	True
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA	REACTOME__REACTOME_DISEASES_ASSOCIATED_WITH_GLYCOSAMINOGLYCAN_METABOLISM	RA-biased	LUM	True
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA	HALLMARK__HALLMARK_TGF_BETA_SIGNALING	RA-biased	MAP3K7	True
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA	REACTOME__REACTOME_DISEASES_ASSOCIATED_WITH_GLYCOSAMINOGLYCAN_METABOLISM	RA-biased	OGN	True
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA	REACTOME__REACTOME_DISEASES_ASSOCIATED_WITH_GLYCOSAMINOGLYCAN_METABOLISM	RA-biased	OMD	True
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA	REACTOME__REACTOME_DISEASES_ASSOCIATED_WITH_GLYCOSAMINOGLYCAN_METABOLISM	RA-biased	PRELP	True
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA	HALLMARK__HALLMARK_TGF_BETA_SIGNALING	RA-biased	RAB31	True
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA	REACTOME__REACTOME_DISEASES_ASSOCIATED_WITH_GLYCOSAMINOGLYCAN_METABOLISM	RA-biased	SDC3	True
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA	HALLMARK__HALLMARK_TGF_BETA_SIGNALING	RA-biased	SKI	True
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA	HALLMARK__HALLMARK_TGF_BETA_SIGNALING	RA-biased	SKIL	True
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA	HALLMARK__HALLMARK_TGF_BETA_SIGNALING	RA-biased	SMAD3	True
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA	HALLMARK__HALLMARK_TGF_BETA_SIGNALING	RA-biased	SMAD6	True
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA	HALLMARK__HALLMARK_TGF_BETA_SIGNALING	RA-biased	SMAD7	True
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA	REACTOME__REACTOME_DISEASES_ASSOCIATED_WITH_GLYCOSAMINOGLYCAN_METABOLISM	RA-biased	VCAN	True
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA	HALLMARK__HALLMARK_TGF_BETA_SIGNALING	RA-biased	WWTR1	True
+11	BMP signalling	BMP signalling	RA	REACTOME__REACTOME_SIGNALING_BY_BMP	RA-biased	BMP10	True
+11	BMP signalling	BMP signalling	RA	REACTOME__REACTOME_SIGNALING_BY_BMP	RA-biased	INHA	True
+11	BMP signalling	BMP signalling	RA	REACTOME__REACTOME_SIGNALING_BY_BMP	RA-biased	SKI	True
+11	BMP signalling	BMP signalling	RA	REACTOME__REACTOME_SIGNALING_BY_BMP	RA-biased	SMAD6	True
+11	BMP signalling	BMP signalling	RA	REACTOME__REACTOME_SIGNALING_BY_BMP	RA-biased	SMAD7	True
+11	BMP signalling	BMP signalling	RA	REACTOME__REACTOME_SIGNALING_BY_BMP	RA-biased	SMAD9	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	BMS1	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	DCAF13	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	DDX21	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	DKC1	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	EBNA1BP2	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	ELAC2	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	EMG1	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	EXOSC1	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	EXOSC10	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	EXOSC7	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	EXOSC8	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	EXOSC9	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	FASTKD2	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	FAU	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	GNL3	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	HEATR1	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	HSD17B10	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	IMP4	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	ISG20L2	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	KRR1	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	LTV1	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	MPHOSPH6	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	MRM1	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	NAT10	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	NGRN	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	NHP2	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	NIP7	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	NOL11	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	NOL6	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	NOP10	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	NOP14	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	NOP2	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	PDCD11	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	PELP1	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RBM28	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL10	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL10A	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL12	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL13	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL14	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL18A	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL19	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL22L1	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL23	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL23A	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL24	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL26	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL27	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL27A	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL29	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL30	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL32	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL35	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL35A	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL36	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL37	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL37A	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL38	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL39	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL39L	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL3L	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL4	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL41	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL6	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL7	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL7A	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL8	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPL9	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPLP0	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPLP1	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPLP2	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPP38	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPP40	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPS11	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPS12	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPS13	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPS14	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPS15	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPS15A	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPS16	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPS18	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPS19	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPS2	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPS20	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPS21	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPS24	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPS25	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPS26	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPS28	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPS3A	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPS4X	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPS4Y1	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPS5	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPS6	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPS7	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPS8	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPSA	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPUSD3	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RPUSD4	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RRP1	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	RRP9	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	TBL3	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	TRMT10C	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	TRUB2	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	TSR1	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	TSR3	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	UBA52	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	UTP15	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	UTP20	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	UTP6	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	WDR18	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	WDR3	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	WDR36	True
+12	rRNA processing	rRNA processing	LA	REACTOME__REACTOME_RRNA_PROCESSING	LA-biased	XRN2	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	AASS	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	ACAD8	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	ACAT1	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	AIMP2	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	ALDH18A1	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	ALDH4A1	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	ALDH6A1	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	ALDH9A1	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	APIP	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	ASL	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	ASS1	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	AUH	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	BCAT2	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	BCKDHA	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	BCKDHB	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	BCKDK	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	CAV1	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	CBS	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	CHDH	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	CKB	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	CKM	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	CKMT2	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	DBT	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	DHTKD1	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	DIO2	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	DLD	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	DLST	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	ECHS1	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	FAH	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	FAU	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	FMO1	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	GATM	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	GCDH	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	GCSH	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	GLUD1	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	GLUL	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	GNMT	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	GOT1	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	GOT2	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	GPT	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	GPT2	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	GRHPR	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	GSTZ1	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	HDC	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	HIBADH	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	HOGA1	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	HSD17B10	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	IDO1	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	IVD	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	MCCC1	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	MCCC2	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	MPST	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	NAT8L	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	NNMT	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	OGDH	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	PCBD1	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	PPM1K	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	PRODH	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	PSMA2	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	PSMA5	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	PSMA7	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	PSMB3	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	PSMB4	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	PSMB5	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	PSMB6	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	PSMB7	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	PSMC3	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	PSMC4	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	PSMD1	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	PSMD13	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	PSMD3	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	PSMD6	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	PXMP2	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	PYCR1	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	QDPR	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RIMKLA	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPL10	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPL12	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPL13	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPL14	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPL18A	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPL19	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPL22L1	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPL23	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPL24	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPL26	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPL27	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPL27A	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPL29	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPL30	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPL32	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPL35	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPL36	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPL37	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPL37A	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPL38	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPL39L	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPL3L	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPL4	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPL7	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPL8	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPL9	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPLP0	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPLP1	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPLP2	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPS11	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPS13	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPS15	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPS15A	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPS16	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPS18	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPS19	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPS2	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPS20	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPS24	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPS26	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPS28	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPS5	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPS6	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPS7	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPS8	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	RPSA	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	SHMT1	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	SIRT5	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	SLC25A10	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	SLC25A15	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	SLC36A4	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	SUOX	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	TMLHE	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	TPO	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	TST	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	TXN2	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	TXNDC11	True
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA	REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	LA-biased	TYRP1	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	EIF2B1	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	EIF2B3	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	EIF2B4	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	EIF2B5	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	EIF2S1	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	EIF2S2	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	EIF3D	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	EIF3F	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	EIF3G	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	EIF3H	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	EIF3I	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	EIF3J	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	EIF3K	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	EIF3M	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	EIF4G1	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	EIF5	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	FAU	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL10	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL10A	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL12	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL13	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL14	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL18A	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL19	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL22L1	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL23	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL23A	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL24	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL26	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL27	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL27A	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL29	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL30	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL32	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL35	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL35A	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL36	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL37	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL37A	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL38	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL39	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL39L	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL3L	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL4	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL41	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL6	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL7	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL7A	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL8	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPL9	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPLP0	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPLP1	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPLP2	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPS11	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPS12	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPS13	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPS14	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPS15	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPS15A	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPS16	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPS18	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPS19	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPS2	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPS20	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPS21	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPS24	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPS25	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPS26	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPS28	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPS3A	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPS4X	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPS4Y1	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPS5	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPS6	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPS7	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPS8	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	RPSA	True
+14	Eukaryotic translation initiation	Translation initiation	LA	REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	LA-biased	UBA52	True
+15	NTRK2 (TrkB) neurotrophin signalling	NTRK2 / TrkB	RA	REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB	RA-biased	CDK5R1	True
+15	NTRK2 (TrkB) neurotrophin signalling	NTRK2 / TrkB	RA	REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB	RA-biased	FRS2	True
+15	NTRK2 (TrkB) neurotrophin signalling	NTRK2 / TrkB	RA	REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB	RA-biased	FYN	True
+15	NTRK2 (TrkB) neurotrophin signalling	NTRK2 / TrkB	RA	REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB	RA-biased	GRB2	True
+15	NTRK2 (TrkB) neurotrophin signalling	NTRK2 / TrkB	RA	REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB	RA-biased	NTF3	True
+15	NTRK2 (TrkB) neurotrophin signalling	NTRK2 / TrkB	RA	REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB	RA-biased	NTRK2	True
+15	NTRK2 (TrkB) neurotrophin signalling	NTRK2 / TrkB	RA	REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB	RA-biased	PLCG1	True
+15	NTRK2 (TrkB) neurotrophin signalling	NTRK2 / TrkB	RA	REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB	RA-biased	SRC	True
+15	NTRK2 (TrkB) neurotrophin signalling	NTRK2 / TrkB	RA	REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB	RA-biased	TIAM1	True
+16	Keratan sulfate biosynthesis	Keratan sulfate	RA	REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS	RA-biased	ACAN	True
+16	Keratan sulfate biosynthesis	Keratan sulfate	RA	REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS	RA-biased	B4GALT1	True
+16	Keratan sulfate biosynthesis	Keratan sulfate	RA	REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS	RA-biased	CHST3	True
+16	Keratan sulfate biosynthesis	Keratan sulfate	RA	REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS	RA-biased	FMOD	True
+16	Keratan sulfate biosynthesis	Keratan sulfate	RA	REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS	RA-biased	LUM	True
+16	Keratan sulfate biosynthesis	Keratan sulfate	RA	REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS	RA-biased	OGN	True
+16	Keratan sulfate biosynthesis	Keratan sulfate	RA	REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS	RA-biased	OMD	True
+16	Keratan sulfate biosynthesis	Keratan sulfate	RA	REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS	RA-biased	PRELP	True
+16	Keratan sulfate biosynthesis	Keratan sulfate	RA	REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS	RA-biased	ST3GAL1	True

@@ -25,7 +25,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT_PDF = ROOT / "figures" / "fig4_v3_a_schematic.pdf"
+OUT_PDF = ROOT / "figures" / "fig4_a_schematic.pdf"
 
 LA_DEEP = "#9C5550"
 RA_DEEP = "#4E6B89"
@@ -109,7 +109,7 @@ def main():
     # Stage 3: family mean
     stage_box(ax, 0.51, 0.55, 0.20, 0.18,
               "3. Family aggregation",
-              "16 NCP_v3 families\nmean of program scores\nper donor",
+              "16 NCP axis families\nmean of program scores\nper donor",
               color="#FFF4E6", edgecolor=ACCENT)
 
     # Stage 4: Spearman + CI

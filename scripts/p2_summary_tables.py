@@ -49,30 +49,30 @@ def build_mtc_table() -> None:
         # (figure, statistic, count, family, correction, threshold, source spec)
         ("Fig 2 rewiring class",
          "permutation gate on |ΔaCAI_rel|",
-         "10 programs × 3 cohorts (gate per program × cohort)",
-         "per-cohort, per-program",
+         "16 axis families × 3 cohorts (gate per family × cohort)",
+         "per-cohort, per-family",
          "permutation; q_perm BH within cohort",
          "q_perm < 0.10 for class assignment",
          "scripts/p4_acai_classify.py"),
         ("Fig 3 LA-arm Δsingscore",
          "permutation Δsingscore (AF − Ctrl)",
-         "10 programs × 4 main compartments = 40 cells",
-         "per program (across the 4 compartments)",
-         "BH-FDR within program",
-         "q_perm < 0.10 to assign AF major carrier (Unresolved otherwise)",
+         "16 families × 4 main compartments = 64 cells",
+         "per family (across the 4 compartments)",
+         "BH-FDR within family",
+         "q_perm < 0.10 to assign carrier-fidelity class (Below-detection otherwise)",
          "scripts/r4_delta_classify.py"),
         ("Fig 4 LAA duration ρ",
          "Spearman ρ + Monte-Carlo permutation",
-         "10 programs × 4 statistical conditions "
+         "16 axis families × 4 statistical conditions "
          "(LAA-primary, LAA-sens-A, LAA-ordinal, LAPV-sens)",
          "region-specific (LAA family separate from LAPV family); "
-         "10 programs per family",
+         "16 families per region",
          "BH-FDR per region per condition",
          "q_perm < 0.10 for `sig_marker = .`; q_perm < 0.05 for `*`",
          "scripts/d4_duration_correlate.py"),
         ("Fig 5A triangulation class",
          "rule-based composite (no p-value)",
-         "10 programs",
+         "16 axis families",
          "n/a (deterministic rule)",
          "n/a",
          "auditable in script header",
@@ -94,20 +94,22 @@ def build_mtc_table() -> None:
          "scripts/h2_meta_axis.R"),
         ("Fig 6B per-program meta",
          "Hedges' g per program + REML / HK pool",
-         "10 programs",
+         "30 NCP pathway programs",
          "no MTC (descriptive consistency summary)",
          "Hartung–Knapp",
          "I² + p_HK reported per program",
          "scripts/h3_meta_program.R"),
-        ("Fig 6C cis-eQTL × AF GWAS coloc",
+        ("Fig 6A/6B cis-eQTL × AF GWAS coloc",
          "coloc.abf default priors (p1=p2=1e-4, p12=1e-5)",
-         "4 anchors × 2 tissues (GTEx Atrial Appendage primary; "
+         "12 pre-specified genes (GTEx Atrial Appendage primary; "
          "GTEx Whole Blood sensitivity)",
-         "n/a (small pre-registered anchor set; verdict bins, not BH)",
-         "verdict bins: supported / inconclusive / not supported",
-         "PP4 ≥ 0.7 supported; PP4 ∈ [0.3, 0.7) inconclusive; "
-         "PP4 < 0.3 or cis-eQTL gate p ≥ 5e-8 → not supported",
-         "scripts/fig6c_mr_plausibility.py"),
+         "n/a (small pre-specified anchor set; support flags, not BH)",
+         "local AF GWAS / atrial eGene / PP4 ≥ 0.70 support flags; "
+         "PP3-dominant configuration readout",
+         "PP4 ≥ 0.70 support; PP3-dominant when PP3 > PP4; "
+         "lead separation descriptive (0.46–1.92 Mb)",
+         "scripts/fig6a_anchor_coloc_calibration.py + "
+         "scripts/fig6b_posterior_lead_distance.py"),
         ("Fig S8a size-matched perms",
          "size-matched random gene-set pooled g",
          "6 frozen support programs × 1000 perms each",
@@ -140,7 +142,7 @@ def build_mtc_table() -> None:
         ("Fig S10 methodology audit",
          "NCP self-recovery; donor-level direction; cross-method ρ; "
          "cross-method axis pooled g",
-         "10 programs × 4 tests",
+         "30 NCP pathway programs × 4 tests",
          "n/a (internal consistency)",
          "no MTC",
          "self-recovery + 8/8 direction stability + "
@@ -167,61 +169,84 @@ def build_mtc_table() -> None:
 # ---------------------------------------------------------------------------
 def build_reproducibility_table() -> None:
     rows = [
-        ("Fig 1A", "scripts/fig1a_pca.py",
-         "bulk/Project_P01/qc/qc_pca.tsv",
-         "figures/fig1a_pca_la_vs_ra.pdf"),
-        ("Fig 1B", "scripts/fig1b_volcano_heatmap.py",
-         "bulk/Project_P01/normal_chamber_genes_full.tsv + "
-         "bulk/logcpm_voom.tsv + bulk/sample_meta.tsv",
-         "figures/fig1b_volcano_heatmap.pdf"),
-        ("Fig 1C", "scripts/fig1c_bulk_programs.py",
-         "normal_chamber_programs.tsv",
-         "figures/fig1c_bulk_programs.pdf"),
-        ("Fig 1D", "scripts/fig1d_program_attribution.py",
-         "results/normal_chamber_program_attribution.tsv",
-         "figures/fig1d_program_attribution.pdf"),
-        ("Fig 2A", "scripts/fig2a_schematic.py",
-         "(schematic, no data input)",
-         "figures/fig2a_schematic.pdf"),
-        ("Fig 2B", "scripts/fig2b_rewiring_heatmap.py",
-         "Project_P1/program_scores_long.tsv",
-         "figures/fig2b_rewiring_heatmap.pdf"),
-        ("Fig 2C", "scripts/fig2c_rewiring_classes.py",
-         "results/af_chamber_rewiring_programs.tsv",
-         "figures/fig2c_rewiring_classes.pdf"),
+        ("Fig 1", "scripts/assemble_figure1.py",
+         "figures/fig1a_donor_paired_estimand.pdf + "
+         "figures/ncp_v3_singscore_reanalysis/"
+         "fig1b_healthy_reference_direction_magnitude.pdf + "
+         "figures/fig1c_selection_provenance.pdf + "
+         "figures/fig1d_program_family_topology.pdf",
+         "figures/figure1_composite.pdf"),
+        ("Fig 1A", "scripts/fig1a_donor_paired_estimand.py",
+         "results/fig1a_donor_paired_estimand_source.tsv",
+         "figures/fig1a_donor_paired_estimand.pdf"),
+        ("Fig 1B",
+         "scripts/ncp_v3_singscore_reanalysis/"
+         "fig1b_healthy_reference_direction_magnitude.py",
+         "results/ncp_v3_singscore_reanalysis/fig1b_input_manifest.tsv",
+         "figures/ncp_v3_singscore_reanalysis/"
+         "fig1b_healthy_reference_direction_magnitude.pdf"),
+        ("Fig 1C", "scripts/fig1c_healthy_selection_frozen_deployment.py",
+         "results/fig1c_pathway_selection_long.tsv + "
+         "results/innovation_ncp_consensus_long.tsv + "
+         "results/innovation_ncp_v3_panel.tsv + "
+         "results/innovation_ncp_v3_summary.tsv + "
+         "results/ncp_v3_selection_criteria.tsv + "
+         "results/innovation_ncp_v3_axis_families.tsv (validation-only)",
+         "figures/fig1c_selection_provenance.pdf"),
+        ("Fig 1D", "scripts/fig1d_program_family_topology.py",
+         "results/innovation_ncp_v3_axis_families.tsv + "
+         "results/ncp_v3_family_labels.tsv + "
+         "results/ncp_v3_canonical_display_order.tsv + "
+         "results/ncp_v3_singscore_reanalysis/fig1b_canonical_display_order.tsv",
+         "figures/fig1d_program_family_topology.pdf"),
+        ("Fig 2A",
+         "scripts/ncp_v3_singscore_reanalysis/fig2a_bulk_deployment_bridge.py",
+         "results/ncp_v3_singscore_reanalysis/fig2a_input_manifest.tsv",
+         "figures/ncp_v3_singscore_reanalysis/"
+         "fig2a_frozen_ncp_bulk_deployment.pdf"),
+        ("Fig 2B",
+         "scripts/ncp_v3_singscore_reanalysis/fig2b_family_donor_heatmap.py",
+         "results/ncp_v3_singscore_reanalysis/fig2a_input_manifest.tsv",
+         "figures/fig2b_donor_acai_heatmap.pdf + "
+         "figures/fig2b_donor_acai_heatmap.svg + "
+         "results/ncp_v3_singscore_reanalysis/fig2b_family_donor_source.tsv"),
+        ("Fig 2C",
+         "scripts/ncp_v3_singscore_reanalysis/fig2c_family_cohort_state_map.py",
+         "results/ncp_v3_singscore_reanalysis/fig2a_input_manifest.tsv",
+         "figures/ncp_v3_singscore_reanalysis/fig2c_family_cohort_state_map.pdf + "
+         "figures/ncp_v3_singscore_reanalysis/fig2c_family_cohort_state_map.svg + "
+         "results/ncp_v3_singscore_reanalysis/fig2c_family_cohort_states_source.tsv + "
+         "results/ncp_v3_singscore_reanalysis/figure2_family_row_geometry.tsv"),
         ("Fig 2D", "scripts/fig2d_representative_dots.py",
          "Project_P1/program_scores_long.tsv",
          "figures/fig2d_representative_dots.pdf"),
         ("Fig 2E", "scripts/fig2e_replication_lollipop.py",
          "results/af_chamber_rewiring_consensus.tsv",
          "figures/fig2e_replication_lollipop.pdf"),
-        ("Fig 3A", "scripts/fig3a_schematic.py",
-         "(schematic)",
-         "figures/fig3a_schematic.pdf"),
-        ("Fig 3B", "scripts/fig3b_delta_heatmap.py",
-         "results/af_la_program_celltype_delta.tsv",
-         "figures/fig3b_delta_heatmap.pdf"),
-        ("Fig 3C", "scripts/fig3c_carrier_shift.py",
-         "results/figure3_carrier_shift.tsv",
-         "figures/fig3c_carrier_shift.pdf"),
-        ("Fig 3D", "scripts/fig3d_representative_dots.py",
-         "results/af_la_program_celltype_delta.tsv",
-         "figures/fig3d_representative_dots.pdf"),
-        ("Fig 3E", "scripts/fig3e_anchor_genes.py",
-         "Project_P3/GSE255612/pseudobulk/<compartment>/expr.tsv",
-         "figures/fig3e_anchor_genes.pdf"),
-        ("Fig 4A", "scripts/fig4a_schematic.py",
-         "(schematic)",
-         "figures/fig4a_schematic.pdf"),
-        ("Fig 4B", "scripts/fig4b_duration_summary.py",
-         "Project_P4/GSE41177/results/duration_trend_laa_primary.tsv",
-         "figures/fig4b_duration_summary.pdf"),
-        ("Fig 4C", "scripts/fig4c_representative_scatter.py",
-         "Project_P4/GSE41177/program_scores.tsv + sample_metadata.tsv",
-         "figures/fig4c_representative_scatter.pdf"),
-        ("Fig 4D", "scripts/fig4d_laa_vs_lapv_sensitivity.py",
-         "Project_P4/GSE41177/results/duration_trend_*.tsv",
-         "figures/fig4d_laa_vs_lapv_sensitivity.pdf"),
+        ("Fig 3",
+         "scripts/ncp_v3_singscore_reanalysis/"
+         "assemble_figure3_la_single_nucleus_localization.py",
+         "results/ncp_v3_singscore_reanalysis/"
+         "fig3b_family_compartment_localization_source.tsv + "
+         "results/ncp_v3_singscore_reanalysis/fig3c_fidelity_relay_donor_source.tsv + "
+         "results/ncp_v3_singscore_reanalysis/gse255612_family_donor_compartment_scores.tsv + "
+         "results/ncp_v3_singscore_reanalysis/"
+         "gse255612_corrected_family_compartment_permutation_classification.tsv + "
+         "results/ncp_v3_singscore_reanalysis/figure3cd_case_study_axis_contract.tsv + "
+         "results/ncp_v3_singscore_reanalysis/figure3cd_case_study_composite_geometry.tsv",
+         "figures/ncp_v3_singscore_reanalysis/"
+         "figure3_la_single_nucleus_localization.pdf + "
+         "figures/ncp_v3_singscore_reanalysis/"
+         "figure3_la_single_nucleus_localization.svg + "
+         "results/ncp_v3_singscore_reanalysis/figure3_composite_manifest.tsv + "
+         "results/ncp_v3_singscore_reanalysis/figure3_composite_qc.md"),
+        ("Fig 4", "scripts/ncp_v3_singscore_reanalysis/regenerate_figure4.py",
+         "results/ncp_v3_singscore_reanalysis/fig4_v3_chronicity_class.tsv + "
+         "gse41177_family_sample_scores.tsv + gse41177_duration_metadata.tsv",
+         "figures/ncp_v3_singscore_reanalysis/figure4_cross_sectional_duration.pdf + "
+         "figures/ncp_v3_singscore_reanalysis/figure4_cross_sectional_duration.svg + "
+         "results/ncp_v3_singscore_reanalysis/figure4_composite_manifest.tsv + "
+         "results/ncp_v3_singscore_reanalysis/figure4_composite_qc.md"),
         ("Fig 5A", "scripts/fig5a_triangulation.py",
          "results/figure3_program_panel.tsv + figure3_carrier_shift.tsv + "
          "Project_P4/GSE41177/results/duration_trend_laa_primary.tsv",
@@ -236,21 +261,44 @@ def build_reproducibility_table() -> None:
         ("Fig 5D", "scripts/fig5d_dual_axis_mechanism.py",
          "(schematic, no data)",
          "figures/fig5d_dual_axis_mechanism.pdf"),
-        ("Fig 6A", "scripts/h2_meta_axis.R + scripts/fig6a_axis_forest.py",
-         "results/figure6_axis_composite_long.tsv (from h1_axis_composite.R)",
-         "figures/fig6a_axis_forest.pdf + results/figure6_meta_axis.tsv"),
-        ("Fig 6B", "scripts/h3_meta_program.R + scripts/fig6b_program_pooled.py",
-         "Project_P1/program_scores_long.tsv + figure3_program_panel.tsv",
-         "figures/fig6b_program_pooled.pdf + results/figure6_meta_program.tsv"),
-        ("Fig 6C", "scripts/h4_mr_coloc_anchors.R + h4b_mr_coloc_blood.R + "
-         "scripts/fig6c_mr_plausibility.py",
-         "AF GWAS GCST90624411 (tabix HTTP) + "
-         "eQTL Catalogue QTD000251/QTD000356 (tabix HTTP)",
-         "figures/fig6c_mr_plausibility.pdf + "
-         "results/figure6_mr_anchors.tsv + figure6_mr_anchors_blood.tsv"),
-        ("Fig 6D", "scripts/fig6d_synthesis.py",
-         "(schematic, references Fig 6A/B/C narratively)",
-         "figures/fig6d_synthesis.pdf"),
+        ("Fig 6A", "scripts/fig6a_anchor_coloc_calibration.py",
+         "results/figure6_mr_anchors_v3_pipeline_wide.tsv + "
+         "results/fig6a_v3_locus_zoom_summary.tsv (frozen coloc artifacts; "
+         "KCNN3 lead dist via scripts/compute_anchor_lead_distance.py)",
+         "figures/fig6a_anchor_coloc_calibration.pdf + "
+         "results/fig6a_anchor_coloc_calibration_source.tsv"),
+        ("Fig 6B", "scripts/fig6b_posterior_lead_distance.py",
+         "results/figure6_mr_anchors_v3_pipeline_wide.tsv + "
+         "results/fig6a_v3_locus_zoom_summary.tsv (frozen coloc artifacts)",
+         "figures/fig6b_posterior_lead_distance.pdf + "
+         "results/fig6b_posterior_lead_distance_source.tsv"),
+        ("Fig 6C", "scripts/fetch_external_af_gene_sets.py + "
+         "scripts/fig6c_family_af_overlap.py",
+         "results/ncp_v3_family_leading_edge_genes.tsv + "
+         "results/ncp_v3_gene_universe.tsv + "
+         "results/external_af_gene_sets.tsv",
+         "figures/fig6c_family_af_overlap.pdf + "
+         "results/fig6c_family_af_overlap_source.tsv"),
+        ("Fig 6D", "scripts/fig6d_non_nested_traceability_profiles.py",
+         "results/fig6a_anchor_coloc_calibration_source.tsv + "
+         "results/fig6b_posterior_lead_distance_source.tsv + "
+         "results/external_af_gene_sets.tsv (frozen; non-nested flags)",
+         "figures/fig6d_traceability_matrix.pdf + "
+         "results/fig6d_non_nested_traceability_source.tsv"),
+        ("Fig 6 composite", "scripts/assemble_figure6_genetic_traceability.py",
+         "figures/fig6a_anchor_coloc_calibration.svg + "
+         "figures/fig6b_posterior_lead_distance.svg + "
+         "figures/fig6c_family_af_overlap.svg + "
+         "figures/fig6d_traceability_matrix.svg (exact-size nest)",
+         "figures/figure6_genetic_traceability.pdf + "
+         "results/figure6_composite_manifest.tsv"),
+        ("Fig 7", "scripts/n2_chamber_reversal_genes.py + "
+         "scripts/n2b_reversal_celltype.py + "
+         "scripts/fig7_reversal_carrier_composite.py",
+         "results/n2_chamber_reversal_long.tsv + n2_chamber_reversal_genes.tsv + "
+         "n2b_reversal_per_celltype_long.tsv + n2b_reversal_per_celltype_summary.tsv "
+         "(frozen reversal / carrier artifacts)",
+         "figures/fig7_reversal_carrier_composite.pdf"),
         ("Graphical abstract", "scripts/graphical_abstract.py",
          "(schematic)",
          "figures/graphical_abstract.pdf"),

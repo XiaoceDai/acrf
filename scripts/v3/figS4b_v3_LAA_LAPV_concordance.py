@@ -24,7 +24,7 @@ ROOT = Path(__file__).resolve().parents[2]
 
 CLS_TSV = ROOT / "results" / "fig4_v3_chronicity_class.tsv"
 ATLAS_TSV = ROOT / "results" / "fig_integrated_af_rewiring_atlas.tsv"
-OUT_PDF = ROOT / "figures" / "figS4b_v3_LAA_LAPV_concordance.pdf"
+OUT_PDF = ROOT / "figures" / "figS4b_LAA_LAPV_concordance.pdf"
 
 LA_DEEP = "#9C5550"
 RA_DEEP = "#4E6B89"
@@ -99,7 +99,7 @@ def main():
         x=0.05, y=0.94, ha="left", fontsize=8.6, fontweight="bold",
     )
     footer_lines = [
-        "Each dot: one NCP_v3 family; x = LAA primary Spearman \u03c1, y = LAPV sensitivity Spearman \u03c1 (both n = 12 AF donors).",
+        "Each dot: one NCP axis family; x = LAA primary Spearman \u03c1, y = LAPV sensitivity Spearman \u03c1 (both n = 12 AF donors).",
         "Solid diagonal y = x marks perfect LAA-LAPV agreement;  dotted antidiagonal y = -x marks perfect inversion.",
         "",
         "At n = 12 the LAPV per-family \u03c1 is highly uncertain (bootstrap CI is wide, often spanning zero); the only",

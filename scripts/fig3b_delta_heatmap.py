@@ -2,7 +2,7 @@
 """
 Figure 3B - program x cell_type Δsinglescore heatmap.
 
-Rows: the 10-program panel, Fig 1C order.
+Rows: NCP axis families (legacy script; see scripts/v3/ for current drivers).
 Cols: 4 main compartments (atrialCM / fibroblast / endothelial_or_vascular / immune).
 Cells: raw Δsinglescore (AF - Ctrl).  Diverging BrBG palette:
     + (brown)  = AF higher

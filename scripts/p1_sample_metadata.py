@@ -11,8 +11,12 @@ Cohorts
 -------
 GSE128188  paired LAA/RAA bulk RNA-seq       5 SR + 5 AF donors (x 2 chambers = 20 samples)
 GSE79768   paired LA/RA  Affymetrix array    6 SR + 7 AF donors (x 2 chambers = 26 samples)
-GSE115574  biatrial Affymetrix array, MR bg  15 AF + 16 SR patients, 59 samples total
-                                             (AF14 missing L, AF15 missing R, SR16 missing L)
+GSE115574  biatrial Affymetrix array, MR bg — GEO registry 15 AF + 16 SR donors
+                                             (59 samples); Fig 2 / NCP panel analytical
+                                             totals are 13 AF + 15 SR (see innovation_ncp_v3_acai_long.tsv
+                                             and scripts/p1_demographics_table.py). Known sample-level
+                                             pairing gaps in GEO titles: AF14 (missing LA), AF15 (missing RA),
+                                             SR16 (missing LA).
 
 Sources (immutable, downloaded from NCBI GEO)
 ---------------------------------------------
@@ -203,7 +207,11 @@ def build_gse79768(series_matrix: Path) -> pd.DataFrame:
 
 
 def build_gse115574(series_matrix: Path) -> pd.DataFrame:
-    """GSE115574 — titles are 'AF01L', 'SR16R' etc. 15 AF + 16 SR patients on MR background."""
+    """GSE115574 — titles are 'AF01L', 'SR16R' etc.; GEO registry 15 AF + 16 SR donors.
+
+    Analytical Fig 2 donor totals (13 AF + 15 SR) are resolved downstream against
+    innovation_ncp_v3_acai_long.tsv / p1_demographics_table.py, not in this parser.
+    """
     df = parse_series_matrix(series_matrix)
     if len(df) != 59:
         raise RuntimeError(f"GSE115574 expected 59 samples, got {len(df)}")

@@ -17,7 +17,7 @@ A 4-panel composite (mirrors v2 layout but rebuilt with v3 LE signatures):
 
     d  Border - Distal Delta per signature with 95 % CI (Welch).
 
-Family signatures = UNION of NCP_v3 LE genes per family (g3b_v3 output).
+Family signatures = UNION of NCP LE genes per family (g3b_v3 output).
 Cell-type panels = canonical hand-curated markers (NOT data-derived).
 
 Inputs:
@@ -25,10 +25,29 @@ Inputs:
 
 Output:
     figures/fig5d_v3_geomx_roi.pdf
+    results/fig5d_geomx_roi_correlations.tsv   long-form Spearman (family x cell-type)
+          + Welch rhythm/area deltas for family signatures only (descriptive; not Path A gate).
+
+GeoMx is corroboration only: ROI-level Welch compares ROI pseudobulk score vectors (not
+patient-level aggregates); Spearman is across n eligible ROIs. Does not enter Fig 5b/5c support_flag.
+
+Cohort geometry (GSE261363)
+-----------------------------
+roi_metadata-driven summaries commonly cite ~48 ROI observations (e.g. 24 AF + 24 SR) among **4 patients**.
+Fig 5d uses only ROI rows with eligible_for_5d == True (upstream roi_scores_v3.tsv); **n_rois** in the export TSV
+matches ROIs passing that gate after pivot — reconcile prose **48 GEO spots vs 24 AA DNA+ Fig 5d panel**
+explicitly in Methods.
+
+Patient-aware sensitivity: **none** in this script (each ROI one observation; no clustering by patient).
+
+Welch: **ROI-level** AF vs SR or border vs distal vectors — **not** patient-stratified summaries.
+
+support_flag: GeoMx is **not** used in Path A triple-positive / cross_layer_support_flag.
 """
 from __future__ import annotations
 
 from pathlib import Path
+import re
 
 import matplotlib as mpl
 import matplotlib.colors as mcolors
@@ -40,7 +59,9 @@ from scipy import stats
 
 ROOT = Path(__file__).resolve().parents[2]
 ROI_TSV = ROOT / "Project_P5" / "GSE261363" / "roi_scores_v3.tsv"
-FIG_OUT = ROOT / "figures" / "fig5d_v3_geomx_roi.pdf"
+FIG_OUT = ROOT / "figures" / "fig5d_geomx_roi.pdf"
+OUT_CORR_TSV = ROOT / "results" / "fig5d_geomx_roi_correlations.tsv"
+LABELS_TSV = ROOT / "results" / "ncp_v3_family_labels.tsv"
 
 LA_COLOR = "#D6604D"
 RA_COLOR = "#4393C3"
@@ -105,6 +126,99 @@ CELL_SHORT = {
 }
 
 ALL_SIG_ORDER = FAMILY_ORDER + CELL_ORDER
+
+
+def family_panel_key_to_id(panel_label: str) -> int | None:
+    m = re.match(r"\s*F(\d+)\b", str(panel_label))
+    return int(m.group(1)) if m else None
+
+
+def export_geomx_manuscript_tsv(
+    *,
+    W: pd.DataFrame,
+    meta: pd.DataFrame,
+    R: np.ndarray,
+    P: np.ndarray,
+    cdf: pd.DataFrame,
+    ddf: pd.DataFrame,
+    fams: list[str],
+    cells: list[str],
+    n_roi: int,
+) -> None:
+    """ROI-level statistics only (no patient-cluster bootstrap in this script)."""
+    n_pat = int(meta["patient"].nunique())
+    lbl_by_fid: dict[int, str] = {}
+    if LABELS_TSV.is_file():
+        labs = pd.read_csv(LABELS_TSV, sep="\t")[["family_id", "family_label"]].drop_duplicates(
+            subset=["family_id"], keep="first"
+        )
+        lbl_by_fid = dict(zip(labs["family_id"].astype(int), labs["family_label"].astype(str)))
+
+    rows: list[dict] = []
+    nan = float("nan")
+    for i, p in enumerate(fams):
+        fid = family_panel_key_to_id(p)
+        flab = lbl_by_fid.get(fid, "") if fid is not None else ""
+        for j, c in enumerate(cells):
+            rows.append({
+                "family_id": fid if fid is not None else nan,
+                "family_label": flab,
+                "roi_feature": f"GeoMx_rank_singscore_correlation:{p.strip()}__vs__cell_panel:{c}",
+                "cell_type_proxy": c,
+                "spearman_rho": float(R[i, j]),
+                "p_value": float(P[i, j]),
+                "n_rois": n_roi,
+                "n_patients": n_pat,
+                "contrast": "ROI-level Spearman across eligible cardiac AA ROIs",
+                "effect_size": float(R[i, j]),
+            })
+
+    for _, row in cdf.iterrows():
+        sig = str(row["sig"])
+        if sig not in FAMILY_ORDER:
+            continue
+        fid = family_panel_key_to_id(sig)
+        flab = lbl_by_fid.get(fid, "") if fid is not None else ""
+        rows.append({
+            "family_id": fid if fid is not None else nan,
+            "family_label": flab,
+            "roi_feature": f"GeoMx_rank_singscore:{sig.strip()}",
+            "cell_type_proxy": "",
+            "spearman_rho": nan,
+            "p_value": float(row["p"]),
+            "n_rois": n_roi,
+            "n_patients": n_pat,
+            "contrast": "AF_minus_SR ROI-level Welch (delta mean singscore across ROIs)",
+            "effect_size": float(row["delta"]),
+        })
+
+    for _, row in ddf.iterrows():
+        sig = str(row["sig"])
+        if sig not in FAMILY_ORDER:
+            continue
+        fid = family_panel_key_to_id(sig)
+        flab = lbl_by_fid.get(fid, "") if fid is not None else ""
+        rows.append({
+            "family_id": fid if fid is not None else nan,
+            "family_label": flab,
+            "roi_feature": f"GeoMx_rank_singscore:{sig.strip()}",
+            "cell_type_proxy": "",
+            "spearman_rho": nan,
+            "p_value": float(row["p"]),
+            "n_rois": n_roi,
+            "n_patients": n_pat,
+            "contrast": "border_minus_distal ROI-level Welch (delta mean singscore across ROIs)",
+            "effect_size": float(row["delta"]),
+        })
+
+    col_order = [
+        "family_id", "family_label", "roi_feature", "cell_type_proxy",
+        "spearman_rho", "p_value", "n_rois", "n_patients", "contrast", "effect_size",
+    ]
+    export = pd.DataFrame(rows)[col_order]
+    OUT_CORR_TSV.parent.mkdir(parents=True, exist_ok=True)
+    export.to_csv(OUT_CORR_TSV, sep="\t", index=False, float_format="%.6g")
+    print(f"wrote {OUT_CORR_TSV.relative_to(ROOT)} ({len(export)} rows)")
 
 
 def set_publication_style():
@@ -175,7 +289,7 @@ def main():
         f"(n = {n_roi} cardiac DNA+ ROIs)",
         fontsize=8.8, fontweight="bold", y=0.97, x=0.02, ha="left")
     fig.text(0.02, 0.945,
-              "6 NCP_v3 priority families (rank-singscore on LE union)  +  6 canonical cell-type marker panels.  "
+              "6 NCP priority families (rank-singscore on LE union)  +  6 canonical cell-type marker panels.  "
               "Spatial layer is corroboration only; mechanistic causality is NOT inferred from 5d.",
               fontsize=6.0, color="#444444", style="italic")
 
@@ -381,7 +495,7 @@ def main():
                      loc="left", fontsize=8.0, fontweight="bold", pad=4)
 
     fig.text(0.02, 0.025,
-              "Family signatures: union of NCP_v3 leading-edge genes per family (rank-singscore).  "
+              "Family signatures: union of NCP leading-edge genes per family (rank-singscore).  "
               "Cell-type panels: hand-curated markers (NOT data-derived).  "
               "Markers: * p_t < 0.05;  . p_t < 0.10  (Welch).  "
               "Tick-label colour: red = LA-driven family, purple = Bilateral family, grey = cell-type.",
@@ -390,6 +504,18 @@ def main():
               "Family selection rationale:  F15/F11/F9/F10 = atlas Triple-/Double-/Single-positive (***);  "
               "F2 = Strong-trend duration (Bilateral *);  F4 = Adipo-carrier metabolic (Bilateral *) for Fig 3F sub-family link.",
               fontsize=5.6, color="#444", ha="left", va="bottom")
+
+    export_geomx_manuscript_tsv(
+        W=W,
+        meta=meta,
+        R=R,
+        P=P,
+        cdf=cdf,
+        ddf=ddf,
+        fams=fams,
+        cells=cells,
+        n_roi=n_roi,
+    )
 
     FIG_OUT.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(FIG_OUT)

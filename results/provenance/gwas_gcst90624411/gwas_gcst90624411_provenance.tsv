@@ -1,0 +1,35 @@
+key	value
+accession	GCST90624411
+accession_role	cross-population AF GWAS
+publication	Yuan et al. Nat Commun 2025;16:6426
+publication_doi	10.1038/s41467-025-61720-2
+author_correction_doi	10.1038/s41467-025-64765-5
+pubmed_id	40645996
+locked_af_cases	252438
+locked_controls	1959739
+erroneous_case_n_replaced	168007
+case_n_correction_note	Author correction replaced erroneous 168007-case figure with 252438 and corrected a European-discovery case count separately
+genome_assembly	GRCh38
+file_used	harmonised/GCST90624411.h.tsv.gz
+local_sumstats_path	/home/bio/Project_P02/data/gwas/GCST90624411/harmonised/GCST90624411.h.tsv.gz
+local_tbi_path	/home/bio/Project_P02/data/gwas/GCST90624411/harmonised/GCST90624411.h.tsv.gz.tbi
+local_meta_yaml_path	/home/bio/Project_P02/results/provenance/gwas_gcst90624411/GCST90624411-meta.yaml
+ftp_sumstats_url	https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90624001-GCST90625000/GCST90624411/harmonised/GCST90624411.h.tsv.gz
+ftp_tbi_url	https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90624001-GCST90625000/GCST90624411/harmonised/GCST90624411.h.tsv.gz.tbi
+ftp_meta_yaml_url	https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90624001-GCST90625000/GCST90624411/harmonised/GCST90624411.h.tsv.gz-meta.yaml
+ftp_md5_expected	04da4c8c82f9d29da802924a02a47441
+local_md5	04da4c8c82f9d29da802924a02a47441
+md5_assert	PASS
+local_sha256	d883b43c524ec179232d055435071d4125f2bb1abbeffa19d3bb3d924d2ddeeb
+tbi_md5	a77b28bae2c9a307db45cc95c3f7729e
+tbi_sha256	6616a7db24b18c28ac3b9904f7244254754ae33e3397052476819679f7b1f97b
+meta_yaml_md5	ab9314bcfa9ffdbd6162823f9b96639f
+meta_yaml_sha256	a59ef12e5a53c2aeab8ebdaf6a23741bc620ac3477a643c16aec4afbd39d156f
+sumstats_bytes	1720310142
+tbi_bytes	1965432
+meta_yaml_bytes	1218
+download_utc	2026-07-14T11:16:22Z
+used_by	Figure 6 anchor atrial cis-eQTL x AF-GWAS colocalisation (remote tabix URL identical accession/file)
+coloc_rerun_required	FALSE
+coloc_rerun_gate	Do not rerun unless local MD5 fails, accession differs, or tabix does not match frozen harmonised file
+catalog_ui_incomplete_2026-07-14	TRUE

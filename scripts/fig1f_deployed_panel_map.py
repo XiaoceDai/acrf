@@ -275,7 +275,7 @@ def main() -> None:
         )
 
     ax_hm.set_title(
-        "f  v3 30-program healthy LA/RA cell-type carrier atlas (family-grouped)",
+        "Fig 1e  NCP deployment map (30 programs, 16 families; HCA LA/RA carriers, family-grouped)",
         fontsize=10.0,
         fontweight="bold",
         loc="left",

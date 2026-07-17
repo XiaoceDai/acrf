@@ -32,7 +32,7 @@ PROG_TSV = ROOT / "results" / "fig3_v3_program_celltype_delta.tsv"
 FAM_TSV = ROOT / "results" / "fig3_v3_family_celltype_delta.tsv"
 HCA_TSV = ROOT / "results" / "fig1f_v3_HCA_family_carriers.tsv"
 ATLAS_TSV = ROOT / "results" / "fig_integrated_af_rewiring_atlas.tsv"
-OUT_PDF = ROOT / "figures" / "figS3_v3_supp_fullmatrix.pdf"
+OUT_PDF = ROOT / "figures" / "figS3_supp_fullmatrix.pdf"
 
 LA_DEEP = "#9C5550"
 RA_DEEP = "#4E6B89"
@@ -100,10 +100,17 @@ def main():
     set_style()
     fam = pd.read_csv(FAM_TSV, sep="\t")
     prog = pd.read_csv(PROG_TSV, sep="\t")
-    atlas = pd.read_csv(ATLAS_TSV, sep="\t")
     hca = pd.read_csv(HCA_TSV, sep="\t")
+    canonical = pd.read_csv(ROOT / "results" / "ncp_v3_canonical_display_order.tsv", sep="\t")
+    labels = pd.read_csv(ROOT / "results" / "ncp_v3_family_labels.tsv", sep="\t")
 
-    fam_order = atlas.sort_values("PriorityScore", ascending=False)["family_id"].astype(int).tolist()
+    fam_order = (
+        canonical[["family_display_order", "family_id"]]
+        .drop_duplicates("family_id")
+        .sort_values("family_display_order")["family_id"]
+        .astype(int)
+        .tolist()
+    )
 
     # FAMILY matrix
     fam_pivot = fam.pivot(index="family_id", columns="compartment", values="dScore")
@@ -111,9 +118,10 @@ def main():
     fam_pmat = fam.pivot(index="family_id", columns="compartment", values="p_perm")
     fam_pmat = fam_pmat.reindex(index=fam_order, columns=COMPARTMENTS)
 
-    fam_short_lookup = (
-        atlas.set_index("family_id")["short"].to_dict()
-    )
+    fam_short_lookup = {
+        int(r.family_id): short_pathway_label(str(r.family_label), 36)
+        for r in labels.itertuples(index=False)
+    }
     fam_labels = [f"F{fid}  {fam_short_lookup.get(fid, '')}" for fid in fam_order]
 
     # PROGRAM matrix - sort by family order, then program_order within family
@@ -162,7 +170,7 @@ def main():
     im_fam = draw_heatmap(
         ax_fam, fam_arr, fam_pmat_arr, vmax_fam,
         fam_labels, [COMP_SHORT[c] for c in COMPARTMENTS],
-        "16 NCP_v3 families  (atlas-priority order)",
+        "16 NCP axis families  (atlas-priority order)",
     )
     cbar_fam = fig.colorbar(im_fam, cax=ax_fam_cb, orientation="vertical")
     cbar_fam.set_label("\u0394singscore  (AF \u2212 Ctrl)", fontsize=6.4)
@@ -171,7 +179,7 @@ def main():
     im_prog = draw_heatmap(
         ax_prog, prog_arr, prog_pmat_arr, vmax_prog,
         prog_labels, [COMP_SHORT[c] for c in COMPARTMENTS],
-        "30 NCP_v3 programs  (within-family order)",
+        "30 NCP pathway programs  (within-family order)",
     )
     cbar_prog = fig.colorbar(im_prog, cax=ax_prog_cb, orientation="vertical")
     cbar_prog.set_label("\u0394singscore  (AF \u2212 Ctrl)", fontsize=6.4)

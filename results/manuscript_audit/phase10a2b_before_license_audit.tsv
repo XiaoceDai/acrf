@@ -1,0 +1,7 @@
+file	current_license_statement	sha256	conflict_status	notes
+LICENSE	MIT; Copyright (c) 2026 Project P02 authors	23cecb40e85c24b0646e703a489ce939e4ef329970ba4148deacc67fa55b15e3	CONFLICT_HOLDER	MIT body present; copyright holder placeholder vs owner decision Xiao-Ce Dai; conflicts with pyproject Proprietary
+pyproject.toml	"license = { text = ""Proprietary"" }"	69eefe18c79451044f9ea67a5ff174ee7b0380c349d963d0c4b0727b453e05e4	CONFLICT_vs_LICENSE_MIT	name=acrf version=0.1.0 include=crf
+README.md	none explicit	6d98e3aec2ecec3c2dd53f71cb6d5c0f0e01f7ccd625a6b9b8031440e47aad76	NO_STATEMENT	no license section; no MIT/Proprietary claim
+CITATION.cff	ABSENT		ABSENT	pending; do not create in this phase
+.zenodo.json	ABSENT		ABSENT	pending; do not create in this phase
+package_metadata	distribution=acrf; import=crf; version=0.1.0; license=Proprietary	69eefe18c79451044f9ea67a5ff174ee7b0380c349d963d0c4b0727b453e05e4	IDENTITY_OK_LICENSE_CONFLICT	identity fields must remain unchanged

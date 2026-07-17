@@ -32,6 +32,7 @@ from plot_style import (  # noqa: E402
     MUTED_COLOR,
     RA_COLOR,
     set_nature_style,
+    enforce_font_floor, FS_PANEL_TITLE, FS_TICK, FS_AXIS_LABEL, FS_LEGEND,
 )
 
 set_nature_style()
@@ -47,7 +48,7 @@ mpl.rcParams.update(
 
 META_IN = ROOT / "results" / "innovation_ncp_v3_axis_families.tsv"
 ATTR_IN = ROOT / "results" / "fig1f_v3_HCA_baseline_attribution.tsv"
-OUT_PDF = ROOT / "figures" / "fig1f_v3_HCA_baseline_attribution.pdf"
+OUT_PDF = ROOT / "figures" / "fig1f_HCA_baseline_attribution.pdf"
 OUT_ROWMAP = ROOT / "results" / "fig1f_v3_HCA_program_celltype_rowmap.tsv"
 
 COMPARTMENTS = [
@@ -187,14 +188,14 @@ def main() -> None:
     cmap = LinearSegmentedColormap.from_list("LA_RA", [(0.0, RA_COLOR), (0.5, "#FFFFFF"), (1.0, LA_COLOR)])
 
     n_cols_comp = len(COMPARTMENTS)
-    fig = plt.figure(figsize=(COL_DOUBLE * 1.66, COL_DOUBLE * 0.92))
+    fig = plt.figure(figsize=(COL_DOUBLE * 1.66, COL_DOUBLE * 1.02))  # taller for larger fonts
     gs = fig.add_gridspec(
         1,
         8,
-        width_ratios=[0.16, 0.36, 3.10, 4.40, 4.40, 1.20, 1.20, 0.40],
+        width_ratios=[0.18, 0.38, 3.10, 4.40, 4.40, 1.20, 1.20, 0.40],
         wspace=0.04,
-        top=0.90,
-        bottom=0.16,
+        top=0.88,
+        bottom=0.14,
         left=0.025,
         right=0.997,
     )
@@ -218,10 +219,10 @@ def main() -> None:
             )
         )
     ax_dir.text(0.5, (n_la_dir - 1) / 2 if n_la_dir > 0 else 0.0, "LA",
-                color="white", fontsize=8.6, fontweight="bold", ha="center", va="center", rotation=90)
+                color="white", fontsize=enforce_font_floor(FS_PANEL_TITLE + 0.5), fontweight="bold", ha="center", va="center", rotation=90)
     if n - n_la_dir > 0:
         ax_dir.text(0.5, n_la_dir + (n - n_la_dir - 1) / 2, "RA",
-                    color="white", fontsize=8.6, fontweight="bold", ha="center", va="center", rotation=90)
+                    color="white", fontsize=enforce_font_floor(FS_PANEL_TITLE + 0.5), fontweight="bold", ha="center", va="center", rotation=90)
     ax_dir.set_xlim(0, 1)
     ax_dir.set_ylim(n - 0.5, -0.5)
     ax_dir.axis("off")
@@ -238,7 +239,7 @@ def main() -> None:
             )
         )
         ax_family.text(0.5, (y0 + y1) / 2, f"F{int(fid)}",
-                       color="white", fontsize=8.0, fontweight="bold", ha="center", va="center")
+                       color="white", fontsize=enforce_font_floor(FS_PANEL_TITLE), fontweight="bold", ha="center", va="center")
 
     # Pathway labels
     ax_lbl.set_xlim(0, 1)
@@ -248,8 +249,8 @@ def main() -> None:
         col = LA_COLOR if row["direction"] == "LA-biased" else RA_COLOR
         ax_lbl.text(
             0.0, i,
-            short_pathway_label(str(row["pathway"]), 42),
-            fontsize=7.7, color=col, fontweight="bold",
+            short_pathway_label(str(row["pathway"]), 36),
+            fontsize=enforce_font_floor(FS_TICK + 0.5), color=col, fontweight="bold",
             ha="left", va="center",
         )
 
@@ -260,12 +261,12 @@ def main() -> None:
     for ax, ttl, color in [(ax_la, "LA  baseline z-score", LA_COLOR),
                            (ax_ra, "RA  baseline z-score", RA_COLOR)]:
         ax.set_xticks(np.arange(n_cols_comp))
-        ax.set_xticklabels([COMP_SHORT[c] for c in COMPARTMENTS], rotation=30, ha="right", fontsize=7.0)
+        ax.set_xticklabels([COMP_SHORT[c] for c in COMPARTMENTS], rotation=30, ha="right", fontsize=enforce_font_floor(FS_TICK - 0.5))
         ax.set_yticks([])
-        ax.set_title(ttl, fontsize=8.6, fontweight="bold", color=color, pad=4, loc="left")
+        ax.set_title(ttl, fontsize=enforce_font_floor(FS_PANEL_TITLE + 0.5), fontweight="bold", color=color, pad=4, loc="left")
 
-    ax_la.set_xlabel("cell compartment  (tile size = |z|, color = sign)", fontsize=7.6)
-    ax_ra.set_xlabel("cell compartment  (tile size = |z|, color = sign)", fontsize=7.6)
+    ax_la.set_xlabel("cell compartment  (tile size = |z|, color = sign)", fontsize=enforce_font_floor(FS_AXIS_LABEL))
+    ax_ra.set_xlabel("cell compartment  (tile size = |z|, color = sign)", fontsize=enforce_font_floor(FS_AXIS_LABEL))
 
     # Group separators (LA/RA direction band + family bands)
     if 0 < n_la_dir < n:
@@ -285,16 +286,16 @@ def main() -> None:
         ax.set_xlim(0, 1)
         ax.set_ylim(n - 0.5, -0.5)
         ax.axis("off")
-        ax.set_title(title, fontsize=8.0, fontweight="bold", color=color, loc="left", pad=3)
+        ax.set_title(title, fontsize=enforce_font_floor(FS_PANEL_TITLE), fontweight="bold", color=color, loc="left", pad=3)
         for i, row in df.iterrows():
             carrier = str(row[col_key])
             if carrier == MIXED_LABEL:
-                ax.text(0.0, i, "Mix", fontsize=7.6, color=MUTED_COLOR, style="italic", ha="left", va="center")
+                ax.text(0.0, i, "Mix", fontsize=enforce_font_floor(FS_TICK + 0.5), color=MUTED_COLOR, style="italic", ha="left", va="center")
             else:
                 ax.text(
                     0.0, i,
                     COMP_SHORT.get(carrier, carrier),
-                    fontsize=7.8, color=FG_COLOR, fontweight="bold",
+                    fontsize=enforce_font_floor(FS_TICK + 0.5), color=FG_COLOR, fontweight="bold",
                     ha="left", va="center",
                 )
 
@@ -302,7 +303,7 @@ def main() -> None:
     ax_cls.set_xlim(0, 1)
     ax_cls.set_ylim(n - 0.5, -0.5)
     ax_cls.axis("off")
-    ax_cls.set_title("class", fontsize=7.4, fontweight="bold", color=FG_COLOR, loc="left", pad=3)
+    ax_cls.set_title("class", fontsize=enforce_font_floor(FS_PANEL_TITLE), fontweight="bold", color=FG_COLOR, loc="left", pad=3)
     for i, row in df.iterrows():
         cls = str(row["consensus_class"])
         ax_cls.add_patch(
@@ -312,23 +313,23 @@ def main() -> None:
             )
         )
         ax_cls.text(0.5, i, CONSENSUS_SHORT.get(cls, "?"), color="white",
-                    fontsize=7.0, fontweight="bold", ha="center", va="center")
+                    fontsize=enforce_font_floor(FS_TICK + 0.5), fontweight="bold", ha="center", va="center")
 
     # Header / colorbar
     ax_la.text(
         -0.5, -1.6,
-        "f  v3 30-program healthy LA / RA cell-type carrier atlas (HCA, paired LA + RA, family-grouped)",
-        fontsize=10.0, fontweight="bold", ha="left",
+        "Fig 1e  NCP deployment map (30 programs, 16 families; HCA LA/RA carriers, family-grouped)",
+        fontsize=enforce_font_floor(FS_PANEL_TITLE + 2), fontweight="bold", ha="left",
     )
 
-    cax = fig.add_axes([0.395, 0.05, 0.22, 0.018])
+    cax = fig.add_axes([0.395, 0.045, 0.22, 0.018])
     sm = mpl.cm.ScalarMappable(norm=norm, cmap=cmap)
     sm.set_array([])
     cb = fig.colorbar(sm, cax=cax, orientation="horizontal")
-    cb.set_label("baseline expression z-score (across compartments)", fontsize=7.0)
-    cb.ax.tick_params(labelsize=6.5)
-    cb.ax.text(0.02, 0.5, "RA-like", transform=cb.ax.transAxes, color=RA_COLOR, fontsize=6.6, fontweight="bold", ha="left", va="center")
-    cb.ax.text(0.98, 0.5, "LA-like", transform=cb.ax.transAxes, color=LA_COLOR, fontsize=6.6, fontweight="bold", ha="right", va="center")
+    cb.set_label("baseline expression z-score (across compartments)", fontsize=enforce_font_floor(FS_AXIS_LABEL))
+    cb.ax.tick_params(labelsize=enforce_font_floor(FS_TICK - 0.5))
+    cb.ax.text(0.02, 0.5, "RA-like", transform=cb.ax.transAxes, color=RA_COLOR, fontsize=enforce_font_floor(FS_LEGEND), fontweight="bold", ha="left", va="center")
+    cb.ax.text(0.98, 0.5, "LA-like", transform=cb.ax.transAxes, color=LA_COLOR, fontsize=enforce_font_floor(FS_LEGEND), fontweight="bold", ha="right", va="center")
 
     # Class legend (right of colorbar) - only show classes that actually
     # occur in this panel; SPLIT/MIXED tend to be empty in many runs.
@@ -343,11 +344,11 @@ def main() -> None:
     items = [(lbl, CONSENSUS_COLORS[k]) for k, lbl in full_items if k in present_classes]
 
     leg_x = 0.66
-    fig.text(leg_x, 0.075, "carrier class:", fontsize=7.0, fontweight="bold", color=FG_COLOR)
+    fig.text(leg_x, 0.075, "carrier class:", fontsize=enforce_font_floor(FS_AXIS_LABEL), fontweight="bold", color=FG_COLOR)
     x0 = leg_x + 0.06
     for label, color in items:
         fig.patches.append(mpatches.Rectangle((x0, 0.058), 0.011, 0.018, transform=fig.transFigure, facecolor=color, edgecolor="none"))
-        fig.text(x0 + 0.015, 0.067, label, fontsize=6.4, color=FG_COLOR, va="center")
+        fig.text(x0 + 0.015, 0.067, label, fontsize=enforce_font_floor(FS_TICK - 0.5), color=FG_COLOR, va="center")
         x0 += 0.072
 
     OUT_PDF.parent.mkdir(parents=True, exist_ok=True)

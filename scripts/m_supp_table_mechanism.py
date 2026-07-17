@@ -40,7 +40,7 @@ SUB_MECHANISMS = [
         "family": "F10  TGF-β  +  GAG metabolism family",
         "carrier": "fibroblast",
         "bulk":     "F10 pooled g = +0.68  CI [+0.11, +1.26]  ★  (Fig 2D)",
-        "snrna":    "F10 × fibroblast  Δ = +0.010  p = 0.026  ★  (Fig 3C)",
+        "snrna":    "F10 × fibroblast  Δ = +0.010  p = 0.023  ★  (Fig 3B/C)",
         "spatial":  "GAG × fibroblast  ROI ρ = +0.43  p = 0.036  ★  (Fig 5D)",
         "duration": "non-significant (acute, not chronicity-driven)",
         "gene":     "DCN, PRELP among 24 reversal panel  (Fig 6B / 6C)",
@@ -57,8 +57,8 @@ SUB_MECHANISMS = [
         "family": "F11  BMP signalling family",
         "carrier": "adipocyte (gain)  +  lymphatic endothelial (loss)",
         "bulk":     "F11 pooled g = +0.85  CI [+0.27, +1.43]  ★  (Fig 2D)",
-        "snrna":    "F11 × adipocyte   Δ = +0.032  p = 0.046  ★  (Fig 3C)\n"
-                     "F11 × lymph endo  Δ = -0.068  p = 0.031  ★  (Fig 3C)",
+        "snrna":    "F11 × adipocyte   Δ = +0.032  p = 0.043  ★  (Fig 3B/C)\n"
+                     "F11 × endothelial Δ = −0.009  p = 0.649  (HCA carrier ref)",
         "spatial":  "BMP-related programs co-vary in same compartments  (Fig 5D)",
         "duration": "non-significant",
         "gene":     "n/a  (program-level only)",
@@ -159,10 +159,10 @@ SUB_MECHANISMS = [
         "family": "all  (gene-level)",
         "carrier": "fibroblast-dominant",
         "bulk":     "21 RA→LA reversal genes  vs  3 LA→RA (24 total)",
-        "snrna":    "fibroblast top carrier  mean Δ_aligned = +0.042  (Fig 6C)",
+        "snrna":    "fibroblast top carrier  mean Δ_aligned = +0.042  (Fig 7d)",
         "spatial":  "consistent with Fig 5D fibroblast-program ρ pattern",
         "duration": "n/a",
-        "gene":     "Fig 6B 24-gene panel  (binomtest p = 2.8 × 10⁻⁴)",
+        "gene":     "Fig 7a–c 24-gene panel  (binomtest p = 2.8 × 10⁻⁴)",
         "test":     "N2d Test 1  binomtest  21:3 vs 1:1  p = 2.8 × 10⁻⁴  ★",
         "interpretation":
             "AF rewires LA tissue toward an RA-like matrix-rich phenotype, "

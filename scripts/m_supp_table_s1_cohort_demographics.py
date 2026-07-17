@@ -41,7 +41,13 @@ def main() -> None:
         "Cohort-level summary for all publicly available RNA-related resources "
         "used in the manuscript (healthy reference, bulk discovery/replication, "
         "single-nucleus, multiome gate, and spatial ROI cohorts). Accession "
-        "identifiers are listed in the first column. Regenerate this table from "
+        "identifiers are listed in the first column. For GSE128188, GSE79768, "
+        "and GSE115574, donor counts and the per-donor companion file "
+        "(results/cohort_demographics_long.tsv) are intersected with "
+        "results/innovation_ncp_v3_acai_long.tsv when tables are regenerated, "
+        "so Fig. 2, Supplementary Fig. S1, and this table agree on analytical "
+        "sample sizes (GSE115574: 13 AF + 15 SR after paired-chamber / coverage "
+        "QC; GEO registry lists additional donors). Regenerate from "
         "results/cohort_demographics_table.tsv after editing "
         "scripts/p1_demographics_table.py.",
     )

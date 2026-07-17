@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-N2b — Map the 24 chamber-identity reversal genes (Fig. 6c, results/
+N2b — Map the 24 chamber-identity reversal genes (Fig. 7, results/
 n2_chamber_reversal_genes.tsv) onto the four single-nucleus
 compartments of GSE255612 to identify the cellular carrier(s) of the
 matrix-invasion signature.

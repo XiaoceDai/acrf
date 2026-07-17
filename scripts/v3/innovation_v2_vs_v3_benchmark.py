@@ -14,18 +14,21 @@ Outputs
 results/innovation_v2_vs_v3_metrics.tsv
 results/innovation_v2_vs_v3_axis_effects.tsv
 results/innovation_v2_vs_v3_decision_table.tsv
-figures/innovation_v2_vs_v3_benchmark.pdf
+figures/figS13_prototype_vs_ncp_benchmark.pdf
 """
 from __future__ import annotations
 
+import sys
 from pathlib import Path
 
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from plot_style import COL_DOUBLE, LA_COLOR, RA_COLOR, set_nature_style
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "scripts"))
+
+from plot_style import COL_DOUBLE, LA_COLOR, RA_COLOR, set_nature_style
 
 PANEL_V2 = ROOT / "results" / "fig1c_ncp_panel_v2.tsv"
 PANEL_V3 = ROOT / "results" / "innovation_ncp_v3_panel.tsv"
@@ -38,9 +41,7 @@ GMT_REAC = ROOT / "bulk" / "Project_P01" / "gene_sets" / "c2.cp.reactome.v2026.1
 OUT_METRICS = ROOT / "results" / "innovation_v2_vs_v3_metrics.tsv"
 OUT_AXIS = ROOT / "results" / "innovation_v2_vs_v3_axis_effects.tsv"
 OUT_DECISION = ROOT / "results" / "innovation_v2_vs_v3_decision_table.tsv"
-OUT_PDF = ROOT / "figures" / "innovation_v2_vs_v3_benchmark.pdf"
-OUT_FIG1D = ROOT / "figures" / "fig1d_v2_to_v3_upgrade_benchmark.pdf"
-OUT_FIGS13 = ROOT / "figures" / "figS13_v2_vs_v3_benchmark.pdf"
+OUT_PDF = ROOT / "figures" / "figS13_prototype_vs_ncp_benchmark.pdf"
 
 
 def load_gmt(path: Path, prefix: str) -> dict[str, set[str]]:
@@ -242,7 +243,7 @@ def main() -> None:
     # A. overlap + redundancy
     m = metrics.iloc[0]
     ax1.bar(
-        ["overlap/v2", "overlap/v3"],
+        ["overlap/prototype", "overlap/NCP"],
         [m["overlap_fraction_vs_v2"], m["overlap_fraction_vs_v3"]],
         color=["#4D4D4D", "#7F7F7F"],
     )
@@ -259,7 +260,7 @@ def main() -> None:
     ra = np.array([m["ra_count_v2"], m["ra_count_v3"]], dtype=float)
     ax2.bar(x, la, color=LA_COLOR, label="LA-biased")
     ax2.bar(x, ra, bottom=la, color=RA_COLOR, label="RA-biased")
-    ax2.set_xticks(x, ["v2", "v3"])
+    ax2.set_xticks(x, ["prototype", "NCP"])
     ax2.set_ylabel("program count")
     ax2.set_title("B  Direction balance")
     ax2.legend(frameon=False, loc="upper right")
@@ -270,8 +271,8 @@ def main() -> None:
     xv = np.arange(len(cohorts))
     d2 = all_axis[all_axis["version"] == "v2"].set_index("cohort").reindex(cohorts)["delta_af_minus_sr"].to_numpy(float)
     d3 = all_axis[all_axis["version"] == "v3"].set_index("cohort").reindex(cohorts)["delta_af_minus_sr"].to_numpy(float)
-    ax3.plot(xv, d2, marker="o", color="#777777", label="v2")
-    ax3.plot(xv, d3, marker="o", color="#111111", label="v3")
+    ax3.plot(xv, d2, marker="o", color="#777777", label="prototype")
+    ax3.plot(xv, d3, marker="o", color="#111111", label="NCP")
     ax3.axhline(0, color="#BBBBBB", linewidth=0.8)
     ax3.set_xticks(xv, cohorts, rotation=20)
     ax3.set_ylabel("AF-SR delta (donor axis aCAI)")
@@ -293,7 +294,7 @@ def main() -> None:
     ax4.set_yticks(ybase, axes_order)
     ax4.set_xlabel("Hedges g (AF-SR)")
     ax4.set_title("D  Effect size by direction arm")
-    ax4.text(0.98, 0.03, "o:v2  x:v3", transform=ax4.transAxes, ha="right", va="bottom", fontsize=8)
+    ax4.text(0.98, 0.03, "o:prototype  x:NCP", transform=ax4.transAxes, ha="right", va="bottom", fontsize=8)
     ax4.text(
         0.02,
         0.03,
@@ -310,20 +311,16 @@ def main() -> None:
         for s in ("top", "right"):
             ax.spines[s].set_visible(False)
 
-    fig.suptitle("Innovation benchmark: v2 vs v3 panel transferability", y=0.995, fontsize=13, fontweight="bold")
+    fig.suptitle("Supplementary benchmark: dual-method prototype vs NCP transferability", y=0.995, fontsize=13, fontweight="bold")
     fig.tight_layout(rect=[0, 0, 1, 0.97])
     OUT_PDF.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(OUT_PDF, bbox_inches="tight", pad_inches=0.02)
-    fig.savefig(OUT_FIG1D, bbox_inches="tight", pad_inches=0.02)
-    fig.savefig(OUT_FIGS13, bbox_inches="tight", pad_inches=0.02)
     plt.close(fig)
 
     print(f"wrote {OUT_METRICS.relative_to(ROOT)}")
     print(f"wrote {OUT_AXIS.relative_to(ROOT)}")
     print(f"wrote {OUT_DECISION.relative_to(ROOT)}")
     print(f"wrote {OUT_PDF.relative_to(ROOT)}")
-    print(f"wrote {OUT_FIG1D.relative_to(ROOT)}")
-    print(f"wrote {OUT_FIGS13.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":

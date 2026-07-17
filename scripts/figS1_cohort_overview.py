@@ -14,7 +14,10 @@ Panels:
 
 This figure summarises the study population across eight GEO cohorts
 (including GSE112339 healthy reference) and matches
-results/cohort_demographics_table.tsv (Supplementary Table S1 source).
+results/cohort_demographics_table.tsv (Supplementary Table S1 source). Chamber
+column matches paired LA/RA (or LA+LAPV, etc.) sampling layout; Fig 2 GEO cohorts are
+restricted to donors present in innovation_ncp_v3_acai_long.tsv when tables are
+regenerated via scripts/p1_demographics_table.py.
 """
 from __future__ import annotations
 
@@ -29,9 +32,16 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from plot_style import (
+    AF_RHYTHM_COLOR,
     COL_DOUBLE,
-    LA_COLOR,
-    RA_COLOR,
+    FS_ANNOT,
+    HEALTHY_REF_COLOR,
+    QUALITATIVE_CATEGORY_COLORS,
+    SR_RHYTHM_COLOR,
+    SEX_FEMALE_COLOR,
+    SEX_MALE_COLOR,
+    SEX_NA_COLOR,
+    cohort_axis_labels,
     panel_label,
     set_nature_style,
     strip_spines,
@@ -42,13 +52,6 @@ set_nature_style()
 IN  = ROOT / "results" / "cohort_demographics_long.tsv"
 OUT = ROOT / "figures"  / "figS1_cohort_overview.pdf"
 OUT_SUMMARY = ROOT / "results" / "figS1_cohort_overview_summary.tsv"
-
-
-AF_COLOR = "#B2182B"   # match Fig 2 AF colour
-SR_COLOR = "#2166AC"   # match Fig 2 SR colour
-MALE_COLOR    = "#5AAE61"
-FEMALE_COLOR  = "#9970AB"
-NA_COLOR      = "#BDBDBD"
 
 
 def cohort_order(df: pd.DataFrame) -> list[str]:
@@ -66,7 +69,8 @@ def main() -> None:
     cohorts = cohort_order(df)
 
     fig = plt.figure(figsize=(COL_DOUBLE, 0.55 * COL_DOUBLE))
-    gs = fig.add_gridspec(2, 2, hspace=0.55, wspace=0.45)
+    fig.patch.set_facecolor("white")
+    gs = fig.add_gridspec(2, 2, hspace=0.50, wspace=0.42)
 
     # --- Panel a : donor counts stacked AF/SR --------------------------------
     ax = fig.add_subplot(gs[0, 0])
@@ -77,15 +81,15 @@ def main() -> None:
     other = counts.drop(columns=["AF", "SR"], errors="ignore").sum(axis=1) \
             if any(c not in {"AF", "SR"} for c in counts.columns) else pd.Series(0, index=cohorts)
     x = np.arange(len(cohorts))
-    ax.bar(x, sr, color=SR_COLOR, label="SR", width=0.7)
-    ax.bar(x, af, bottom=sr, color=AF_COLOR, label="AF", width=0.7)
+    ax.bar(x, sr, color=SR_RHYTHM_COLOR, label="SR", width=0.68, linewidth=0, zorder=2)
+    ax.bar(x, af, bottom=sr, color=AF_RHYTHM_COLOR, label="AF", width=0.68, linewidth=0, zorder=2)
     if other.sum() > 0:
-        ax.bar(x, other, bottom=sr + af, color=NA_COLOR, label="other", width=0.7)
+        ax.bar(x, other, bottom=sr + af, color=HEALTHY_REF_COLOR,
+               label="healthy ref. / other", width=0.68, linewidth=0, zorder=2)
     for xi, total in zip(x, sr + af + other):
         ax.text(xi, total + 0.5, f"n = {int(total)}",
-                ha="center", va="bottom", fontsize=6)
-    ax.set_xticks(x)
-    ax.set_xticklabels(cohorts, rotation=30, ha="right")
+                ha="center", va="bottom", fontsize=FS_ANNOT, color="#333333")
+    cohort_axis_labels(ax, cohorts)
     ax.set_ylabel("donors (n)")
     ax.set_ylim(0, max((sr + af + other).max() * 1.18, 5))
     ax.legend(loc="upper right", frameon=False)
@@ -108,7 +112,8 @@ def main() -> None:
                 continue
             plot_data.append(ages)
             plot_pos.append(i + (j - 0.5) * 0.32)
-            plot_colors.append(SR_COLOR if rhythm == "SR" else AF_COLOR)
+            plot_colors.append(
+                SR_RHYTHM_COLOR if rhythm == "SR" else AF_RHYTHM_COLOR)
             plot_labels.append(rhythm)
 
     if plot_data:
@@ -124,13 +129,14 @@ def main() -> None:
         for pos, ages, col in zip(plot_pos, plot_data, plot_colors):
             ax.scatter(np.full(len(ages), pos)
                        + np.random.RandomState(0).uniform(-0.05, 0.05, len(ages)),
-                       ages, s=4, color=col, edgecolor="white",
-                       linewidth=0.2, zorder=3)
-    ax.set_xticks(np.arange(len(cohorts)))
-    ax.set_xticklabels(cohorts, rotation=30, ha="right")
+                       ages, s=6, color=col, edgecolor="white",
+                       linewidth=0.25, zorder=3, alpha=0.85)
+    cohort_axis_labels(ax, cohorts)
     ax.set_ylabel("age (years)")
-    handles = [plt.Rectangle((0, 0), 1, 1, color=SR_COLOR, alpha=0.55, label="SR"),
-               plt.Rectangle((0, 0), 1, 1, color=AF_COLOR, alpha=0.55, label="AF")]
+    handles = [
+        plt.Rectangle((0, 0), 1, 1, color=SR_RHYTHM_COLOR, alpha=0.55, label="SR"),
+        plt.Rectangle((0, 0), 1, 1, color=AF_RHYTHM_COLOR, alpha=0.55, label="AF"),
+    ]
     ax.legend(handles=handles, loc="lower right", frameon=False)
     strip_spines(ax)
     panel_label(ax, "b")
@@ -153,11 +159,12 @@ def main() -> None:
     female_p = (female / totals * 100).fillna(0)
     na_p     = (na     / totals * 100).fillna(0)
     x = np.arange(len(cohorts))
-    ax.bar(x, male_p,   color=MALE_COLOR,   width=0.7, label="male")
-    ax.bar(x, female_p, bottom=male_p, color=FEMALE_COLOR, width=0.7, label="female")
-    ax.bar(x, na_p,     bottom=male_p + female_p, color=NA_COLOR, width=0.7, label="not reported")
-    ax.set_xticks(x)
-    ax.set_xticklabels(cohorts, rotation=30, ha="right")
+    ax.bar(x, male_p, color=SEX_MALE_COLOR, width=0.68, linewidth=0, label="male")
+    ax.bar(x, female_p, bottom=male_p, color=SEX_FEMALE_COLOR,
+           width=0.68, linewidth=0, label="female")
+    ax.bar(x, na_p, bottom=male_p + female_p, color=SEX_NA_COLOR,
+           width=0.68, linewidth=0, label="not reported")
+    cohort_axis_labels(ax, cohorts)
     ax.set_ylabel("sex composition (%)")
     ax.set_ylim(0, 105)
     ax.legend(loc="lower right", frameon=False, ncols=3, columnspacing=0.6)
@@ -172,26 +179,25 @@ def main() -> None:
     db_counts = (df.groupby(["cohort", "_db"]).size().unstack(fill_value=0)
                    .reindex(cohorts).fillna(0))
 
-    palette = [
-        "#1B9E77", "#D95F02", "#7570B3", "#E7298A",
-        "#66A61E", "#E6AB02", "#A6761D", "#999999",
-        "#666666", "#BDBDBD",
-    ]
     backgrounds = list(db_counts.columns)
     bottoms = pd.Series(0.0, index=cohorts)
     x = np.arange(len(cohorts))
     totals = db_counts.sum(axis=1).replace(0, np.nan)
     for i, b in enumerate(backgrounds):
         share = (db_counts[b] / totals * 100).fillna(0)
-        ax.bar(x, share, bottom=bottoms, color=palette[i % len(palette)],
-               width=0.7, label=str(b))
+        ax.bar(
+            x, share, bottom=bottoms,
+            color=QUALITATIVE_CATEGORY_COLORS[i % len(QUALITATIVE_CATEGORY_COLORS)],
+            width=0.68, linewidth=0, label=str(b),
+        )
         bottoms = bottoms + share
-    ax.set_xticks(x)
-    ax.set_xticklabels(cohorts, rotation=30, ha="right")
+    cohort_axis_labels(ax, cohorts)
     ax.set_ylabel("disease background (%)")
     ax.set_ylim(0, 105)
-    ax.legend(loc="upper left", bbox_to_anchor=(1.02, 1.0), frameon=False,
-              fontsize=5, handlelength=1.0)
+    ax.legend(
+        loc="upper left", bbox_to_anchor=(1.02, 1.0), frameon=False,
+        fontsize=FS_ANNOT, handlelength=1.0,
+    )
     strip_spines(ax)
     panel_label(ax, "d")
 

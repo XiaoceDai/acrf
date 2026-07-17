@@ -1,34 +1,26 @@
 #!/usr/bin/env python3
 """
-Fig 3d / 3e v3 case-study panels.
+Supporting gene-level decompositions for F15 (Relay) and F16 (Extension).
 
-Fig 3d: F15 NTRK2 (cellular relay)
-    Two side-by-side per-gene Delta-rank bar plots:
-        left  = lymphocyte (sig)
-        right = endothelial (sig)
-    Each gene bar is overlaid with a grey vertical reference line marking
-    the gene's healthy-LA log1p-CPM in the BASELINE CARRIER (fibroblast,
-    HCA paired-LA donors).  This visualises the relay signature: black bars
-    drift one direction (AF-driven cellular shift in non-carrier ct) while
-    grey lines sit at a different position (the resting executor remains
-    the carrier).
+Formerly main-text Fig 3d/3e; main Figure 3 now uses family-level donor
+summaries (3C/3D). These panels remain as Supporting Figures.
 
-Fig 3e: F16 Keratan sulfate (cellular extension)
-    Same dual-bar layout, but the sig cell types are fibroblast (the carrier
-    itself) and atrialCM (a neighbour) - both upregulated.
+F15 NTRK2 (cellular relay; endothelial-only family support):
+    left  = endothelial (sig)
+    right = fibroblast (HCA carrier reference; non-sig at family level)
 
-Inputs
-------
-results/fig3_v3_per_gene_delta.tsv      (already computed by step 1)
-results/fig1f_v3_HCA_family_carriers.tsv
+F16 Keratan sulfate (cellular extension):
+    fibroblast (carrier) + atrialCM (neighbour) — both upregulated.
 
 Outputs
 -------
-figures/fig3_v3_d_F15_NTRK2_relay.pdf
-figures/fig3_v3_e_F16_Keratan_extension.pdf
+figures/figS_gene_decomp_F15_NTRK2_relay.pdf
+figures/figS_gene_decomp_F16_Keratan_extension.pdf
+(also mirrors legacy fig3_d_* / fig3_e_* paths for backwards compatibility)
 """
 from __future__ import annotations
 
+import sys
 from pathlib import Path
 
 import matplotlib as mpl
@@ -38,6 +30,8 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "scripts"))
+from plot_style import enforce_font_floor, FS_PANEL_TITLE, FS_TICK, FS_AXIS_LABEL, FS_FOOTNOTE
 
 DELTA_TSV = ROOT / "results" / "fig3_v3_per_gene_delta.tsv"
 HCA_TSV = ROOT / "results" / "fig1f_v3_HCA_family_carriers.tsv"
@@ -78,16 +72,17 @@ CASES = {
         "label": "F15 NTRK2 / TrkB",
         "class_name": "Cellular relay",
         "class_color": "#8E6BAA",
-        "left_ct": "lymphocyte",
-        "right_ct": "endothelial",
+        "left_ct": "endothelial",
+        "right_ct": "fibroblast",
         "carrier_ct": "fibroblast",
-        "panel_letter": "3d",
-        "out_pdf": OUT_DIR / "fig3_v3_d_F15_NTRK2_relay.pdf",
+        "panel_letter": "S (F15 gene)",
+        "out_pdf": OUT_DIR / "figS_gene_decomp_F15_NTRK2_relay.pdf",
+        "legacy_pdf": OUT_DIR / "fig3_d_F15_NTRK2_relay.pdf",
         "interpretation_lines": [
-            "Bars in non-carrier compartments (lymphocyte, endothelial) reveal a predominantly AF-time downshift.",
-            "The bulk-detected attenuation (Fig 2C, F15 = Att 2/3) therefore originates from cellular relay rather than carrier-intrinsic change.",
-            "Note that the relay is NOT a uniform downshift of every LE gene: SRC (in lymphocyte) and PLCG1 (in endothelial) show modest upward",
-            "drift, indicating compartment-specific divergence within the same pathway.",
+            "Family-level support after exact-singscore correction is endothelial-only (Relay); fibroblast is the HCA carrier reference.",
+            "Gene bars in endothelial show a predominantly AF-time downshift; fibroblast carrier bars are shown for context.",
+            "Lymphocyte is no longer a family-level support compartment and is omitted from this supporting panel.",
+            "Gene-level marks are descriptive and do not redefine family classification.",
         ],
     },
     "fig3e": {
@@ -98,16 +93,13 @@ CASES = {
         "left_ct": "fibroblast",
         "right_ct": "atrialCM",
         "carrier_ct": "fibroblast",
-        "panel_letter": "3e",
-        "out_pdf": OUT_DIR / "fig3_v3_e_F16_Keratan_extension.pdf",
+        "panel_letter": "S (F16 gene)",
+        "out_pdf": OUT_DIR / "figS_gene_decomp_F16_Keratan_extension.pdf",
+        "legacy_pdf": OUT_DIR / "fig3_e_F16_Keratan_extension.pdf",
         "interpretation_lines": [
-            "Both compartments show concordant AF-time upshift (positive RED bars), in contrast to the predominantly",
-            "downshift (blue) seen in the relay case (Fig 3d).  The baseline carrier (fibroblast) is co-active with the",
-            "neighbouring cardiomyocyte compartment; the bulk-detected change therefore reflects cellular extension",
-            "\u2014 the carrier's activity change is amplified by adjacent cell types rather than re-routed.",
-            "Note that OGN, OMD and CHST3 show small divergent (negative) drift in atrialCM despite the overall upshift,",
-            "indicating that extension is not a perfectly uniform pathway-wide event; the dominant extension signal is",
-            "carried by ACAN, FMOD and PRELP (gene-level p < 0.05 in both compartments).",
+            "Both compartments show concordant AF-time upshift (positive RED bars), matching family-level Extension.",
+            "The baseline carrier (fibroblast) is co-active with neighbouring atrialCM; this is cellular extension,",
+            "not relay. Gene-level marks are Supporting only; main Fig 3D uses family-level donor summaries.",
         ],
     },
 }
@@ -117,7 +109,7 @@ def set_style():
     mpl.rcParams.update({
         "font.family": "sans-serif",
         "font.sans-serif": ["Arial", "Helvetica", "Liberation Sans", "DejaVu Sans"],
-        "font.size": 8,
+        "font.size": enforce_font_floor(FS_TICK),
         "axes.linewidth": 0.6,
         "savefig.dpi": 300,
         "pdf.fonttype": 42,
@@ -156,10 +148,10 @@ def render_case(delta, key, cfg):
 
     n_genes = len(gene_order)
     MM = 1.0 / 25.4
-    fig = plt.figure(figsize=(170 * MM, max(85, 38 + 8.0 * n_genes) * MM))
+    fig = plt.figure(figsize=(170 * MM, max(95, 44 + 8.5 * n_genes) * MM))  # taller for larger fonts
     gs = fig.add_gridspec(
         1, 2, width_ratios=[1, 1],
-        left=0.10, right=0.96, top=0.84, bottom=0.30, wspace=0.18,
+        left=0.10, right=0.96, top=0.82, bottom=0.28, wspace=0.18,
     )
     ax_left = fig.add_subplot(gs[0, 0])
     ax_right = fig.add_subplot(gs[0, 1])
@@ -190,13 +182,13 @@ def render_case(delta, key, cfg):
             if p < 0.05:
                 ax.text(
                     v + (max_dr * 0.04 if v >= 0 else -max_dr * 0.04),
-                    i, "*", fontsize=10, fontweight="bold", color="#1A1A1A",
+                    i, "*", fontsize=enforce_font_floor(FS_PANEL_TITLE + 2), fontweight="bold", color="#1A1A1A",
                     ha="left" if v >= 0 else "right", va="center", zorder=5,
                 )
             elif p < 0.10:
                 ax.text(
                     v + (max_dr * 0.04 if v >= 0 else -max_dr * 0.04),
-                    i, ".", fontsize=10, fontweight="bold", color="#444444",
+                    i, ".", fontsize=enforce_font_floor(FS_PANEL_TITLE + 2), fontweight="bold", color="#444444",
                     ha="left" if v >= 0 else "right", va="center", zorder=5,
                 )
             # Carrier reference line (vertical short tick at scaled position)
@@ -210,12 +202,12 @@ def render_case(delta, key, cfg):
         ax.set_ylim(-0.5, n_genes - 0.5)
         ax.invert_yaxis()
         ax.set_yticks(np.arange(n_genes))
-        ax.set_yticklabels(gene_order, fontsize=6.6, fontweight="bold")
-        ax.set_xlabel("\u0394 norm-rank  (AF \u2212 Ctrl)", fontsize=7.0)
-        ax.tick_params(axis="x", labelsize=6.2)
+        ax.set_yticklabels(gene_order, fontsize=enforce_font_floor(FS_TICK - 0.2), fontweight="bold")
+        ax.set_xlabel("\u0394 norm-rank  (AF \u2212 Ctrl)", fontsize=enforce_font_floor(FS_AXIS_LABEL))
+        ax.tick_params(axis="x", labelsize=enforce_font_floor(FS_TICK - 0.5))
         ax.set_title(
             title,
-            fontsize=7.6, fontweight="bold",
+            fontsize=enforce_font_floor(FS_PANEL_TITLE), fontweight="bold",
             color=COMPARTMENT_PALETTE.get(ct, "#1A1A1A"), loc="left", pad=4,
         )
         for s in ("top", "right"):
@@ -230,7 +222,7 @@ def render_case(delta, key, cfg):
     fig.text(
         0.10, 0.92,
         f"Fig {cfg['panel_letter']}  {cfg['label']}  \u2014  {cfg['class_name']}",
-        fontsize=9.2, fontweight="bold", color="#1A1A1A",
+        fontsize=enforce_font_floor(FS_PANEL_TITLE + 2), fontweight="bold", color="#1A1A1A",
     )
     fig.add_artist(
         mpatches.FancyBboxPatch(
@@ -240,7 +232,7 @@ def render_case(delta, key, cfg):
             transform=fig.transFigure,
         )
     )
-    fig.text(0.86, 0.925, cfg["class_name"], fontsize=6.6, fontweight="bold",
+    fig.text(0.86, 0.925, cfg["class_name"], fontsize=enforce_font_floor(FS_TICK), fontweight="bold",
              color="white", ha="center", va="center")
 
     # ---- footer with full caption (each line manually wrapped to fit 170mm width) ----
@@ -259,17 +251,21 @@ def render_case(delta, key, cfg):
         "from the carrier palette in Fig 3b to avoid cross-figure confusion.",
     ])
     y_top = 0.27
-    line_h = 0.018
+    line_h = 0.020
     for k, line in enumerate(footer_lines):
         fig.text(
             0.05, y_top - line_h * k,
-            line, fontsize=5.6, color="#444444",
+            line, fontsize=enforce_font_floor(FS_FOOTNOTE - 0.5), color="#444444",
         )
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     fig.savefig(cfg["out_pdf"], bbox_inches=None, pad_inches=0.04)
-    plt.close(fig)
     print("wrote " + str(cfg["out_pdf"].relative_to(ROOT)))
+    legacy = cfg.get("legacy_pdf")
+    if legacy is not None:
+        fig.savefig(legacy, bbox_inches=None, pad_inches=0.04)
+        print("wrote " + str(legacy.relative_to(ROOT)) + " (legacy mirror)")
+    plt.close(fig)
 
 
 def main():

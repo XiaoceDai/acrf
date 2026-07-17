@@ -7,7 +7,7 @@ Fig 4 evidence into a cross-axis convergence classification, then anchors
 the result with GeoMx ROI spatial support and a mechanism cartoon.
 
 Flow:
-    16 NCP_v3 family anchor
+    16 NCP axis family anchor
         |
         v
     5 evidence streams in parallel
@@ -36,7 +36,7 @@ import matplotlib.patches as mpatches
 import matplotlib.pyplot as plt
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT_PDF = ROOT / "figures" / "fig5a_v3_schematic.pdf"
+OUT_PDF = ROOT / "figures" / "fig5a_schematic.pdf"
 
 LA_DEEP = "#9C5550"
 RA_DEEP = "#4E6B89"
@@ -99,7 +99,7 @@ def main():
 
     # ---- title ----
     ax.text(0.025, 0.965,
-              "Fig 5a  Cross-figure synthesis pipeline (NCP_v3, 16 families)",
+              "Fig 5a  Cross-figure synthesis pipeline (NCP, 16 families)",
               fontsize=9.6, fontweight="bold", color="#1A1A1A")
     ax.text(0.025, 0.940,
               "Integrates Fig 1F (carrier prior), Fig 2 (bulk rewiring), Fig 3 (snRNA carrier exec) "
@@ -108,7 +108,7 @@ def main():
 
     # ---- Stage 0: anchor ----
     stage_box(ax, 0.025, 0.78, 0.18, 0.10,
-              "0.  NCP_v3 family anchor",
+              "0.  NCP axis family anchor",
               "16 axis families\nfrozen panel\n(Fig 1c-e)",
               color=BG_GOLD, edgecolor=ACCENT, body_align="left",
               title_fs=7.0, body_fs=5.7)
@@ -120,7 +120,7 @@ def main():
     stream_xs = [0.025, 0.220, 0.415, 0.610, 0.805]
     stream_specs = [
         ("L0  HCA LA carrier",
-         "Fig 1F v3\n"
+         "Fig 1e\n"
          "HCA Heart Atlas\n"
          "(LA + RA paired)\n"
          "cell-type per family\n"
@@ -226,7 +226,7 @@ def main():
                 "5d  Spatial corroboration  (support-only, NOT discovery)",
                 "GSE261363 GeoMx WTA\n"
                 "n = 24 atrial-appendage ROIs (border / distal x AF / SR)\n"
-                "6 Atlas-priority families x v3 LE rank singscore\n"
+                "6 Atlas-priority families x NCP LE rank singscore\n"
                 "  -> family x cell-type Spearman matrix\n"
                 "  -> AF - SR \u0394, Border - Distal \u0394 (Welch CI)\n"
                 "Selection: F15, F11, F9, F10, F2, F4 (covers structure + metabolism axes)",
@@ -235,7 +235,7 @@ def main():
 
     # ---- Stage 5: cartoon / asymmetry banner ----
     stage_box(ax, 0.495, 0.175, 0.480, 0.105,
-                "5e  Mechanism cartoon  (asymmetric, v3 honest layout)",
+                "5e  Mechanism cartoon  (asymmetric, integrative layout)",
                 "Banner:  All 4 *** Priority families are LA-driven (4 / 4)\n"
                 "Right tier (LA-axis):  6 chips for top-priority families\n"
                 "  F15 (Triple), F11, F9, F10 (***);  F16, F3 (**);  F2, F4 (Bilateral *)\n"
@@ -248,7 +248,7 @@ def main():
     # ---- footer banner (3 framing lines) ----
     ax.add_patch(mpatches.Rectangle((0.025, 0.020), 0.95, 0.135,
                                      facecolor="#FFF8F0", edgecolor=ACCENT, linewidth=0.6))
-    ax.text(0.040, 0.140, "v3 honest framing:",
+    ax.text(0.040, 0.140, "Integrative framing:",
               fontsize=6.5, fontweight="bold", color="#1A1A1A", va="top")
     ax.text(0.155, 0.140,
               "no single integrated metric replaces per-axis classes; Fig 5 chains the three already-published "

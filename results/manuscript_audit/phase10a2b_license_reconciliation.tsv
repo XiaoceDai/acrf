@@ -1,0 +1,11 @@
+item	before	after	status	sha256_before	sha256_after	notes
+LICENSE	MIT; Copyright (c) 2026 Project P02 authors	MIT; Copyright (c) 2026 Xiao-Ce Dai	PASS	23cecb40e85c24b0646e703a489ce939e4ef329970ba4148deacc67fa55b15e3	2c4d87fc6550045e2e470204ece90fb3272021588e807230c3e7304354f749d8	copyright holder synchronized to owner decision
+pyproject.toml_license	Proprietary	MIT	PASS	69eefe18c79451044f9ea67a5ff174ee7b0380c349d963d0c4b0727b453e05e4	4192f4f767b3b9b7082ff9468ac34587479badefd1f2682aa578bd3b3c8ea7b0	"kept license = { text = ""MIT"" } format"
+pyproject.toml_identity	acrf / crf / 0.1.0	acrf / crf / 0.1.0	PASS	69eefe18c79451044f9ea67a5ff174ee7b0380c349d963d0c4b0727b453e05e4	4192f4f767b3b9b7082ff9468ac34587479badefd1f2682aa578bd3b3c8ea7b0	include=['crf']
+README.md	none explicit	none explicit	PASS	6d98e3aec2ecec3c2dd53f71cb6d5c0f0e01f7ccd625a6b9b8031440e47aad76	6d98e3aec2ecec3c2dd53f71cb6d5c0f0e01f7ccd625a6b9b8031440e47aad76	no license statement present; left unchanged
+CITATION.cff	ABSENT	ABSENT	PENDING			not created; repository does not already use CITATION.cff
+.zenodo.json	ABSENT	ABSENT	PENDING			not created; Zenodo out of scope for this phase
+license_consistency	LICENSE MIT vs pyproject Proprietary	LICENSE MIT; pyproject MIT; README silent	PASS			public-facing metadata synchronized to MIT
+manuscript_hash_integrity	locked	Abstract:PASS; Introduction:PASS; Results:PASS; Methods:PASS; Discussion:PASS; Figure_Captions:PASS; Data_Code_Availability:PASS	PASS			vs phase10a0_locked_manuscript_manifest
+claims_registry	7a337c84df13caeb3661b6cde0ef6e0ee419693073f327beb122bf6e85b29c1d	7a337c84df13caeb3661b6cde0ef6e0ee419693073f327beb122bf6e85b29c1d	PASS	7a337c84df13caeb3661b6cde0ef6e0ee419693073f327beb122bf6e85b29c1d	7a337c84df13caeb3661b6cde0ef6e0ee419693073f327beb122bf6e85b29c1d	results/handoff/fulltext_audit_v1_1/02_final_claims_registry.tsv
+scientific_asset_integrity	unchanged expected	PASS	PASS			fig3 live match; GA frozen match; claims=NOT_FOUND; canon_live_matches=64; canon_mismatches=0

@@ -26,6 +26,7 @@ from __future__ import annotations
 
 from typing import Iterable, Sequence
 
+import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap
@@ -70,6 +71,30 @@ PANEL_F_SIZE = (_in(PANEL_F_MM[0]), _in(PANEL_F_MM[1]))
 # Chromatic axis (the ONLY use of red / blue in any panel)
 LA_COLOR = "#C97A74"   # muted warm red, LA
 RA_COLOR = "#7D99B8"   # muted cool blue, RA
+
+# Deeper endpoints for heatmaps / emphasis (same hue family as LA/RA)
+LA_DEEP = "#9C5550"
+RA_DEEP = "#4E6B89"
+
+# Rhythm axis (AF vs SR) — distinct semantic axis from LA/RA chamber colours.
+# Use for stacked bars / boxplots of rhythm; keep consistent across Fig 2 / S1.
+AF_RHYTHM_COLOR = "#B2182B"
+SR_RHYTHM_COLOR = "#2166AC"
+
+# Healthy reference donors (e.g. GSE112339) when shown beside AF/SR stacks
+HEALTHY_REF_COLOR = "#6C7B8A"
+
+# Sex composition (supplementary demographics)
+SEX_MALE_COLOR = "#5AAE61"
+SEX_FEMALE_COLOR = "#9970AB"
+SEX_NA_COLOR = "#BDBDBD"
+
+# Qualitative stacks (disease background, many categories) — colorblind-friendly
+QUALITATIVE_CATEGORY_COLORS = [
+    "#1B9E77", "#D95F02", "#7570B3", "#E7298A",
+    "#66A61E", "#E6AB02", "#A6761D", "#666666",
+    "#999999", "#BDBDBD",
+]
 
 # Structural greys — for text, lines, background shading
 FG_COLOR    = "#1A1A1A"   # primary text
@@ -151,15 +176,19 @@ DURATION_CMAP = [
 ]
 
 # ----------------------------------------------------------------------
-# Typography (locked).  6 pt floor.  Nothing under 6 pt is allowed.
+# Typography (locked).  6.5 pt absolute floor; 7 pt default for main-text readability.
 # ----------------------------------------------------------------------
-FS_PANEL_LETTER = 9    # bold lowercase a, b, c…
-FS_PANEL_TITLE  = 8    # bold panel title (one line ideally)
-FS_AXIS_LABEL   = 7
-FS_TICK         = 6.5
-FS_ANNOT        = 6.5  # in-figure annotations
-FS_LEGEND       = 6.5
-FS_FOOTNOTE     = 6.5  # italic muted footnote, figure-level
+FS_PANEL_LETTER = 10     # bold lowercase a, b, c…
+FS_PANEL_TITLE  = 9      # bold panel title (one line ideally)
+FS_AXIS_LABEL   = 8
+FS_TICK         = 7      # ticks / legend / in-figure annotations
+FS_ANNOT        = 7      # in-figure annotations
+FS_LEGEND       = 7      # legend text
+FS_FOOTNOTE     = 7      # italic muted footnote, figure-level
+
+# Submission / main-text minimum visible font size (legacy exploratory scripts may use 6.5)
+FONT_FLOOR_MAIN = 7.0
+FONT_FLOOR_HARD = 6.5
 
 # Line weights (locked)
 LW_AXIS = 0.5
@@ -197,21 +226,31 @@ def set_nature_style() -> None:
         "ytick.major.size":  2.4,
         "xtick.minor.size":  1.4,
         "ytick.minor.size":  1.4,
+        "xtick.direction":   "out",
+        "ytick.direction":   "out",
+        "xtick.major.pad":   2.5,
+        "ytick.major.pad":   2.5,
         "lines.linewidth":   LW_BOLD,
         "patch.linewidth":   LW_THIN,
 
         "axes.spines.top":    False,
         "axes.spines.right":  False,
         "axes.grid":          False,
+        "axes.axisbelow":     True,
+        "axes.facecolor":     "white",
+        "figure.facecolor":   "white",
 
         "axes.edgecolor":     FG_COLOR,
         "axes.labelcolor":    FG_COLOR,
         "xtick.color":        FG_COLOR,
         "ytick.color":        FG_COLOR,
         "text.color":         FG_COLOR,
+        "axes.unicode_minus": False,
 
         "figure.dpi":         150,
         "savefig.dpi":        300,
+        "savefig.facecolor":  "white",
+        "savefig.edgecolor":  "none",
         "savefig.bbox":       "tight",
         "savefig.pad_inches": 0.02,
         "pdf.fonttype":       42,
@@ -272,6 +311,13 @@ def strip_spines(ax: plt.Axes,
         ax.spines[s].set_visible(s in keep_set)
 
 
+def cohort_axis_labels(ax: plt.Axes, cohorts: Sequence[str], *, rotation: float = 30.0) -> None:
+    """Standard GEO-style cohort tick labels (rotation + padding)."""
+    ax.set_xticks(np.arange(len(cohorts)))
+    ax.set_xticklabels(cohorts, rotation=rotation, ha="right")
+    ax.tick_params(axis="x", pad=2)
+
+
 def shared_chamber_colorbar(fig: plt.Figure, im, *,
                              rect: Sequence[float] = (0.34, 0.045, 0.32, 0.012),
                              label: str = "aCAI = log\u2082(LA) − log\u2082(RA)"
@@ -289,3 +335,72 @@ def shared_chamber_colorbar(fig: plt.Figure, im, *,
     cb.ax.text(1.0, 0.5, "→ LA", transform=cb.ax.transAxes,
                ha="left", va="center", fontsize=FS_LEGEND,
                color=LA_COLOR, fontweight="bold")
+
+
+# ----------------------------------------------------------------------
+# Layout helpers for readability (added 2026-07-09)
+# ----------------------------------------------------------------------
+
+def enforce_font_floor(size: float, *, main_text: bool = False) -> float:
+    """Return the largest of the requested size and the locked floor.
+
+    main_text=True enforces the 7 pt main-text minimum; otherwise 6.5 pt.
+    """
+    floor = FONT_FLOOR_MAIN if main_text else FONT_FLOOR_HARD
+    return max(size, floor)
+
+
+def bump_figure_size(figsize: tuple[float, float], *, dh_mm: float = 12, dw_mm: float = 0) -> tuple[float, float]:
+    """Increase figure height (and optionally width) when larger fonts cause overflow.
+
+    Keep the locked mm-to-inch conversion so canvas sizes stay in physical units.
+    """
+    w, h = figsize
+    return (w + dw_mm * MM, h + dh_mm * MM)
+
+
+def reserve_header_strip(figsize: tuple[float, float], n_lines: int = 2,
+                         *, line_height_mm: float = 4.2, margin_mm: float = 2.5) -> tuple[float, float, float]:
+    """Return (new_figsize, new_gridspec_top, header_y0) that reserves space for n_lines of title.
+
+    Example: figsize, top, y0 = reserve_header_strip(figsize, n_lines=2)
+             gs = fig.add_gridspec(..., top=top)
+             fig.text(0.03, y0, title, ...)
+             fig.text(0.03, y0 - 0.04, subtitle, ...)
+    """
+    strip_h_mm = n_lines * line_height_mm + margin_mm
+    new_figsize = bump_figure_size(figsize, dh_mm=strip_h_mm)
+    # Convert reserved strip to figure fraction (approximate, assuming ~100% height used)
+    strip_frac = strip_h_mm * MM / new_figsize[1]
+    top = 1.0 - strip_frac - 0.02
+    y0 = 1.0 - margin_mm * MM / new_figsize[1] - 0.005
+    return new_figsize, top, y0
+
+
+def figure_header(fig: plt.Figure, panel_letter: str, title: str, *,
+                  subtitle: str | None = None,
+                  x: float = 0.034, top_reserve: float = 0.08) -> float:
+    """Place a single unified header strip at the top of the figure.
+
+    Returns the bottom y coordinate of the subtitle so callers can position content below.
+    """
+    y0 = 1.0 - top_reserve + 0.01
+    fig.text(x, y0, panel_letter, fontsize=FS_PANEL_LETTER, fontweight="bold",
+             ha="left", va="baseline", color=FG_COLOR)
+    title_x = x + 0.045
+    fig.text(title_x, y0, title, fontsize=FS_PANEL_TITLE + 1, fontweight="bold",
+             ha="left", va="baseline", color=FG_COLOR)
+    if subtitle:
+        y1 = y0 - 0.035
+        fig.text(title_x, y1, subtitle, fontsize=FS_TICK, ha="left", va="baseline",
+                 color=MUTED_COLOR)
+        return y1 - 0.015
+    return y0 - 0.015
+
+
+def figure_footnote(fig: plt.Figure, text: str,
+                    y: float = 0.014,
+                    color: str = MUTED_COLOR) -> None:
+    """Italic muted footnote at the very bottom of the figure (now at 7 pt)."""
+    fig.text(0.012, y, text, fontsize=FS_FOOTNOTE,
+             ha="left", va="bottom", color=color, style="italic")

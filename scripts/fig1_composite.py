@@ -177,12 +177,12 @@ def draw_panel_b(ax) -> None:
 
 
 # ---------------------------------------------------------------------------
-# Panel C — Curated NCP_v2 selection (no numbers; colour-only)
+# Panel C — Curated NCP deployment (no numbers; colour-only)
 # ---------------------------------------------------------------------------
 def draw_panel_c(ax_sc, ax_lst) -> None:
     long  = pd.read_csv(ROOT / "results" / "fig1c_pathway_selection_long.tsv",
                          sep="\t")
-    panel = pd.read_csv(ROOT / "results" / "fig1c_ncp_panel_v2.tsv",
+    panel = pd.read_csv(ROOT / "results" / "innovation_ncp_v3_panel.tsv",
                          sep="\t")
     panel_set = set(panel["pathway"])
     long["is_panel"] = long["pathway"].isin(panel_set)
@@ -211,9 +211,8 @@ def draw_panel_c(ax_sc, ax_lst) -> None:
     ax_sc.set_xlabel("signed GSEA NES (LA-biased > 0)")
     ax_sc.set_ylabel("GSVA paired log₂FC (LA − RA)")
     ax_sc.set_title(
-        f"Dual-method GSEA + GSVA + stability + Jaccard\n"
-        f"{len(long)} candidates → {(long['stability_consistent_runs']>=7).sum()} stable "
-        f"→ {len(panel)} NCP panel",
+        f"Dual-method discovery → consensus + redundancy control\n"
+        f"{len(long)} candidates → {len(panel)} NCP pathway programs",
         loc="left", pad=8, fontsize=7, fontweight="bold")
 
     # Stability legend
@@ -254,7 +253,7 @@ def draw_panel_c(ax_sc, ax_lst) -> None:
     ax_lst.set_xlim(0, 1); ax_lst.set_ylim(K_rows + 0.5, -0.5)
     ax_lst.axis("off")
     ax_lst.text(0.0, -0.2,
-                  f"NCP_v2 panel  (K = {len(panel)})",
+                  f"NCP panel  (K = {len(panel)})",
                   fontsize=7, fontweight="bold",
                   ha="left", va="bottom")
 

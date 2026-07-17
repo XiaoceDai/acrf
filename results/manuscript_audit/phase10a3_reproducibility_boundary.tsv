@@ -1,0 +1,8 @@
+item	status	interpretation	allowed_action	prohibited_action
+Scientific analyses	LOCKED	Analyses that produced final artifacts are closed for this release.	Hash verification; environment metadata recording	Rerun full analysis pipeline; regenerate scientific outputs
+Scientific outputs	LOCKED	Final tables/figures/manuscript sections are frozen.	Read-only inspection	Modify figures, tables, or manuscript scientific wording
+Figures	HASH VERIFIED	Main Fig 1–6 and SI S1–S8 hashes verified against canonical authority.	Report mismatches	Regenerate or repair figures
+Tables	HASH VERIFIED	SI S1–S6 workbooks/TSVs verified.	Report mismatches	Regenerate or edit SI tables
+Historical environment	NOT RECOVERABLE	Exact historical coloc and Python environment pins cannot be reconstructed.	Document limitation honestly	Claim exact historical reproducibility or historical coloc identity
+Release environment	FREEZABLE	Current runtime versions can be recorded as the release reproduction environment.	Record current Python/R/package versions for release reproduction	Interpret release env as complete historical reconstruction
+New analysis	NOT REQUIRED	Canonical artifacts verify without scientific rerun.	Proceed to later release metadata steps after this phase	Start new analyses to “fix” environment gaps

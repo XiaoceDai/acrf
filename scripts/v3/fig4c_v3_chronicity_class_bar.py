@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parents[2]
 
 CLS_TSV = ROOT / "results" / "fig4_v3_chronicity_class.tsv"
 ATLAS_TSV = ROOT / "results" / "fig_integrated_af_rewiring_atlas.tsv"
-OUT_PDF = ROOT / "figures" / "fig4_v3_c_chronicity_class.pdf"
+OUT_PDF = ROOT / "figures" / "fig4_c_chronicity_class.pdf"
 
 CLASS_ORDER = ["Strong_trend", "Weak_trend", "Stable", "Inconclusive"]
 CLASS_LABELS = {

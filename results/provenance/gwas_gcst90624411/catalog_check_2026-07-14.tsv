@@ -1,0 +1,15 @@
+field	value	source	notes
+check_date_utc	2026-07-14	local	Catalog REST + study page inspected on this date
+accession	GCST90624411	GWAS Catalog REST	https://www.ebi.ac.uk/gwas/rest/api/studies/GCST90624411
+study_page	https://www.ebi.ac.uk/gwas/studies/GCST90624411	GWAS Catalog UI	Study page showed incomplete publication/sample metadata blocks
+not_yet_associated_banner	TRUE	GWAS Catalog UI	Banner text observed: study not yet associated with a peer-reviewed publication
+pubmed_id	40645996	GWAS Catalog REST publicationInfo	Present in REST despite UI banner
+publication_date	2025-07-11	GWAS Catalog REST	Nat Commun date from REST
+publication_title	Cross-population GWAS and proteomics improve risk prediction and reveal mechanisms in atrial fibrillation.	GWAS Catalog REST	Matches Yuan et al. 2025
+trait	Atrial fibrillation	GWAS Catalog REST	EFO_0000275 in FTP meta.yaml
+initial_sample_size_rest	252,438 European ancestry cases, 1,959,739 European ancestry controls, plus non-European strata	GWAS Catalog REST	European discovery stratum matches author correction
+locked_cases	252438	Author correction DOI 10.1038/s41467-025-64765-5	Replaces erroneous 168007-case figure
+locked_controls	1959739	Author correction DOI 10.1038/s41467-025-64765-5	Locked control N for manuscript wording
+associations_totalElements	NULL	GWAS Catalog REST /associations	No Catalog-associated SNP records returned on check date
+summary_statistics_ftp	https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90624001-GCST90625000/GCST90624411/harmonised/GCST90624411.h.tsv.gz	EBI FTP	Primary file used by Figure 6 coloc/tabix
+authority_note	Publication attribution, accession role and sample size taken from corrected article + Data availability; Catalog accession/FTP identify deposited sumstats	provenance policy	Do not elevate Catalog UI incompleteness into manuscript main text

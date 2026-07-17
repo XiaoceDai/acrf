@@ -15,7 +15,6 @@ from docx.shared import Pt, RGBColor
 from m0_doc_style import (
     apply_base_style,
     add_body,
-    add_caption_paragraph,
 )
 
 OUT = ROOT / "manuscript_drafts" / "Figure_Captions.docx"
@@ -26,387 +25,596 @@ OUT.parent.mkdir(parents=True, exist_ok=True)
 # Caption content. Each entry: (figure_title, [(panel_letter, body), ...],
 # trailing_italic_note_or_None)
 # ---------------------------------------------------------------------------
-MAIN_FIGURES: list[tuple[str, list[tuple[str, str]], str | None]] = [
+MAIN_FIGURES: list[tuple[str, list[str]]] = [
     (
-        "Figure 1 | Framework construction: dual discovery primitives on the "
-        "donor-level chamber asymmetry matrix",
+        "Fig 1. A frozen healthy chamber reference defines the Normal Chamber Prior.",
         [
-            ("a", "Principal-component analysis of GSE112339 healthy bulk "
-             "RNA-seq (n = 16 samples; 8 paired donors). Donor-level "
-             "variation dominates the global transcriptome, motivating the "
-             "paired chamber-aware analysis used downstream and the "
-             "framework's atomic unit M_aCAI(d, g) = log2(LA donor d, "
-             "gene g) − log2(RA donor d, gene g)."),
-            ("b", "Volcano plot and heatmap of paired LA-vs-RA differential "
-             "expression (donor-adjusted limma). Structured chamber-biased "
-             "genes constitute the substrate for both discovery primitives "
-             "below."),
-            ("c", "Curated discovery primitive — Normal Chamber Prior (NCP): "
-             "10 stable LA- or RA-biased gene programs derived by signed "
-             "GSEA over MSigDB Hallmark and Reactome. LA-biased programs "
-             "are metabolic and translational; RA-biased programs are "
-             "matrix and glycan. Program order is locked as program_order "
-             "1–10 and used unchanged downstream as the calibration set."),
-            ("d", "Data-driven discovery primitive — gene loadings on the "
-             "top-2 principal components of M_aCAI (3,781 chamber-biased "
-             "genes × 59 paired chamber donors across 4 cohorts; gene-wise "
-             "centred and scaled), coloured by k-means module assignment "
-             "(k = 12). PC1 explains 36.5 % of the chamber-asymmetry "
-             "variance; the top-10 PCs cumulatively explain 69.1 %. All "
-             "12 modules are framework-discovered novel modules (Jaccard "
-             "≥ 0.30 against any NCP program is not reached by any of "
-             "the 12 modules)."),
-            ("e", "Module × donor heatmap of mean module aCAI (donors "
-             "ordered healthy → SR → AF; modules ordered LA-biased → "
-             "RA-biased and within direction by |ΔaCAI(AF − SR)|). The "
-             "PITX2-anchored mesothelial module (M11; ITLN1, MSLN, KRT19, "
-             "PRG4, SLPI, HP) collapses toward RA in AF "
-             "(ΔaCAI(AF − SR) = −0.33); the adipose module (M7; ADIPOQ, "
-             "LEP, PLIN1, PCK1, CIDEC, RBP4, TF) expands toward LA in AF "
-             "(ΔaCAI(AF − SR) = +0.53); the small atrial-cardiomyocyte "
-             "module (M8; HAMP, BMP10) is partially equalised toward LA "
-             "(ΔaCAI(AF − SR) = +0.50). The independent recovery of "
-             "PITX2 inside the unsupervised M11 cluster validates the "
-             "data-driven primitive against canonical AF biology."),
-            ("f", "Cell-compartment attribution at single-nucleus "
-             "resolution across the full 13-cell-type taxonomy of "
-             "GSE255612 (atrialCM, fibroblast, vascular endothelial, "
-             "lymphatic endothelial, macrophage, lymphocyte, mast "
-             "cell, B cell, pericyte, vascular smooth muscle, "
-             "adipocyte, epicardial, neuronal). Left, 10 NCP programs "
-             "(curated primitive). Right, 12 data-driven modules "
-             "(data-driven primitive). Each cell shows the row "
-             "z-score of mean program / module gene expression across "
-             "compartments; the compartment with the largest row "
-             "z-score is circled. Green box = predicted single-cell "
-             "carrier confirmed: the M7 adipose module peaks in "
-             "adipocytes (z = +3.45), and the M11 PITX2 / mesothelial "
-             "module peaks in epicardial cells (z = +3.46). Both "
-             "carrier compartments had been excluded from the "
-             "original 4-compartment lock used by Fig. 3 and are "
-             "added here precisely because the data-driven primitive "
-             "predicted them."),
+            (
+                "(A) Donor-paired chamber estimand. In paired atrial cohorts, rhythm is assigned "
+                "at donor level and chamber is measured within donor. Donor-level LA–RA program "
+                "contrasts are aligned to the frozen healthy chamber direction and scaled by the "
+                "corresponding healthy reference magnitude to generate the relative aligned "
+                "chamber asymmetry index used downstream. This panel defines the measurement "
+                "framework and is not an AF association result."
+            ),
+            (
+                "(B) Healthy-reference calibration in eight healthy donors with paired LA and RA "
+                "samples from GSE112339. The frozen panel contains 30 programs, of which 22 are "
+                "LA-biased and eight RA-biased. All 30 programs matched the canonical chamber "
+                "direction in every donor. Healthy reference magnitude varied across programs "
+                "(median M = 0.0284; range approximately 0.00940–0.311), motivating "
+                "program-specific scaling."
+            ),
+            (
+                "(C) Selection and freeze provenance. Eighty candidate pathways were evaluated; "
+                "38 entered the strict pool. Diversity-aware redundancy control retained 25 "
+                "strict-selected programs, and five additional programs were admitted under the "
+                "prespecified fallback rule to complete the frozen 30-program panel. Disease "
+                "cohorts did not contribute to candidate scoring, reselection, program membership, "
+                "or chamber direction."
+            ),
+            (
+                "(D) Frozen program-to-family topology. The 30 programs map to 16 NCP families in "
+                "the canonical direction-blocked order used throughout subsequent analyses. The "
+                "topology retains 22 LA-biased and eight RA-biased programs and spans translation "
+                "and ribosome quality control, extracellular-matrix and glycosaminoglycan biology, "
+                "growth-factor and receptor signaling, metabolism, and related atrial-remodeling "
+                "themes."
+            ),
+            (
+                "LA, left atrium; RA, right atrium; AF, atrial fibrillation; NCP, Normal Chamber "
+                "Prior; M, healthy program-specific reference magnitude."
+            ),
         ],
-        "Cell-compartment attribution in panel f is descriptive and is not "
-        "interpreted as a causal-driver claim. The original "
-        "4-compartment lock (atrialCM, fibroblast, "
-        "endothelial / vascular, immune) is preserved for the "
-        "pre-registered Fig. 3 analysis; the extended 13-compartment "
-        "scheme is used in panel f only.",
     ),
     (
-        "Figure 2 | Atrial-fibrillation chamber rewiring",
+        "Fig 2. Paired-chamber bulk cohorts reveal selective cross-cohort NCP remodeling "
+        "in atrial fibrillation.",
         [
-            ("a", "Analytical schematic of the Chamber-aware Rewiring "
-             "Framework. Because rhythm is a donor-level attribute in "
-             "paired chamber cohorts, a sample-level donor × chamber × "
-             "rhythm interaction is rank-deficient; rewiring is therefore "
-             "quantified at the donor level using "
-             "aCAIrel = aCAI / |aCAI healthy_bulk(p)|, which aligns each "
-             "program to its NCP direction and normalises by the healthy "
-             "bulk magnitude."),
-            ("b", "AF chamber-rewiring landscape (mean aCAIrel; programs × "
-             "cohort × rhythm) across paired atrial cohorts. A diverging "
-             "PuOr palette is used: positive values indicate preserved or "
-             "amplified healthy direction; negative values indicate "
-             "reversal."),
-            ("c", "Per-program rewiring class (Preserved, Attenuated, "
-             "Reversed, Amplified, or Low-support) by cohort, called by a "
-             "strict permutation gate. The trend-class overlay is shown "
-             "for context only and is not used for the main-text claim."),
-            ("d", "Representative donor-level aCAIrel distributions for "
-             "example programs."),
-            ("e", "Replication in the GSE115574 mitral-regurgitation "
-             "cohort. The replication cohort provides directional support "
-             "and is not the discovery sample."),
+            (
+                "(A) Bulk deployment of the frozen NCP. Fixed selection-time leading-edge gene "
+                "sets were scored at program level in three paired-chamber bulk cohorts. "
+                "Sample-level scores were converted to donor-level LA–RA contrasts, aligned to the "
+                "healthy chamber direction, scaled by the program-specific healthy magnitude, and "
+                "summarized at family level without pathway reselection."
+            ),
+            (
+                "(B) Donor-level family heatmap across 51 paired donors: 25 with AF and 26 in "
+                "sinus rhythm. Rows show the 16 frozen families and columns show donors, with "
+                "cohort and rhythm annotations. The heatmap displays AF-associated "
+                "shifts together with donor, cohort, and family heterogeneity."
+            ),
+            (
+                "(C) Descriptive family-by-cohort remodeling states. Across 16 families and three "
+                "cohorts, the 48 family–cohort calls comprised five Amplified, 16 Preserved, 15 "
+                "Attenuated, and 12 Reversed states. These labels summarize cohort-level remodeling "
+                "patterns and are not independent significance tests or unique causal trajectories."
+            ),
+            (
+                "(D) Cohort-specific and pooled family effects with cross-cohort consistency. "
+                "Points and intervals show cohort-specific AF-minus-SR Hedges’ g estimates and "
+                "their uncertainty; pooled effects use fixed-effect inverse-variance weighting. "
+                "Six families were classified as High consistency, eight as Moderate, and two as "
+                "Low. The High set comprised three LA-biased translation/RQC families "
+                "(F1, F12, and F14) and three RA-biased matrix/developmental families "
+                "(F9, F10, and F15). All six High-consistency pooled effects were negative on the "
+                "aligned family scale. Consistency classes summarize pooled-effect uncertainty and "
+                "cross-cohort direction agreement and are not causal claims."
+            ),
+            (
+                "AF, atrial fibrillation; SR, sinus rhythm; LA, left atrium; RA, right atrium; "
+                "NCP, Normal Chamber Prior; RQC, ribosome quality control; Hedges’ g, standardized "
+                "mean difference corrected for small-sample bias."
+            ),
         ],
-        None,
     ),
     (
-        "Figure 3 | LA-arm cell-compartment localisation",
+        "Fig 3. LA single-nucleus data resolve selective NCP family localization.",
         [
-            ("a", "Pseudobulk schematic. GSE255612 cells were mapped to "
-             "four main compartments (atrialCM, fibroblast, "
-             "endothelial_or_vascular, immune; locked cell-type buckets) and aggregated by "
-             "donor × compartment."),
-            ("b", "AF-associated LA-arm Δsingscore is modest in absolute "
-             "magnitude and distributed across compartments (per program × "
-             "compartment Δsingscore (AF − Ctrl))."),
-            ("c", "Carrier-shift table: dominant carrier in Fig. 1, top "
-             "expressor in Fig. 1, and AF major carrier in Fig. 3. Most "
-             "programs do not pass the qperm < 0.10 gate and are reported "
-             "as Unresolved (uniform grey tile)."),
-            ("d", "Representative programs at the donor × compartment "
-             "level."),
-            ("e", "Anchor genes underlying compartment-localised program "
-             "shifts. Anchor genes are component genes drawn from each "
-             "program's leading-edge set and are reported as descriptive "
-             "support."),
+            (
+                "(A) LA single-nucleus localization design. GSE255612 contributed 18 AF and "
+                "16 non-fibrillating control donors. Frozen NCP programs were scored in "
+                "donor-aware compartment pseudobulks across nine LA compartments: atrial "
+                "cardiomyocytes, fibroblasts, endothelial cells, macrophages, lymphocytes, "
+                "pericytes, vascular smooth muscle cells, adipocytes, and neuronal cells. Because "
+                "the resource contains LA samples only, this layer provides LA compartment context "
+                "rather than an independent test of RA-driven remodeling."
+            ),
+            (
+                "(B) Family-by-compartment AF-minus-control localization map. Cell values show "
+                "family-score differences across included compartments. Nominal permutation "
+                "markers identify compartments meeting the preset donor-count, detectable-gene, "
+                "and permutation-support criteria. These markers are localization cues and are not "
+                "FDR-controlled discovery."
+            ),
+            (
+                "(C) Carrier-relative class architecture. Final classes comprised one Fidelity "
+                "family (F10 GAG disease / TGF-β), two Relay families "
+                "(F11 BMP signaling and F15 NTRK2 / TrkB), one Extension family "
+                "(F16 Keratan sulfate), and 12 Below-detection families. F10 showed nominal "
+                "Fidelity localization in fibroblasts, F11 Relay localization in adipocytes, F15 "
+                "Relay localization in endothelial cells only, and F16 Extension involving "
+                "fibroblasts and atrial cardiomyocytes. Below-detection indicates that no included "
+                "LA compartment met the preset criteria and does not imply absence of biological "
+                "remodeling."
+            ),
+            (
+                "(D) Donor-level examples of Relay and Extension. For F15, the healthy carrier "
+                "prior was fibroblast, whereas nominal AF-associated localization was confined to "
+                "endothelial cells, illustrating Relay. F16 illustrates Extension, with nominal "
+                "support in the fibroblast carrier compartment and atrial cardiomyocytes. The "
+                "displayed examples do not expand the four-family non-Below set."
+            ),
+            (
+                "AF, atrial fibrillation; LA, left atrium; RA, right atrium; NCP, Normal Chamber "
+                "Prior; FDR, false discovery rate."
+            ),
         ],
-        "Figure 3 quantifies the LA arm only; RA-arm-driven rewiring "
-        "cannot be resolved in GSE255612. The framework claim is "
-        "distributed but structured rewiring rather than a single "
-        "compartment-of-origin claim.",
     ),
     (
-        "Figure 4 | AF-duration chronicity in the LA appendage",
+        "Fig 4. Cross-sectional AF-duration analysis identifies selective chronicity "
+        "trends.",
         [
-            ("a", "Schematic. The frozen Fig. 1–3 program panel is "
-             "projected to GSE41177 LAA samples and Spearman ρ is computed "
-             "on AF-only LAA samples with numeric AF duration in months "
-             "(n = 12). Sinus-rhythm samples are visual anchors at month = "
-             "0 and are not in the primary statistical model. The duration "
-             "covariate represents disease duration in valvular persistent "
-             "AF and is not a recurrence covariate."),
-            ("b", "LAA program trends with AF duration: heatmap of ρ, "
-             "permutation p, and sign concordance under sensitivity "
-             "coding A. Sensitivity-supported directionality is "
-             "emphasised over a single-cell FDR call."),
-            ("c", "Representative programs (linear fit on AF-only samples; "
-             "SR anchors are displayed but not fitted): OXPHOS shows the "
-             "strongest LAA duration-associated decline."),
-            ("d", "LAA-weighted duration trends with region-specific "
-             "heterogeneity (LAA primary vs LAPV sensitivity)."),
+            (
+                "(A) Duration-analysis design in GSE41177. The primary analysis used LAA samples "
+                "from 12 AF donors with finite numeric month-coded duration. Because this was not "
+                "a paired LA–RA duration design, frozen family activity scores rather than "
+                "relative chamber-asymmetry scores were analyzed. LAPV samples provided regional "
+                "sensitivity only. Sinus-rhythm samples were not included as duration anchors in "
+                "the final main-figure panels."
+            ),
+            (
+                "(B) Family-level LAA duration associations with LAPV sensitivity. Spearman "
+                "correlations summarize the relationship between family activity and AF duration "
+                "in the 12 primary AF-LAA samples; corresponding LAPV estimates provide a "
+                "regional-direction sensitivity view."
+            ),
+            (
+                "(C) Chronicity classes across the 16 families. Classes were assigned from the "
+                "full-precision absolute LAA Spearman correlation: Strong-trend for |ρ| ≥ 0.4, "
+                "Weak-trend for 0.2 ≤ |ρ| < 0.4, and Stable for |ρ| < 0.2. Two families were "
+                "Strong-trend, six Weak-trend, and eight Stable. Display rounding, permutation "
+                "p values, bootstrap intervals, LAPV estimates, and regional sign did not determine "
+                "class. The classes are descriptive trend-magnitude summaries rather than "
+                "multiple-testing-controlled significance calls."
+            ),
+            (
+                "(D) Representative duration patterns. F9 HS-GAG / bone / GPCR showed a Strong "
+                "negative LAA trend (ρ = −0.420) and a same-sign negative LAPV estimate "
+                "(ρ = −0.161). F2 Mito Ca²⁺ transport showed a Strong negative LAA trend "
+                "(ρ = −0.564) but an opposite-sign positive LAPV estimate (ρ = 0.196). "
+                "F15 NTRK2 / TrkB showed a Weak negative LAA trend (ρ = −0.385) and a "
+                "same-sign negative LAPV estimate (ρ = −0.186). Regional sign is a sensitivity "
+                "descriptor and is not interpreted as replication or failure."
+            ),
+            (
+                "Duration provides cross-sectional chronicity context and does not establish "
+                "temporal progression, recurrence risk, or treatment response. AF, atrial "
+                "fibrillation; LAA, left-atrial appendage; LAPV, left atrial–pulmonary vein "
+                "junction; ρ, Spearman correlation coefficient."
+            ),
         ],
-        "Power statement: the primary numeric-duration LAA sample is "
-        "n = 12. Figure 4 is interpreted as a direction- and "
-        "sensitivity-based progression analysis rather than a "
-        "high-powered association screen.",
     ),
     (
-        "Figure 5 | Cross-figure synthesis and dual-axis cartoon",
+        "Fig 5. Rule-based cross-layer triangulation prioritizes two NCP families and "
+        "provides ROI-level spatial context.",
         [
-            ("a", "Cross-figure triangulation of the 10 frozen chamber "
-             "programs. Columns: NCP healthy bias, Fig. 2 bulk rewiring "
-             "class, Fig. 3 AF major carrier (uniform grey when "
-             "Unresolved), Fig. 4 LAA duration ρ, and triangulation "
-             "class. Anchor calls: OXPHOS = Metabolism-led; ECM "
-             "proteoglycans = Structure-led."),
-            ("b", "Pre-registered multiome support gate. Six frozen "
-             "support programs × two expected compartments are tested on "
-             "the GSE238242 LAA snRNA pseudobulk (AF n = 3, SR n = 4). "
-             "Outcome: the gate is not met and multiome regulator-tier "
-             "inference is therefore deferred (see Supplementary "
-             "Fig. S5)."),
-            ("c", "ROI-level localisation of fibroblast-associated ECM "
-             "proteoglycan signal (GSE261363 GeoMx atrial-appendage "
-             "segments, n = 24). The spatial layer provides localisation "
-             "support only; mechanistic inference is not derived from "
-             "GeoMx and relies on cross-layer synthesis."),
-            ("d", "Distributed dual-axis mechanism cartoon. Healthy "
-             "chamber identity → AF rewiring (matrix arm and metabolic "
-             "arm) → distributed substrate. There is no single FDR-robust "
-             "dominant carrier; remodelling is distributed but structured "
-             "(Fig. 3 Unresolved carriers). Schematic."),
+            (
+                "(A) Cross-layer triangulation contract. Corrected paired-bulk, LA "
+                "single-nucleus, and LAA duration summaries were placed on the frozen 16-family "
+                "NCP topology without fitting a merged latent model. High bulk consistency, "
+                "non-Below-detection LA single-nucleus classification, and non-Stable duration "
+                "classification defined the three Path A gates. The healthy HCA LA carrier prior "
+                "and dominant bulk state were contextual annotations; GeoMx and genetics were "
+                "also excluded from the support count."
+            ),
+            (
+                "(B) Family-level triangulation matrix in the canonical Figure 1D order. Context "
+                "columns show the healthy HCA LA carrier prior and corrected dominant bulk state. "
+                "Gate columns show bulk consistency, LA single-nucleus class, and LAA duration "
+                "class. Support count is the number of satisfied gates, and Path A requires all "
+                "three. F10 GAG disease / TGF-β and F15 NTRK2 / TrkB satisfied 3/3 gates and "
+                "were assigned Path A. F9 HS-GAG / bone / GPCR satisfied 2/3 gates."
+            ),
+            (
+                "(C) Observed gate architecture. Across 16 families, two satisfied 3/3 gates, one "
+                "satisfied 2/3, ten satisfied 1/3, and three satisfied 0/3. F1, F12, and F14 were "
+                "bulk-only; F11 and F16 were single-nucleus-only; F2, F3, F7, F8, and F13 were "
+                "duration-only; and F4, F5, and F6 met none of the three gates. Path A is a "
+                "rule-based triage label across non-exchangeable evidence layers, not a joint "
+                "statistical test or causal-validation claim."
+            ),
+            (
+                "(D) GeoMx ROI-level spatial context. The full GSE261363 resource contained "
+                "48 ROIs from four patients; the panel displays 24 eligible cardiac "
+                "atrial-appendage DNA-positive ROIs. F10 family-signature scores showed a nominal "
+                "positive correlation with fibroblast-panel scores "
+                "(Spearman ρ = 0.439, nominal p = 0.0318), and F15 scores showed a nominal "
+                "positive correlation with macrophage-panel scores "
+                "(ρ = 0.431, nominal p = 0.0354). F9 showed a nominal AF-minus-SR ROI-level "
+                "difference (Δ = −0.033, Welch p = 0.0481). Marker color and shape identify "
+                "patients, and open versus filled markers identify rhythm; axes are panel-specific. "
+                "Multiple ROIs arose from each patient, and no patient-clustered or mixed-effects "
+                "inference was applied. GeoMx family signatures used the approved frozen "
+                "gene-union scoring exception and were not numerically merged with "
+                "the program-first family scores used in Figures 2–4. These summaries provide "
+                "spatial context only and did not modify Path A."
+            ),
+            (
+                "HCA, Human Cell Atlas; LA, left atrium; LAA, left-atrial appendage; ROI, region "
+                "of interest; AF, atrial fibrillation; SR, sinus rhythm; NCP, Normal Chamber Prior."
+            ),
         ],
-        None,
     ),
     (
-        "Figure 6 | Robustness, plausibility, and synthesis",
+        "Fig 6. Genetic calibration reveals limited, non-nested traceability of "
+        "prespecified NCP anchors and families.",
         [
-            ("a", "Cross-cohort consistency of dual-axis chamber "
-             "rewiring. Random-effects meta-analysis on the donor-level "
-             "axis composite (equal-weight mean of aCAIrel over the six "
-             "frozen support programs per axis). Per-cohort Hedges' g "
-             "(AF − SR) and the Hartung–Knapp pooled estimate (REML, "
-             "k = 3 cohorts) are reported. With k = 3, the pooled "
-             "estimate is interpreted as a cross-cohort consistency "
-             "check, not a high-powered pooled discovery."),
-            ("b", "Per-program pooled effects for the 10 frozen panel "
-             "programs. Structural programs show the most consistent "
-             "pooled attenuation; metabolic programs are directionally "
-             "consistent but more heterogeneous."),
-            ("c", "Framework-discovered chamber-identity REVERSAL "
-             "genes — gene-level positive evidence for the distributed "
-             "substrate. A reversal gene is defined per gene as a gene "
-             "whose chamber direction in healthy donors is flipped in "
-             "AF donors of paired-chamber cohorts while sinus-rhythm "
-             "donors of the same cohorts preserve the healthy direction "
-             "(Methods). Twenty-four reversal genes were identified at "
-             "AF-specific reversal in ≥ 2 of 3 paired chamber cohorts; "
-             "21 of 24 are RA → LA reversals (RA-biased genes pulled "
-             "into the LA in AF), and only 3 are LA → RA reversals. "
-             "PRELP (the pre-registered structural-axis anchor of "
-             "Fig. 6) is independently recovered by the chamber-"
-             "reversal screen. A complementary single-gene cis-eQTL "
-             "regime check, including two canonical AF GWAS positive "
-             "controls (PITX2, KCNN3), is reported in Supplementary "
-             "Fig. S12."),
-            ("d", "Cellular carrier of the chamber-identity reversal "
-             "signature in single-nucleus AF atrial tissue (GSE255612, "
-             "AF n = 18, Ctrl n = 16). Per gene, Δ_expr = "
-             "mean(expression in AF) − mean(expression in Ctrl) is "
-             "computed in each of the four main compartments and "
-             "sign-aligned by the gene's expected AF direction; "
-             "positive Δ_aligned indicates expression shift consistent "
-             "with the chamber-reversal call. The 24 reversal genes "
-             "localise quantitatively to fibroblasts (mean Δ_aligned = "
-             "+0.042, ~5-fold higher than any other compartment; 71 % "
-             "of the 21 RA → LA matrix-invasion genes up-regulated in "
-             "AF in fibroblasts), with smaller contributions from "
-             "atrialCM and immune cells. Per-gene heatmap is given in "
-             "panel c. The synthesis cartoon previously shown here is "
-             "moved to the Graphical Abstract."),
+            (
+                "(A) Anchor-level calibration against AF GWAS and atrial cis-eQTL evidence. "
+                "Twelve prespecified anchors—10 framework anchors and the PITX2 and KCNN3 AF "
+                "calibration controls—were evaluated using the Yuan et al. 2025 cross-population "
+                "AF GWAS deposited as GWAS Catalog accession GCST90624411 and GTEx "
+                "left-atrial-appendage cis-eQTL data. The corrected GWAS publication reports "
+                "252,438 AF cases and 1,959,739 controls. Seven anchor windows contained local "
+                "genome-wide AF associations, one anchor, SMAD9, met the corrected atrial eGene "
+                "criterion, and no anchor reached the prespecified same-variant colocalization "
+                "threshold of PP4 ≥ 0.70. SMAD9 illustrates that atrial eGene evidence does not "
+                "imply GWAS–eQTL colocalization. The lack of colocalization support for PITX2 and "
+                "KCNN3 under the same regime helps calibrate the overall non-support rather than "
+                "exclude gene-level mechanisms."
+            ),
+            (
+                "(B) Continuous colocalization posterior configuration and lead-variant "
+                "separation. All "
+                "12 anchors were PP3-dominant, and none reached PP4 ≥ 0.70. The adjacent "
+                "lollipop track shows the absolute genomic separation between the frozen lead AF "
+                "GWAS and atrial eQTL variants, ranging from 0.46 to 1.92 Mb. Lead separation is "
+                "a descriptive diagnostic and was not used to calculate the colocalization "
+                "posterior. The "
+                "combined high-PP3, low-PP4 pattern is consistent with distinct local association "
+                "signals rather than supported same-variant bulk-LAA total-expression mediation."
+            ),
+            (
+                "(C) Sparse overlap between frozen NCP family leading-edge genes and four "
+                "prespecified external AF gene sets. Sixty-four family–set pairs were tested for "
+                "enrichment by a hypergeometric test against a background of 14,635 NCP-eligible "
+                "genes. "
+                "Five cells contained member overlap, involving two unique genes across three "
+                "families. Four cells reflected CAV1 membership in F3 Adipo-lipid axis and "
+                "F13 Amino-acid metabolism across two common-risk or prioritized sets; the fifth "
+                "reflected HEY2 membership in F9 HS-GAG / bone / GPCR and a regulatory set. "
+                "No family–set enrichment survived BH-FDR correction. Repeated CAV1 cells reflect "
+                "shared set membership rather than independent genetic observations; member "
+                "overlap is therefore shown as a traceability cue rather than evidence of "
+                "family-level enrichment."
+            ),
+            (
+                "(D) Non-nested genetic traceability profiles across the 12 anchors. The compact "
+                "core profile shows local AF GWAS, atrial eGene, and same-variant colocalization "
+                "flags, present for 7/12, 1/12, and 0/12 anchors. External columns show risk or "
+                "prioritized gene-set membership, regulatory annotation, and rare or functional "
+                "membership, present for 2/12, 2/12, and 0/12 anchors. Filled symbols indicate "
+                "evidence present, open symbols indicate that an evaluated criterion was not met "
+                "or no membership was found, and dashes indicate evidence not evaluated. The "
+                "categories are non-nested and were not combined into an ordinal tier, composite "
+                "score, or causal verdict, and they were not used to exclude genetic "
+                "mechanisms or as a Figure 5 Path A gate."
+            ),
+            (
+                "AF, atrial fibrillation; GWAS, genome-wide association study; eQTL, expression "
+                "quantitative trait locus; PP3, posterior probability favoring distinct local "
+                "signals; PP4, posterior probability favoring a shared causal signal; BH-FDR, "
+                "Benjamini–Hochberg false discovery rate; LAA, left-atrial appendage; NCP, Normal "
+                "Chamber Prior."
+            ),
         ],
-        None,
     ),
 ]
 
 
-SUPP_FIGURES: list[tuple[str, str]] = [
+# Phase 5B4 — final formal SI figure legends (S1–S8 only; no S9+ / no S12)
+SUPP_FIGURES: list[tuple[str, list[str]]] = [
     (
-        "Supplementary Figure S1 | Cohort overview",
-        "Per-cohort summary of the 71 donors that compose the eight "
-        "publicly available datasets analysed in this study. a Donor "
-        "counts per cohort, stacked by rhythm (atrial fibrillation in "
-        "red, sinus rhythm in blue). b Age distribution per cohort, "
-        "split by rhythm (boxes: median and IQR; points: individual "
-        "donors). c Sex composition per cohort (male, female, or not "
-        "reported). d Disease background composition per cohort. The "
-        "underlying donor-level table is released as "
-        "results/cohort_demographics_long.tsv and the figure-side "
-        "summary as results/figS1_cohort_overview_summary.tsv.",
+        "S1 Fig. Cohort overview and analysis roles of public datasets.",
+        [
+            (
+                "(A) Dataset-specific donor, sample, patient, region-of-interest, or summary-"
+                "statistics counts, stratified by rhythm or control group where applicable. "
+                "(B) Age distributions by cohort and rhythm or control status where available. "
+                "(C) Sex composition by cohort. (D) Reported disease-background annotations. "
+                "Counts use the analysis unit appropriate to each resource and should not be "
+                "interpreted as a single pooled donor total. The analysis role, primary unit, and "
+                "source provenance for each dataset are provided in S1 Table."
+            ),
+            (
+                "AF, atrial fibrillation; SR, sinus rhythm; ROI, region of interest."
+            ),
+        ],
     ),
     (
-        "Supplementary Figure S2 | Donor pairing and sample-attribute "
-        "structure",
-        "Donor × chamber (GSE128188, GSE79768, GSE115574) or donor × "
-        "region (GSE41177 LAA / LAPV) pairing matrix for the four "
-        "cohorts that drive Figs 2 and 4. Filled cells indicate that "
-        "the corresponding sample is present in the dataset and are "
-        "coloured by donor rhythm (AF = red, SR = blue); empty cells "
-        "indicate a missing sample. Right-hand side panels report "
-        "per-donor sex (green = male, purple = female, grey = not "
-        "reported) and age. Companion table: "
-        "results/figS2_pairing_summary.tsv.",
+        "S2 Fig. Donor pairing and sample-attribute structure.",
+        [
+            (
+                "Pairing and sample-availability map for the three paired-chamber bulk cohorts and "
+                "the GSE41177 regional-duration cohort. For GSE128188, GSE79768, and GSE115574, "
+                "rows represent donors and columns represent atrial chambers. For GSE41177, rows "
+                "represent donors and columns represent left-atrial-appendage and left "
+                "atrial–pulmonary vein junction samples. Filled cells indicate available samples; "
+                "rhythm, age, and sex annotations are shown where available. GSE41177 "
+                "sinus-rhythm samples document cohort structure only and were not used as duration "
+                "anchors in the final correlation, classification, or Figure 4D analyses. This "
+                "figure documents sample structure and is not an independent AF-remodeling "
+                "evidence layer."
+            ),
+            (
+                "AF, atrial fibrillation; SR, sinus rhythm."
+            ),
+        ],
     ),
     (
-        "Supplementary Figure S3 | Normal Chamber Prior — panel and "
-        "gene-level stability",
-        "a Program-level direction stability across the 8 donor "
-        "resamplings of GSE112339 for each of the 10 panel programs "
-        "(stability_consistent_runs, maximum 8). b Mean stability of "
-        "the leading-edge genes of each program across the same 8 "
-        "resamplings; the right-hand annotation reports the fraction "
-        "of leading-edge genes that are significant in all 8 "
-        "resamplings. c Gene-level stability distribution split by "
-        "direction (LA-high in blue, RA-high in red), supporting the "
-        "per-program summaries in panels a–b. Companion deliverable: "
-        "results/figS3_ncp_stability_summary.tsv.",
+        "S3 Fig. Full LA single-nucleus family and program localization.",
+        [
+            (
+                "Donor-aware compartment pseudobulk profiles from GSE255612 were analyzed using "
+                "the frozen exact-reference NCP scoring lineage."
+            ),
+            (
+                "(A) Complete 16-family × 9-compartment AF-minus-control localization map. "
+                "(B) Complete 30-program × 9-compartment localization map. "
+                "(C) Corrected family class and supported-compartment summary."
+            ),
+            (
+                "Final family classes comprised one Fidelity family "
+                "(F10 GAG disease / TGF-β), two Relay families "
+                "(F11 BMP signaling and F15 NTRK2 / TrkB), one Extension family "
+                "(F16 Keratan sulfate), and 12 Below-detection families. Supported compartments "
+                "were fibroblast for F10, adipocyte for F11, endothelial only for F15, and "
+                "fibroblast plus atrial cardiomyocyte for F16. Markers denote nominal permutation "
+                "localization under the preset donor-count and detectable-gene criteria and are not "
+                "FDR-controlled discovery. Because the resource contains LA samples only, this "
+                "figure supplies LA compartment context rather than an independent test of "
+                "RA-driven remodeling. Program-level values do not redefine the family classes; "
+                "in particular, any F4 BCAA program signal does not make F4 a fifth non-Below "
+                "family."
+            ),
+            (
+                "AF, atrial fibrillation; LA, left atrium; RA, right atrium; FDR, false discovery "
+                "rate."
+            ),
+        ],
     ),
     (
-        "Supplementary Figure S4 | Per-cohort principal-component "
-        "overview",
-        "Top-variance 2,000-feature, sample-centred PCA on each of the "
-        "five bulk cohorts. a GSE112339 (healthy LA / RA reference; "
-        "PCA reused from bulk/Project_P01/qc/qc_pca.tsv); paired "
-        "donors are connected. b–d Paired-chamber AF-vs-SR cohorts "
-        "(GSE128188, GSE79768, GSE115574). e GSE41177 LAA samples "
-        "only. In b–e, points are coloured by rhythm (AF = red, SR = "
-        "blue) and shaped by chamber (circle = LA, triangle = RA where "
-        "applicable). The healthy donor / chamber axis dominates the "
-        "global structure in panel a, whereas the rhythm signal is a "
-        "smaller-magnitude axis on top of donor variation in the AF "
-        "cohorts — motivating the donor-paired aCAIrel framework. "
-        "Companion deliverable: results/figS4_per_cohort_pca.tsv.",
+        "S4 Fig. Per-cohort principal-component overview of expression datasets.",
+        [
+            (
+                "Principal-component analysis was performed separately within each expression "
+                "cohort using the fixed preprocessing recorded in the figure source lineage. "
+                "Panels show the GSE112339 healthy paired LA/RA reference, the three paired-"
+                "chamber AF/SR bulk cohorts GSE128188, GSE79768, and GSE115574, and the GSE41177 "
+                "duration cohort. Points are annotated by rhythm or control status and by chamber "
+                "or region where applicable; paired healthy donors are connected in the reference "
+                "panel. This figure provides cohort-level quality control and sample context only "
+                "and is not an independent statistical test of AF remodeling."
+            ),
+            (
+                "PCA, principal-component analysis; AF, atrial fibrillation; SR, sinus rhythm; "
+                "LA, left atrium; RA, right atrium."
+            ),
+        ],
     ),
     (
-        "Supplementary Figure S5 | Multiome RNA-side support gate (negative)",
-        "GSE238242 LAA snRNA pseudobulk Δsingscore (AF − SR) on the six "
-        "frozen support programs × four main compartments. The "
-        "locked multiome support-gate rule is not met: "
-        "no expected (program × compartment) cell reaches moderate or "
-        "strong support, and the HS-GAG programs even trend in the "
-        "opposite direction (Δscore = −0.03 to −0.04). Multiome "
-        "regulator-tier inference is therefore deferred to an independent "
-        "cohort.",
+        "S5 Fig. GSE238242 RNA-side and mural-cell sensitivity.",
+        [
+            (
+                "(A) RNA-side AF-minus-SR score differences for six prespecified support programs "
+                "across the four primary compartments in the GSE238242 left-atrial-appendage "
+                "multiome cohort. (B) Sensitivity analysis after combining pericyte and vascular "
+                "smooth muscle cell profiles into a mural-cell compartment. The combined mural-"
+                "cell result was directionally consistent with the four-compartment RNA-side "
+                "analysis. No expected program–compartment pair met the prespecified moderate or "
+                "strong support criterion. These panels are supplementary sensitivity analyses "
+                "only: they are not among the three Path A gates, do not alter the Figure 3 family "
+                "classes, and do not constitute an independent main-text evidence layer."
+            ),
+            (
+                "AF, atrial fibrillation; SR, sinus rhythm."
+            ),
+        ],
     ),
     (
-        "Supplementary Figure S6 | Mural sensitivity (pericyte + VSMC)",
-        "Δsingscore on the six frozen support programs in the mural "
-        "(pericyte + vascular smooth-muscle cell) pseudobulk of GSE238242. "
-        "Direction is consistent with the four-compartment main panel and "
-        "is not a separate finding.",
+        "S6 Fig. Chamber contribution to AF-associated NCP family rewiring.",
+        [
+            (
+                "Chamber-contribution view of AF-associated family shifts across the three "
+                "paired-chamber bulk cohorts GSE128188, GSE79768, and GSE115574. For each cohort, "
+                "families are plotted by the AF-minus-SR change in relative left-atrial "
+                "(ΔaCAI_LA) and right-atrial (ΔaCAI_RA) scores; bubble size encodes "
+                "|ΔaCAIrel|, the absolute AF-minus-SR change in the donor-paired relative aligned "
+                "chamber asymmetry index. Points are colored by chamber source "
+                "(LA-dominant, RA-dominant, or Bilateral), indicating whether the paired-chamber "
+                "family shift is driven primarily by the LA component, the RA component, or both. "
+                "Family rows follow the final canonical NCP topology and display order. The figure "
+                "decomposes chamber contributions to the observed AF-associated family rewiring "
+                "and does not constitute mechanism-direction validation or a separate Path A gate."
+            ),
+            (
+                "AF, atrial fibrillation; LA, left atrium; RA, right atrium; NCP, Normal Chamber "
+                "Prior; aCAIrel, relative aligned chamber asymmetry index."
+            ),
+        ],
     ),
     (
-        "Supplementary Figure S7 | Leave-one-cohort-out sensitivity (Fig. 6a)",
-        "Pooled Hedges' g for the structural and metabolic axes when each "
-        "of the three discovery cohorts is excluded in turn. Direction "
-        "stability of the structural axis is the intended check.",
+        "S7 Fig. F4 BCAA constituent-program fibroblast support.",
+        [
+            (
+                "The parent F4 Mito proteostasis / FA–BCAA family remained Below-detection in the "
+                "final family-level LA single-nucleus classification. Within that family, the "
+                "branched-chain amino-acid catabolism constituent program showed nominal "
+                "fibroblast support under the corrected exact-reference scorer "
+                "(Δsingscore = 0.0125; p_perm = 0.0115; n_control = 16; n_AF = 18). The figure "
+                "displays the program-level donor and compartment evidence underlying this nominal "
+                "result. This is a constituent-program example only: it is not a fifth non-Below "
+                "family, does not assign F4 to Fidelity, Relay, or Extension, is not FDR-controlled "
+                "discovery, and does not change the Figure 5 support count or Path A classification."
+            ),
+            (
+                "AF, atrial fibrillation; BCAA, branched-chain amino-acid."
+            ),
+        ],
     ),
     (
-        "Supplementary Figure S8 | Specificity and falsification supplement",
-        "Four-component specificity supplement "
-        "(locked falsification protocol; scripts/figS8_falsification.py). "
-        "a Size-matched random "
-        "gene-set permutations (1,000 per program; ECM proteoglycans "
-        "empirical p = 0.10). b Axis-membership permutation of the six "
-        "frozen support programs (1,000 partitions; |g_STRUCT| empirical "
-        "p = 0.33, consistent with both axes pooling negatively under any "
-        "3:3 partition). c Six pre-registered negative-control pathways "
-        "(axis-specificity controls: HALLMARK_INFLAMMATORY_RESPONSE, "
-        "KRAS_SIGNALING_UP, E2F_TARGETS; biologically unrelated controls: "
-        "REACTOME_OLFACTORY_SIGNALING_PATHWAY, KERATINIZATION, "
-        "SENSORY_PERCEPTION_OF_TASTE). d Leave-one-program-out (LOPO) "
-        "axis robustness — both axes remain direction-preserved (6/6 LOPO "
-        "removals), confirming that the dual-axis signal is not driven by "
-        "any single component program.",
+        "S8 Fig. Full NCP family overlap with external AF gene sets.",
+        [
+            (
+                "Complete 16-family × 4-set matrix of member overlap between frozen NCP family "
+                "leading-edge genes and the prespecified external AF common-risk or prioritized, "
+                "regulatory, and rare or functional gene sets. All 64 family–set pairs were tested "
+                "against the frozen background universe of 14,635 NCP-eligible genes. Five cells "
+                "contained member overlap, involving two unique genes across three families: "
+                "CAV1 occurred in F3 Adipo-lipid axis and F13 Amino-acid metabolism across the "
+                "Yuan and Roselli sets, and HEY2 occurred in F9 HS-GAG / bone / GPCR and the "
+                "Selewa regulatory set. The Choi rare/structural-variant set contained no overlap "
+                "with the frozen families. No family–set enrichment survived BH-FDR correction. "
+                "Repeated CAV1 cells reflect shared set membership rather than independent genetic "
+                "observations. Cell labels indicate member overlap; blank cells indicate tested zero "
+                "overlap. Member overlap is not interpreted as family-level enrichment or a Path A "
+                "gate."
+            ),
+            (
+                "AF, atrial fibrillation; BH-FDR, Benjamini–Hochberg false discovery rate."
+            ),
+        ],
+    ),
+]
+
+
+# Phase 5B4 — final formal SI table legends (S1–S6 only)
+SUPP_TABLES: list[tuple[str, list[str]]] = [
+    (
+        "S1 Table. Public datasets, cohort metadata, and analysis roles.",
+        [
+            (
+                "The workbook lists the public molecular, spatial, eQTL, GWAS, and external "
+                "gene-set resources used in the study. For each resource, it reports accession or "
+                "resource identifier, platform, tissue or region, chamber information, rhythm or "
+                "control groups, dataset-specific counts, primary analysis unit, analysis role, "
+                "main-figure or supplementary link, source publication, source path, and "
+                "provenance hash. Counts use the unit appropriate to each dataset—donor, sample, "
+                "patient, ROI, or summary-statistics resource—and should not be interpreted as a "
+                "single pooled donor total. The workbook contains README, datasets, and "
+                "Provenance sheets."
+            ),
+        ],
     ),
     (
-        "Supplementary Figure S9 | Reduced-axis readout",
-        "Five-gene reduced panel per axis (matrix: PRELP, OMD, FMOD, "
-        "CHST3, B4GALT1; metabolic: IDH2, NDUFA8, NDUFS2, COX5A, UQCRC1). "
-        "The reduced panel reproduces the full-axis donor-level composite "
-        "(Spearman ρ = 0.55–0.90) and the cohort-level SR→AF centroid "
-        "direction. The reduced metabolic panel does not replace OXPHOS "
-        "for chronicity (ρ_LAA = −0.06 vs full OXPHOS ρ_LAA = −0.58). "
-        "This panel is a framework-feasibility check and not a clinical "
-        "classifier.",
+        "S2 Table. Multiple-testing, uncertainty, and evidence-gating strategy.",
+        [
+            (
+                "The workbook summarizes the tested or summarized unit, estimand, statistic, "
+                "uncertainty measure, resampling or multiplicity treatment, classification rule, "
+                "Path A contribution, and interpretation boundary for each analysis layer. "
+                "Exactly three rows contribute to Path A: High bulk cross-cohort consistency, "
+                "non-Below-detection LA single-nucleus classification, and non-Stable LAA duration "
+                "classification. The healthy carrier prior, dominant bulk state, GeoMx, genetics, "
+                "GSE238242 sensitivity, and the F4 BCAA constituent-program example are context or "
+                "sensitivity layers and do not enter the Path A support count. The workbook "
+                "distinguishes formal effect estimates, nominal localization cues, descriptive "
+                "effect-size bins, ROI-level summaries, and non-nested genetic diagnostics. It "
+                "contains README, evidence_gating, and Provenance sheets."
+            ),
+        ],
     ),
     (
-        "Supplementary Figure S10 | Methodology audit",
-        "Internal-consistency tests (scripts/h7_methodology_audit.R). a NCP "
-        "self-recovery (mean aCAIrel ≈ 1 for 10/10 programs in the "
-        "healthy bulk reference). b Donor-level direction stability (8/8 "
-        "healthy donors with aCAI > 0 for every program). c singscore vs "
-        "mean-z cross-method correlation (Spearman ρ = 0.52–0.93 across "
-        "programs). d Axis-pooled g unchanged when singscore is replaced "
-        "with mean-z (structural g = −0.57 / −0.79; both with I² = 0%).",
+        "S3 Table. Corrected bulk paired-chamber effects and cross-cohort consistency.",
+        [
+            (
+                "The family_summary sheet reports the 16 frozen NCP families in canonical order, "
+                "including healthy direction, pooled AF-minus-SR Hedges’ g, standard error, "
+                "95% confidence interval, fixed-effect inverse-variance pooling metadata, cohort-"
+                "sign agreement, and final High, Moderate, or Low consistency class. The final "
+                "classes comprise six High, eight Moderate, and two Low families. The "
+                "cohort_effects sheet reports the family-by-cohort estimates and the 48 descriptive "
+                "state calls: five Amplified, 16 Preserved, 15 Attenuated, and 12 Reversed. State "
+                "calls summarize remodeling patterns and are not independent significance tests. "
+                "The workbook contains README, family_summary, cohort_effects, and Provenance "
+                "sheets."
+            ),
+        ],
     ),
     (
-        "Supplementary Figure S11 | Method-validity supplement (P5)",
-        "External-style validations (scripts/h8_methodology_p5.R). a "
-        "Simulation power (≥ 92% detection at a true effect of 0.3 in "
-        "aCAIrel units, cohort-matched donor counts). b Cohort-donor "
-        "bootstrap (B = 2,000) of the dual-axis pooled g; intervals are "
-        "consistent with and tighter than the Hartung–Knapp pooled "
-        "estimates of Fig. 6a. c Classical limma per-chamber AF-vs-SR "
-        "comparison; framework-direction concordance = 25/30 program × "
-        "cohort cells (83%; 100% in GSE115574); discordant cells were "
-        "near-zero classical effects.",
+        "S4 Table. Corrected LA single-nucleus localization and carrier-relative classes.",
+        [
+            (
+                "The family_summary sheet reports the 16 frozen families, healthy HCA LA carrier "
+                "prior, final Fidelity, Relay, Extension, or Below-detection class, supported "
+                "compartments, and evidence summary. Final classes comprise F10 Fidelity, "
+                "F11 and F15 Relay, F16 Extension, and 12 Below-detection families. Supported "
+                "compartments are fibroblast for F10, adipocyte for F11, endothelial only for F15, "
+                "and fibroblast plus atrial cardiomyocyte for F16. The family_compartment_detail "
+                "sheet reports donor counts, detectable leading-edge genes, AF-minus-control family "
+                "score differences, permutation method, nominal permutation p values, testing "
+                "eligibility, carrier relationship, and localization status for all 16 families "
+                "across nine LA compartments. Localization is LA-only and nominal; it is not "
+                "FDR-controlled discovery, and Below-detection does not imply biological absence. "
+                "The workbook contains README, family_summary, family_compartment_detail, and "
+                "Provenance sheets."
+            ),
+            (
+                "HCA, Human Cell Atlas; LA, left atrium; FDR, false discovery rate."
+            ),
+        ],
     ),
     (
-        "Supplementary Figure S12 | Single-gene cis-eQTL × AF-GWAS "
-        "regime check (calibration)",
-        "Pre-registered cis-eQTL × AF-GWAS colocalisation on the four "
-        "framework anchor genes (PRELP, OMD, IDH2, NDUFA8) and the two "
-        "pre-registered canonical AF GWAS positive controls (PITX2 at "
-        "the 4q25 locus and KCNN3 at the 1q21 locus). At current GTEx "
-        "Atrial Appendage panel power (n = 372), neither the framework "
-        "anchors nor the canonical positive controls pass the "
-        "conservative cis-eQTL gate (lead p < 5e-8 within ± 1 Mb), and "
-        "the colocalisation posterior PP4 is below the supporting "
-        "threshold for all six anchors. The failure of the canonical "
-        "positive controls indicates that the single-gene mRNA-mediated "
-        "regime is calibration-limited at this panel power and is "
-        "therefore not informative against a single-gene mediation "
-        "argument; the framework-level positive gene-level evidence is "
-        "supplied by the chamber-identity reversal genes shown in "
-        "Fig. 6c. Anchors are not replaced post hoc. A blood-tissue "
-        "sensitivity column (GTEx Whole Blood, eQTL Catalogue "
-        "QTD000356) is shown for the framework anchors; the two "
-        "positive-control anchors are heart-tissue-specific and have "
-        "no whole-blood expression sufficient for cis-eQTL testing.",
+        "S5 Table. Corrected cross-sectional AF-duration trends and chronicity classes.",
+        [
+            (
+                "The family_summary sheet reports the 16 frozen families, full-precision and "
+                "displayed LAA Spearman correlations, absolute LAA correlation, final Strong-, "
+                "Weak-, or Stable-trend class, permutation p value, bootstrap interval, LAPV "
+                "sensitivity estimate, and regional-sign descriptor. Final classes comprise two "
+                "Strong-trend, six Weak-trend, and eight Stable families. Classification uses only "
+                "the full-precision absolute LAA Spearman correlation; displayed rounding, "
+                "p values, confidence intervals, LAPV estimates, and regional sign do not determine "
+                "class. The design_summary sheet records the primary 12 AF-LAA samples, duration "
+                "parsing, scoring design, LAPV sensitivity role, and the exclusion of SR samples "
+                "from duration correlation and class assignment. The analysis provides "
+                "cross-sectional chronicity context and is not a progression, recurrence, or "
+                "treatment-response model. The workbook contains README, family_summary, "
+                "design_summary, and Provenance sheets."
+            ),
+            (
+                "AF, atrial fibrillation; LAA, left-atrial appendage; LAPV, left atrial–pulmonary "
+                "vein junction; SR, sinus rhythm."
+            ),
+        ],
+    ),
+    (
+        "S6 Table. Anchor-level genetic calibration and non-nested traceability.",
+        [
+            (
+                "The anchor_summary sheet reports the 12 prespecified anchors in the final Figure "
+                "6 order, including calibration-control role, local AF GWAS status, lead GWAS and "
+                "atrial eQTL variants and positions, atrial eGene status, PP3, PP4, same-variant "
+                "colocalization status, lead-variant separation, and membership in common-risk or "
+                "prioritized, regulatory, and rare or functional external evidence sets. The final "
+                "summary contains local AF GWAS support for 7/12 anchors, atrial eGene support for "
+                "1/12 (SMAD9), PP3-dominant configuration for 12/12, and PP4 ≥ 0.70 support for "
+                "0/12. Risk or prioritized and regulatory membership are each present for 2/12 "
+                "anchors, PITX2 and KCNN3, whereas rare or functional membership is present for "
+                "0/12. The dimension_summary sheet provides definitions, present counts, thresholds, "
+                "source lineage, and interpretation boundaries for the seven evidence dimensions. "
+                "The categories are non-nested, are not combined into a score or ordinal tier, and "
+                "do not enter Path A. GWAS provenance is locked to Yuan et al. 2025, "
+                "GCST90624411, with 252,438 AF cases and 1,959,739 controls. The workbook "
+                "contains README, anchor_summary, dimension_summary, and Provenance sheets."
+            ),
+            (
+                "AF, atrial fibrillation; GWAS, genome-wide association study; eQTL, expression "
+                "quantitative trait locus; PP3, posterior probability favoring distinct local "
+                "signals; PP4, posterior probability favoring a shared causal signal."
+            ),
+        ],
     ),
 ]
 
@@ -441,17 +649,26 @@ def main() -> None:
     intro_run.font.size = Pt(10)
     intro_run.font.color.rgb = RGBColor(0x66, 0x66, 0x66)
 
-    # Main figures
+    # Main figures (Phase 5A: six A–D legends; no Figure 7)
     doc.add_heading("Main figures", level=2)
-    for title, panels, trailing in MAIN_FIGURES:
+    for title, paragraphs in MAIN_FIGURES:
         doc.add_heading(title, level=3)
-        add_caption_paragraph(doc, panels, trailing_note=trailing)
+        for para in paragraphs:
+            add_body(doc, para)
 
-    # Supplementary figures
-    doc.add_heading("Supplementary figures", level=2)
-    for title, body in SUPP_FIGURES:
+    # Supporting Information figures (Phase 5B4: S1–S8 only)
+    doc.add_heading("Supporting Information figures", level=2)
+    for title, paragraphs in SUPP_FIGURES:
         doc.add_heading(title, level=3)
-        add_body(doc, body)
+        for para in paragraphs:
+            add_body(doc, para)
+
+    # Supporting Information tables (Phase 5B4: S1–S6 only)
+    doc.add_heading("Supporting Information tables", level=2)
+    for title, paragraphs in SUPP_TABLES:
+        doc.add_heading(title, level=3)
+        for para in paragraphs:
+            add_body(doc, para)
 
     # Graphical abstract
     doc.add_heading("Graphical abstract", level=2)

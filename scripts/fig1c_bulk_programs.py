@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """
+LEGACY — superseded by the frozen NCP panel (30 pathway programs / 16 axis families).
+Not referenced in the manuscript. Retained for development archive only.
+
 Figure 1C - Bulk chamber programs overview.
 
 One-column heatmap:
-    rows = 10 stable bulk chamber programs (normal_chamber_programs.tsv)
+    rows = legacy bulk chamber programs (normal_chamber_programs.tsv; archive only)
     col  = "Bulk chamber bias"
     val  = signed NES (positive if LA-biased, negative if RA-biased)
     cmap = diverging RdBu    (blue = LA-high, red = RA-high)

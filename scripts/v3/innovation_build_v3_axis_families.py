@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Build a family-mapping table for the innovation NCP_v3 panel.
+Build a family-mapping table for the innovation NCP panel.
 
 Policy
 ------

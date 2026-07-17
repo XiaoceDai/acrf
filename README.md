@@ -4,13 +4,17 @@ Atrial **Chamber-aware Rewiring Framework (CRF)** — analysis code and installa
 
 **GitHub:** [github.com/XiaoceDai/acrf](https://github.com/XiaoceDai/acrf)
 
+Publication-facing text uses NCP. Internal artifact names retain the historical
+ncp_v3 identifier to preserve frozen lineage, checksums and
+backward-compatible workflow paths.
+
 ## Layout
 
 | Path | Purpose |
 |------|---------|
 | `src/crf/` | Installable **acrf** package (`import crf`); column contracts in `crf.schema` |
 | `scripts/` | Cohort pipelines, figure drivers, shared `plot_style.py` |
-| `scripts/v3/` | NCP_v3 figure drivers (`*_v3*.py`) |
+| `scripts/v3/` | NCP figure drivers (`*_v3*.py`); thirty pathway programs / sixteen axis families |
 | `tests/` | Package tests (`pytest`) |
 | `results/` | TSV outputs consumed by figure scripts |
 | `figures/` | PDF outputs |

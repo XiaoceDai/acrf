@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Build Supplementary Table S4 — per-gene per-compartment AF − Ctrl
-expression Δ for the 24 chamber-reversal genes (Fig. 6d source data)."""
+expression Δ for the 24 chamber-reversal genes (Fig. 7d–f source data)."""
 from __future__ import annotations
 
 import sys
@@ -47,7 +47,7 @@ def main() -> None:
     )
     add_body(
         doc,
-        "Source data for Fig. 6d. Per gene, per compartment Δ_expr = "
+        "Source data for Fig. 7d–f. Per gene, per compartment Δ_expr = "
         "mean(expression in AF biosamples) − mean(expression in Ctrl "
         "biosamples) on the GSE255612 single-nucleus pseudobulks "
         "(AF n = 18, Ctrl n = 16; expression units = pseudobulk-mean "

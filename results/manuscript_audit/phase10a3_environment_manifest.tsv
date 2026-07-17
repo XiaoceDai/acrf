@@ -1,0 +1,32 @@
+component	version	source_file	sha256	current_or_historical	used_in_final_lineage	release_freeze_status	notes
+Operating_system	Linux 6.17.0-22-generic (Linux-6.17.0-22-generic-x86_64-with-glibc2.39)	runtime		current	YES	RECORDED	Ubuntu/Linux host at freeze inspection
+Python_runtime	3.12.3	runtime		current	YES	RECORDED_RELEASE	pyproject requires-python>=3.10
+R_runtime	4.5.1	runtime		current	YES	RECORDED_RELEASE	matches phase6c/phase10a0 freeze record
+Package_manager_pip	24.0	runtime		current	YES	RECORDED	no release requirements.lock created in this phase
+Package_manager_renv	ABSENT	renv.lock		n/a	NO	MISSING	no renv.lock in repository root
+Package_manager_conda_release	ABSENT	environment.yml		n/a	NO	MISSING	no root conda env; tools/ldsc/environment.yml is tool-local only
+Dockerfile	ABSENT	Dockerfile		n/a	NO	MISSING	no project Dockerfile
+CI_configuration	ABSENT	.github/workflows		n/a	NO	MISSING	no CI workflows detected
+pyproject.toml	acrf 0.1.0; license=MIT; requires-python>=3.10	pyproject.toml	4192f4f767b3b9b7082ff9468ac34587479badefd1f2682aa578bd3b3c8ea7b0	current	YES	RECORDED	identity locked; license synchronized in Phase 10A2-B
+LICENSE	MIT; Copyright (c) 2026 Xiao-Ce Dai	LICENSE	2c4d87fc6550045e2e470204ece90fb3272021588e807230c3e7304354f749d8	current	YES	RECORDED	Phase 10A2-B synchronized
+singscore	1.28.1	runtime+phase6c_software_environment_manifest.tsv		current	YES	RECORDED_RELEASE	Bioconductor; final lineage scorer reference
+matrixStats	1.5.0	runtime+phase6c_software_environment_manifest.tsv		current	YES	RECORDED_RELEASE	singscore dependency
+GSEABase	1.70.1	runtime+phase6c_software_environment_manifest.tsv		current	YES	RECORDED_RELEASE	singscore dependency
+edgeR	4.6.3	runtime+phase6c_software_environment_manifest.tsv		current	YES	RECORDED_RELEASE	RNAseq norm/filter
+limma	3.64.3	runtime+phase6c_software_environment_manifest.tsv		current	YES	RECORDED_RELEASE	linear models where used
+coloc	5.2.3	runtime+phase6c_software_environment_manifest.tsv		current	YES	RECORDED_RELEASE_CURRENT_ONLY	historical production version NOT RECOVERABLE; do not claim historical identity
+metafor	4.8.0	runtime+phase6c_software_environment_manifest.tsv		current	YES	RECORDED_RELEASE	meta-analysis helpers
+acrf	0.1.0	runtime+phase6c_software_environment_manifest.tsv		current	YES	RECORDED_RELEASE	distribution name from pyproject
+crf	0.1.0	runtime+phase6c_software_environment_manifest.tsv		current	YES	RECORDED_RELEASE	import name; src/crf __version__; runtime import not installed in inspect env
+pandas	2.3.3	runtime		current	YES	RECORDED_RELEASE_UNPINNED_HISTORICALLY	exact historical Python pins NOT RECOVERABLE
+numpy	2.4.4	runtime		current	YES	RECORDED_RELEASE_UNPINNED_HISTORICALLY	exact historical Python pins NOT RECOVERABLE
+scipy	1.17.1	runtime		current	YES	RECORDED_RELEASE_UNPINNED_HISTORICALLY	exact historical Python pins NOT RECOVERABLE
+matplotlib	3.10.8	runtime		current	YES	RECORDED_RELEASE_UNPINNED_HISTORICALLY	exact historical Python pins NOT RECOVERABLE
+scikit-learn	1.8.0	runtime		current	YES	RECORDED_RELEASE_UNPINNED_HISTORICALLY	exact historical Python pins NOT RECOVERABLE
+openpyxl	3.1.5	runtime		current	YES	RECORDED_RELEASE_UNPINNED_HISTORICALLY	exact historical Python pins NOT RECOVERABLE
+python-docx	1.2.0	runtime		current	YES	RECORDED_RELEASE_UNPINNED_HISTORICALLY	exact historical Python pins NOT RECOVERABLE
+historical_coloc_version	NOT RECOVERABLE	phase6c_software_environment_manifest.tsv / phase10a0_environment_readiness.tsv		historical	YES	UNRESOLVED_HISTORICAL	current coloc recorded separately as release-only
+historical_Python_environment	NOT RECOVERABLE	phase10a0_environment_readiness.tsv		historical	YES	UNRESOLVED_HISTORICAL	exact historical pins unavailable
+phase6c_software_environment_manifest	see file	results/manuscript_audit/phase6c_software_environment_manifest.tsv	c426a14cd1a8e16b66a7037cfb3adc8d55c803b14c5110a317e204e75f9118f1	audit	YES	AUTHORITY_INPUT	Phase 6C environment audit
+phase10a0_environment_readiness	READY_TO_FREEZE_RELEASE_ENV	results/manuscript_audit/phase10a0_environment_readiness.tsv	17a0fdb4a1e4d215e06911648579a5e10b49d4fda6e7f9f65986c367d7f618a9	audit	YES	AUTHORITY_INPUT	Phase 10A0 preflight
+release_lockfile_requirements	ABSENT	requirements.txt		n/a	N/A	PENDING_FUTURE_LOCKFILE	metadata freeze only in 10A3; no lockfile written (allowed outputs restricted)

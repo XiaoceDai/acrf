@@ -1,0 +1,82 @@
+path	reason	replacement_or_reference	release_status	bytes	notes
+global_raw.h5ad	raw/restricted-scale expression object	public GEO accessions in S1 Table	EXCLUDE_FROM_RELEASE	5068859764	
+Project_P2/	cohort working tree / raw archives	S1 datasets + processed results tables	EXCLUDE_FROM_RELEASE	1861985867	
+data/gwas/	GWAS download tree including large sumstats	results/provenance/gwas_gcst90624411/	EXCLUDE_FROM_RELEASE	1722275574	
+data/gwas/GCST90624411/harmonised/GCST90624411.h.tsv.gz	large external source file (~1.72GB harmonized sumstats); not redistribution target	public accession GCST90624411; results/provenance/gwas_gcst90624411/	EXCLUDE_FROM_RELEASE	1720310142	Do not delete/move/modify; keep local for analysis
+Project_P3/	cohort working tree / raw archives	S1 datasets + processed results tables	EXCLUDE_FROM_RELEASE	1399747059	
+results/figure6_ldsc/af_GCST90624411_for_munge.tsv.gz	large intermediate GWAS munge input	GWAS provenance package + public accession	EXCLUDE_FROM_RELEASE	758965648	
+Project_P4/	cohort working tree / raw archives	S1 datasets + processed results tables	EXCLUDE_FROM_RELEASE	449725686	
+Project_P5/	cohort working tree / raw archives	S1 datasets + processed results tables	EXCLUDE_FROM_RELEASE	393585861	
+Project_P6/	cohort working tree	processed results only	EXCLUDE_FROM_RELEASE	102605276	
+.venv/	local virtualenv	pyproject + environment manifest	EXCLUDE_FROM_RELEASE	37132977	
+bulk/	bulk working data	processed results tables	EXCLUDE_FROM_RELEASE	19748285	
+results/graphical_abstract_preview.png	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	1561314	
+results/handoff/fulltext_audit_v1_1/figure_previews/figure1_preview.png	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	684172	
+results/handoff/fulltext_audit_v1/figure_previews/figure1_preview.png	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	684172	
+results/graphical_abstract_layout_debug.png	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	620197	
+results/handoff/fulltext_audit_v1_1/figure_previews/figure5_preview.png	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	618876	
+results/handoff/fulltext_audit_v1/figure_previews/figure5_preview.png	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	618876	
+results/handoff/fulltext_audit_v1_1/figure_previews/figure2_preview.png	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	601572	
+results/handoff/fulltext_audit_v1/figure_previews/figure2_preview.png	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	601572	
+figures/fig7_reversal_carrier_composite.pdf	legacy Figure 7	not in final main figures	EXCLUDE_FROM_RELEASE	583120	
+results/handoff/fulltext_audit_v1_1/figure_previews/figure3_preview.png	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	491784	
+results/handoff/fulltext_audit_v1/figure_previews/figure3_preview.png	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	491784	
+results/handoff/fulltext_audit_v1_1/figure_previews/figure4_preview.png	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	459686	
+results/handoff/fulltext_audit_v1/figure_previews/figure4_preview.png	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	459686	
+results/handoff/fulltext_audit_v1_1/figure_previews/figure6_preview.png	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	260483	
+results/handoff/fulltext_audit_v1/figure_previews/figure6_preview.png	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	260483	
+results/manuscript_audit/phase5b3a_previews/figS3_preview.png	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	222384	
+figures/_audit_png/fig7_reversal_carrier_composite.png	legacy Figure 7	not in final main figures	EXCLUDE_FROM_RELEASE	221160	
+figures/_audit_png/fig5e_mechanism_cartoon.png	legacy Figure 5E / exploratory panel	final Figure 5 A–D	EXCLUDE_FROM_RELEASE	212854	
+figures/_composite_fig1.pdf	intermediate/obsolete rendering	canonical figure composites	EXCLUDE_FROM_RELEASE	203689	
+results/manuscript_audit/phase5b3a_previews/figS6_preview.png	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	137842	
+figures/_audit_png/fig7_data_driven_modules.png	legacy Figure 7	not in final main figures	EXCLUDE_FROM_RELEASE	100055	
+figures/fig7_data_driven_modules.pdf	legacy Figure 7	not in final main figures	EXCLUDE_FROM_RELEASE	96656	
+results/manuscript_audit/phase5b3a_previews/figS5_preview.png	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	94283	
+results/manuscript_audit/phase5b3a_previews/figS8_preview.png	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	88462	
+results/manuscript_audit/phase5b3a_previews/figS1_preview.png	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	82458	
+results/manuscript_audit/phase5b3a_previews/figS4_preview.png	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	76709	
+results/manuscript_audit/phase5b3a_previews/figS2_preview.png	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	63853	
+results/manuscript_audit/phase5b3a_previews/figS7_preview.png	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	58147	
+figures/figS9_reduced_axis.pdf	legacy SI figure S9	formal S1–S8 in figures/supplementary/	EXCLUDE_FROM_RELEASE	54006	
+figures/figS11_method_p5.pdf	legacy SI figure S11	formal S1–S8 in figures/supplementary/	EXCLUDE_FROM_RELEASE	50748	
+figures/figS10_methodology_audit.pdf	legacy SI figure S10	formal S1–S8 in figures/supplementary/	EXCLUDE_FROM_RELEASE	50036	
+figures/ncp_v3_singscore_reanalysis/fig5e_mechanism_cartoon.pdf	legacy Figure 5E / exploratory panel	final Figure 5 A–D	EXCLUDE_FROM_RELEASE	49108	
+figures/fig5e_mechanism_cartoon.pdf	legacy Figure 5E / exploratory panel	final Figure 5 A–D	EXCLUDE_FROM_RELEASE	48318	
+figures/fig_integrated_af_rewiring_atlas.pdf	intermediate/obsolete rendering	canonical figure composites	EXCLUDE_FROM_RELEASE	40570	
+figures/figS16_g_tier_entity_strip.pdf	legacy SI figure S16	formal S1–S8 in figures/supplementary/	EXCLUDE_FROM_RELEASE	38764	
+figures/figS16_program_donor_acairel_heatmap.pdf	legacy SI figure S16	formal S1–S8 in figures/supplementary/	EXCLUDE_FROM_RELEASE	35564	
+figures/figS14_ncp_bootstrap_stability.pdf	legacy SI figure S14	formal S1–S8 in figures/supplementary/	EXCLUDE_FROM_RELEASE	29767	
+figures/figS13_prototype_vs_ncp_benchmark.pdf	legacy SI figure S13	formal S1–S8 in figures/supplementary/	EXCLUDE_FROM_RELEASE	27541	
+figures/figS15_pairing_stress_test.pdf	legacy SI figure S15	formal S1–S8 in figures/supplementary/	EXCLUDE_FROM_RELEASE	23934	
+figures/figS1_cohort_overview.pdf	duplicate/non-canonical SI path	figures/supplementary/figS1_cohort_overview.*	EXCLUDE_FROM_RELEASE	23184	
+results/manuscript_audit/phase5b3b_table_previews/S6_Table_preview.md	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	17423	
+results/manuscript_audit/phase5b3b_table_previews/S5_Table_preview.md	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	14253	
+results/manuscript_audit/phase5ap_main_figure_legends_preview.md	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	14203	
+results/manuscript_audit/phase5a_main_figure_legends_preview.md	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	13980	
+results/manuscript_audit/phase6bp_methods_part2_preview.md	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	13836	
+results/manuscript_audit/phase5b4_si_legends_preview.md	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	13740	
+results/manuscript_audit/phase6br_methods_part2_preview.md	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	12937	
+results/manuscript_audit/phase6ap_methods_part1_preview.md	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	12419	
+results/manuscript_audit/phase5b3b_table_previews/S1_Table_preview.md	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	12003	
+results/manuscript_audit/phase5b3b_table_previews/S3_Table_preview.md	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	11810	
+results/manuscript_audit/phase6c_methods_part3_preview.md	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	11513	
+results/manuscript_audit/phase6cp_methods_part3_preview.md	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	11267	
+results/manuscript_audit/phase5b3b_table_previews/S4_Table_preview.md	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	11004	
+results/manuscript_audit/phase6a_methods_part1_preview.md	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	10542	
+scripts/fig5d_dual_axis_mechanism.py	obsolete pattern **/*dual*axis*	final locked figures/tables	EXCLUDE_FROM_RELEASE	8819	
+results/manuscript_audit/phase5b3b_table_previews/S2_Table_preview.md	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	8610	
+results/manuscript_audit/phase8_discussion_preview.md	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	8302	
+results/manuscript_audit/phase4a_results_fig1_fig2_preview.md	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	5510	
+results/manuscript_audit/phase4ap_results_preview.md	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	5462	
+results/manuscript_audit/phase4cp_results_preview.md	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	5212	
+results/manuscript_audit/phase4c_results_fig5_fig6_preview.md	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	5077	
+results/manuscript_audit/phase4b_results_fig3_fig4_preview.md	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	4475	
+results/manuscript_audit/phase4bp_results_preview.md	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	4255	
+results/manuscript_audit/phase7_introduction_preview.md	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	3779	
+results/manuscript_audit/phase4h_text_preview.md	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	3061	
+results/manuscript_audit/phase3p_text_preview.md	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	2980	
+results/manuscript_audit/phase3_text_preview.md	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	2835	
+results/manuscript_audit/phase9b_data_code_preview.md	temporary preview/debug artifact	final publication assets	EXCLUDE_FROM_RELEASE	1856	
+.pytest_cache/	test cache	n/a	EXCLUDE_FROM_RELEASE	1047	
+figures/_composite_fig1.tex	intermediate/obsolete rendering	canonical figure composites	EXCLUDE_FROM_RELEASE	1013	

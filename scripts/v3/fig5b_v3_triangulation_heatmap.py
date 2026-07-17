@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Fig 5b v3 - Cross-figure triangulation heatmap (16 NCP_v3 families).
+Fig 5b v3 - Cross-figure triangulation heatmap (16 NCP axis families).
 
 Stage-grouped layout (left -> right = narrative time arrow):
 
@@ -32,10 +32,20 @@ Inputs:
 
 Outputs:
     results/fig5b_v3_triangulation.tsv               (per-family rolled-up table)
+        Manuscript-first columns (synonyms for prose):
+        family_label, axis_group, HCA_carrier (= LA carrier), bulk_replication_class,
+        dominant_bulk_state, snRNA_fidelity_class,
+        snRNA_supported_compartment (= comma-separated nominal-sig compartments from
+        Fig 3 carrier fidelity; empty if Below_detection — aligns with Fig 3C, distinct from HCA_carrier),
+        duration_class, duration_rho (LAA primary Spearman), atlas_priority_score,
+        cross_layer_support_flag (True iff n_supportive == 3 triple-positive, Path A).
+        Technical columns for Fig 5c/5e follow.
+
     figures/fig5b_v3_triangulation_heatmap.pdf       (the heatmap)
 """
 from __future__ import annotations
 
+import sys
 from pathlib import Path
 
 import matplotlib as mpl
@@ -46,6 +56,8 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "scripts"))
+from plot_style import enforce_font_floor, FS_PANEL_TITLE, FS_TICK, FS_AXIS_LABEL, FS_FOOTNOTE
 
 ATLAS_TSV = ROOT / "results" / "fig_integrated_af_rewiring_atlas.tsv"
 HCA_TSV = ROOT / "results" / "fig1f_v3_HCA_family_carriers.tsv"
@@ -53,9 +65,10 @@ REPL_TSV = ROOT / "results" / "fig2e_replication_lollipop_v3.tsv"
 DELTA_TSV = ROOT / "results" / "fig3_v3_family_celltype_delta.tsv"
 FID_TSV = ROOT / "results" / "fig3_v3_carrier_fidelity_class.tsv"
 CHRO_TSV = ROOT / "results" / "fig4_v3_chronicity_class.tsv"
+LABELS_TSV = ROOT / "results" / "ncp_v3_family_labels.tsv"
 
 OUT_TSV = ROOT / "results" / "fig5b_v3_triangulation.tsv"
-OUT_PDF = ROOT / "figures" / "fig5b_v3_triangulation_heatmap.pdf"
+OUT_PDF = ROOT / "figures" / "fig5b_triangulation_heatmap.pdf"
 
 # --- shared cell-type colour palette (matches Fig 1F-v3 / Fig 3B) ---
 COMPARTMENT_PALETTE = {
@@ -123,7 +136,7 @@ def set_style():
     mpl.rcParams.update({
         "font.family": "sans-serif",
         "font.sans-serif": ["Arial", "Helvetica", "Liberation Sans", "DejaVu Sans"],
-        "font.size": 8,
+        "font.size": enforce_font_floor(FS_TICK),
         "axes.linewidth": 0.6,
         "savefig.dpi": 300,
         "pdf.fonttype": 42,
@@ -215,13 +228,54 @@ def build_table() -> pd.DataFrame:
     return df
 
 
+MANUSCRIPT_FIRST = [
+    "family_id",
+    "family_label",
+    "axis_group",
+    "HCA_carrier",
+    "bulk_replication_class",
+    "dominant_bulk_state",
+    "snRNA_fidelity_class",
+    "snRNA_supported_compartment",
+    "duration_class",
+    "duration_rho",
+    "atlas_priority_score",
+    "cross_layer_support_flag",
+]
+
+
+def finalize_manuscript_columns(df: pd.DataFrame) -> pd.DataFrame:
+    """Join atlas labels and prepend manuscript-facing synonyms (Fig 5B Results table)."""
+    labs = (
+        pd.read_csv(LABELS_TSV, sep="\t")[["family_id", "family_label", "axis_group"]]
+        .drop_duplicates(subset=["family_id"], keep="first")
+    )
+    out = df.merge(labs, on="family_id", how="left")
+    fid_sig = pd.read_csv(FID_TSV, sep="\t")[["family_id", "sig_compartments"]].copy()
+    fid_sig["family_id"] = fid_sig["family_id"].astype(int)
+    out = out.merge(fid_sig, on="family_id", how="left")
+    out["HCA_carrier"] = out["LA_carrier"]
+    out["bulk_replication_class"] = out["replication_class"]
+    out["dominant_bulk_state"] = out["state_consensus"]
+    out["snRNA_fidelity_class"] = out["fidelity_class"]
+    sc = out["sig_compartments"].fillna("").astype(str).str.strip()
+    out["snRNA_supported_compartment"] = sc.replace({"nan": ""})
+    out = out.drop(columns=["sig_compartments"])
+    out["duration_class"] = out["chronicity_class"]
+    out["duration_rho"] = out["rho_primary"]
+    out["atlas_priority_score"] = out["PriorityScore"]
+    out["cross_layer_support_flag"] = out["n_supportive"].astype(int) == 3
+    rest = [c for c in out.columns if c not in MANUSCRIPT_FIRST]
+    return out[MANUSCRIPT_FIRST + rest]
+
+
 def render_pdf(df: pd.DataFrame) -> None:
     set_style()
     n = len(df)
     MM = 1.0 / 25.4
-    fig_w_mm, fig_h_mm = 230, 155
+    fig_w_mm, fig_h_mm = 230, 175
     fig = plt.figure(figsize=(fig_w_mm * MM, fig_h_mm * MM))
-    ax = fig.add_axes((0.005, 0.04, 0.99, 0.84))
+    ax = fig.add_axes((0.005, 0.04, 0.99, 0.82))
     ax.set_xlim(0, 100)
     # Reserve 2 axes-units above row 0 for two header rows (stage band + col names)
     ax.set_ylim(-2.2, n + 1)
@@ -252,7 +306,7 @@ def render_pdf(df: pd.DataFrame) -> None:
     stage_y = -1.55
     col_y = -0.30
 
-    def hdr_col(x_centre, txt, *, fontsize=5.7, weight="bold"):
+    def hdr_col(x_centre, txt, *, fontsize=enforce_font_floor(FS_TICK - 0.5), weight="bold"):
         ax.text(x_centre, col_y, txt, ha="center", va="bottom",
                 fontsize=fontsize, fontweight=weight, color="#1A1A1A")
 
@@ -266,13 +320,13 @@ def render_pdf(df: pd.DataFrame) -> None:
             facecolor=stage_bg, edgecolor="#999", linewidth=0.4, zorder=0.5,
         ))
         ax.text((x0 + x1) / 2.0, stage_y, label,
-                ha="center", va="center", fontsize=6.6,
+                ha="center", va="center", fontsize=enforce_font_floor(FS_TICK - 0.5),
                 fontweight="bold", color="#1A1A1A")
 
     # Family / L0 stays as a "anchor" header (no band)
     ax.text((X["fid"][0] + X["short"][1]) / 2.0, stage_y,
               "Family / Atlas anchor", ha="center", va="center",
-              fontsize=6.6, fontweight="bold", color="#1A1A1A")
+              fontsize=enforce_font_floor(FS_TICK - 0.5), fontweight="bold", color="#1A1A1A")
 
     stage_band(X["L0"][0] - 0.2, X["L0"][1] + 0.2, "L0  Carrier")
     stage_band(X["L1_g"][0] - 0.2, X["L1_state"][1] + 0.2, "L1  Bulk (Fig 2)")
@@ -306,9 +360,9 @@ def render_pdf(df: pd.DataFrame) -> None:
         # --- F-id + short label
         bias_color = LA_DEEP if row["HealthyBias"] == "LA-biased" else RA_DEEP
         ax.text(X["fid"][0], y, f"F{int(row['family_id'])}", ha="left", va="center",
-                fontsize=6.8, fontweight="bold", color=bias_color)
+                fontsize=enforce_font_floor(FS_TICK + 0.5), fontweight="bold", color=bias_color)
         ax.text(X["short"][0] + 0.5, y, str(row["short"])[:24],
-                ha="left", va="center", fontsize=6.4, color="#1A1A1A")
+                ha="left", va="center", fontsize=enforce_font_floor(FS_TICK), color="#1A1A1A")
 
         # --- L0 carrier strip (cell-type colour) ---
         carrier = row["LA_carrier"]
@@ -323,7 +377,7 @@ def render_pdf(df: pd.DataFrame) -> None:
         # carrier short label
         ax.text((X["L0"][0] + X["L0"][1]) / 2.0, y,
                 COMPARTMENT_SHORT.get(carrier, "?"),
-                ha="center", va="center", fontsize=5.4, color="#1A1A1A")
+                ha="center", va="center", fontsize=enforce_font_floor(FS_TICK - 0.5), color="#1A1A1A")
 
         # --- L1 g value cell ---
         g = row["pooled_g"]
@@ -336,7 +390,7 @@ def render_pdf(df: pd.DataFrame) -> None:
         if np.isfinite(g):
             txt_color = "white" if abs(g) > G_VMAX * 0.6 else "#1A1A1A"
             ax.text((X["L1_g"][0] + X["L1_g"][1]) / 2.0, y, f"{g:+.2f}",
-                    ha="center", va="center", fontsize=6.0, color=txt_color)
+                    ha="center", va="center", fontsize=enforce_font_floor(FS_TICK - 0.5), color=txt_color)
 
         # --- L1' state strip ---
         s_color = STATE_COLORS.get(row["state_consensus"], "#FFFFFF")
@@ -354,7 +408,7 @@ def render_pdf(df: pd.DataFrame) -> None:
                                         edgecolor="#AAA", linewidth=0.3, hatch="///")
             ax.add_patch(rect)
             ax.text((X["L2_d"][0] + X["L2_d"][1]) / 2.0, y, "—",
-                    ha="center", va="center", fontsize=6.0, color="#888")
+                    ha="center", va="center", fontsize=enforce_font_floor(FS_TICK - 0.5), color="#888")
         else:
             dc = value_to_color(d, DSCORE_VMAX, cmap)
             edge = SUPPORT_BORDER if row["L2_supportive"] else "#888"
@@ -365,15 +419,15 @@ def render_pdf(df: pd.DataFrame) -> None:
             ax.add_patch(rect)
             txt_color = "white" if abs(d) > DSCORE_VMAX * 0.6 else "#1A1A1A"
             ax.text((X["L2_d"][0] + X["L2_d"][1]) / 2.0, y, f"{d:+.3f}",
-                    ha="center", va="center", fontsize=6.0, color=txt_color)
+                    ha="center", va="center", fontsize=enforce_font_floor(FS_TICK - 0.5), color=txt_color)
             # significance dot/star inside the cell, top-right
             if np.isfinite(row["p_perm_carrier"]):
                 if row["p_perm_carrier"] < 0.05:
                     ax.text(X["L2_d"][1] - 0.4, y0 + 0.15, "*",
-                            ha="right", va="top", fontsize=7.0, color="#1A1A1A")
+                            ha="right", va="top", fontsize=enforce_font_floor(FS_TICK), color="#1A1A1A")
                 elif row["p_perm_carrier"] < 0.10:
                     ax.text(X["L2_d"][1] - 0.4, y0 + 0.15, ".",
-                            ha="right", va="top", fontsize=7.0, color="#1A1A1A")
+                            ha="right", va="top", fontsize=enforce_font_floor(FS_TICK), color="#1A1A1A")
 
         # --- L2' fidelity strip ---
         f_color = FIDELITY_COLORS.get(row["fidelity_class"], "#F0F0F0")
@@ -392,7 +446,7 @@ def render_pdf(df: pd.DataFrame) -> None:
                 tag = "Relay\u2192non-carrier" if fid_cls == "Relay" else "Extension"
                 ax.text(X["L2_d"][1] - 0.15, y0 + row_h - 0.05, tag,
                           ha="right", va="top",
-                          fontsize=4.6, color="#5E3C99", style="italic",
+                          fontsize=enforce_font_floor(FS_TICK - 1), color="#5E3C99", style="italic",
                           fontweight="bold")
 
         # --- L3 rho cell ---
@@ -407,14 +461,14 @@ def render_pdf(df: pd.DataFrame) -> None:
         if np.isfinite(rho):
             txt_color = "white" if abs(rho) > RHO_VMAX * 0.6 else "#1A1A1A"
             ax.text((X["L3_rho"][0] + X["L3_rho"][1]) / 2.0, y, f"{rho:+.2f}",
-                    ha="center", va="center", fontsize=6.0, color=txt_color)
+                    ha="center", va="center", fontsize=enforce_font_floor(FS_TICK - 0.5), color=txt_color)
             if np.isfinite(row["p_perm_primary"]):
                 if row["p_perm_primary"] < 0.05:
                     ax.text(X["L3_rho"][1] - 0.4, y0 + 0.15, "*",
-                            ha="right", va="top", fontsize=7.0, color="#1A1A1A")
+                            ha="right", va="top", fontsize=enforce_font_floor(FS_TICK), color="#1A1A1A")
                 elif row["p_perm_primary"] < 0.10:
                     ax.text(X["L3_rho"][1] - 0.4, y0 + 0.15, ".",
-                            ha="right", va="top", fontsize=7.0, color="#1A1A1A")
+                            ha="right", va="top", fontsize=enforce_font_floor(FS_TICK), color="#1A1A1A")
 
         # --- L3' chronicity strip ---
         chro_color = CHRONICITY_COLORS.get(row["chronicity_class"], "#F0F0F0")
@@ -438,42 +492,42 @@ def render_pdf(df: pd.DataFrame) -> None:
                                           bar_w, row_h * 0.5,
                                           facecolor=bar_color, edgecolor="none"))
         ax.text(X["atlas"][0] + bar_w + 0.4, y, f"{ps:.0f}",
-                ha="left", va="center", fontsize=5.8, color="#1A1A1A")
+                ha="left", va="center", fontsize=enforce_font_floor(FS_TICK - 0.5), color="#1A1A1A")
 
         # --- stars (★ glyphs) ---
         ax.text((X["stars"][0] + X["stars"][1]) / 2.0, y,
                 stars,
                 ha="center", va="center",
-                fontsize=8.4, fontweight="bold",
+                fontsize=enforce_font_floor(FS_PANEL_TITLE + 0.5), fontweight="bold",
                 color={"***": "#2E7B5E", "**": "#7BB36C", "*": "#888888"}.get(stars, "#888"))
         # --- n.sup ---
         ax.text((X["n_sup"][0] + X["n_sup"][1]) / 2.0, y,
                 f"{int(row['n_supportive'])}/3",
                 ha="center", va="center",
-                fontsize=6.2, fontweight="bold",
+                fontsize=enforce_font_floor(FS_TICK), fontweight="bold",
                 color="#1A1A1A")
 
     # ---- Title block ----
     fig.text(0.005, 0.965,
-             "Fig 5b  Cross-figure triangulation  (16 NCP_v3 families)",
-             fontsize=10.0, fontweight="bold", color="#1A1A1A")
+             "Fig 5b  Cross-figure triangulation  (16 NCP axis families)",
+             fontsize=enforce_font_floor(FS_PANEL_TITLE + 2), fontweight="bold", color="#1A1A1A")
     fig.text(0.005, 0.940,
              "Stage-grouped layout:  L0 HCA carrier  \u2192  L1 bulk  \u2192  L2 snRNA  \u2192  L3 duration  \u2192  Atlas",
-             fontsize=6.8, color="#444444", style="italic")
+             fontsize=enforce_font_floor(FS_TICK), color="#444444", style="italic")
 
     # ---- Compact bottom caption (full legend in figure caption / local manuscript) ----
     fig.text(0.005, 0.022,
              "Stage-grouped layout: L0 HCA carrier  \u2192  L1 bulk  \u2192  L2 snRNA  \u2192  L3 duration  \u2192  Atlas.  "
              "Continuous cells: BrBG palette (white = 0; deep red = positive / LA-ward; deep blue = negative).  "
              "Yellow border = layer-supportive.   *  p_perm < 0.05;   .  p_perm < 0.10.",
-             fontsize=5.6, color="#444444")
+             fontsize=enforce_font_floor(FS_FOOTNOTE - 0.5), color="#444444")
     fig.text(0.005, 0.005,
              "L2 \u0394 = signed \u0394Score at the healthy LA carrier cell type;  "
              "L2 supportive (yellow border on fidelity strip) = fidelity_class \u2208 {Fidelity, Relay, Extension} "
-             "(signal may reside in a non-carrier compartment, e.g. F15 Relay \u2192 lymph + endothelial).  "
+             "(signal may reside in a non-carrier compartment, e.g. F15 Relay \u2192 endothelial only).  "
              "Hatched L2 cells = LA carrier is Mixed/Unresolved (no single carrier-specific \u0394).  "
              "See Figure Legend for full colour key.",
-             fontsize=5.6, color="#444444")
+             fontsize=enforce_font_floor(FS_FOOTNOTE - 0.5), color="#444444")
 
     OUT_PDF.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(OUT_PDF, bbox_inches=None, pad_inches=0.04)
@@ -482,7 +536,7 @@ def render_pdf(df: pd.DataFrame) -> None:
 
 
 def main():
-    df = build_table()
+    df = finalize_manuscript_columns(build_table())
     OUT_TSV.parent.mkdir(parents=True, exist_ok=True)
     df.to_csv(OUT_TSV, sep="\t", index=False, float_format="%.4f")
     print(f"wrote {OUT_TSV.relative_to(ROOT)} ({len(df)} rows)")

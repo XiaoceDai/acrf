@@ -5,14 +5,15 @@ Figure 1d (SUMMARY version, for the main composite Figure 1).
 Drops the 30 x 8 per-donor heatmap to reduce visual fatigue across the
 Figure 1 panels (Fig 1d / 1e / 1f all used 30-row heatmaps).
 
-What this panel shows, for each NCP_v2 program:
+What this panel shows, for each deployed NCP program (same pathways as
+results/innovation_ncp_v3_axis_families.tsv):
     - mean_aCAI averaged over 8 healthy donors  (bar length / direction)
     - sign-concordance n/8                       (text annotation)
     - chamber direction tag (LA = red, RA = blue)
     - pathway short name on the right
 
 The full per-donor heatmap is kept as a supplementary figure
-(fig1b_baseline_donor_aCAI.pdf).
+(same row order as results/fig1b_baseline_donor_aCAI.tsv).
 
 Inputs:
     results/fig1b_baseline_donor_aCAI.tsv   (cached by fig1b_baseline_donor_aCAI.py)

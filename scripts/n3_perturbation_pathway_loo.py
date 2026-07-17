@@ -14,7 +14,7 @@ For each chamber-reversal gene g  (n = 24)  and each NCP_v2 program p
         (relative to the program's overall  Δsing variance)
 
 This quantifies how much each individual reversal gene contributes to the
-program's signal in LA fibroblasts (the dominant Fig 6C carrier);  large
+program's signal in LA fibroblasts (the dominant Fig 7 carrier);  large
 |keystone| genes are candidate hubs whose silencing collapses program-
 level scoring.
 

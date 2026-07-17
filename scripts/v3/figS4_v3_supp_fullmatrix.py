@@ -30,7 +30,7 @@ FAM_GT1M = ROOT / "results" / "fig4_v3_FAMILY_laa_sens_gt1m_eq1.tsv"
 FAM_ORD = ROOT / "results" / "fig4_v3_FAMILY_laa_sens_ordinal.tsv"
 FAM_LAPV = ROOT / "results" / "fig4_v3_FAMILY_lapv_sensitivity.tsv"
 ATLAS_TSV = ROOT / "results" / "fig_integrated_af_rewiring_atlas.tsv"
-OUT_PDF = ROOT / "figures" / "figS4_v3_supp_fullmatrix.pdf"
+OUT_PDF = ROOT / "figures" / "figS4_supp_fullmatrix.pdf"
 
 LA_DEEP = "#9C5550"
 RA_DEEP = "#4E6B89"
@@ -151,14 +151,14 @@ def main():
 
     im_fam = draw_heatmap(ax_fam, fam_rho, fam_p, vmax_fam,
                             fam_labels, [CODING_LABEL[c] for c in CODINGS],
-                            "16 NCP_v3 families  (atlas-priority order)")
+                            "16 NCP axis families  (atlas-priority order)")
     cbar_fam = fig.colorbar(im_fam, cax=ax_fam_cb, orientation="vertical")
     cbar_fam.set_label("Spearman \u03c1", fontsize=6.4)
     cbar_fam.ax.tick_params(labelsize=5.6)
 
     im_prog = draw_heatmap(ax_prog, prog_rho_arr, prog_p_arr, vmax_prog,
                              prog_labels, prog_col_labels,
-                             "30 NCP_v3 programs  (within-family order; LAA primary only)")
+                             "30 NCP pathway programs  (within-family order; LAA primary only)")
     cbar_prog = fig.colorbar(im_prog, cax=ax_prog_cb, orientation="vertical")
     cbar_prog.set_label("Spearman \u03c1", fontsize=6.4)
     cbar_prog.ax.tick_params(labelsize=5.6)

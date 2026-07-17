@@ -6,7 +6,7 @@ Source data: Project_P3/HCA/pseudobulk_chamber/<comp>/{expr.tsv,samples.tsv}
              (built by scripts/p_hca_pseudobulk_chamber.py from
               global_raw.h5ad / Litvinukova et al. 2020).
 
-For every NCP_v3 program / family we compute, separately for LA and RA:
+For every NCP pathway program / family we compute, separately for LA and RA:
     (1) per-compartment mean expression averaged across paired donors,
     (2) row z-score across reliable compartments,
     (3) per-side dominant carrier (top z) and Mixed/Unresolved flag.

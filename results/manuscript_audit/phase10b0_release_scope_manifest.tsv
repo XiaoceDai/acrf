@@ -1,0 +1,195 @@
+path	git_status	category	release_classification	commit_candidate	exclude	reason	asset_group	bytes	notes
+results/manuscript_audit/	?? (tree)	ARCHIVE_ONLY	ARCHIVE_INTERNAL_AUDITS	SELECTIVE	PARTIAL	phase audit trail; release needs env/hash manifests; not all audit noise	audit	5964341	include phase10a3_* and key lock manifests; bulk phase previews optional/archive
+docs/manuscript/MANUSCRIPT_FRAMEWORK.md	IGNORED	ARCHIVE_ONLY	ARCHIVE	OPTIONAL	NO	terminology framework; locked title already in file; not required if sections released	docs_internal	11407	
+results/handoff/fulltext_audit_v1_1/	IGNORED	ARCHIVE_ONLY	ARCHIVE_SELECTIVE	SELECTIVE	PARTIAL	claims registry + manifests useful; full nested manuscript_sources duplicates excluded	handoff	3990419	
+.pytest_cache/	IGNORED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	test cache	excluded_raw_or_dev	1047	
+.venv/	IGNORED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	local virtualenv	excluded_raw_or_dev	37132977	
+Project_P2/	IGNORED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	cohort working tree / raw archives	excluded_raw_or_dev	1861985867	
+Project_P3/	IGNORED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	cohort working tree / raw archives	excluded_raw_or_dev	1399747059	
+Project_P4/	IGNORED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	cohort working tree / raw archives	excluded_raw_or_dev	449725686	
+Project_P5/	IGNORED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	cohort working tree / raw archives	excluded_raw_or_dev	393585861	
+Project_P6/	IGNORED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	cohort working tree	excluded_raw_or_dev	102605276	
+bulk/	TRACKED_CLEAN	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	bulk working data	excluded_raw_or_dev	19748285	
+data/gwas/	IGNORED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	GWAS download tree including large sumstats	excluded_raw_or_dev	1722275574	
+global_raw.h5ad	IGNORED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	raw/restricted-scale expression object	excluded_raw_or_dev	5068859764	
+results/figure6_ldsc/af_GCST90624411_for_munge.tsv.gz	IGNORED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	large intermediate	excluded_raw_or_dev	758965648	
+results/handoff/fulltext_audit_v1/	IGNORED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	superseded handoff package	handoff_legacy	3985762	
+figures/_audit_png/fig5e_mechanism_cartoon.png	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	legacy Figure 5E / exploratory panel	legacy_or_temp	212854	
+figures/_audit_png/fig7_data_driven_modules.png	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	legacy Figure 7	legacy_or_temp	100055	
+figures/_audit_png/fig7_reversal_carrier_composite.png	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	legacy Figure 7	legacy_or_temp	221160	
+figures/_composite_fig1.pdf	M	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	intermediate/obsolete rendering	legacy_or_temp	203689	
+figures/_composite_fig1.tex	M	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	intermediate/obsolete rendering	legacy_or_temp	1013	
+figures/fig5e_mechanism_cartoon.pdf	??	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	legacy Figure 5E / exploratory panel	legacy_or_temp	48318	
+figures/fig7_data_driven_modules.pdf	TRACKED_CLEAN	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	legacy Figure 7	legacy_or_temp	96656	
+figures/fig7_reversal_carrier_composite.pdf	??	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	legacy Figure 7	legacy_or_temp	583120	
+figures/figS10_methodology_audit.pdf	TRACKED_CLEAN	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	legacy SI figure S10	legacy_or_temp	50036	
+figures/figS11_method_p5.pdf	TRACKED_CLEAN	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	legacy SI figure S11	legacy_or_temp	50748	
+figures/figS13_prototype_vs_ncp_benchmark.pdf	??	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	legacy SI figure S13	legacy_or_temp	27541	
+figures/figS14_ncp_bootstrap_stability.pdf	??	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	legacy SI figure S14	legacy_or_temp	29767	
+figures/figS15_pairing_stress_test.pdf	M	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	legacy SI figure S15	legacy_or_temp	23934	
+figures/figS16_g_tier_entity_strip.pdf	??	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	legacy SI figure S16	legacy_or_temp	38764	
+figures/figS16_program_donor_acairel_heatmap.pdf	??	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	legacy SI figure S16	legacy_or_temp	35564	
+figures/figS9_reduced_axis.pdf	TRACKED_CLEAN	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	legacy SI figure S9	legacy_or_temp	54006	
+figures/fig_integrated_af_rewiring_atlas.pdf	M	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	intermediate/obsolete rendering	legacy_or_temp	40570	
+figures/ncp_v3_singscore_reanalysis/fig5e_mechanism_cartoon.pdf	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	legacy Figure 5E / exploratory panel	legacy_or_temp	49108	
+results/graphical_abstract_layout_debug.png	??	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	620197	
+results/graphical_abstract_preview.png	??	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	1561314	
+results/handoff/fulltext_audit_v1/figure_previews/figure1_preview.png	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	684172	
+results/handoff/fulltext_audit_v1/figure_previews/figure2_preview.png	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	601572	
+results/handoff/fulltext_audit_v1/figure_previews/figure3_preview.png	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	491784	
+results/handoff/fulltext_audit_v1/figure_previews/figure4_preview.png	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	459686	
+results/handoff/fulltext_audit_v1/figure_previews/figure5_preview.png	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	618876	
+results/handoff/fulltext_audit_v1/figure_previews/figure6_preview.png	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	260483	
+results/handoff/fulltext_audit_v1_1/figure_previews/figure1_preview.png	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	684172	
+results/handoff/fulltext_audit_v1_1/figure_previews/figure2_preview.png	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	601572	
+results/handoff/fulltext_audit_v1_1/figure_previews/figure3_preview.png	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	491784	
+results/handoff/fulltext_audit_v1_1/figure_previews/figure4_preview.png	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	459686	
+results/handoff/fulltext_audit_v1_1/figure_previews/figure5_preview.png	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	618876	
+results/handoff/fulltext_audit_v1_1/figure_previews/figure6_preview.png	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	260483	
+results/manuscript_audit/phase3_text_preview.md	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	2835	
+results/manuscript_audit/phase3p_text_preview.md	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	2980	
+results/manuscript_audit/phase4a_results_fig1_fig2_preview.md	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	5510	
+results/manuscript_audit/phase4ap_results_preview.md	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	5462	
+results/manuscript_audit/phase4b_results_fig3_fig4_preview.md	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	4475	
+results/manuscript_audit/phase4bp_results_preview.md	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	4255	
+results/manuscript_audit/phase4c_results_fig5_fig6_preview.md	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	5077	
+results/manuscript_audit/phase4cp_results_preview.md	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	5212	
+results/manuscript_audit/phase4h_text_preview.md	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	3061	
+results/manuscript_audit/phase5a_main_figure_legends_preview.md	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	13980	
+results/manuscript_audit/phase5ap_main_figure_legends_preview.md	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	14203	
+results/manuscript_audit/phase5b3a_previews/figS1_preview.png	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	82458	
+results/manuscript_audit/phase5b3a_previews/figS2_preview.png	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	63853	
+results/manuscript_audit/phase5b3a_previews/figS3_preview.png	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	222384	
+results/manuscript_audit/phase5b3a_previews/figS4_preview.png	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	76709	
+results/manuscript_audit/phase5b3a_previews/figS5_preview.png	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	94283	
+results/manuscript_audit/phase5b3a_previews/figS6_preview.png	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	137842	
+results/manuscript_audit/phase5b3a_previews/figS7_preview.png	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	58147	
+results/manuscript_audit/phase5b3a_previews/figS8_preview.png	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	88462	
+results/manuscript_audit/phase5b3b_table_previews/S1_Table_preview.md	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	12003	
+results/manuscript_audit/phase5b3b_table_previews/S2_Table_preview.md	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	8610	
+results/manuscript_audit/phase5b3b_table_previews/S3_Table_preview.md	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	11810	
+results/manuscript_audit/phase5b3b_table_previews/S4_Table_preview.md	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	11004	
+results/manuscript_audit/phase5b3b_table_previews/S5_Table_preview.md	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	14253	
+results/manuscript_audit/phase5b3b_table_previews/S6_Table_preview.md	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	17423	
+results/manuscript_audit/phase5b4_si_legends_preview.md	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	13740	
+results/manuscript_audit/phase6a_methods_part1_preview.md	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	10542	
+results/manuscript_audit/phase6ap_methods_part1_preview.md	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	12419	
+results/manuscript_audit/phase6bp_methods_part2_preview.md	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	13836	
+results/manuscript_audit/phase6br_methods_part2_preview.md	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	12937	
+results/manuscript_audit/phase6c_methods_part3_preview.md	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	11513	
+results/manuscript_audit/phase6cp_methods_part3_preview.md	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	11267	
+results/manuscript_audit/phase7_introduction_preview.md	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	3779	
+results/manuscript_audit/phase8_discussion_preview.md	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	8302	
+results/manuscript_audit/phase9b_data_code_preview.md	UNTRACKED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	temporary preview/debug artifact	legacy_or_temp	1856	
+scripts/fig5d_dual_axis_mechanism.py	TRACKED_CLEAN	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	obsolete pattern **/*dual*axis*	legacy_or_temp	8819	
+data/gwas/GCST90624411/harmonised/GCST90624411.h.tsv.gz	IGNORED	EXCLUDE_FROM_RELEASE	EXCLUDE	NO	YES	large external GWAS sumstats	raw_external	1720310142	
+tests/	TRACKED_CLEAN	PUBLIC_RELEASE_OPTIONAL	INCLUDE_OPTIONAL	YES	NO	package tests useful for release validation	code_tests	2398	
+.zenodo.json	MISSING	PUBLIC_RELEASE_OPTIONAL	PENDING_CREATE	NO	NO	create at Zenodo phase; not blocking	metadata	0	
+CITATION.cff	MISSING	PUBLIC_RELEASE_OPTIONAL	PENDING_CREATE	NO	NO	not present; create at tag/Zenodo phase if desired — not blocking clean code release	metadata	0	
+tools/ldsc/	TRACKED_CLEAN	PUBLIC_RELEASE_OPTIONAL	OPTIONAL_TOOLING	OPTIONAL	NO	vendored LDSC tool + test fixtures (optional separately)	optional_tools	26960084	
+results/figure1_composite_qc.md	??	PUBLIC_RELEASE_OPTIONAL	INCLUDE_OPTIONAL	YES	NO	QC companion figure1_composite_qc	qc	2508	
+results/figure2_composite_qc.md	??	PUBLIC_RELEASE_OPTIONAL	INCLUDE_OPTIONAL	YES	NO	QC companion figure2_composite_qc	qc	1986	
+results/figure6_composite_qc.md	??	PUBLIC_RELEASE_OPTIONAL	INCLUDE_OPTIONAL	YES	NO	QC companion figure6_composite_qc	qc	2005	
+results/ncp_v3_singscore_reanalysis/figure3_composite_qc.md	UNTRACKED	PUBLIC_RELEASE_OPTIONAL	INCLUDE_OPTIONAL	YES	NO	QC companion figure3_composite_qc	qc	3441	
+scripts/graphical_abstract/build_graphical_abstract.py	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	GA builder	code_figure_builders	65723	
+scripts/m0_doc_style.py	TRACKED_CLEAN	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	manuscript generator	code_manuscript_generators	3884	
+scripts/m10_supp_table_s6_anchor_matrix.py	M	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	manuscript generator	code_manuscript_generators	2222	
+scripts/m1_methods_docx.py	M	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	manuscript generator	code_manuscript_generators	42526	
+scripts/m2_figure_captions_docx.py	M	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	manuscript generator	code_manuscript_generators	40237	
+scripts/m3_data_availability_docx.py	M	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	manuscript generator	code_manuscript_generators	3030	
+scripts/m4_results_docx.py	M	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	manuscript generator	code_manuscript_generators	53247	
+scripts/m5_discussion_docx.py	M	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	manuscript generator	code_manuscript_generators	10619	
+scripts/m6_introduction_docx.py	M	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	manuscript generator	code_manuscript_generators	5333	
+scripts/m7_supp_table_s3_reversal.py	TRACKED_CLEAN	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	manuscript generator	code_manuscript_generators	3307	
+scripts/m8_supp_table_s4_carrier.py	M	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	manuscript generator	code_manuscript_generators	2947	
+scripts/m9_supp_table_s5_modules.py	TRACKED_CLEAN	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	manuscript generator	code_manuscript_generators	3348	
+scripts/m_supp_table_mechanism.py	M	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	manuscript generator	code_manuscript_generators	10424	
+scripts/m_supp_table_s1_cohort_demographics.py	M	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	manuscript generator	code_manuscript_generators	2572	
+src/crf/	TRACKED_CLEAN	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	installable package import crf / dist acrf	code_package	9474	
+scripts/	M (tree)	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	analysis scripts, figure/table builders, manuscript generators	code_scripts	3568905	exclude __pycache__ at commit time
+figures/figure1_composite.pdf	??	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical Figure1_PDF; sha verified Phase10A3	figures_main	120480	A–D only; A–D
+figures/figure1_composite.png	??	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical Figure1_PNG; sha verified Phase10A3	figures_main	1942601	A–D only; A–D
+figures/figure1_composite.svg	??	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical Figure1_SVG; sha verified Phase10A3	figures_main	224583	A–D only; A–D
+figures/figure2_composite.pdf	??	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical Figure2_PDF; sha verified Phase10A3	figures_main	129884	A–D only; A–D
+figures/figure2_composite.png	??	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical Figure2_PNG; sha verified Phase10A3	figures_main	1549495	A–D only; A–D
+figures/figure2_composite.svg	??	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical Figure2_SVG; sha verified Phase10A3	figures_main	256064	A–D only; A–D
+figures/figure6_genetic_traceability.pdf	??	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical Figure6_PDF; sha verified Phase10A3	figures_main	1044044	A–D only; A–D
+figures/figure6_genetic_traceability.png	??	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical Figure6_PNG; sha verified Phase10A3	figures_main	676582	A–D only; A–D
+figures/figure6_genetic_traceability.svg	??	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical Figure6_SVG; sha verified Phase10A3	figures_main	155948	A–D only; A–D
+figures/ncp_v3_singscore_reanalysis/figure3_la_single_nucleus_localization.pdf	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical Figure3_PDF; sha verified Phase10A3	figures_main	1057043	A–D only; A–D; Live matches Phase6B0-R authority; Manifest stale
+figures/ncp_v3_singscore_reanalysis/figure3_la_single_nucleus_localization.png	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical Figure3_PNG; sha verified Phase10A3	figures_main	1024169	A–D only; A–D; Live matches Phase6B0-R authority; Manifest stale
+figures/ncp_v3_singscore_reanalysis/figure3_la_single_nucleus_localization.svg	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical Figure3_SVG; sha verified Phase10A3	figures_main	202670	A–D only; A–D; Live matches Phase6B0-R authority; Manifest stale
+figures/ncp_v3_singscore_reanalysis/figure4_cross_sectional_duration.pdf	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical Figure4_PDF; sha verified Phase10A3	figures_main	985674	A–D only; A–D
+figures/ncp_v3_singscore_reanalysis/figure4_cross_sectional_duration.png	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical Figure4_PNG; sha verified Phase10A3	figures_main	1053447	A–D only; A–D
+figures/ncp_v3_singscore_reanalysis/figure4_cross_sectional_duration.svg	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical Figure4_SVG; sha verified Phase10A3	figures_main	109026	A–D only; A–D
+figures/ncp_v3_singscore_reanalysis/figure5_cross_layer_triangulation.pdf	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical Figure5_PDF; sha verified Phase10A3	figures_main	1542050	A–D only; A–D
+figures/ncp_v3_singscore_reanalysis/figure5_cross_layer_triangulation.png	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical Figure5_PNG; sha verified Phase10A3	figures_main	1428023	A–D only; A–D
+figures/ncp_v3_singscore_reanalysis/figure5_cross_layer_triangulation.svg	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical Figure5_SVG; sha verified Phase10A3	figures_main	177595	A–D only; A–D
+figures/supplementary/figS1_cohort_overview.pdf	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S1Fig_PDF; sha verified Phase10A3	figures_si	26722	Cohort overview and analysis roles of public datasets
+figures/supplementary/figS1_cohort_overview.png	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S1Fig_PNG; sha verified Phase10A3	figures_si	503642	Cohort overview and analysis roles of public datasets
+figures/supplementary/figS1_cohort_overview.svg	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S1Fig_SVG; sha verified Phase10A3	figures_si	54284	Cohort overview and analysis roles of public datasets
+figures/supplementary/figS2_pairing_sample_attributes.pdf	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S2Fig_PDF; sha verified Phase10A3	figures_si	27654	Donor pairing and sample-attribute structure
+figures/supplementary/figS2_pairing_sample_attributes.png	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S2Fig_PNG; sha verified Phase10A3	figures_si	373648	Donor pairing and sample-attribute structure
+figures/supplementary/figS2_pairing_sample_attributes.svg	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S2Fig_SVG; sha verified Phase10A3	figures_si	130016	Donor pairing and sample-attribute structure
+figures/supplementary/figS3_la_single_nucleus_full_localization.pdf	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S3Fig_PDF; sha verified Phase10A3	figures_si	162869	Full LA single-nucleus family and program localization
+figures/supplementary/figS3_la_single_nucleus_full_localization.png	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S3Fig_PNG; sha verified Phase10A3	figures_si	1198751	Full LA single-nucleus family and program localization
+figures/supplementary/figS3_la_single_nucleus_full_localization.svg	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S3Fig_SVG; sha verified Phase10A3	figures_si	173248	Full LA single-nucleus family and program localization
+figures/supplementary/figS4_cohort_pca_overview.pdf	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S4Fig_PDF; sha verified Phase10A3	figures_si	42619	Per-cohort principal-component overview of expression datasets
+figures/supplementary/figS4_cohort_pca_overview.png	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S4Fig_PNG; sha verified Phase10A3	figures_si	388543	Per-cohort principal-component overview of expression datasets
+figures/supplementary/figS4_cohort_pca_overview.svg	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S4Fig_SVG; sha verified Phase10A3	figures_si	74650	Per-cohort principal-component overview of expression datasets
+figures/supplementary/figS5_gse238242_rna_mural_sensitivity.pdf	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S5Fig_PDF; sha verified Phase10A3	figures_si	52176	GSE238242 RNA-side and mural-cell sensitivity
+figures/supplementary/figS5_gse238242_rna_mural_sensitivity.png	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S5Fig_PNG; sha verified Phase10A3	figures_si	538411	GSE238242 RNA-side and mural-cell sensitivity
+figures/supplementary/figS5_gse238242_rna_mural_sensitivity.svg	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S5Fig_SVG; sha verified Phase10A3	figures_si	49563	GSE238242 RNA-side and mural-cell sensitivity
+figures/supplementary/figS6_chamber_contribution_af_ncp_rewiring.pdf	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S6Fig_PDF; sha verified Phase10A3	figures_si	43292	Chamber contribution to AF-associated NCP family rewiring
+figures/supplementary/figS6_chamber_contribution_af_ncp_rewiring.png	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S6Fig_PNG; sha verified Phase10A3	figures_si	677934	Chamber contribution to AF-associated NCP family rewiring
+figures/supplementary/figS6_chamber_contribution_af_ncp_rewiring.svg	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S6Fig_SVG; sha verified Phase10A3	figures_si	101869	Chamber contribution to AF-associated NCP family rewiring
+figures/supplementary/figS7_f4_bcaa_fibroblast_support.pdf	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S7Fig_PDF; sha verified Phase10A3	figures_si	32879	F4 BCAA constituent-program fibroblast support
+figures/supplementary/figS7_f4_bcaa_fibroblast_support.png	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S7Fig_PNG; sha verified Phase10A3	figures_si	307755	F4 BCAA constituent-program fibroblast support
+figures/supplementary/figS7_f4_bcaa_fibroblast_support.svg	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S7Fig_SVG; sha verified Phase10A3	figures_si	15981	F4 BCAA constituent-program fibroblast support
+figures/supplementary/figS8_full_external_af_gene_overlap.pdf	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S8Fig_PDF; sha verified Phase10A3	figures_si	28586	Full NCP family overlap with external AF gene sets
+figures/supplementary/figS8_full_external_af_gene_overlap.png	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S8Fig_PNG; sha verified Phase10A3	figures_si	498157	Full NCP family overlap with external AF gene sets
+figures/supplementary/figS8_full_external_af_gene_overlap.svg	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S8Fig_SVG; sha verified Phase10A3	figures_si	18658	Full NCP family overlap with external AF gene sets
+figures/graphical_abstract/graphical_abstract_final.pdf	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	Phase 10A2-A frozen GA PDF	graphical_abstract	54570	
+figures/graphical_abstract/graphical_abstract_final.png	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	Phase 10A2-A frozen GA PNG	graphical_abstract	1560867	
+figures/graphical_abstract/graphical_abstract_final.svg	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	Phase 10A2-A frozen GA SVG	graphical_abstract	77545	
+docs/manuscript/drafts/Author_Metadata.md	IGNORED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	Author metadata (Phase 10A1)	manuscript	1833	
+manuscript_drafts/Abstract_AuthorSummary_plos_cb.md	IGNORED; via manuscript_drafts/Abstract_AuthorSummary_plos_cb.md	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	Abstract/Author Summary source	manuscript	3330	symlink manuscript_drafts -> docs/manuscript/drafts
+manuscript_drafts/Data_Code_Availability.docx	IGNORED; via manuscript_drafts/Data_Code_Availability.docx	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	Data/Code Availability Option B	manuscript	37620	symlink manuscript_drafts -> docs/manuscript/drafts
+manuscript_drafts/Discussion.docx	IGNORED; via manuscript_drafts/Discussion.docx	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	Discussion	manuscript	40223	symlink manuscript_drafts -> docs/manuscript/drafts
+manuscript_drafts/Figure_Captions.docx	IGNORED; via manuscript_drafts/Figure_Captions.docx	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	Figure captions	manuscript	45959	symlink manuscript_drafts -> docs/manuscript/drafts
+manuscript_drafts/Introduction.docx	IGNORED; via manuscript_drafts/Introduction.docx	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	Introduction	manuscript	38443	symlink manuscript_drafts -> docs/manuscript/drafts
+manuscript_drafts/Methods.docx	IGNORED; via manuscript_drafts/Methods.docx	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	Methods	manuscript	49420	symlink manuscript_drafts -> docs/manuscript/drafts
+manuscript_drafts/Results.docx	IGNORED; via manuscript_drafts/Results.docx	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	Results	manuscript	44113	symlink manuscript_drafts -> docs/manuscript/drafts
+LICENSE	M	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	MIT; Copyright 2026 Xiao-Ce Dai	metadata	1068	
+README.md	M	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	repository readme	metadata	1302	
+pyproject.toml	M	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	package identity + MIT license metadata	metadata	678	
+results/handoff/fulltext_audit_v1_1/02_final_claims_registry.tsv	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	claims registry	provenance	20208	
+results/innovation_ncp_v3_axis_families.tsv	TRACKED_CLEAN	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	NCP axis families source table	provenance	2178	
+results/innovation_ncp_v3_panel.tsv	TRACKED_CLEAN	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	NCP panel source table	provenance	5756	
+results/manuscript_audit/phase10a3_environment_manifest.tsv	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	environment freeze inventory	provenance	4379	
+results/manuscript_audit/phase10a3_output_hash_verification.tsv	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical hash verification	provenance	20704	
+results/manuscript_audit/phase10a3_reproducibility_boundary.tsv	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	reproducibility boundary	provenance	1313	
+results/ncp_v3_canonical_display_order.tsv	??	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical family order	provenance	2113	
+results/ncp_v3_family_labels.tsv	??	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	program-to-family mapping	provenance	1081	
+results/ncp_v3_family_leading_edge_genes.tsv	??	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	selection-time LE genes	provenance	176508	
+results/ncp_v3_singscore_reanalysis/frozen_program_metadata.tsv	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	frozen NCP metadata	provenance	14438	
+results/provenance/figure6_external_gene_sets_manifest.tsv	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	external gene-set manifest	provenance	1915	
+results/provenance/gwas_gcst90624411/	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	GWAS accession provenance package (NOT sumstats)	provenance	11197	
+results/supplementary_tables/S1_datasets.tsv	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S1Table_TSV_S1_datasets.tsv; sha verified Phase10A3	tables_si	8326	visible-sheet TSV
+results/supplementary_tables/S2_evidence_gating.tsv	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S2Table_TSV_S2_evidence_gating.tsv; sha verified Phase10A3	tables_si	6968	visible-sheet TSV
+results/supplementary_tables/S3_cohort_effects.tsv	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S3Table_TSV_S3_cohort_effects.tsv; sha verified Phase10A3	tables_si	22174	visible-sheet TSV
+results/supplementary_tables/S3_family_summary.tsv	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S3Table_TSV_S3_family_summary.tsv; sha verified Phase10A3	tables_si	6395	visible-sheet TSV
+results/supplementary_tables/S4_family_compartment_detail.tsv	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S4Table_TSV_S4_family_compartment_detail.tsv; sha verified Phase10A3	tables_si	35592	visible-sheet TSV
+results/supplementary_tables/S4_family_summary.tsv	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S4Table_TSV_S4_family_summary.tsv; sha verified Phase10A3	tables_si	4936	visible-sheet TSV
+results/supplementary_tables/S5_design_summary.tsv	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S5Table_TSV_S5_design_summary.tsv; sha verified Phase10A3	tables_si	784	visible-sheet TSV
+results/supplementary_tables/S5_family_summary.tsv	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S5Table_TSV_S5_family_summary.tsv; sha verified Phase10A3	tables_si	11699	visible-sheet TSV
+results/supplementary_tables/S6_anchor_summary.tsv	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S6Table_TSV_S6_anchor_summary.tsv; sha verified Phase10A3	tables_si	10567	visible-sheet TSV
+results/supplementary_tables/S6_dimension_summary.tsv	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S6Table_TSV_S6_dimension_summary.tsv; sha verified Phase10A3	tables_si	2186	visible-sheet TSV
+tables/supplementary/S1_Table_public_datasets_analysis_roles.xlsx	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S1Table_XLSX; sha verified Phase10A3	tables_si	12244	Public datasets, cohort metadata, and analysis roles
+tables/supplementary/S2_Table_testing_uncertainty_evidence_gating.xlsx	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S2Table_XLSX; sha verified Phase10A3	tables_si	11554	Multiple-testing, uncertainty, and evidence-gating strategy
+tables/supplementary/S3_Table_bulk_effects_consistency.xlsx	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S3Table_XLSX; sha verified Phase10A3	tables_si	20776	Corrected bulk paired-chamber effects and cross-cohort consistency
+tables/supplementary/S4_Table_snRNA_localization_classes.xlsx	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S4Table_XLSX; sha verified Phase10A3	tables_si	23489	Corrected LA single-nucleus localization and carrier-relative classes
+tables/supplementary/S5_Table_duration_chronicity.xlsx	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S5Table_XLSX; sha verified Phase10A3	tables_si	11631	Corrected cross-sectional AF-duration trends and chronicity classes
+tables/supplementary/S6_Table_genetic_calibration_traceability.xlsx	UNTRACKED	PUBLIC_RELEASE_REQUIRED	INCLUDE	YES	NO	canonical S6Table_XLSX; sha verified Phase10A3	tables_si	12901	Anchor-level genetic calibration and non-nested traceability
+submission/PLOS_CB_submission_pack/01_Manuscript_Word/Manuscript_main.docx	UNTRACKED	SUBMISSION_ONLY	DEFER_PHASE10C	NO	YES	stale/combined not rebuilt; rebuild in Phase 10C before submission pack	manuscript_combined	42316	not a clean-release blocker if section sources are released
+submission/PLOS_CB_submission_pack/	UNTRACKED	SUBMISSION_ONLY	STALE_REBUILD_LATER	NO	YES	stale routing/pack; rebuild Phase 10D; not for clean public code release as authority	submission	10924789	

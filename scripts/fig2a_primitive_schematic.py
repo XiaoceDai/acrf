@@ -6,13 +6,14 @@ Two-row layout:
     Row 1  (per-donor primitive)
         STAGE 1  donor + paired LA / RA biopsies
         STAGE 2  per-chamber expression vector
-        STAGE 3  frozen v3 program panel from Fig1
+        STAGE 3  frozen NCP program panel from Fig1
         STAGE 4  donor-level chamber contrast and normalized rewiring unit
 
     Row 2  (AF-stage inference)
         STAGE 5a  M_aCAI matrix (frozen programs × donors)
         STAGE 5b  block by rhythm, pool 3 cohorts
-        STAGE 5c  per-program Hedges' g + REML / Hartung–Knapp 95 % CI
+        STAGE 5c  per-family Hedges' g + fixed-effect IVW 95% CI
+                   (REML / Hartung–Knapp reserved for axis/program supplements)
 
 Output:  figures/fig2a_primitive_schematic.pdf
 """
@@ -110,10 +111,10 @@ def main() -> None:
 
     # ---- title (now wraps to fit 200mm width) ----
     fig.text(0.025, 0.965,
-              "Fig 2A  Fig1->Fig2 bridge: frozen v3 panel to AF rewiring unit",
+              "Fig 2A  Fig1->Fig2 bridge: frozen NCP panel to AF rewiring unit",
               fontsize=9.0, fontweight="bold", ha="left", va="center")
     fig.text(0.025, 0.935,
-              "No panel re-selection in Fig2: v3 programs are fixed from Fig1, "
+              "No panel re-selection in Fig2: NCP programs are fixed from Fig1, "
               "then projected to donor-paired AF cohorts for rewiring estimation.",
               fontsize=7.5, color=GREY_DARK, ha="left", va="center",
               style="italic")
@@ -195,7 +196,7 @@ def main() -> None:
               r"$S_{ik}^{\mathrm{RA}}=\mathrm{NES}(P_k\mid\mathrm{RA}_i)$",
               fc=BG_RA, ec=RA_COLOR, fontsize=7.2)
     ax.text(s3_x + s3_w / 2, 0.575,
-             "P_k from locked NCP_v3 panel (K = 30; defined in Fig1)",
+             "P_k from locked NCP panel (K = 30; defined in Fig1)",
              fontsize=6.0, color=GREY_DARK, ha="center", va="center",
              style="italic")
 
@@ -249,7 +250,7 @@ def main() -> None:
     # ===================================================================
     row2_top = 0.46
     add_stage_header(ax, 0.030, 0.985, row2_top,
-                       5, "AF-stage inference on fixed v3 object")
+                       5, "AF-stage inference on fixed NCP object")
 
     # M_aCAI matrix
     mat_x = 0.030; mat_y = 0.13; mat_w = 0.225; mat_h = 0.30
@@ -332,7 +333,7 @@ def main() -> None:
              r"\mathrm{aCAI}_{k,c}^{\mathrm{rel,SR}}\right)$",
              fontsize=8.5, ha="center", va="center")
     ax.text(hk_x + hk_w / 2, hk_y + hk_h - 0.150,
-             "pool 3 cohorts  →  REML  +  Hartung-Knapp 95 % CI",
+             "pool 3 cohorts  →  fixed-effect IVW 95% CI (family)",
              fontsize=6.8, ha="center", va="center", color="#1F5C39")
     ax.text(hk_x + hk_w / 2, hk_y + hk_h - 0.180,
              "+ leave-one-cohort-out sensitivity",
@@ -343,7 +344,7 @@ def main() -> None:
              fontsize=6.2, ha="center", va="center", color=GREY_DARK,
              style="italic")
     ax.text(hk_x + hk_w / 2, hk_y + 0.030,
-             "feeds  Fig 2C (decomposition)   &   Fig 2D (forest)",
+             "feeds  Fig 2C (states)   &   Fig 2D (effects/consistency)",
              fontsize=6.8, ha="center", va="center",
              color="#1F5C39", fontweight="bold")
 
@@ -364,7 +365,7 @@ def main() -> None:
 
     # ---- bottom notation ----
     fig.text(0.025, 0.030,
-              "Notation:   i = donor;   k = NCP_v3 program;   "
+              "Notation:   i = donor;   k = NCP pathway program;   "
               "c = cohort;   P_k = program gene set;   "
               "expr = per-gene expression vector.",
               fontsize=6.2, color="#444", ha="left", va="bottom")

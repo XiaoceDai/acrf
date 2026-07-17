@@ -22,7 +22,7 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[2]
 
 CLS_TSV = ROOT / "results" / "fig3_v3_carrier_fidelity_class.tsv"
-OUT_PDF = ROOT / "figures" / "fig3_v3_c_fidelity_class.pdf"
+OUT_PDF = ROOT / "figures" / "fig3_c_fidelity_class.pdf"
 
 CLASS_ORDER = ["Fidelity", "Relay", "Extension", "Below_detection"]
 CLASS_LABELS = {

@@ -393,7 +393,7 @@ def main() -> None:
     )
     summary.to_csv(OUT_SUMMARY, sep="\t", index=False)
     print(f"wrote {OUT_SUMMARY.relative_to(ROOT)}")
-    print("\nTop 10 panel pathways by consensus score:")
+    print("\nTop ten pathway programs by consensus score:")
     print(
         panel.sort_values("consensus_score", ascending=False)
         .head(10)[["program_order", "direction", "pathway", "consensus_score", "stability_consistent_runs"]]

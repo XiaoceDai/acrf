@@ -42,27 +42,44 @@ ROWS: list[list[str]] = [
      "Defines the chamber-biased gene pool used to build NCP programs."],
 
     ["Fig. 1", "c",
-     "NCP program stability across donor resamplings",
-     "singscore on leading-edge sets, donor bootstrap",
-     "10 candidate programs",
-     "Cross-resample stability gate (no FDR)",
-     "≥ 70 % cross-resample direction concordance",
-     "10 / 10 retained programs satisfy the gate (program_order locked)."],
+     "NCP pathway-program selection (consensus pruning)",
+     "dual GSEA + GSVA evidence fusion, LOO stability, Jaccard pruning",
+     "80 candidate pathways → 30 deployed programs",
+     "Consensus gates + diversity pruning (no FDR)",
+     "consensus_score ≥ 0.62; stability ≥ 7/8; dual padj < 0.05",
+     "Thirty pathway programs frozen as the NCP panel "
+     "(results/innovation_ncp_v3_panel.tsv)."],
 
     ["Fig. 1", "d",
-     "Compartment attribution of NCP programs (GSE255612)",
-     "per-compartment Δsingscore vs label permutation",
-     "10 programs × 4 compartments = 40 tests",
-     "Empirical permutation p (1,000 perms); descriptive panel — "
-     "no global FDR",
-     "qperm < 0.10 to flag a 'best compartment'",
-     "Reported as attribution, not as a causal-driver claim."],
+     "Dual-method prototype panel versus consensus-pruned NCP",
+     "side-by-side benchmark on healthy reference and cross-cohort transfer",
+     "30 prototype programs vs 30 NCP programs",
+     "None (methodological benchmark; no discovery claim)",
+     "descriptive continuity / balance / redundancy metrics",
+     "Prototype retained only for benchmarking (Supplementary Fig. S13)."],
+
+    ["Fig. 1", "e",
+     "NCP selection robustness under evidence-weight perturbation",
+     "bootstrap-style resampling of consensus weights / thresholds",
+     "30 pathway programs",
+     "None (stability panel)",
+     "structural preservation of panel size and LA/RA balance",
+     "Panel composition remains stable under perturbation "
+     "(Supplementary Fig. S14)."],
+
+    ["Fig. 1", "f",
+     "Frozen NCP deployment map and HCA LA-carrier priors",
+     "family-level carrier assignment from healthy cardiac atlas",
+     "16 axis families",
+     "None (descriptive deployment panel)",
+     "n / a",
+     "Sixteen families and LA baseline carriers locked for Figs. 2–5."],
 
     # ---- Figure 2 ----
     ["Fig. 2", "b–c",
-     "Per program × cohort AF rewiring class",
+     "Per family × cohort AF rewiring class",
      "donor-level aCAIrel, label-permutation gate",
-     "10 programs × 3 cohorts = 30 program × cohort cells",
+     "16 axis families × 3 cohorts = 48 family × cohort cells",
      "Empirical permutation p, BH within cohort",
      "qperm < 0.10 to call a strict class",
      "Trend-class overlay shown for context only and not used "
@@ -71,20 +88,19 @@ ROWS: list[list[str]] = [
     ["Fig. 2", "e",
      "Replication of bulk rewiring (GSE115574)",
      "donor-level aCAIrel, lollipop direction",
-     "10 programs",
+     "16 axis families",
      "None (descriptive replication panel)",
      "Direction concordance with discovery cohorts",
      "Direction-concordance check; not a discovery sample."],
 
     # ---- Figure 3 ----
     ["Fig. 3", "b–c",
-     "AF major-carrier call per program (LA-arm, GSE255612)",
-     "per program × compartment Δsingscore vs perm null",
-     "10 programs × 4 compartments = 40 tests",
-     "Empirical permutation qperm (BH within program)",
-     "qperm < 0.10 to assign a major carrier",
-     "Most programs (≥ 7 / 10) do not pass and are tagged "
-     "Unresolved."],
+     "AF carrier-fidelity call per NCP axis family (LA-arm, GSE255612)",
+     "per family × compartment Δsingscore vs perm null",
+     "16 families × 4 compartments = 64 tests",
+     "Empirical permutation qperm (BH within family)",
+     "qperm < 0.10 to assign Fidelity / Relay / Extension",
+     "Most families do not pass and are tagged Below-detection."],
 
     ["Fig. 3", "e",
      "Anchor-gene support",
@@ -97,28 +113,26 @@ ROWS: list[list[str]] = [
 
     # ---- Figure 4 ----
     ["Fig. 4", "a–c",
-     "LAA AF-only Spearman ρ vs numeric AF duration",
-     "Spearman correlation, label permutation (1,000 perms)",
-     "10 programs (LAA family)",
-     "BH within region (LAA family separate from LAPV family)",
-     "qperm,BH < 0.10 with sign-concordance under sensitivity coding A",
-     "Direction- and sensitivity-supported call rather than a "
-     "single-cell FDR call (n = 12 AF donors)."],
+     "LAA AF-only Spearman ρ vs numeric AF duration (12 donors)",
+     "Spearman correlation, label permutation (10,000 perms)",
+     "16 NCP families (LAA primary)",
+     "BH within region (LAA separate from LAPV)",
+     "|ρ_LAA| effect-size class (Strong / Weak / Stable)",
+     "Descriptive chronicity proxy; SR excluded; not recurrence analysis."],
 
     ["Fig. 4", "d",
-     "LAPV region-sensitivity Spearman ρ",
-     "Spearman correlation, label permutation",
-     "10 programs (LAPV family)",
-     "BH within region (separate from LAA)",
-     "qperm,BH < 0.10",
-     "Region-sensitivity panel; not part of the primary "
-     "interpretation."],
+     "Donor-level exemplar scatter (F9, F2, F15)",
+     "Descriptive display only",
+     "3 families × 12 AF-LAA donors",
+     "None",
+     "No inferential fit; LAPV ρ shown in facet annotation only",
+     "Exemplar panel for narrative linkage to Fig. 2–3."],
 
     # ---- Figure 5 ----
     ["Fig. 5", "a",
      "Cross-figure triangulation classification",
      "deterministic rule on Fig. 1–4 outputs",
-     "10 programs",
+     "16 axis families",
      "None (composite of upstream MTC-controlled tests)",
      "Rule-based class assignment",
      "Each upstream input retains its own MTC; this panel "
@@ -154,10 +168,10 @@ ROWS: list[list[str]] = [
      "check, not a high-powered pooled discovery."],
 
     ["Fig. 6", "b",
-     "Per-program pooled effect (panel programs)",
+     "Per-program pooled effect (NCP pathway programs)",
      "Hedges' g per cohort, REML + Hartung–Knapp pool",
-     "10 panel programs (k = 3 cohorts each)",
-     "BH across the 10 panel programs (within Fig. 6b family)",
+     "30 NCP pathway programs (k = 3 cohorts each)",
+     "BH across the 30 pathway programs (within Fig. 6b family)",
      "Hartung–Knapp 95 % CI; q < 0.10 highlighted",
      "Structural programs the most consistently attenuated; "
      "metabolic programs directionally consistent but more "
@@ -175,16 +189,15 @@ ROWS: list[list[str]] = [
      "PRELP independently recovered. Positive gene-level evidence "
      "for the distributed substrate model."],
 
-    ["Fig. 1", "d–e",
-     "Data-driven rewiring-defined gene modules (framework's "
-     "second discovery primitive; PCA + k-means on M_aCAI)",
+    ["Complementary", "M_aCAI modules",
+     "Data-driven rewiring-defined gene modules (PCA + k-means on M_aCAI)",
      "PCA on (gene × donor) aCAI matrix + k-means clustering on "
      "top-10 PC loadings; modules characterised by direction, "
-     "ΔaCAI(AF − SR), Jaccard against NCP panel, and top-loading "
-     "genes",
+     "ΔaCAI(AF − SR), Jaccard against NCP pathway programs, and "
+     "top-loading genes",
      "3,781 genes (filtered) × 59 donors → 12 modules",
      "None (unsupervised discovery; canonical / novel call by "
-     "Jaccard ≥ 0.30 against any of the 10 NCP panel programs)",
+     "Jaccard ≥ 0.30 against any of the 30 NCP pathway programs)",
      "PC1 = 36.5 %; top-10 PCs = 69.1 % cumulative",
      "12 / 12 modules are novel (no canonical NCP match exceeds "
      "Jaccard 0.30); PITX2 module (M11) collapses in AF, adipose "
@@ -229,11 +242,11 @@ ROWS: list[list[str]] = [
      "NCP panel and gene-level stability across donor resamplings",
      "stability_consistent_runs (out of 8) and per-gene "
      "stability_score (out of 8) on GSE112339",
-     "10 panel programs (panel a–b); ≈ 14,600 genes (panel c)",
+     "30 NCP pathway programs (panel a–b); ≈ 14,600 genes (panel c)",
      "None (consistency check)",
      "Programs retained when stable in 8 / 8 resamplings",
-     "All 10 retained panel programs are direction-stable in 8 / 8 "
-     "resamplings; LE-gene stability is consistently high."],
+     "All thirty deployed NCP pathway programs are direction-stable "
+     "in 8 / 8 resamplings; LE-gene stability is consistently high."],
 
     ["Supp. Fig. S4", "a–e",
      "Per-cohort top-2,000-feature PCA",
@@ -280,7 +293,7 @@ ROWS: list[list[str]] = [
      "Reduced 5-gene panel readout per axis",
      "Spearman ρ between reduced-axis composite and full-axis "
      "composite per donor",
-     "10 panel programs (5 STRUCTURAL + 5 METABOLIC genes)",
+     "six axis-support programs (3 structural + 3 metabolic)",
      "None (framework-feasibility check; not a clinical classifier)",
      "ρ = 0.55–0.90 cohort-level reproducibility",
      "Reduced panel reproduces full-axis composite and AF − SR "
@@ -344,19 +357,28 @@ ROWS: list[list[str]] = [
      "Power ≥ 92 % at true effect = 0.3; bootstrap CIs ⊂ HK CIs; "
      "limma direction concordance 25 / 30 cells."],
 
-    ["Supp. Fig. S12", "all",
-     "Single-gene cis-eQTL × AF-GWAS coloc regime check (former "
-     "Fig. 6c, demoted to supplementary calibration check)",
+    ["Fig. 6c", "all",
+     "NCP family × external AF risk-gene overlap (genetic traceability)",
+     "One-sided hypergeometric enrichment per family × reference set",
+     "16 NCP families × 4 external AF gene sets; background universe = "
+     "bulk chamber DE genes (n = 14,635)",
+     "BH-FDR across all family×set tests",
+     "FDR ≤ 0.05 for enrichment claim",
+     "Family-level overlap supports traceability at program level; "
+     "not interpreted as single-gene causal validation."],
+    ["Fig. 6a / 6b", "all",
+     "Single-gene cis-eQTL × AF-GWAS coloc traceability and calibration "
+     "check (genetic layer)",
      "coloc.abf (default priors p1 = p2 = 1e-4, p12 = 1e-5)",
-     "(4 framework anchors + 2 canonical AF positive controls) × "
-     "2 tissues = 12 tests",
+     "12 genes × primary tissue (GTEx atrial appendage): 10 pre-registered "
+     "framework anchors + PITX2 + KCNN3 calibration genes; optional whole-blood "
+     "sensitivity columns where tabulated",
      "No FDR — pre-registered gate-and-coloc",
      "lead cis-eQTL p < 5e-8 AND PP4 ≥ 0.7 to support",
-     "All 6 anchors (including PITX2 / KCNN3 positive controls) "
-     "fail the gate at current GTEx Atrial Appendage panel power; "
-     "the regime is calibration-limited and therefore not "
-     "informative against the distributed substrate model. Anchors "
-     "not replaced post hoc."],
+     "No tested anchor reaches the conservative supporting gate (including "
+     "PITX2 / KCNN3); absence of PP4 ≥ 0.7 support is calibration-limited at "
+     "current GTEx atrial-appendage panel resolution — not informative for "
+     "excluding AF-relevant genetics. Anchors not replaced post hoc."],
 ]
 
 

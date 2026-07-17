@@ -1,0 +1,17 @@
+family_id	family_label	short_label	axis_group
+1	Cytoplasmic translation and ribosome quality control	Translation / RQC	LA
+2	Mitochondrial calcium ion transport	Mito Ca²⁺ transport	LA
+3	Adipocyte and circulating lipid metabolism	Adipo–lipid axis	LA
+4	Mitochondrial proteostasis, localization, and amino-acid catabolism	Mito proteostasis / FA–BCAA	LA
+5	tRNA aminoacylation	tRNA aminoacylation	LA
+6	Mitochondrial translation and protein import	Mito translation / import	LA
+7	Oxidative phosphorylation and respiratory chain	OXPHOS / ETC	LA
+8	Mitochondrial respiratory complex I biogenesis	Complex I biogenesis	LA
+9	Heparan sulfate / ECM and osteochondral receptor programmes	HS-GAG / bone / GPCR	RA
+10	GAG disease pathways and TGF-β signalling	GAG disease / TGF-β	RA
+11	BMP signalling	BMP signalling	RA
+12	rRNA processing	rRNA processing	LA
+13	Amino-acid and derivative metabolism	Amino-acid metabolism	LA
+14	Eukaryotic translation initiation	Translation initiation	LA
+15	NTRK2 (TrkB) neurotrophin signalling	NTRK2 / TrkB	RA
+16	Keratan sulfate biosynthesis	Keratan sulfate	RA

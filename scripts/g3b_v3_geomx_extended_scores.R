@@ -1,17 +1,17 @@
 #!/usr/bin/env Rscript
 # ---------------------------------------------------------------------------
 # G3b v3 — Extended Fig 5d v3 ROI singscores against:
-#         (a) 6 NCP_v3 families covering the v3 Atlas top-priority + a
+#         (a) 6 NCP axis families covering the v3 Atlas top-priority + a
 #             metabolic anchor (F2 Mito Ca²⁺) + an adipocyte-carrier metabolic
 #             family (F4 BCAA).  Each family signature = UNION of LE genes
-#             across its NCP_v3 programs (rank-singscore semantics);
+#             across its NCP pathway programs (rank-singscore semantics);
 #         (b) the same canonical hand-curated cell-type marker panels as v2
 #             (fibroblast, lymphatic_endothelial, atrialCM, macrophage,
 #             vascular_endothelial) — explicitly NOT data-derived.
 #
 # Inputs:
 #   Project_P5/GSE261363/GSE261363_All_Data_WTA_1_7_22.xlsx  (Q3-normalised)
-#   results/fig3_v3_program_le.tsv                            (NCP_v3 LE)
+#   results/fig3_v3_program_le.tsv                            (NCP LE)
 #   Project_P5/GSE261363/roi_metadata.tsv                     (from g3, all metadata)
 #
 # Outputs:
@@ -49,7 +49,7 @@ md <- fread(file.path(G, "roi_metadata.tsv"))
 md_in <- md[match(expr_cols, md$title)]
 stopifnot(all(md_in$title == expr_cols))
 
-# ---- 3. NCP_v3 family panel (union LE per family) ----
+# ---- 3. NCP axis family panel (union LE per family) ----
 le_tbl <- fread(file.path(ROOT, "results", "fig3_v3_program_le.tsv"))
 # le_tbl columns: program_id, program_order, direction, family_id,
 #                 n_full_pathway, n_LE_total, leading_edge_genes
@@ -106,7 +106,7 @@ score_set <- function(rk, gs) {
   list(score = s$TotalScore, n_in = length(gs_in))
 }
 
-cat("\n--- Family signatures (NCP_v3 LE union) ---\n")
+cat("\n--- Family signatures (NCP LE union) ---\n")
 rows <- list()
 for (p in FAMILY_TARGETS) {
   gs <- family_le(p$family_id)

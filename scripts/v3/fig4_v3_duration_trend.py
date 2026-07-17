@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Fig 4 v3 - duration trend on GSE41177 (LAA + LAPV) for the NCP_v3 panel.
+Fig 4 v3 - duration trend on GSE41177 (LAA + LAPV) for the NCP panel.
 
 Pipeline:
     GSE41177 expr  ->  rank singscore on Fig3-derived LE genes per program

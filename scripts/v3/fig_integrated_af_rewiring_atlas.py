@@ -13,6 +13,9 @@ Inputs:
 
 Outputs:
     results/fig_integrated_af_rewiring_atlas.tsv
+        Rows sorted by PriorityScore (high \u2192 low).  Leading manuscript columns:
+        family_label, priority_score, rank, components  document display ordering;
+        PriorityScore is not a Path A cross-layer support gate (see components text).
     figures/fig_integrated_af_rewiring_atlas.pdf
 """
 from __future__ import annotations
@@ -35,6 +38,15 @@ CONS_TSV = ROOT / "results" / "fig2e_replication_lollipop_v3.tsv"
 
 OUT_TSV = ROOT / "results" / "fig_integrated_af_rewiring_atlas.tsv"
 OUT_PDF = ROOT / "figures" / "fig_integrated_af_rewiring_atlas.pdf"
+LABELS_TSV = ROOT / "results" / "ncp_v3_family_labels.tsv"
+
+PRIORITY_COMPONENTS_DOC = (
+    "PriorityScore=100*(0.40*E+0.30*R+0.20*C+0.10*H) with "
+    "E=min(1,|pooled_g|/0.8), R={high:1,moderate:0.6,low:0.2}, "
+    "C=state_concordance_n/3, H=1-min(1,I2). "
+    "priority_score/rank are for display ordering and atlas PDF layout only; "
+    "not used in Fig 5b/5c Path A supportive Boolean gates."
+)
 
 COMPARTMENTS = [
     "atrialCM",
@@ -214,9 +226,23 @@ def build_integrated_table(attr_tsv: Path, driver_tsv: Path, cons_tsv: Path) -> 
         ["PriorityScore", "abs_pooled_g", "family_id"],
         ascending=[False, False, True],
     ).reset_index(drop=True)
+    if LABELS_TSV.is_file():
+        labs = pd.read_csv(LABELS_TSV, sep="\t")[["family_id", "family_label"]].drop_duplicates(
+            subset=["family_id"], keep="first"
+        )
+        out = out.merge(labs, on="family_id", how="left")
+    else:
+        out["family_label"] = ""
+    out["priority_score"] = out["PriorityScore"]
+    out["rank"] = np.arange(1, len(out) + 1, dtype=int)
+    out["components"] = PRIORITY_COMPONENTS_DOC
     cols = [
         "family_id",
         "Family",
+        "family_label",
+        "priority_score",
+        "rank",
+        "components",
         "short",
         "LA_carrier",
         "LA_carrier_short",

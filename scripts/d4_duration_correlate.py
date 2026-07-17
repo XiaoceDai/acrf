@@ -18,7 +18,7 @@ Writes four TSVs to Project_P4/GSE41177/results/ :
        statistic: Spearman rho   (mirrors analysis 1 on LAPV)
 
 Permutation: MC, 10 000 draws, seed 20260418; BH within each file across
-the 10 panel programs (spec §3.5: LAA / LAPV families are separated; the
+the sixteen NCP axis families (spec §3.5: LAA / LAPV families are separated; the
 three LAA analyses above are also BH'd independently so their decision
 boundaries do not leak into each other).
 

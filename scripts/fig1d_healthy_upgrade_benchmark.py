@@ -29,6 +29,7 @@ from plot_style import (
     RA_COLOR,
     SUPPORT_COLOR,
     set_nature_style,
+    enforce_font_floor, FS_PANEL_TITLE, FS_TICK, FS_AXIS_LABEL, FS_FOOTNOTE, FS_LEGEND,
 )
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -43,7 +44,7 @@ GMT_REAC = ROOT / "bulk" / "Project_P01" / "gene_sets" / "c2.cp.reactome.v2026.1
 OUT_METRICS = ROOT / "results" / "fig1d_healthy_upgrade_metrics.tsv"
 OUT_GATES = ROOT / "results" / "fig1d_healthy_upgrade_gates.tsv"
 OUT_MEMBERSHIP = ROOT / "results" / "fig1d_healthy_upgrade_membership.tsv"
-OUT_PDF = ROOT / "figures" / "fig1d_v2_to_v3_upgrade_benchmark.pdf"
+OUT_PDF = ROOT / "figures" / "fig1d_prototype_vs_ncp_benchmark.pdf"
 
 
 def load_gmt(path: Path, prefix: str) -> dict[str, set[str]]:
@@ -203,12 +204,12 @@ def main() -> None:
 
     # ---------------- plot ----------------
     set_nature_style()
-    fig, axs = plt.subplots(2, 2, figsize=(COL_DOUBLE * 1.14, COL_DOUBLE * 0.90))
+    fig, axs = plt.subplots(2, 2, figsize=(COL_DOUBLE * 1.14, COL_DOUBLE * 1.00))
     ax_a, ax_b, ax_c, ax_d = axs.ravel()
 
     # a) continuity with controlled replacement
     share_vals = np.array([len(shared), len(v3_only)], dtype=float) / len(set3)
-    ax_a.bar(["shared", "v3-only"], share_vals, color=[MUTED_COLOR, HIGHLIGHT_COLOR], width=0.62)
+    ax_a.bar(["shared", "NCP-only"], share_vals, color=[MUTED_COLOR, HIGHLIGHT_COLOR], width=0.62)
     ax_a.axhline(0.80, color=LINE_COLOR, linestyle="--", linewidth=0.9)
     ax_a.text(
         0.02,
@@ -217,14 +218,14 @@ def main() -> None:
         transform=ax_a.transAxes,
         ha="left",
         va="top",
-        fontsize=7.2,
+        fontsize=enforce_font_floor(FS_TICK),
         color=MUTED_COLOR,
     )
-    ax_a.text(0, share_vals[0] + 0.03, f"{len(shared)}/{len(set3)}", ha="center", va="bottom", fontsize=8.2)
-    ax_a.text(1, share_vals[1] + 0.03, f"{len(v3_only)}/{len(set3)}", ha="center", va="bottom", fontsize=8.2)
+    ax_a.text(0, share_vals[0] + 0.03, f"{len(shared)}/{len(set3)}", ha="center", va="bottom", fontsize=enforce_font_floor(FS_TICK + 1.2))
+    ax_a.text(1, share_vals[1] + 0.03, f"{len(v3_only)}/{len(set3)}", ha="center", va="bottom", fontsize=enforce_font_floor(FS_TICK + 1.2))
     ax_a.set_ylim(0, 1.0)
-    ax_a.set_ylabel("fraction of v3 panel")
-    ax_a.set_title("a  Panel continuity with controlled replacement", loc="left", fontsize=9.8, fontweight="bold")
+    ax_a.set_ylabel("fraction of NCP panel", fontsize=enforce_font_floor(FS_AXIS_LABEL))
+    ax_a.set_title("a  Panel continuity with controlled replacement", loc="left", fontsize=enforce_font_floor(FS_PANEL_TITLE + 1.5), fontweight="bold")
     ax_a.grid(axis="y", alpha=0.16)
 
     # b) direction balance (inside chamber-paired family)
@@ -233,10 +234,10 @@ def main() -> None:
     ra = np.array([m["ra_count_v2"], m["ra_count_v3"]], dtype=float)
     ax_b.bar(x, la, width=0.62, color=LA_COLOR, label="LA-biased")
     ax_b.bar(x, ra, width=0.62, bottom=la, color=RA_COLOR, label="RA-biased")
-    ax_b.set_xticks(x, ["v2", "v3"])
+    ax_b.set_xticks(x, ["prototype", "NCP"])
     ax_b.set_ylim(0, max(la + ra) + 2)
-    ax_b.set_ylabel("program count")
-    ax_b.set_title("b  Direction rebalance in paired framework", loc="left", fontsize=9.8, fontweight="bold")
+    ax_b.set_ylabel("program count", fontsize=enforce_font_floor(FS_AXIS_LABEL))
+    ax_b.set_title("b  Direction rebalance in paired framework", loc="left", fontsize=enforce_font_floor(FS_PANEL_TITLE + 1.5), fontweight="bold")
     ax_b.text(
         0.98,
         0.93,
@@ -244,11 +245,11 @@ def main() -> None:
         transform=ax_b.transAxes,
         ha="right",
         va="top",
-        fontsize=8.0,
+        fontsize=enforce_font_floor(FS_TICK + 1),
         color=FG_COLOR,
         fontweight="bold",
     )
-    ax_b.legend(frameon=False, loc="upper left")
+    ax_b.legend(frameon=False, loc="upper left", fontsize=enforce_font_floor(FS_LEGEND))
 
     # c) bootstrap robustness distribution + redundancy note
     freq2 = boot.loc[boot["pathway"].isin(set2), "inclusion_freq"].to_numpy(float)
@@ -271,10 +272,10 @@ def main() -> None:
         jitter = rng.uniform(-0.07, 0.07, size=len(arr))
         ax_c.scatter(np.full_like(arr, i, dtype=float) + jitter, arr, s=12, color=FG_COLOR, alpha=0.36, linewidths=0)
     ax_c.axhline(0.8, color=LINE_COLOR, linestyle="--", linewidth=0.9)
-    ax_c.set_xticks([0, 1], ["v2 set", "v3 set"])
+    ax_c.set_xticks([0, 1], ["prototype set", "NCP set"])
     ax_c.set_ylim(0, 1.04)
-    ax_c.set_ylabel("bootstrap inclusion frequency")
-    ax_c.set_title("c  Healthy resampling robustness", loc="left", fontsize=9.8, fontweight="bold")
+    ax_c.set_ylabel("bootstrap inclusion frequency", fontsize=enforce_font_floor(FS_AXIS_LABEL))
+    ax_c.set_title("c  Healthy resampling robustness", loc="left", fontsize=enforce_font_floor(FS_PANEL_TITLE + 1.5), fontweight="bold")
     ax_c.text(
         0.02,
         0.96,
@@ -284,15 +285,15 @@ def main() -> None:
         transform=ax_c.transAxes,
         ha="left",
         va="top",
-        fontsize=7.0,
+        fontsize=enforce_font_floor(FS_TICK),
         color=MUTED_COLOR,
     )
 
     # d) gate audit summary
     ax_d.set_axis_off()
-    ax_d.set_title("d  Healthy-only upgrade gate audit", loc="left", fontsize=9.8, fontweight="bold")
+    ax_d.set_title("d  Healthy-only upgrade gate audit", loc="left", fontsize=enforce_font_floor(FS_PANEL_TITLE + 1.5), fontweight="bold")
     y = 0.95
-    row_h = 0.135
+    row_h = 0.125
     for _, row in gates.iterrows():
         y0 = y - row_h + 0.01
         face = "#EAF4EC" if bool(row["pass"]) else "#F7EAEA"
@@ -314,7 +315,7 @@ def main() -> None:
             transform=ax_d.transAxes,
             ha="left",
             va="center",
-            fontsize=7.3,
+            fontsize=enforce_font_floor(FS_TICK + 0.5),
             color=FG_COLOR,
             fontweight="bold",
         )
@@ -325,7 +326,7 @@ def main() -> None:
             transform=ax_d.transAxes,
             ha="left",
             va="center",
-            fontsize=6.8,
+            fontsize=enforce_font_floor(FS_TICK),
             color=MUTED_COLOR,
         )
         ax_d.text(
@@ -335,7 +336,7 @@ def main() -> None:
             transform=ax_d.transAxes,
             ha="left",
             va="center",
-            fontsize=6.9,
+            fontsize=enforce_font_floor(FS_TICK),
             color=FG_COLOR,
         )
         ax_d.text(
@@ -345,7 +346,7 @@ def main() -> None:
             transform=ax_d.transAxes,
             ha="right",
             va="center",
-            fontsize=7.5,
+            fontsize=enforce_font_floor(FS_TICK + 0.5),
             color=SUPPORT_COLOR if bool(row["pass"]) else HIGHLIGHT_COLOR,
             fontweight="bold",
         )
@@ -357,22 +358,22 @@ def main() -> None:
         transform=ax_d.transAxes,
         ha="left",
         va="bottom",
-        fontsize=7.7,
+        fontsize=enforce_font_floor(FS_TICK + 0.5),
         color=FG_COLOR,
         fontweight="bold",
     )
 
     fig.suptitle(
-        "Fig1D  Healthy-only v2->v3 upgrade benchmark (paired framework)",
+        "Fig 1c  Prototype-to-NCP upgrade benchmark (healthy-only, paired framework)",
         y=0.995,
-        fontsize=12.0,
+        fontsize=enforce_font_floor(FS_PANEL_TITLE + 2.5),
         fontweight="bold",
     )
     fig.text(
         0.012,
         0.008,
         "Metrics use only baseline panel tables, gene-set overlap, and healthy bootstrap resampling.",
-        fontsize=6.6,
+        fontsize=enforce_font_floor(FS_FOOTNOTE),
         color=MUTED_COLOR,
         ha="left",
         va="bottom",

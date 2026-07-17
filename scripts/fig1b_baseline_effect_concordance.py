@@ -1,29 +1,37 @@
 #!/usr/bin/env python3
-"""
-Figure 1B (algorithm storyline) - baseline aCAI effect + concordance view.
-
-Replaces heatmap-heavy rendering with a method-centric panel:
-  1) donor-level sign profile (dots)
-  2) program-level effect size (mean with min-max and IQR)
-  3) sign concordance summary (k/8)
-"""
+"""Final Figure 1B: healthy reference magnitude and donor concordance."""
 from __future__ import annotations
 
 import sys
 from pathlib import Path
 
 import matplotlib as mpl
-import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
 import matplotlib.lines as mlines
+import matplotlib.patches as patches
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from _pathway_labels import short_pathway_label
-from plot_style import COL_DOUBLE, FG_COLOR, LA_COLOR, LINE_COLOR, MUTED_COLOR, RA_COLOR, SUPPORT_COLOR, set_nature_style
+from _pathway_labels import short_pathway_label  # noqa: E402
+from plot_style import (  # noqa: E402
+    COL_DOUBLE,
+    FG_COLOR,
+    LA_COLOR,
+    LINE_COLOR,
+    MUTED_COLOR,
+    RA_COLOR,
+    SUPPORT_COLOR,
+    set_nature_style,
+)
+
+SOURCE = ROOT / "results" / "fig1b_baseline_donor_aCAI.tsv"
+FAMILY_MAP = ROOT / "results" / "innovation_ncp_v3_axis_families.tsv"
+FAMILY_LABELS = ROOT / "results" / "ncp_v3_family_labels.tsv"
+OUT_BASE = ROOT / "figures" / "fig1b_healthy_reference_concordance"
+OUT_SOURCE = ROOT / "results" / "fig1b_healthy_reference_concordance_source.tsv"
 
 set_nature_style()
 mpl.rcParams.update(
@@ -36,219 +44,248 @@ mpl.rcParams.update(
     }
 )
 
-IN_TSV = ROOT / "results" / "fig1b_baseline_donor_aCAI.tsv"
-OUT_TSV = ROOT / "results" / "fig1b_baseline_effect_concordance.tsv"
-OUT_PDF = ROOT / "figures" / "fig1b_baseline_effect_concordance.pdf"
+
+def build_source() -> tuple[pd.DataFrame, list[str], dict[str, float | int]]:
+    raw = pd.read_csv(SOURCE, sep="\t")
+    fam = pd.read_csv(FAMILY_MAP, sep="\t")[["pathway", "family_id"]]
+    labels = pd.read_csv(FAMILY_LABELS, sep="\t")[["family_id", "short_label", "axis_group"]]
+    donor_cols = [c for c in raw.columns if c.startswith("aCAI_")]
+    if len(donor_cols) != 8:
+        raise AssertionError(f"Expected 8 donor columns, found {len(donor_cols)}")
+
+    df = raw.merge(fam, on="pathway", how="left", validate="one_to_one")
+    df = df.merge(labels, on="family_id", how="left", validate="many_to_one")
+    if df[["family_id", "short_label", "axis_group"]].isna().any().any():
+        raise AssertionError("Missing family metadata in Figure 1B join")
+
+    direction_sign = df["direction"].map({"LA-biased": 1.0, "RA-biased": -1.0})
+    if direction_sign.isna().any():
+        raise AssertionError("Unexpected chamber direction")
+
+    aligned_cols: list[str] = []
+    for c in donor_cols:
+        new = c.replace("aCAI_", "aligned_aCAI_")
+        df[new] = df[c].astype(float) * direction_sign
+        aligned_cols.append(new)
+    df["M"] = df[aligned_cols].abs().mean(axis=1)
+    df["directional_concordance_k"] = (df[aligned_cols] > 0).sum(axis=1).astype(int)
+    df["display_label"] = df["pathway"].map(lambda p: short_pathway_label(p, 35))
+    df["direction_rank"] = df["direction"].map({"LA-biased": 0, "RA-biased": 1}).astype(int)
+    df = df.sort_values(["direction_rank", "family_id", "program_order"]).reset_index(drop=True)
+    df["display_order"] = np.arange(1, len(df) + 1)
+
+    summary: dict[str, float | int] = {
+        "n_programs": int(len(df)),
+        "n_la": int((df["direction"] == "LA-biased").sum()),
+        "n_ra": int((df["direction"] == "RA-biased").sum()),
+        "n_full_concordance": int((df["directional_concordance_k"] == 8).sum()),
+        "n_ge6_concordance": int((df["directional_concordance_k"] >= 6).sum()),
+        "median_M": float(df["M"].median()),
+        "n_families": int(df["family_id"].nunique()),
+    }
+    expected = {
+        "n_programs": 30,
+        "n_la": 22,
+        "n_ra": 8,
+        "n_full_concordance": 21,
+        "n_ge6_concordance": 28,
+        "n_families": 16,
+    }
+    for key, value in expected.items():
+        if summary[key] != value:
+            raise AssertionError(f"{key}: expected {value}, observed {summary[key]}")
+
+    source_cols = [
+        "display_order",
+        "program_order",
+        "pathway",
+        "display_label",
+        "direction",
+        "family_id",
+        "short_label",
+        "M",
+        "directional_concordance_k",
+    ] + donor_cols + aligned_cols
+    OUT_SOURCE.parent.mkdir(parents=True, exist_ok=True)
+    df[source_cols].to_csv(OUT_SOURCE, sep="\t", index=False, float_format="%.10g")
+    return df, aligned_cols, summary
 
 
-def sort_programs(df: pd.DataFrame) -> pd.DataFrame:
-    la = df[df["direction"] == "LA-biased"].sort_values("mean_aCAI", ascending=False)
-    ra = df[df["direction"] == "RA-biased"].sort_values("mean_aCAI", ascending=True)
-    other = df[~df["direction"].isin(["LA-biased", "RA-biased"])].sort_values("mean_aCAI", ascending=False)
-    return pd.concat([la, ra, other], ignore_index=True)
+def render(df: pd.DataFrame, aligned_cols: list[str], summary: dict[str, float | int]) -> None:
+    n = len(df)
+    y = np.arange(n)
+    fig = plt.figure(figsize=(COL_DOUBLE * 1.32, COL_DOUBLE * 1.22))
+    gs = fig.add_gridspec(
+        1,
+        6,
+        width_ratios=[0.13, 0.72, 2.65, 1.65, 2.05, 0.62],
+        left=0.045,
+        right=0.985,
+        bottom=0.105,
+        top=0.835,
+        wspace=0.025,
+    )
+    ax_dir = fig.add_subplot(gs[0, 0])
+    ax_fam = fig.add_subplot(gs[0, 1], sharey=ax_dir)
+    ax_lbl = fig.add_subplot(gs[0, 2], sharey=ax_dir)
+    ax_don = fig.add_subplot(gs[0, 3], sharey=ax_dir)
+    ax_mag = fig.add_subplot(gs[0, 4], sharey=ax_dir)
+    ax_k = fig.add_subplot(gs[0, 5], sharey=ax_dir)
+
+    fig.text(0.045, 0.965, "b", fontsize=13, fontweight="bold", ha="left", va="top")
+    fig.text(
+        0.070,
+        0.965,
+        "Healthy reference magnitude and donor concordance for 30 deployed programs",
+        fontsize=10.8,
+        fontweight="bold",
+        ha="left",
+        va="top",
+    )
+    summary_text = (
+        f"{summary['n_la']} LA / {summary['n_ra']} RA  |  "
+        f"8/8 concordant: {summary['n_full_concordance']}/{summary['n_programs']}  |  "
+        f"≥6/8 concordant: {summary['n_ge6_concordance']}/{summary['n_programs']}  |  "
+        f"median M[p] = {summary['median_M']:.3f}"
+    )
+    fig.text(0.070, 0.915, summary_text, fontsize=8.3, color=FG_COLOR, ha="left", va="top")
+    fig.text(
+        0.070,
+        0.882,
+        "Rows are grouped by canonical chamber direction, then family ID and frozen program order.",
+        fontsize=7.4,
+        color=MUTED_COLOR,
+        ha="left",
+        va="top",
+    )
+
+    family_starts: list[int] = []
+    last = None
+    for i, r in df.iterrows():
+        key = (r["direction"], int(r["family_id"]))
+        if key != last:
+            family_starts.append(i)
+            last = key
+    boundaries = [i - 0.5 for i in family_starts[1:]]
+
+    for ax in (ax_dir, ax_fam, ax_lbl, ax_don, ax_mag, ax_k):
+        ax.set_ylim(n - 0.5, -0.5)
+        for boundary in boundaries:
+            ax.axhline(boundary, color=LINE_COLOR, lw=0.6, zorder=0)
+
+    ax_dir.set_xlim(0, 1)
+    ax_dir.axis("off")
+    for i, direction in enumerate(df["direction"]):
+        ax_dir.add_patch(
+            patches.Rectangle(
+                (0.15, i - 0.47),
+                0.70,
+                0.94,
+                facecolor=LA_COLOR if direction == "LA-biased" else RA_COLOR,
+                edgecolor="white",
+                linewidth=0.25,
+            )
+        )
+    ax_dir.set_title("dir.", fontsize=6.7, fontweight="bold", pad=7)
+
+    ax_fam.set_xlim(0, 1)
+    ax_fam.axis("off")
+    for start in family_starts:
+        fid = int(df.loc[start, "family_id"])
+        members = df.index[df["family_id"].eq(fid)].tolist()
+        center = float(np.mean(members))
+        ax_fam.text(0.94, center, f"F{fid}", fontsize=7.1, fontweight="bold", ha="right", va="center")
+    ax_fam.set_title("family", fontsize=6.7, fontweight="bold", pad=7)
+
+    ax_lbl.set_xlim(0, 1)
+    ax_lbl.axis("off")
+    for i, r in df.iterrows():
+        ax_lbl.text(0.98, i, r["display_label"], fontsize=6.7, color=FG_COLOR, ha="right", va="center")
+    ax_lbl.set_title("deployed program", fontsize=6.9, fontweight="bold", pad=7)
+
+    ax_don.set_xlim(-0.55, 7.55)
+    ax_don.set_facecolor("#FAFAFA")
+    for i, r in df.iterrows():
+        vals = r[aligned_cols].to_numpy(dtype=float)
+        concordant = vals > 0
+        ax_don.scatter(
+            np.arange(8)[concordant],
+            np.full(int(concordant.sum()), i),
+            s=17,
+            color=SUPPORT_COLOR,
+            edgecolor="white",
+            linewidth=0.3,
+            zorder=3,
+        )
+        ax_don.scatter(
+            np.arange(8)[~concordant],
+            np.full(int((~concordant).sum()), i),
+            s=17,
+            marker="x",
+            color=MUTED_COLOR,
+            linewidth=0.8,
+            zorder=4,
+        )
+    ax_don.set_xticks(np.arange(8), [f"d{i}" for i in range(1, 9)], fontsize=6.4)
+    ax_don.set_yticks([])
+    ax_don.set_title("donor\nconcordance", fontsize=6.9, fontweight="bold", pad=5)
+    for side in ("top", "right", "left"):
+        ax_don.spines[side].set_visible(False)
+    ax_don.spines["bottom"].set_color(LINE_COLOR)
+
+    xmax = float(df["M"].max()) * 1.12
+    ax_mag.set_xlim(0, xmax)
+    for i, r in df.iterrows():
+        color = LA_COLOR if r["direction"] == "LA-biased" else RA_COLOR
+        ax_mag.plot([0, r["M"]], [i, i], color=LINE_COLOR, lw=1.0, zorder=1)
+        ax_mag.scatter(r["M"], i, s=21, color=color, edgecolor="white", linewidth=0.35, zorder=2)
+    ax_mag.set_yticks([])
+    ax_mag.set_xlabel(r"$M[p]=mean_d(|aCAI[d,p]|)$", fontsize=7.2, labelpad=5)
+    ax_mag.set_title("healthy reference\nmagnitude", fontsize=6.9, fontweight="bold", pad=5)
+    ax_mag.tick_params(axis="x", labelsize=6.5)
+    for side in ("top", "right", "left"):
+        ax_mag.spines[side].set_visible(False)
+    ax_mag.spines["bottom"].set_color(LINE_COLOR)
+
+    ax_k.set_xlim(0, 1)
+    ax_k.axis("off")
+    for i, k in enumerate(df["directional_concordance_k"]):
+        ax_k.text(
+            0.5,
+            i,
+            f"{int(k)}/8",
+            fontsize=7.0,
+            color=SUPPORT_COLOR if int(k) == 8 else MUTED_COLOR,
+            fontweight="bold" if int(k) == 8 else "normal",
+            ha="center",
+            va="center",
+        )
+    ax_k.set_title("k/8", fontsize=7.2, fontweight="bold", pad=7)
+
+    handles = [
+        mlines.Line2D([], [], marker="o", linestyle="none", color=SUPPORT_COLOR, markersize=4.5, label="canonical direction"),
+        mlines.Line2D([], [], marker="x", linestyle="none", color=MUTED_COLOR, markersize=4.5, label="opposite direction"),
+    ]
+    fig.legend(handles=handles, loc="lower center", ncol=2, frameon=False, fontsize=7.0, bbox_to_anchor=(0.5, 0.025))
+
+    OUT_BASE.parent.mkdir(parents=True, exist_ok=True)
+    fig.savefig(OUT_BASE.with_suffix(".pdf"), bbox_inches=None, facecolor="white")
+    fig.savefig(OUT_BASE.with_suffix(".svg"), bbox_inches=None, facecolor="white")
+    fig.savefig(OUT_BASE.with_suffix(".png"), dpi=600, bbox_inches=None, facecolor="white")
+    plt.close(fig)
 
 
 def main() -> None:
-    df = pd.read_csv(IN_TSV, sep="\t")
-    donor_cols = [c for c in df.columns if c.startswith("aCAI_")]
-    if not donor_cols:
-        raise ValueError("No donor columns found in fig1b_baseline_donor_aCAI.tsv")
-
-    if "mean_aCAI" not in df.columns:
-        df["mean_aCAI"] = df[donor_cols].mean(axis=1)
-    if "sign_concordance" not in df.columns:
-        df["sign_concordance"] = np.sign(df[donor_cols]).eq(np.sign(df["mean_aCAI"]), axis=0).sum(axis=1).astype(int)
-
-    df["q25"] = df[donor_cols].quantile(0.25, axis=1)
-    df["q75"] = df[donor_cols].quantile(0.75, axis=1)
-    df["vmin"] = df[donor_cols].min(axis=1)
-    df["vmax"] = df[donor_cols].max(axis=1)
-    df["abs_mean"] = df["mean_aCAI"].abs()
-    # Naive y~chamber estimate on balanced paired healthy data:
-    # mean(LA) - mean(RA) is algebraically identical to mean paired difference.
-    # We keep it as an explicit column for visual comparison with paired estimate.
-    df["naive_chamber_est"] = df[donor_cols].mean(axis=1)
-
-    plot_df = sort_programs(df)
-    top_idx = set(plot_df["abs_mean"].nlargest(6).index.tolist())
-    plot_df.to_csv(
-        OUT_TSV,
-        sep="\t",
-        index=False,
-        columns=[
-            "program_order",
-            "pathway",
-            "direction",
-            "mean_aCAI",
-            "q25",
-            "q75",
-            "vmin",
-            "vmax",
-            "naive_chamber_est",
-            "sign_concordance",
-        ]
-        + donor_cols,
+    df, aligned_cols, summary = build_source()
+    render(df, aligned_cols, summary)
+    print(f"wrote {OUT_BASE.relative_to(ROOT)}.[pdf|svg|png]")
+    print(f"wrote {OUT_SOURCE.relative_to(ROOT)}")
+    print(
+        f"summary: {summary['n_la']}/{summary['n_ra']} LA/RA; "
+        f"{summary['n_full_concordance']}/30 at 8/8; "
+        f"{summary['n_ge6_concordance']}/30 at >=6/8; "
+        f"median M={summary['median_M']:.10f}"
     )
-
-    n = len(plot_df)
-    n_la = int((plot_df["direction"] == "LA-biased").sum())
-    y = np.arange(n)
-    donor_names = [c.replace("aCAI_", "") for c in donor_cols]
-
-    fig = plt.figure(figsize=(COL_DOUBLE * 1.04, COL_DOUBLE * 0.96))
-    gs = fig.add_gridspec(
-        1,
-        5,
-        width_ratios=[0.18, 3.0, 1.7, 2.55, 0.9],
-        wspace=0.03,
-        top=0.92,
-        bottom=0.12,
-        left=0.03,
-        right=0.99,
-    )
-
-    # Column 0: direction strip
-    ax_dir = fig.add_subplot(gs[0, 0])
-    ax_dir.set_xlim(0, 1)
-    ax_dir.set_ylim(n - 0.5, -0.5)
-    ax_dir.axis("off")
-    for i, (_, r) in enumerate(plot_df.iterrows()):
-        face = LA_COLOR if r["direction"] == "LA-biased" else RA_COLOR
-        ax_dir.add_patch(mpatches.Rectangle((0, i - 0.5), 1, 1, facecolor=face, edgecolor="white", linewidth=0.2))
-    if 0 < n_la < n:
-        ax_dir.axhline(n_la - 0.5, color=LINE_COLOR, lw=0.8)
-
-    # Column 1: program labels
-    ax_lbl = fig.add_subplot(gs[0, 1], sharey=ax_dir)
-    ax_lbl.set_xlim(0, 1)
-    ax_lbl.set_ylim(n - 0.5, -0.5)
-    ax_lbl.axis("off")
-    for i, (_, r) in enumerate(plot_df.iterrows()):
-        color = LA_COLOR if r["direction"] == "LA-biased" else RA_COLOR
-        text = short_pathway_label(r["pathway"], 38)
-        if i in top_idx:
-            text = f"* {text}"
-        ax_lbl.text(
-            0.0,
-            i,
-            text,
-            fontsize=7.8,
-            color=color,
-            ha="left",
-            va="center",
-            fontweight="bold" if i in top_idx else "normal",
-        )
-    if 0 < n_la < n:
-        ax_lbl.axhline(n_la - 0.5, color=LINE_COLOR, lw=0.8)
-
-    # Column 2: donor-level sign profile dots
-    ax_dot = fig.add_subplot(gs[0, 2], sharey=ax_lbl)
-    ax_dot.set_xlim(-0.5, len(donor_cols) - 0.5)
-    ax_dot.set_ylim(n - 0.5, -0.5)
-    for i, row in plot_df.iterrows():
-        msign = np.sign(row["mean_aCAI"])
-        for j, c in enumerate(donor_cols):
-            v = float(row[c])
-            dsign = np.sign(v)
-            dot_color = LA_COLOR if v >= 0 else RA_COLOR
-            ax_dot.scatter(j, i, s=22, color=dot_color, edgecolor="white", linewidth=0.25, zorder=3)
-            if msign != 0 and dsign != 0 and dsign != msign:
-                ax_dot.scatter(j, i, s=15, marker="x", color=FG_COLOR, linewidth=0.6, zorder=4)
-    ax_dot.set_xticks(np.arange(len(donor_cols)))
-    ax_dot.set_xticklabels(donor_names, rotation=45, ha="right", fontsize=6.8)
-    ax_dot.set_yticks([])
-    ax_dot.set_xlabel("donor sign profile", fontsize=7.2)
-    for spine in ("top", "right"):
-        ax_dot.spines[spine].set_visible(False)
-    if 0 < n_la < n:
-        ax_dot.axhline(n_la - 0.5, color=LINE_COLOR, lw=0.8)
-
-    # Column 3: effect size distribution summary
-    ax_eff = fig.add_subplot(gs[0, 3], sharey=ax_lbl)
-    ax_eff.set_ylim(n - 0.5, -0.5)
-    ax_eff.axvline(0, color=LINE_COLOR, lw=0.8, zorder=0)
-    for i, row in plot_df.iterrows():
-        col = LA_COLOR if row["direction"] == "LA-biased" else RA_COLOR
-        ax_eff.plot([row["vmin"], row["vmax"]], [i, i], color="#C7C7C7", lw=0.9, zorder=1)
-        ax_eff.plot([row["q25"], row["q75"]], [i, i], color="#7F7F7F", lw=2.0, zorder=2)
-        # Naive estimate: hollow circle (larger ring so overlap is still visible).
-        ax_eff.scatter(
-            row["naive_chamber_est"],
-            i,
-            s=44,
-            facecolor="none",
-            edgecolor="#4A4A4A",
-            linewidth=0.75,
-            zorder=3,
-        )
-        # Paired estimate: filled circle.
-        ax_eff.scatter(row["mean_aCAI"], i, s=20, color=col, edgecolor="white", linewidth=0.3, zorder=4)
-        if i in top_idx:
-            ax_eff.scatter(row["mean_aCAI"], i, s=48, facecolor="none", edgecolor="#6A5A2B", linewidth=0.8, zorder=5)
-    xlim = max(0.15, float(np.nanmax(np.abs(plot_df[donor_cols].values))) * 1.08)
-    ax_eff.set_xlim(-xlim, xlim)
-    ax_eff.set_yticks([])
-    ax_eff.set_xlabel("aCAI effect size (mean, IQR, range)", fontsize=7.2)
-    ax_eff.tick_params(axis="x", labelsize=7.0)
-    for spine in ("top", "right"):
-        ax_eff.spines[spine].set_visible(False)
-    if 0 < n_la < n:
-        ax_eff.axhline(n_la - 0.5, color=LINE_COLOR, lw=0.8)
-    ax_eff.set_title(
-        "b  Baseline chamber prior: effect size and donor concordance",
-        loc="left",
-        fontsize=9.8,
-        fontweight="bold",
-        pad=6,
-    )
-
-    # Column 4: sign concordance
-    ax_sc = fig.add_subplot(gs[0, 4], sharey=ax_lbl)
-    ax_sc.set_xlim(0, 1)
-    ax_sc.set_ylim(n - 0.5, -0.5)
-    ax_sc.axis("off")
-    ax_sc.set_title("k/8", loc="left", fontsize=7.6, fontweight="bold", pad=3)
-    for i, row in plot_df.iterrows():
-        sc = int(row["sign_concordance"])
-        color = SUPPORT_COLOR if sc == len(donor_cols) else MUTED_COLOR
-        fw = "bold" if sc == len(donor_cols) else "normal"
-        ax_sc.text(0.5, i, f"{sc}/{len(donor_cols)}", ha="center", va="center", fontsize=7.0, color=color, fontweight=fw)
-    if 0 < n_la < n:
-        ax_sc.axhline(n_la - 0.5, color=LINE_COLOR, lw=0.8)
-
-    # Legend for effect-size summary primitives
-    legend_handles = [
-        mlines.Line2D([], [], color="#C7C7C7", lw=1.0, label="range (min-max)"),
-        mlines.Line2D([], [], color="#7F7F7F", lw=2.2, label="IQR (Q1-Q3)"),
-        mlines.Line2D([], [], marker="o", markersize=5.0, linestyle="None", markerfacecolor="none", markeredgecolor="#4A4A4A", label="naive y~chamber"),
-        mlines.Line2D([], [], marker="o", markersize=4.4, linestyle="None", markerfacecolor=FG_COLOR, markeredgecolor="white", label="paired aCAI"),
-    ]
-    fig.legend(
-        handles=legend_handles,
-        loc="lower center",
-        bbox_to_anchor=(0.57, 0.045),
-        ncol=4,
-        frameon=False,
-        fontsize=6.4,
-        handlelength=1.7,
-        columnspacing=0.9,
-    )
-
-    fig.text(
-        0.03,
-        0.025,
-        "In this balanced healthy paired cohort, naive and paired estimates can overlap; hollow ring is kept visible around filled point.",
-        fontsize=6.5,
-        color=MUTED_COLOR,
-        ha="left",
-        va="bottom",
-    )
-
-    OUT_PDF.parent.mkdir(parents=True, exist_ok=True)
-    fig.savefig(OUT_PDF, bbox_inches=None, pad_inches=0.04)
-    plt.close(fig)
-    print(f"wrote {OUT_PDF.relative_to(ROOT)}")
-    print(f"wrote {OUT_TSV.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":

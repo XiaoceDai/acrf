@@ -36,8 +36,8 @@ IN_FREQ = ROOT / "results" / "innovation_ncp_bootstrap_frequency.tsv"
 IN_SUM = ROOT / "results" / "innovation_ncp_bootstrap_summary.tsv"
 IN_PANEL = ROOT / "results" / "innovation_ncp_v3_panel.tsv"
 
-OUT_FIG1E = ROOT / "figures" / "fig1e_v3_robustness_stability.pdf"
-OUT_FIGS14 = ROOT / "figures" / "figS14_v3_bootstrap_stability.pdf"
+OUT_FIG1E = ROOT / "figures" / "fig1e_ncp_robustness_stability.pdf"
+OUT_FIGS14 = ROOT / "figures" / "figS14_ncp_bootstrap_stability.pdf"
 
 
 def main() -> None:

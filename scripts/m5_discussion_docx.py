@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Build manuscript_drafts/Discussion.docx (NC style; ~1,200 words; 6 paragraphs).
+Build manuscript_drafts/Discussion.docx
 
-Tone : framework-first / conservative / no clinical-target claim.
-References are placeholders [N] to be back-filled at submission.
+Phase 8 locked Discussion: seven paragraphs; citation sets [5,6,9] and
+[11-13] retained without bibliography renumbering.
 """
 from __future__ import annotations
 
@@ -15,7 +15,6 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from docx import Document
 from docx.enum.text import WD_ALIGN_PARAGRAPH
-from docx.shared import Pt, RGBColor
 
 from m0_doc_style import apply_base_style
 
@@ -23,205 +22,137 @@ OUT = ROOT / "manuscript_drafts" / "Discussion.docx"
 OUT.parent.mkdir(parents=True, exist_ok=True)
 
 
-# ---------------------------------------------------------------------------
-# Discussion text. NC style: no internal sub-headings; paragraph breaks only.
-# ---------------------------------------------------------------------------
 PARAGRAPHS: list[str] = [
-    # ---- 1. Opening / restated main finding ---------------------------------
-    "Across eight publicly available human atrial transcriptomic and "
-    "multi-omic resources, a single chamber-aware framework anchored "
-    "on a healthy LA-vs-RA program panel resolved atrial fibrillation "
-    "(AF) into a distributed, dual-axis substrate rather than a "
-    "master-gene or master-compartment phenotype. The matrix arm "
-    "(ECM proteoglycans and heparan-sulfate / glycosaminoglycan "
-    "metabolism) and the metabolic arm (oxidative phosphorylation, "
-    "aerobic respiration and electron transport, and cytoplasmic "
-    "translation) were each identifiable as cross-cohort consistent "
-    "attenuations of the healthy chamber direction; neither arm was "
-    "carried by a single FDR-robust dominant cell carrier in the "
-    "left-atrial single-nucleus arm; and neither arm was mediated "
-    "through a pre-registered single-gene cis-eQTL anchor in the "
-    "tissue-matched GTEx Atrial Appendage panel. Read together, these "
-    "three observations argue that AF substrate phenotyping is best "
-    "framed at the level of cross-compartment transcriptional "
-    "programs rather than at the level of any single causal gene or "
-    "any single carrier cell type.",
-
-    # ---- 2. Methodological contribution -------------------------------------
-    "A central methodological observation is that paired chamber × "
-    "rhythm cohorts are intrinsically rank-deficient at the "
-    "sample-level interaction term: rhythm is a donor-level "
-    "attribute, so a sample-level donor × chamber × rhythm model "
-    "cannot identify how AF rewires the chamber axis. The "
-    "donor-level aligned chamber asymmetry index, aCAIrel, was "
-    "designed to recover that interaction by aligning each program "
-    "to its healthy chamber direction and then normalising by the "
-    "healthy bulk magnitude. The normalisation step removes the "
-    "dependence of singscore magnitudes on leading-edge set size, "
-    "which is what allows programs of very different sizes to share "
-    "a single, interpretable scale on which preservation, "
-    "attenuation, and reversal of the healthy chamber direction can "
-    "be read off directly. Internal-consistency checks "
-    "(Supplementary Fig. S10) and external-style validations "
-    "(Supplementary Fig. S11) confirmed that this metric recovers "
-    "known direction in healthy bulk, agrees with a classical "
-    "limma chamber-stratified analysis in 25 / 30 program × cohort "
-    "cells, and matches its REML / Hartung–Knapp meta-analytic "
-    "intervals against an independent cohort-donor bootstrap. "
-    "We anticipate that the same chamber-aware donor-level recipe "
-    "will be useful in any setting where a tissue is structurally "
-    "asymmetric and the perturbation is donor-level rather than "
-    "sample-level. A second design feature of the framework is "
-    "that, on the same donor-level chamber asymmetry matrix M_aCAI "
-    "established at framework construction (Fig. 1), it provides "
-    "two complementary discovery primitives: a curated primitive — "
-    "signed GSEA over MSigDB / Reactome on the chamber-biased gene "
-    "cohort, yielding the 10 canonical NCP programs that constitute "
-    "the locked calibration set used downstream — and a data-driven "
-    "primitive — PCA of M_aCAI followed by k-means on the top-PC "
-    "loadings (Fig. 1d–e), yielding twelve rewiring-defined modules "
-    "none of which exceeded a 30 % Jaccard overlap with any "
-    "canonical NCP program. Among the twelve data-driven modules a "
-    "tight PITX2-anchored mesothelial module (M11) collapses in AF "
-    "and a 27-gene adipose-program module (M7; ADIPOQ, LEP, PLIN1, "
-    "PCK1) expands toward the LA in AF, both observations that the "
-    "GSEA-based primitive cannot reach. The independent recovery of "
-    "PITX2 inside an unsupervised cluster validates the data-driven "
-    "primitive against canonical AF biology and demonstrates that "
-    "the two primitives are mutually consistent on the locus that "
-    "matters most; the LA expansion of the adipose module is a "
-    "framework-specific finding that motivates further investigation "
-    "of epicardial-adipose-tissue involvement in AF substrate. Both "
-    "data-driven module predictions are independently validated at "
-    "single-nucleus resolution in Fig. 1f: the M7 adipose module "
-    "peaks in adipocytes (row z = +3.45) and the M11 PITX2 / "
-    "mesothelial module peaks in epicardial cells (row z = +3.46), "
-    "in both cases on cell types that had been excluded from the "
-    "original 4-compartment analysis lock and that were added back "
-    "specifically because the data-driven primitive identified them "
-    "as biologically central.",
-
-    # ---- 3. Relation to the prior literature --------------------------------
-    "The framework's findings sit naturally alongside three strands "
-    "of the existing AF literature. First, multi-ancestry AF GWAS "
-    "have identified hundreds of common-variant signals dominated by "
-    "the 4q25 / PITX2 locus and a small number of "
-    "transcription-factor and ion-channel loci [1, 2]; targeted "
-    "single-gene mediation analyses have nevertheless struggled to "
-    "produce a generalisable, tissue-matched cis-eQTL × AF-GWAS "
-    "colocalisation outside that locus [3]. In this study, even the "
-    "two pre-registered canonical AF GWAS positive controls (PITX2 "
-    "and KCNN3) failed the conservative single-gene cis-eQTL gate at "
-    "current GTEx Atrial Appendage panel power (Supplementary "
-    "Fig. S12), confirming that the classical single-gene mRNA-"
-    "mediated regime is presently calibration-limited rather than "
-    "diagnostically informative for distributed substrate models. "
-    "Against that classical-regime null, our framework provides a "
-    "gene-level positive signature uniquely visible to CRF: a class "
-    "of 24 chamber-identity REVERSAL genes (Fig. 6c) that are "
-    "reproducibly RA → LA reversed across at least two of the three "
-    "paired-chamber AF cohorts. The 21:3 RA → LA asymmetry of the "
-    "reversal class, dominated by extracellular-matrix proteoglycans "
-    "and fibroblast genes (PRELP, OMD, DCN, FGFBP2, C1S, CTSK), "
-    "describes a previously unreported pattern of chamber-identity "
-    "invasion in AF — RA-biased matrix programs are pulled into the "
-    "LA — and the independent recovery of PRELP through both the "
-    "framework's pre-registered structural anchor list and the "
-    "unbiased chamber-reversal screen provides cross-method "
-    "convergence on the same gene. The cellular carrier of the "
-    "reversal signature, identified by projecting the 24 reversal "
-    "genes onto the GSE255612 single-nucleus compartments (Fig. 6d), "
-    "is the fibroblast (mean Δ_aligned ≈ 5-fold higher than any other "
-    "compartment), with smaller contributions from atrialCM and "
-    "immune cells; this gene-level carrier resolution is itself a "
-    "framework-specific finding that the prior literature has not "
-    "reported. Second, single-nucleus surveys of human atrial tissue "
-    "have reported compartment-level transcriptional differences in "
-    "AF without resolving a single dominant cellular carrier at the "
-    "program level [4–7]; the program-level Fig. 3 finding "
-    "(unresolved at the strict permutation gate) recapitulates that "
-    "lack of program-level carrier resolution, while the gene-level "
-    "Fig. 6d analysis identifies the chamber-reversal carrier "
-    "precisely. Third, atrial fibrosis and mitochondrial "
-    "dysfunction have been described separately in AF [8–11]; the "
-    "dual-axis synthesis in Figs 5–6 places them within the same "
-    "chamber-aware framework and shows that they pool negatively as "
-    "cross-cohort consistent axes — most consistently for the "
-    "structural arm, more heterogeneously for the metabolic arm.",
-
-    # ---- 4. Translational implications (conservative) -----------------------
-    "The translational implication that we feel can be defended at "
-    "this stage is therefore framework-level rather than "
-    "target-level. A donor-level aCAIrel readout, or the reduced "
-    "five-gene-per-axis panel that reproduces the full-axis "
-    "donor composite at Spearman ρ = 0.55–0.90 (Supplementary "
-    "Fig. S9), provides a candidate molecular phenotyping tool that "
-    "operates beyond a binary AF / SR state and could in principle "
-    "be applied to bulk transcriptomic data from clinical atrial "
-    "biopsy material. The OXPHOS attenuation that tracks AF duration "
-    "in the LA appendage (Fig. 4) is consistent with a metabolic "
-    "progression component that warrants prospective testing in "
-    "cohorts with paired clinical follow-up, and the distributed "
-    "nature of the substrate suggests that combination strategies "
-    "that engage both the matrix and metabolic arms are conceptually "
-    "more defensible than single-target approaches. We deliberately "
-    "stop short of nominating actionable molecular targets, because "
-    "the evidence assembled here does not include independent "
-    "regulator-tier or causal-perturbation data; the framework is "
-    "intended as a substrate-phenotyping scaffold, not as a target "
-    "discovery study.",
-
-    # ---- 5. Limitations / honest negatives ----------------------------------
-    "Several limitations frame the strength of the conclusions. The "
-    "primary chronicity panel (Fig. 4) used n = 12 AF donors with "
-    "numeric AF duration in months and is interpreted as a direction- "
-    "and sensitivity-supported progression analysis rather than a "
-    "high-powered association screen; the duration covariate is a "
-    "disease-duration proxy in valvular persistent AF, not a "
-    "recurrence covariate. The pre-registered multiome regulator-tier "
-    "support gate (Fig. 5b) was not met on the GSE238242 LAA snRNA "
-    "pseudobulk (AF n = 3, SR n = 4), so all chromatin- and "
-    "regulator-tier inference was deferred to an independent cohort; "
-    "the field will need a multiome cohort that satisfies the "
-    "support gate before the dual-axis substrate can be extended to "
-    "transcription-factor-level claims. The cis-eQTL × AF-GWAS coloc "
-    "(Fig. 6c) used four pre-registered anchor genes and was not "
-    "replaced post hoc; broader anchor sets, larger or "
-    "atrial-tissue-specific cis-eQTL resources [12], and rare-variant "
-    "association would together provide the more sensitive single-gene "
-    "test that this study deliberately did not perform. Sex-stratified "
-    "meta-analysis was constrained by data availability — only "
-    "GSE79768 contained both sexes with sufficient AF and SR "
-    "representation — and is therefore not presented as a main-text "
-    "result. Spatial localisation (Fig. 5c) is at the GeoMx ROI level "
-    "and would benefit from single-cell-resolution spatial "
-    "confirmation in independent tissue. Finally, all cohorts "
-    "analysed here were drawn from public archives; recruitment and "
-    "selection biases of those original studies propagate into the "
-    "framework's effect sizes.",
-
-    # ---- 6. Conclusion / outlook --------------------------------------------
-    "In sum, a chamber-aware framework based on a locked panel of ten "
-    "stable LA-vs-RA programs and a donor-level aCAIrel metric "
-    "yields a reproducible, distributed, dual-axis substrate model "
-    "of AF that is supported by cross-cohort consistency and is not "
-    "supported by a single-gene mediation argument at the resolution "
-    "tested. The framework, the locked specifications, and the "
-    "intermediate deliverables that ground every numerical claim in "
-    "this paper are released openly to permit independent replication "
-    "and extension. The most informative follow-up experiments would "
-    "be (i) an independent multiome cohort sized to satisfy the "
-    "pre-registered regulator-tier support gate, (ii) "
-    "single-cell-resolution spatial profiling of AF and SR atrial "
-    "tissue to test whether the LA-arm Unresolved carrier signature "
-    "becomes resolved at sufficient compartment depth, and (iii) "
-    "prospective phenotyping cohorts to test whether the dual-axis "
-    "donor-level readout adds clinically actionable information "
-    "beyond the binary AF / SR distinction.",
+    (
+        "This study establishes a chamber-aware coordinate system for comparing atrial "
+        "fibrillation (AF) remodeling across heterogeneous human datasets. By freezing a "
+        "healthy LA–RA reference before disease-cohort analysis, the Normal Chamber Prior "
+        "(NCP) separated baseline chamber identity from disease-associated displacement "
+        "of that identity. Cross-cohort reproducibility in paired bulk tissue was selective "
+        "and spanned both sides of the healthy reference: LA-biased translation and "
+        "ribosome-quality-control families and RA-biased matrix, proteoglycan, and "
+        "developmental-signaling families were represented among the High-consistency "
+        "group. LA single-nucleus analysis supplied nominal compartment context for four "
+        "families, cross-sectional duration analysis supplied a separate chronicity layer, "
+        "and the prespecified Path A rule prioritized F10 GAG disease / TGF-β and "
+        "F15 NTRK2 / TrkB across the three transcriptomic evidence layers. GeoMx and "
+        "genetic analyses added spatial and genetic context but did not enter Path A. "
+        "Accordingly, the evidence supports a reproducible chamber-aware architecture "
+        "rather than a single causal mechanism."
+    ),
+    (
+        "Prior human AF studies have repeatedly implicated extracellular-matrix "
+        "organization, inflammatory and signaling programs, and mitochondrial or "
+        "metabolic remodeling [5,6,9]. The NCP addresses a complementary problem: these "
+        "themes are difficult to compare when cohorts differ in chamber sampling or when "
+        "healthy LA–RA asymmetry is incompletely modeled [11-13]. The aligned family scale "
+        "also requires a specific interpretation. A negative pooled AF-minus-SR effect "
+        "indicates displacement opposite to the frozen healthy chamber direction on the "
+        "aligned scale; it does not imply uniform downregulation of every gene in the "
+        "family. All six High-consistency pooled effects were negative on this scale, but "
+        "the High set included both LA-biased translation/ribosome-quality-control "
+        "families and RA-biased matrix/developmental families. The final bulk results "
+        "therefore do not support a simple division in which structural families are "
+        "uniformly reproducible and translational families are uniformly cohort dependent. "
+        "Instead, they suggest that AF perturbs selected components of both healthy "
+        "chamber-biased arms, while other mitochondrial and metabolic families remain more "
+        "variable across cohorts."
+    ),
+    (
+        "The LA single-nucleus layer showed that family-level bulk remodeling does not map "
+        "uniformly to cell compartments. F10 retained its healthy fibroblast context and "
+        "was classified as Fidelity; F11 localized to adipocytes and F15 to endothelial "
+        "cells only, producing Relay patterns; and F16 involved fibroblasts together with "
+        "atrial cardiomyocytes, producing Extension. These assignments were based on "
+        "nominal donor-label permutation support in LA and were not FDR-controlled "
+        "discoveries. They should therefore be interpreted as cellular localization cues, "
+        "not as validated cell-type mechanisms or an independent replication of "
+        "bi-chamber remodeling. Conversely, Below-detection indicates that no eligible LA "
+        "compartment met the preset support rule; it does not imply absence of remodeling, "
+        "particularly for families whose bulk reference is RA biased. The supplementary "
+        "F4 BCAA example further shows that a constituent program can retain nominal "
+        "compartment support while its parent family remains Below-detection, emphasizing "
+        "that biological resolution depends on the level of aggregation."
+    ),
+    (
+        "The duration and triangulation layers were similarly designed to preserve rather "
+        "than erase differences in evidence type. Duration associations were estimated in "
+        "12 AF-LAA samples and classified by the magnitude of the full-precision "
+        "cross-sectional Spearman correlation. Only F2 and F9 met the Strong-trend "
+        "threshold, and regional LAPV direction was not uniform, illustrating that trend "
+        "magnitude and regional sign agreement are distinct properties. These observations "
+        "do not establish progression, recurrence risk, treatment response, or temporal "
+        "causal order. Path A then combined exactly three prespecified binary summaries: "
+        "High bulk consistency, a non-Below-detection single-nucleus class, and a "
+        "non-Stable duration class. F10 and F15 met all three conditions, whereas F9 met "
+        "the bulk and duration conditions without LA single-nucleus localization. Path A "
+        "is therefore best read as transparent rule-based triage across non-exchangeable "
+        "layers, not as a joint statistical test or causal-validation criterion."
+    ),
+    (
+        "GeoMx supplied an additional but deliberately separate spatial view. Nominal "
+        "ROI-level summaries linked F10 with fibroblast-panel scores, F15 with "
+        "macrophage-panel scores, and F9 with an AF-minus-SR difference. The F10 result is "
+        "directionally compatible with its fibroblast single-nucleus localization, whereas "
+        "the F15 macrophage-panel association and endothelial single-nucleus localization "
+        "arise from different assays, signatures, and analysis units and should not be "
+        "collapsed into a single cell-type claim. GeoMx family signatures also used an "
+        "explicit family-gene-union scoring exception rather than the program-first family "
+        "aggregation used in the primary transcriptomic analyses. Because the eligible "
+        "data comprised multiple ROIs from each of four patients and no patient-clustered "
+        "or mixed-effects inference was applied, these findings provide ROI-level spatial "
+        "context only. They neither validate Path A at patient level nor constitute a "
+        "fourth gate."
+    ),
+    (
+        "The genetic analyses further illustrate why evidence layers should remain "
+        "separate. Seven of 12 anchor windows contained local genome-wide AF associations, "
+        "but only SMAD9 met the corrected atrial eGene criterion and no anchor reached the "
+        "prespecified PP4 threshold for same-variant colocalization. All anchors were "
+        "PP3-dominant, and lead AF-GWAS and atrial-eQTL variants were separated by "
+        "hundreds of kilobases to nearly two megabases. These diagnostics are compatible "
+        "with distinct local association signals but do not prove that different causal "
+        "variants underlie the two traits. The failure of PITX2 and KCNN3 calibration "
+        "controls to meet the same colocalization threshold underscores the conservatism "
+        "of the available bulk-LAA regulatory setting. Similarly, the external gene-set "
+        "analysis yielded only sparse CAV1 and HEY2 membership and no family-level "
+        "enrichment after correction across 64 tests. Together, these results do not "
+        "support same-variant bulk-LAA total-expression mediation for the tested anchors, "
+        "but neither do they exclude cell-state-specific regulation, developmental "
+        "effects, distal or trans mechanisms, rare variation, or other untested genetic "
+        "routes. The non-nested traceability matrix was intended to expose these distinct "
+        "forms of evidence without converting them into an ordinal tier, composite score, "
+        "or genetics-based Path A gate."
+    ),
+    (
+        "Several limitations define the appropriate scope of the framework. The healthy "
+        "reference comprised eight donors, and frozen pathway definitions may not capture "
+        "all cohort- or comorbidity-specific biology. Public bulk cohorts differed in "
+        "platform and clinical context, and bulk chamber contrasts can reflect both "
+        "within-cell regulation and shifts in cellular composition. The single-nucleus "
+        "resource was LA only, used nominal localization thresholds, and could not test "
+        "RA-driven compartment remodeling. Duration analysis was cross-sectional and "
+        "based on 12 AF-LAA samples. GeoMx included four patients, multiple ROIs per "
+        "patient, and no clustered inference; its reduced-panel structure also required a "
+        "gene-union scoring exception. Genetic analyses used bulk atrial-appendage eQTL "
+        "data rather than cell-state-specific regulatory maps, and exact historical "
+        "software-environment recovery was incomplete for some dependencies. Finally, "
+        "Path A depends on prespecified categorical boundaries and should be evaluated "
+        "prospectively rather than treated as a clinical or mechanistic classifier. The "
+        "principal contribution of the NCP is therefore methodological: frozen program "
+        "definitions, donor-paired chamber alignment, program-specific healthy scaling, "
+        "and explicit evidence-layer boundaries provide a reproducible framework for "
+        "comparing AF datasets. Prospective paired-atrial studies with matched "
+        "single-cell, spatial, regulatory, proteomic, metabolic, and perturbational data "
+        "will be needed to test temporal order and causal mechanisms."
+    ),
 ]
 
 
 def main() -> None:
+    if len(PARAGRAPHS) != 7:
+        raise SystemExit(f"Expected exactly 7 Discussion paragraphs, got {len(PARAGRAPHS)}")
+
     doc = Document()
     apply_base_style(doc)
 
@@ -230,19 +161,6 @@ def main() -> None:
     for p in PARAGRAPHS:
         para = doc.add_paragraph(p)
         para.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
-
-    note = doc.add_paragraph()
-    note.paragraph_format.space_before = Pt(18)
-    run = note.add_run(
-        "End-of-Discussion note (not for typesetter): citation "
-        "placeholders [1]–[12] in the Discussion text are to be "
-        "back-filled at submission against the bibliography file. "
-        "All numerical claims trace to the deliverables released "
-        "alongside the manuscript (see Code availability)."
-    )
-    run.italic = True
-    run.font.size = Pt(9)
-    run.font.color.rgb = RGBColor(0x66, 0x66, 0x66)
 
     doc.save(OUT)
     print(f"wrote {OUT.relative_to(ROOT)}")

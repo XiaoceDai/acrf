@@ -25,11 +25,12 @@ from matplotlib.colors import LinearSegmentedColormap, TwoSlopeNorm
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts"))
 
+from _pathway_labels import short_pathway_label  # noqa: E402
+
 VHS_TSV = ROOT / "results" / "fig3_v3_VHS_per_family_ct.tsv"
-ATLAS_TSV = ROOT / "results" / "fig_integrated_af_rewiring_atlas.tsv"
 HCA_TSV = ROOT / "results" / "fig1f_v3_HCA_family_carriers.tsv"
 DSCORE_TSV = ROOT / "results" / "fig3_v3_family_celltype_delta.tsv"
-OUT_PDF = ROOT / "figures" / "figS3_v3_VHS_overlay.pdf"
+OUT_PDF = ROOT / "figures" / "figS3_VHS_overlay.pdf"
 
 LA_DEEP = "#9C5550"
 RA_DEEP = "#4E6B89"
@@ -70,26 +71,38 @@ def set_style():
 def main():
     set_style()
     vhs = pd.read_csv(VHS_TSV, sep="\t")
-    atlas = pd.read_csv(ATLAS_TSV, sep="\t").sort_values("PriorityScore", ascending=False)
     hca = pd.read_csv(HCA_TSV, sep="\t")
     dscore = pd.read_csv(DSCORE_TSV, sep="\t")
+    canonical = pd.read_csv(ROOT / "results" / "ncp_v3_canonical_display_order.tsv", sep="\t")
+    labels = pd.read_csv(ROOT / "results" / "ncp_v3_family_labels.tsv", sep="\t")
 
-    fam_order = atlas["family_id"].astype(int).tolist()
-    short_lookup = dict(zip(atlas["family_id"].astype(int), atlas["short"].astype(str)))
-    dir_lookup = dict(zip(atlas["family_id"].astype(int), atlas["HealthyBias"].astype(str)))
+    fam_order = (
+        canonical[["family_display_order", "family_id", "canonical_direction"]]
+        .drop_duplicates("family_id")
+        .sort_values("family_display_order")
+    )
+    fam_ids = fam_order["family_id"].astype(int).tolist()
+    short_lookup = {
+        int(r.family_id): short_pathway_label(str(r.family_label), 36)
+        for r in labels.itertuples(index=False)
+    }
+    dir_lookup = dict(
+        zip(fam_order["family_id"].astype(int), fam_order["canonical_direction"].astype(str))
+    )
     carriers = dict(zip(hca["family_id"].astype(int), hca["LA_carrier"].astype(str)))
 
     vhs["family_id"] = vhs["family_id"].astype(int)
     vhs_pivot = vhs.pivot(index="family_id", columns="compartment", values="log2_VHS")
-    vhs_pivot = vhs_pivot.reindex(index=fam_order, columns=COMPARTMENTS)
+    vhs_pivot = vhs_pivot.reindex(index=fam_ids, columns=COMPARTMENTS)
     p_pivot = vhs.pivot(index="family_id", columns="compartment", values="p_perm")
-    p_pivot = p_pivot.reindex(index=fam_order, columns=COMPARTMENTS)
+    p_pivot = p_pivot.reindex(index=fam_ids, columns=COMPARTMENTS)
     dscore["family_id"] = dscore["family_id"].astype(int)
     dscore_p_pivot = dscore.pivot(index="family_id", columns="compartment", values="p_perm")
-    dscore_p_pivot = dscore_p_pivot.reindex(index=fam_order, columns=COMPARTMENTS)
+    dscore_p_pivot = dscore_p_pivot.reindex(index=fam_ids, columns=COMPARTMENTS)
 
-    n_rows = len(fam_order)
+    n_rows = len(fam_ids)
     n_cols = len(COMPARTMENTS)
+    fam_order = fam_ids  # downstream loops use fam_order as list of ids
 
     # Diverging cmap distinct from Fig 3b's blue-red: purple <-> orange
     cmap = LinearSegmentedColormap.from_list(

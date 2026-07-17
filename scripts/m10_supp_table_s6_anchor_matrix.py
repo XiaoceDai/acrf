@@ -15,7 +15,7 @@ from docx.shared import Cm
 
 from m0_doc_style import apply_base_style, add_body, add_table
 
-IN = ROOT / "results" / "figure6_mr_anchors_v3_consolidated.tsv"
+IN = ROOT / "results" / "figure6_mr_anchors_v3_pipeline_wide.tsv"
 OUT = ROOT / "manuscript_drafts" / "Supplementary_Table_S6_anchor_matrix.docx"
 OUT.parent.mkdir(parents=True, exist_ok=True)
 
@@ -51,7 +51,8 @@ def main() -> None:
         "genes, primary tissue (GTEx atrial appendage; eQTL Catalogue QTD000251) "
         "and blood sensitivity (QTD000356), including coloc posterior "
         "probabilities and pipeline verdict fields. Source file: "
-        "results/figure6_mr_anchors_v3_consolidated.tsv.",
+        "results/figure6_mr_anchors_v3_pipeline_wide.tsv. "
+        "Manuscript-facing slim matrix: results/figure6_mr_anchors_v3_consolidated.tsv.",
     )
 
     headers = [str(c) for c in df.columns]

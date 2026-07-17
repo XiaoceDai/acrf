@@ -1,0 +1,11 @@
+item	value	sha256	bytes	notes
+snapshot_utc	2026-07-17T08:19:11.746645+00:00			pre-freeze; assets unmodified
+builder_path	scripts/graphical_abstract/build_graphical_abstract.py	594c8072eeb3d8a1a216be0246c4742283d72163ca86a86e8e7d7434925c938a	65244	
+pdf_path	figures/graphical_abstract/graphical_abstract_final.pdf	03093e5f9d5a9579beec53b1d4efd480bbeb1acbe3ea4b1c55be3378c17333ba	54279	pre-freeze
+svg_path	figures/graphical_abstract/graphical_abstract_final.svg	dd5c0c9ebe0b6a6f7b685f5760b2d7d81e6132ad3cf48bab68dc19814aac6289	77550	pre-freeze
+png_path	figures/graphical_abstract/graphical_abstract_final.png	b257abc2cab4d6748e7ea61e97392ccf9c8229701e705e9332475591398d30e1	1561314	pre-freeze
+canvas_mm	240.0 x 160.0			from builder CANVAS_* constants
+svg_viewBox	0 0 680.314961 453.543307			680.314961pt x 453.543307pt
+git_status_ga_paths	?? figures/graphical_abstract/; | ?? scripts/graphical_abstract/			untracked dirs expected
+git_porcelain_line_count	453			whole-repo porcelain lines at snapshot
+DEBUG_LAYOUT_in_builder	True			read-only observation

@@ -16,6 +16,7 @@ Cases (3-panel batch):
 """
 from __future__ import annotations
 
+import sys
 from pathlib import Path
 
 import matplotlib as mpl
@@ -25,6 +26,8 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "scripts"))
+from plot_style import enforce_font_floor, FS_PANEL_TITLE, FS_TICK, FS_AXIS_LABEL, FS_FOOTNOTE
 
 LONG_TSV = ROOT / "results" / "fig4_v3_singscore_per_sample.tsv"
 META_TSV = ROOT / "Project_P4" / "GSE41177" / "sample_metadata.tsv"
@@ -43,7 +46,7 @@ CASES = {
         "class_name": "Strong-trend (4/4 sensitivity)",
         "class_color": "#C44569",
         "panel_letter": "4d",
-        "out_pdf": OUT_DIR / "fig4_v3_d_F9_HSGAG.pdf",
+        "out_pdf": OUT_DIR / "fig4_d_F9_HSGAG.pdf",
         "interpretation_paragraphs": [
             ("Data:",
              "F9 (Heparan / Glycosaminoglycan metabolism, RA-biased baseline) shows a robust negative duration "
@@ -59,7 +62,7 @@ CASES = {
         "class_name": "Strong-trend (biological anchor)",
         "class_color": "#C44569",
         "panel_letter": "4e",
-        "out_pdf": OUT_DIR / "fig4_v3_e_F2_MitoCa.pdf",
+        "out_pdf": OUT_DIR / "fig4_e_F2_MitoCa.pdf",
         "interpretation_paragraphs": [
             ("Data:",
              "F2 (Mitochondrial Ca\u00b2\u207a transport, LA-biased baseline) shows the strongest single-family "
@@ -77,7 +80,7 @@ CASES = {
         "class_name": "Weak-trend (cross-Fig 3D link)",
         "class_color": "#F8B500",
         "panel_letter": "4f",
-        "out_pdf": OUT_DIR / "fig4_v3_f_F15_NTRK2.pdf",
+        "out_pdf": OUT_DIR / "fig4_f_F15_NTRK2.pdf",
         "interpretation_paragraphs": [
             ("Data:",
              "F15 (NTRK2 / TrkB signalling, RA-biased baseline) sits just below the Strong-trend threshold "
@@ -114,7 +117,7 @@ def set_style():
     mpl.rcParams.update({
         "font.family": "sans-serif",
         "font.sans-serif": ["Arial", "Helvetica", "Liberation Sans", "DejaVu Sans"],
-        "font.size": 8,
+        "font.size": enforce_font_floor(FS_TICK),
         "axes.linewidth": 0.6,
         "savefig.dpi": 300,
         "pdf.fonttype": 42,
@@ -152,9 +155,9 @@ def render_case(scores_long, meta, cls_df, key, cfg):
     sens_n = int(cls_row["sens_same_sign_n"])
 
     MM = 1.0 / 25.4
-    fig = plt.figure(figsize=(170 * MM, 135 * MM))
+    fig = plt.figure(figsize=(170 * MM, 150 * MM))  # taller for larger fonts
     gs = fig.add_gridspec(
-        1, 1, left=0.13, right=0.96, top=0.78, bottom=0.42,
+        1, 1, left=0.13, right=0.96, top=0.76, bottom=0.40,
     )
     ax = fig.add_subplot(gs[0, 0])
 
@@ -177,9 +180,9 @@ def render_case(scores_long, meta, cls_df, key, cfg):
         ax.plot(x_line, slope * x_line + intercept, color="#1A1A1A", lw=1.2,
                 ls="--", alpha=0.7, zorder=2)
 
-    ax.set_xlabel("AF duration (months, LAA)", fontsize=7.6)
-    ax.set_ylabel(f"Family-level singscore  (F{fid})", fontsize=7.6)
-    ax.tick_params(labelsize=6.5)
+    ax.set_xlabel("AF duration (months, LAA)", fontsize=enforce_font_floor(FS_AXIS_LABEL))
+    ax.set_ylabel(f"Family-level singscore  (F{fid})", fontsize=enforce_font_floor(FS_AXIS_LABEL))
+    ax.tick_params(labelsize=enforce_font_floor(FS_TICK))
     for s in ("top", "right"):
         ax.spines[s].set_visible(False)
     ax.spines["left"].set_linewidth(0.4)
@@ -187,15 +190,24 @@ def render_case(scores_long, meta, cls_df, key, cfg):
 
     # ---- compact horizontal legend in figure header strip (no plot overlap) ----
     legend_handles = [af_handle]
-    legend_labels = [f"AF donors (brown filled circle, n = {len(af)}; in linear fit)"]
+    legend_labels = [f"AF donors (n = {len(af)}, finite duration; fit + ρ)"]
     if sr_handle is not None:
         legend_handles.append(sr_handle)
         legend_labels.append(f"SR controls (blue open square, n = {len(sr)}; visual anchor only)")
     fig.legend(
         legend_handles, legend_labels,
         loc="upper left", bbox_to_anchor=(0.13, 0.86),
-        fontsize=5.9, frameon=False, ncol=2, handlelength=1.1, columnspacing=1.2,
+        fontsize=enforce_font_floor(FS_TICK - 0.5), frameon=False, ncol=2, handlelength=1.1, columnspacing=1.2,
         handletextpad=0.4,
+    )
+    fig.text(
+        0.13, 0.795,
+        "AF donors with non-numeric duration (GEO '>1M') are not plotted; ρ, CI, p_perm, chronicity class: "
+        f"n = {len(af)} AF LAA donors with finite duration.",
+        fontsize=enforce_font_floor(FS_FOOTNOTE - 0.5),
+        color="#444444",
+        ha="left",
+        va="top",
     )
 
     # ---- top-right statistics box (highlight CI crossing 0 + marginal p) ----
@@ -217,7 +229,7 @@ def render_case(scores_long, meta, cls_df, key, cfg):
     ax.text(
         0.97, 0.97, box_text,
         transform=ax.transAxes,
-        fontsize=6.4, color="#1A1A1A", ha="right", va="top",
+        fontsize=enforce_font_floor(FS_TICK), color="#1A1A1A", ha="right", va="top",
         bbox=dict(boxstyle="round,pad=0.4", facecolor="white", edgecolor="#888", linewidth=0.5),
     )
     note_lines = ["Bootstrap 5000 resamples;  permutation 10,000 shuffles."]
@@ -228,7 +240,7 @@ def render_case(scores_long, meta, cls_df, key, cfg):
     ax.text(
         0.97, 0.69, "\n".join(note_lines),
         transform=ax.transAxes,
-        fontsize=5.2,
+        fontsize=enforce_font_floor(FS_FOOTNOTE - 0.5),
         color="#C44569" if p_marginal else "#666666",
         ha="right", va="top", style="italic",
     )
@@ -255,7 +267,7 @@ def render_case(scores_long, meta, cls_df, key, cfg):
     line_h = 0.045
     ax.text(x_left, y_top, "Sensitivity codings",
               transform=ax.transAxes,
-              fontsize=5.9, fontweight="bold", color="#1A1A1A", ha="left", va="top")
+              fontsize=enforce_font_floor(FS_TICK), fontweight="bold", color="#1A1A1A", ha="left", va="top")
     for i, (lab, rho_str, marker, is_primary, same_sign) in enumerate(body_rows):
         y = y_top - line_h * (i + 1)
         if is_primary:
@@ -266,15 +278,15 @@ def render_case(scores_long, meta, cls_df, key, cfg):
             weight, color, style = "normal", "#333333", "normal"
         ax.text(x_left + 0.005, y, lab,
                   transform=ax.transAxes,
-                  fontsize=5.6, color=color, fontweight=weight, fontstyle=style,
+                  fontsize=enforce_font_floor(FS_TICK - 0.5), color=color, fontweight=weight, fontstyle=style,
                   ha="left", va="top", family="monospace")
         ax.text(x_left + 0.42, y, rho_str,
                   transform=ax.transAxes,
-                  fontsize=5.6, color=color, fontweight=weight, fontstyle=style,
+                  fontsize=enforce_font_floor(FS_TICK - 0.5), color=color, fontweight=weight, fontstyle=style,
                   ha="right", va="top", family="monospace")
         ax.text(x_left + 0.45, y, marker,
                   transform=ax.transAxes,
-                  fontsize=5.6, color=color, fontstyle=style,
+                  fontsize=enforce_font_floor(FS_TICK - 0.5), color=color, fontstyle=style,
                   ha="left", va="top")
     y_conc = y_top - line_h * (len(body_rows) + 1)
     conc_text = f"Same-sign concordance:  {sens_n} / 4"
@@ -283,7 +295,7 @@ def render_case(scores_long, meta, cls_df, key, cfg):
         conc_text = conc_text + f"   ({rev_str} reverses sign)"
     ax.text(x_left, y_conc, conc_text,
               transform=ax.transAxes,
-              fontsize=5.6, color="#1A1A1A", fontweight="bold", ha="left", va="top")
+              fontsize=enforce_font_floor(FS_TICK - 0.5), color="#1A1A1A", fontweight="bold", ha="left", va="top")
     box_w, box_h = 0.58, line_h * (len(body_rows) + 2) + 0.02
     rect = mpatches.FancyBboxPatch(
         (x_left - 0.02, y_conc - 0.025), box_w, box_h,
@@ -297,7 +309,7 @@ def render_case(scores_long, meta, cls_df, key, cfg):
     fig.text(
         0.05, 0.92,
         f"Fig {cfg['panel_letter']}  {cfg['label']}  \u2014  {cfg['class_name']}",
-        fontsize=9.2, fontweight="bold", color="#1A1A1A",
+        fontsize=enforce_font_floor(FS_PANEL_TITLE + 2), fontweight="bold", color="#1A1A1A",
     )
     fig.add_artist(
         mpatches.FancyBboxPatch(
@@ -307,28 +319,31 @@ def render_case(scores_long, meta, cls_df, key, cfg):
             transform=fig.transFigure,
         )
     )
-    fig.text(0.85, 0.925, cfg["class_name"], fontsize=6.4, fontweight="bold",
+    fig.text(0.85, 0.925, cfg["class_name"], fontsize=enforce_font_floor(FS_TICK), fontweight="bold",
              color="white", ha="center", va="center")
 
     # ---- footer caption (structured: data block + paragraphs) ----
     y_cur = 0.34
-    line_h = 0.020
+    line_h = 0.022
     header_paragraph = (
-        f"GSE41177 LAA bulk RNA-seq.  AF n = {len(af)} donors with numeric duration; "
-        f"SR n = {len(sr)} (anchor only).  Linear fit shown for visualisation only; "
-        "\u03c1 is rank-based.  LAPV sensitivity row uses the paired LAPV-region "
-        "cohort (n = 12), not LAA-pooled."
+        "GSE41177 LAA bulk Affymetrix expression.  "
+        f"Panels show SR controls at month 0 (n = {len(sr)}, anchor only; excluded from correlation) plus "
+        f"AF donors with finite duration (n = {len(af)}).  "
+        "Additional AF LAA donors with censored duration strings ('>1M' in GEO metadata) are retained in the cohort "
+        f"but omitted from scatter panels; reported Spearman ρ, bootstrap CI, permutation p, and chronicity class "
+        f"use only those n = {len(af)} AF donors.  Linear trend line is visualisation only (rank-based ρ).  "
+        "LAPV sensitivity row uses paired LAPV cohort (same donors), not LAA-pooled."
     )
     for j, ln in enumerate(_wrap_paragraph(header_paragraph, max_chars=130)):
-        fig.text(0.05, y_cur - line_h * j, ln, fontsize=5.6, color="#444444")
+        fig.text(0.05, y_cur - line_h * j, ln, fontsize=enforce_font_floor(FS_FOOTNOTE - 0.5), color="#444444")
     y_cur -= line_h * (len(_wrap_paragraph(header_paragraph, max_chars=130)) + 0.6)
     for tag, body in cfg["interpretation_paragraphs"]:
         # Tag on its own line (avoids collision with wrapped body)
-        fig.text(0.05, y_cur, tag, fontsize=5.8, fontweight="bold", color="#1A1A1A")
+        fig.text(0.05, y_cur, tag, fontsize=enforce_font_floor(FS_FOOTNOTE), fontweight="bold", color="#1A1A1A")
         y_cur -= line_h * 0.95
         wrapped = _wrap_paragraph(body, max_chars=130)
         for j, ln in enumerate(wrapped):
-            fig.text(0.07, y_cur - line_h * j, ln, fontsize=5.6, color="#444444")
+            fig.text(0.07, y_cur - line_h * j, ln, fontsize=enforce_font_floor(FS_FOOTNOTE - 0.5), color="#444444")
         y_cur -= line_h * (len(wrapped) + 0.4)
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)

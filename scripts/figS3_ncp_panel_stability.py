@@ -14,7 +14,7 @@ Inputs:
        -> per-gene stability_score (1-8, max 8 = significant in all
           eight donor-resamplings)
   results/figure5_program_sets.tsv
-       -> axis assignment (STRUCTURAL / METABOLIC) for the 10 panel programs
+       -> axis assignment (STRUCTURAL / METABOLIC) for axis-support programs
 
 Outputs:
   figures/figS3_ncp_panel_stability.pdf

@@ -14,7 +14,8 @@ The full per-donor heatmap version is kept as supplementary
 
 Inputs:
     results/fig1e_baseline_axis_families.tsv   (cached by fig1e_baseline_axis_families.py)
-    results/fig1b_baseline_donor_aCAI.tsv      (per-donor aCAI matrix; needed
+    results/fig1b_baseline_donor_aCAI.tsv      (per-donor aCAI matrix for the
+                                                 deployed NCP pathways; needed
                                                  to recompute Pearson distance
                                                  -> dendrogram for the panel)
 

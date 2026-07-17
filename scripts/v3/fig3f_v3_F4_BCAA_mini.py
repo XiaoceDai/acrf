@@ -20,7 +20,8 @@ ROOT = Path(__file__).resolve().parents[2]
 
 PROG_TSV = ROOT / "results" / "fig3_v3_program_celltype_delta.tsv"
 HCA_TSV = ROOT / "results" / "fig1f_v3_HCA_family_carriers.tsv"
-OUT_PDF = ROOT / "figures" / "fig3_v3_f_F4_BCAA_mini.pdf"
+OUT_PDF = ROOT / "figures" / "fig3_f_F4_BCAA_mini.pdf"
+OUT_SUPP = ROOT / "figures" / "figS_F4_BCAA_program_exception.pdf"
 
 PROGRAM_ID = "REACTOME__REACTOME_BRANCHED_CHAIN_AMINO_ACID_CATABOLISM"
 PROGRAM_LABEL = "F4 BCAA catabolism (program-level)"
@@ -90,7 +91,7 @@ def main():
         ax.barh(i, v, height=0.65, color=color, edgecolor="#1A1A1A", linewidth=0.4, alpha=0.92)
         # carrier marker (left margin)
         if ct == family_carrier:
-            ax.text(-0.024, i, "\u25C0  family carrier", fontsize=5.6, color="#888888",
+            ax.text(-0.024, i, "<  family carrier", fontsize=5.6, color="#888888",
                     style="italic", ha="left", va="center")
         # significance text
         if p < 0.05:
@@ -115,7 +116,7 @@ def main():
     ax.spines["bottom"].set_linewidth(0.4)
 
     fig.suptitle(
-        f"Fig 3f  {PROGRAM_LABEL}",
+        f"Supporting  {PROGRAM_LABEL}",
         x=0.05, y=0.94, ha="left", fontsize=8.4, fontweight="bold",
     )
     fig.text(
@@ -136,8 +137,8 @@ def main():
         "Fibroblast is therefore the only compartment passing the gene-level significance threshold here.",
         "",
         "Color note: bars are colored by direction (RED = AF > Ctrl upshift, BLUE = AF < Ctrl downshift),",
-        "the same convention as Fig 3b, 3d and 3e.  Color encodes direction (up/down), NOT cellular-fidelity",
-        "class (relay/extension/fidelity); the latter is shown by the badge color in each case-study panel.",
+        "the same convention as Fig 3b.  Color encodes direction (up/down), NOT cellular-fidelity class.",
+        "Parent family F4 remains Below-detection at family level; this program-level exception is Supporting only.",
     ]
     y_top = 0.20
     line_h = 0.018
@@ -149,8 +150,10 @@ def main():
 
     OUT_PDF.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(OUT_PDF, bbox_inches=None, pad_inches=0.04)
+    fig.savefig(OUT_SUPP, bbox_inches=None, pad_inches=0.04)
     plt.close(fig)
     print("wrote " + str(OUT_PDF.relative_to(ROOT)))
+    print("wrote " + str(OUT_SUPP.relative_to(ROOT)))
 
 
 if __name__ == "__main__":

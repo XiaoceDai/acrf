@@ -4,7 +4,7 @@
 #       pre-registered cis-eQTL × GWAS anchors (small frozen set).
 #
 # Sources (locked tissue priority for primary vs blood sensitivity):
-#   AF GWAS  : GCST90624411 (Miyazawa 2023 multi-ancestry, harmonised tabix)
+#   AF GWAS  : GCST90624411 (Yuan et al. 2025 cross-population AF GWAS, harmonised tabix)
 #   eQTL     : eQTL Catalogue dataset QTD000251
 #              (GTEx, heart_atrial_appendage, n=372, gene-level)
 #

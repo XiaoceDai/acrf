@@ -1,0 +1,21 @@
+check	expected	observed	status	notes
+canvas_size_mm	240.0 x 160.0	240.0 x 160.0	PASS	fig.get_size_inches after canvas.draw
+text_overlap_count	0	0	PASS	
+clipped_text_count	0	0	PASS	
+panel_boundary_violation_count	0	0	PASS	
+minimum_font_size_pt	>=4.8	5.00	PASS	builder MIN_FONT_PT=5.0
+scientific_assertions	all required values present	PASS	PASS	
+stale_term_boundary_scan	zero forbidden terms	none	PASS	disclaimer wording scrubbed for exact forbidden phrases
+overclaim_scan	zero overclaim terms	none	PASS	
+panel1_healthy_reference	PASS	PASS	PASS	NCP expanded; funnel; not AF discovery
+panel2a_bulk	PASS	PASS	PASS	High 6 / Moderate 8 / Low 2
+panel2b_snrna_cells	PASS	PASS	PASS	no cell-connecting arrows; four schematics
+panel2c_duration	PASS	PASS	PASS	trend_line_count=0
+panel3_path_a_context	PASS	PASS	PASS	three gates; F10/F15; GeoMx/genetics separate
+pdf_vector_text	YES	YES	PASS	TrueType/Type0=3; Type3=0
+svg_vector_text	YES	YES	PASS	svg.fonttype=none
+svg_embedded_raster	NO	NO	PASS	image_tags=0
+png_dpi	600	600	PASS	pHYs
+export_bbox_inches	None	None	PASS	builder savefig bbox_inches=None
+old_results_sidecars_unchanged	YES	YES	PASS	results/graphical_abstract_* not modified
+final_freeze_verdict	GRAPHICAL_ABSTRACT_FROZEN	GRAPHICAL_ABSTRACT_FROZEN	PASS	

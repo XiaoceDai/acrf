@@ -296,7 +296,7 @@ def main() -> None:
 
     tbl = pd.DataFrame(rows)
 
-    # BH adjustment per cohort across the 10 programs
+    # BH adjustment per cohort across NCP axis families
     def bh(p: np.ndarray) -> np.ndarray:
         p = np.asarray(p, dtype=float)
         m = len(p)

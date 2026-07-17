@@ -4,7 +4,7 @@ Figure 4 (REPLACEMENT) — Matrix-invasion chamber-reversal signature
 intensifies with atrial fibrillation duration in the left atrial appendage.
 
 Concept:
-    The 24 chamber-identity reversal genes identified in Fig. 6c
+    The 24 chamber-identity reversal genes identified in Fig. 7
     define a gene-level signature whose AF-specific reversal direction
     is known per gene (RA -> LA for 21 genes, LA -> RA for 3 genes).
     If matrix-invasion is a progressive process, the LA expression of
