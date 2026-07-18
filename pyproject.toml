@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "acrf"
-version = "0.1.0"
+version = "0.1.1"
 description = "Chamber-aware Rewiring Framework (CRF) — method core: aCAI_rel, classification rules, I/O column contracts."
 readme = "README.md"
 requires-python = ">=3.10"
