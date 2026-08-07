@@ -1,0 +1,7 @@
+method_id	stratum	role	estimand	authority_status	components_removed	source_input_hash	software_version	seed	valid	notes
+A1_FULL_ACRF	unstratified	reference	E_A1_paired_aCAI_rel_Hedges_g	LOCKED_REFERENCE	none	96c30306c7e63f75	acrf/crf 0.1.1	NA	True	Locked fig2d values; not ground truth
+A2_NO_DONOR_PAIRING	unstratified	design_ablation	E_A2_unpaired_chamber_mean_contrast_AFSR	COMPUTED	within_donor_pairing	96c30306c7e63f75	acrf/crf 0.1.1	NA	True	Welch unpaired; formula_id=WELCH_UNPAIRED_MEAN_DIFF_V1
+A3_NO_DIRECTION_ALIGNMENT	unstratified	design_ablation	E_A3_paired_CAI_rel_unaligned_Hedges_g	COMPUTED	s_p_direction_alignment	96c30306c7e63f75	acrf/crf 0.1.1	NA	True	Opposite-direction programs may cancel in family means
+A4_NO_HEALTHY_MAGNITUDE_SCALING	unstratified	design_ablation	E_A4_paired_aCAI_unscaled_Hedges_g	COMPUTED	division_by_abs_M_p	96c30306c7e63f75	acrf/crf 0.1.1	NA	True	No alternative normalization
+A5_CHAMBER_AGNOSTIC	unstratified	design_ablation	E_A5_donor_mean_chamber_agnostic_Hedges_g	COMPUTED	chamber_contrast;alignment;M_scaling	96c30306c7e63f75	acrf/crf 0.1.1	NA	True	within_donor_avg=mean(score_LA,score_RA); pseudoreplication=0
+B1_PLAIN_SINGSCORE	LA|RA	scoring_comparator	E_B1_LA / E_B1_RA	COMPUTED	acrf_calibration	96c30306c7e63f75	acrf/crf 0.1.1	NA	True	Chamber-stratified; not redundant with A5; method_count contributes 1

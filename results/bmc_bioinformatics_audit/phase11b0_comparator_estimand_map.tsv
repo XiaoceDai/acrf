@@ -1,0 +1,8 @@
+method_id	estimand_id	estimand_label	primary_effect_definition	M1_valid	M2_valid	M3_valid	M4_valid	M5_valid	M6_valid	M7_valid	directly_comparable_to_A1_contrast_scale	notes
+A1_FULL_ACRF	E_A1	paired_aCAI_rel_Hedges_g	Hedges g of donor-level family aCAI_rel (AF−SR)	YES	YES	YES	YES	YES	REF	YES	YES	Reference arm.
+A2_NO_DONOR_PAIRING	E_A2	unpaired_chamber_mean_contrast_AFSR	AF−SR difference of unpaired rhythm-specific chamber mean contrasts (aligned/scaled)	YES	YES	YES	YES_IF_SE	YES_IF_SE	YES_DESCRIPTIVE	YES	NO_SCALE_DIFFERS_BUT_RANK_SIGN_METRICS_OK	Point-estimate scale differs from Hedges g; M1/M2/M3 remain valid within-method and for cross-method stability comparison.
+A3_NO_DIRECTION_ALIGNMENT	E_A3	paired_CAI_rel_unaligned_Hedges_g	Hedges g of donor-level family unaligned CAI_rel	YES	YES	YES	YES	YES	YES	YES	PARTIAL	Same donor-level machinery; different orientation.
+A4_NO_HEALTHY_MAGNITUDE_SCALING	E_A4	paired_aCAI_unscaled_Hedges_g	Hedges g of donor-level family aCAI (unscaled)	YES	YES	YES	YES	YES	YES	YES	PARTIAL	Same pairing/alignment; no M scaling.
+A5_CHAMBER_AGNOSTIC	E_A5	donor_mean_chamber_agnostic_Hedges_g	Hedges g of donor-level family mean(LA,RA) scores	YES	YES	YES	YES	YES	YES_DESCRIPTIVE	YES	NO_DIFFERENT_ESTIMAND	Stability metrics valid; not a chamber-contrast estimand.
+B1_PLAIN_SINGSCORE	E_B1_LA	plain_singscore_LA_Hedges_g	Hedges g of donor-level family LA scores (AF−SR)	YES	YES	YES	YES	OPTIONAL	DESCRIPTIVE_VS_A1	YES	NO	Chamber-stratified comparator. Not designed as chamber calibration. Not redundant with A5.
+B1_PLAIN_SINGSCORE	E_B1_RA	plain_singscore_RA_Hedges_g	Hedges g of donor-level family RA scores (AF−SR)	YES	YES	YES	YES	OPTIONAL	DESCRIPTIVE_VS_A1	YES	NO	Report separately from B1_LA. Do not average with LA for primary B1 metrics.

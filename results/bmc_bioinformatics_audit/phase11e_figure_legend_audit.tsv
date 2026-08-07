@@ -1,0 +1,8 @@
+figure	panel	claim	source_table	source_key	sample_count	statistical_method	boundary_statement	word_count	status	notes
+1	A;B;C;D	1. A frozen healthy chamber reference defines the acrf measurement framework	results/ncp_v3_singscore_reanalysis/frozen_program_metadata.tsv	healthy_reference	see_methods_results	see_legend	YES	200	PASS	ok
+2	A;B;C;D	2. Benchmarking chamber-aware calibration across atrial cohorts	results/bmc_bioinformatics_benchmark/benchmark_summary.tsv	benchmark_M1_M2_M5	see_methods_results	see_legend	YES	183	PASS	ok
+3	A;B;C;D;E	3. Paired-chamber bulk cohorts reveal selective cross-cohort remodeling	tables/supplementary/S3_Table_bulk_effects_consistency.xlsx	bulk_consistency	see_methods_results	see_legend	YES	178	PASS	ok
+4	A;B;C–D	4. LA single-nucleus data resolve selective family localization	tables/supplementary/S4_Table_snRNA_localization_classes.xlsx	snRNA_classes	see_methods_results	see_legend	YES	167	PASS	ok
+5	A;B;C;D	5. Cross-sectional AF-duration analysis identifies selective chronicity trends	tables/supplementary/S5_Table_duration_chronicity.xlsx	duration	see_methods_results	see_legend	YES	166	PASS	ok
+6	A;B;C;D	6. Rule-based cross-layer prioritization and ROI-level spatial context	docs/manuscript/bmc_bioinformatics/07_results.md	pathA_geomx	see_methods_results	see_legend	YES	179	PASS	ok
+7	A;B;C;D	7. Genetic calibration reveals limited, non-nested traceability	tables/supplementary/S6_Table_genetic_calibration_traceability.xlsx	genetics	see_methods_results	see_legend	YES	173	PASS	ok

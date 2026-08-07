@@ -1,0 +1,15 @@
+package	version	role
+Python	3.12.3	benchmark_execution
+R	"R version 4.5.1 (2025-06-13) -- ""Great Square Root"""	benchmark_execution_not_invoked
+acrf	0.1.1	benchmark_execution
+crf	0.1.1	benchmark_execution
+singscore	1.28.1_historical_scores_cached	historical_production_scores
+edgeR	NOT_USED_THIS_PHASE	benchmark_execution
+limma	NOT_USED_THIS_PHASE	benchmark_execution
+matrixStats	NOT_USED_THIS_PHASE	benchmark_execution
+GSEABase	NOT_USED_THIS_PHASE	benchmark_execution
+pandas	2.3.3	benchmark_execution
+numpy	2.4.4	benchmark_execution
+scipy	1.17.1	benchmark_execution
+statsmodels	0.14.6	benchmark_execution
+ENVIRONMENT_BOUNDARY	HISTORICAL_PRODUCTION_VS_CURRENT_BENCHMARK	note
