@@ -1,34 +1,20 @@
-"""
-Rewiring labels and continuous→discrete rules (Fig 2C + Fig 5A bulk leg).
+"""Fig 2C state labels and the Fig 5A bulk/duration scores.
 
-- Fig 2C state machine: `scripts/fig2c_chamber_decomposition.py` ``classify_state``.
-- Fig 5A bulk strength: `scripts/fig5a_triangulation.py` ``bulk_score``.
+Thresholds match scripts/ncp_v3_singscore_reanalysis/regenerate_fig2.py
+and scripts/fig5a_triangulation.py. Do not retune them here.
 """
 
 from __future__ import annotations
 
 import math
-from typing import Any
 
-__all__ = [
-    "FIG2C_EPS_REVERSED",
-    "FIG2C_EPS_FLOOR",
-    "FIG2C_RATIO_ATTENUATED",
-    "FIG2C_RATIO_AMPLIFIED",
-    "BULK_CLASS_TO_STRENGTH",
-    "bulk_strength_from_labels",
-    "dur_direction",
-    "fig2c_trend_state",
-]
-
-# —— Fig 2C (trend / exploratory) — same constants as fig2c_chamber_decomposition.py
+# Same cutoffs as classify_state() in the fig2 redraw.
 FIG2C_EPS_REVERSED = 0.02
 FIG2C_EPS_FLOOR = 0.02
 FIG2C_RATIO_ATTENUATED = 0.67
 FIG2C_RATIO_AMPLIFIED = 1.33
 
-# —— Fig 5A: consensus / trend string → signed strength in {-2,-1,0,+1,+2} ——
-BULK_CLASS_TO_STRENGTH: dict[str, int] = {
+BULK_CLASS_TO_STRENGTH = {
     "Reversed": -2,
     "Reversed-weak": -1,
     "Attenuated": -1,
@@ -41,30 +27,20 @@ BULK_CLASS_TO_STRENGTH: dict[str, int] = {
 }
 
 
-def _strip(s: Any) -> str:
+def _strip(s):
     if s is None or (isinstance(s, float) and math.isnan(s)):
         return ""
-    t = str(s).strip().strip('"')
-    return t
+    return str(s).strip().strip('"')
 
 
-def bulk_strength_from_labels(
-    consensus_class: Any,
-    trend_class: Any,
-) -> tuple[int, str]:
-    """
-    Map ``consensus_class`` (permutation-gated) with ``trend_class`` fallback
-    to a signed ``bulk_strength`` and resolved label.
-    """
-    c = _strip(consensus_class)
-    t = _strip(trend_class)
-    label = c or t
+def bulk_strength_from_labels(consensus_class, trend_class):
+    # Permutation label if present, otherwise the trend label.
+    label = _strip(consensus_class) or _strip(trend_class)
     strength = BULK_CLASS_TO_STRENGTH.get(label, 0)
     return strength, label or "n/a"
 
 
-def dur_direction(rho: float | None, thr: float = 0.30) -> int:
-    """LAA primary duration trend: sign of Spearman ρ if |ρ| >= thr, else 0 (Fig 5A)."""
+def dur_direction(rho, thr=0.30):
     if rho is None:
         return 0
     r = float(rho)
@@ -77,13 +53,8 @@ def dur_direction(rho: float | None, thr: float = 0.30) -> int:
     return 0
 
 
-def fig2c_trend_state(af_aligned: float, ref_aligned: float) -> str:
-    """
-    Preserved / Attenuated / Reversed / Amplified from *aligned* AF vs SR means.
-
-    ``af_aligned`` and ``ref_aligned`` must already be signed by program
-    direction (see Fig 2C pipeline: ``aligned_AF``, ``reference_aligned_SR``).
-    """
+def fig2c_trend_state(af_aligned, ref_aligned):
+    # af_aligned / ref_aligned are already signed by program direction.
     if af_aligned <= -FIG2C_EPS_REVERSED:
         return "Reversed"
     ref = max(float(ref_aligned), FIG2C_EPS_FLOOR)

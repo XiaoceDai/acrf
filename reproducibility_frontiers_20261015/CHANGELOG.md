@@ -15,3 +15,5 @@ Left unchanged:
 - tag `v0.2.0` at `f10135200ca295af2d9e23c5392c3771c532ba87`
 - the ten benchmark TSVs under `results/bmc_bioinformatics_benchmark/`
 - Local GWAS 7/12, atrial eGene 1/12 (SMAD9), and PP4 ≥ 0.70 0/12
+
+This commit restyles `src/crf/` so the comments match the figure scripts. The scoring functions, thresholds, and return values are unchanged. The package version remains 0.2.0.
