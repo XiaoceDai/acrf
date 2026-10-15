@@ -1,0 +1,175 @@
+block	analysis	selector	fold_id	heldout_donor	n_candidates	n_quality_pool_before_diversity	n_after_diversity	n_after_direction_rule	n_final	n_LA	n_RA	n_intersection_archived_30	jaccard_with_archived_30	program_id	n_folds_selected	n_folds	direction	n_agree	denominator	proportion	n_zero_delta	note	consensus_score	passes_strict	passes_fallback	in_quality_pool	survives_diversity	retained_by_direction_rule	selected_final	first_exclusion_stage	path_note	score_rank	boundary_score
+step_counts	full8_stored_tstat	PUBLISHED_SELECTOR	full8		80.0	63.0	47.0	16.0	30.0	22.0	8.0	30.0	1.0																				
+step_counts	full8_stored_tstat	R2_NO_QUOTA_SELECTOR	full8		80.0	63.0	47.0		30.0	26.0	4.0	26.0	0.7647058823529411																				
+step_counts	full8_limma	PUBLISHED_SELECTOR	full8		80.0	66.0	50.0	16.0	30.0	22.0	8.0	25.0	0.7142857142857143																				
+step_counts	full8_limma	R2_NO_QUOTA_SELECTOR	full8		80.0	66.0	50.0		30.0	27.0	3.0	23.0	0.6216216216216216																				
+step_counts	outer7_limma	PUBLISHED_SELECTOR	1	1479_2	80.0	52.0	41.0	16.0	30.0	22.0	8.0	23.0	0.6216216216216216																				
+step_counts	outer7_limma	R2_NO_QUOTA_SELECTOR	1	1479_2	80.0	52.0	41.0		30.0	28.0	2.0	21.0	0.5384615384615384																				
+step_counts	outer7_limma	PUBLISHED_SELECTOR	2	1545_1	80.0	58.0	46.0	16.0	30.0	22.0	8.0	23.0	0.6216216216216216																				
+step_counts	outer7_limma	R2_NO_QUOTA_SELECTOR	2	1545_1	80.0	58.0	46.0		30.0	28.0	2.0	21.0	0.5384615384615384																				
+step_counts	outer7_limma	PUBLISHED_SELECTOR	3	1545_2	80.0	64.0	49.0	16.0	30.0	22.0	8.0	28.0	0.875																				
+step_counts	outer7_limma	R2_NO_QUOTA_SELECTOR	3	1545_2	80.0	64.0	49.0		30.0	28.0	2.0	22.0	0.5789473684210527																				
+step_counts	outer7_limma	PUBLISHED_SELECTOR	4	1546_1	80.0	56.0	44.0	16.0	30.0	22.0	8.0	23.0	0.6216216216216216																				
+step_counts	outer7_limma	R2_NO_QUOTA_SELECTOR	4	1546_1	80.0	56.0	44.0		30.0	26.0	4.0	21.0	0.5384615384615384																				
+step_counts	outer7_limma	PUBLISHED_SELECTOR	5	1546_2	80.0	52.0	42.0	16.0	30.0	22.0	8.0	24.0	0.6666666666666666																				
+step_counts	outer7_limma	R2_NO_QUOTA_SELECTOR	5	1546_2	80.0	52.0	42.0		30.0	25.0	5.0	25.0	0.7142857142857143																				
+step_counts	outer7_limma	PUBLISHED_SELECTOR	6	1547_2	80.0	76.0	55.0	15.0	30.0	23.0	7.0	21.0	0.5384615384615384																				
+step_counts	outer7_limma	R2_NO_QUOTA_SELECTOR	6	1547_2	80.0	76.0	55.0		30.0	30.0	0.0	18.0	0.4285714285714285																				
+step_counts	outer7_limma	PUBLISHED_SELECTOR	7	1548_2	80.0	66.0	50.0	16.0	30.0	22.0	8.0	24.0	0.6666666666666666																				
+step_counts	outer7_limma	R2_NO_QUOTA_SELECTOR	7	1548_2	80.0	66.0	50.0		30.0	27.0	3.0	23.0	0.6216216216216216																				
+step_counts	outer7_limma	PUBLISHED_SELECTOR	8	1550_1	80.0	62.0	47.0	16.0	30.0	22.0	8.0	28.0	0.875																				
+step_counts	outer7_limma	R2_NO_QUOTA_SELECTOR	8	1550_1	80.0	62.0	47.0		30.0	27.0	3.0	25.0	0.7142857142857143																				
+archived_frequency		PUBLISHED_SELECTOR												HALLMARK__HALLMARK_ADIPOGENESIS	8.0	8.0																	
+archived_frequency		PUBLISHED_SELECTOR												HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	7.0	8.0																	
+archived_frequency		PUBLISHED_SELECTOR												HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	8.0	8.0																	
+archived_frequency		PUBLISHED_SELECTOR												HALLMARK__HALLMARK_TGF_BETA_SIGNALING	5.0	8.0																	
+archived_frequency		PUBLISHED_SELECTOR												REACTOME__REACTOME_BRANCHED_CHAIN_AMINO_ACID_CATABOLISM	6.0	8.0																	
+archived_frequency		PUBLISHED_SELECTOR												REACTOME__REACTOME_CITRIC_ACID_CYCLE_TCA_CYCLE	8.0	8.0																	
+archived_frequency		PUBLISHED_SELECTOR												REACTOME__REACTOME_CLASS_B_2_SECRETIN_FAMILY_RECEPTORS	6.0	8.0																	
+archived_frequency		PUBLISHED_SELECTOR												REACTOME__REACTOME_COMPLEX_III_ASSEMBLY	8.0	8.0																	
+archived_frequency		PUBLISHED_SELECTOR												REACTOME__REACTOME_COMPLEX_IV_ASSEMBLY	8.0	8.0																	
+archived_frequency		PUBLISHED_SELECTOR												REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	8.0	8.0																	
+archived_frequency		PUBLISHED_SELECTOR												REACTOME__REACTOME_DISEASES_ASSOCIATED_WITH_GLYCOSAMINOGLYCAN_METABOLISM	8.0	8.0																	
+archived_frequency		PUBLISHED_SELECTOR												REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	1.0	8.0																	
+archived_frequency		PUBLISHED_SELECTOR												REACTOME__REACTOME_HEPARAN_SULFATE_HEPARIN_HS_GAG_METABOLISM	8.0	8.0																	
+archived_frequency		PUBLISHED_SELECTOR												REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS	2.0	8.0																	
+archived_frequency		PUBLISHED_SELECTOR												REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	4.0	8.0																	
+archived_frequency		PUBLISHED_SELECTOR												REACTOME__REACTOME_MITOCHONDRIAL_CALCIUM_ION_TRANSPORT	6.0	8.0																	
+archived_frequency		PUBLISHED_SELECTOR												REACTOME__REACTOME_MITOCHONDRIAL_FATTY_ACID_BETA_OXIDATION	7.0	8.0																	
+archived_frequency		PUBLISHED_SELECTOR												REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	8.0	8.0																	
+archived_frequency		PUBLISHED_SELECTOR												REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	8.0	8.0																	
+archived_frequency		PUBLISHED_SELECTOR												REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	2.0	8.0																	
+archived_frequency		PUBLISHED_SELECTOR												REACTOME__REACTOME_PROTEIN_LOCALIZATION	8.0	8.0																	
+archived_frequency		PUBLISHED_SELECTOR												REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	8.0	8.0																	
+archived_frequency		PUBLISHED_SELECTOR												REACTOME__REACTOME_RIBOSOME_ASSOCIATED_QUALITY_CONTROL	3.0	8.0																	
+archived_frequency		PUBLISHED_SELECTOR												REACTOME__REACTOME_RRNA_PROCESSING	7.0	8.0																	
+archived_frequency		PUBLISHED_SELECTOR												REACTOME__REACTOME_RUNX2_REGULATES_BONE_DEVELOPMENT	8.0	8.0																	
+archived_frequency		PUBLISHED_SELECTOR												REACTOME__REACTOME_SIGNALING_BY_BMP	8.0	8.0																	
+archived_frequency		PUBLISHED_SELECTOR												REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB	2.0	8.0																	
+archived_frequency		PUBLISHED_SELECTOR												REACTOME__REACTOME_TRANSLATION	8.0	8.0																	
+archived_frequency		PUBLISHED_SELECTOR												REACTOME__REACTOME_TRIGLYCERIDE_METABOLISM	8.0	8.0																	
+archived_frequency		PUBLISHED_SELECTOR												REACTOME__REACTOME_TRNA_AMINOACYLATION	8.0	8.0																	
+archived_frequency		R2_NO_QUOTA_SELECTOR												HALLMARK__HALLMARK_ADIPOGENESIS	8.0	8.0																	
+archived_frequency		R2_NO_QUOTA_SELECTOR												HALLMARK__HALLMARK_FATTY_ACID_METABOLISM	8.0	8.0																	
+archived_frequency		R2_NO_QUOTA_SELECTOR												HALLMARK__HALLMARK_OXIDATIVE_PHOSPHORYLATION	8.0	8.0																	
+archived_frequency		R2_NO_QUOTA_SELECTOR												HALLMARK__HALLMARK_TGF_BETA_SIGNALING	1.0	8.0																	
+archived_frequency		R2_NO_QUOTA_SELECTOR												REACTOME__REACTOME_BRANCHED_CHAIN_AMINO_ACID_CATABOLISM	7.0	8.0																	
+archived_frequency		R2_NO_QUOTA_SELECTOR												REACTOME__REACTOME_CITRIC_ACID_CYCLE_TCA_CYCLE	8.0	8.0																	
+archived_frequency		R2_NO_QUOTA_SELECTOR												REACTOME__REACTOME_CLASS_B_2_SECRETIN_FAMILY_RECEPTORS	1.0	8.0																	
+archived_frequency		R2_NO_QUOTA_SELECTOR												REACTOME__REACTOME_COMPLEX_III_ASSEMBLY	8.0	8.0																	
+archived_frequency		R2_NO_QUOTA_SELECTOR												REACTOME__REACTOME_COMPLEX_IV_ASSEMBLY	8.0	8.0																	
+archived_frequency		R2_NO_QUOTA_SELECTOR												REACTOME__REACTOME_COMPLEX_I_BIOGENESIS	8.0	8.0																	
+archived_frequency		R2_NO_QUOTA_SELECTOR												REACTOME__REACTOME_DISEASES_ASSOCIATED_WITH_GLYCOSAMINOGLYCAN_METABOLISM	3.0	8.0																	
+archived_frequency		R2_NO_QUOTA_SELECTOR												REACTOME__REACTOME_EUKARYOTIC_TRANSLATION_INITIATION	2.0	8.0																	
+archived_frequency		R2_NO_QUOTA_SELECTOR												REACTOME__REACTOME_HEPARAN_SULFATE_HEPARIN_HS_GAG_METABOLISM	5.0	8.0																	
+archived_frequency		R2_NO_QUOTA_SELECTOR												REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS	0.0	8.0																	
+archived_frequency		R2_NO_QUOTA_SELECTOR												REACTOME__REACTOME_METABOLISM_OF_AMINO_ACIDS_AND_DERIVATIVES	7.0	8.0																	
+archived_frequency		R2_NO_QUOTA_SELECTOR												REACTOME__REACTOME_MITOCHONDRIAL_CALCIUM_ION_TRANSPORT	8.0	8.0																	
+archived_frequency		R2_NO_QUOTA_SELECTOR												REACTOME__REACTOME_MITOCHONDRIAL_FATTY_ACID_BETA_OXIDATION	8.0	8.0																	
+archived_frequency		R2_NO_QUOTA_SELECTOR												REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_DEGRADATION	8.0	8.0																	
+archived_frequency		R2_NO_QUOTA_SELECTOR												REACTOME__REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT	8.0	8.0																	
+archived_frequency		R2_NO_QUOTA_SELECTOR												REACTOME__REACTOME_MITOCHONDRIAL_TRANSLATION	2.0	8.0																	
+archived_frequency		R2_NO_QUOTA_SELECTOR												REACTOME__REACTOME_PROTEIN_LOCALIZATION	8.0	8.0																	
+archived_frequency		R2_NO_QUOTA_SELECTOR												REACTOME__REACTOME_RESPIRATORY_ELECTRON_TRANSPORT	8.0	8.0																	
+archived_frequency		R2_NO_QUOTA_SELECTOR												REACTOME__REACTOME_RIBOSOME_ASSOCIATED_QUALITY_CONTROL	3.0	8.0																	
+archived_frequency		R2_NO_QUOTA_SELECTOR												REACTOME__REACTOME_RRNA_PROCESSING	8.0	8.0																	
+archived_frequency		R2_NO_QUOTA_SELECTOR												REACTOME__REACTOME_RUNX2_REGULATES_BONE_DEVELOPMENT	1.0	8.0																	
+archived_frequency		R2_NO_QUOTA_SELECTOR												REACTOME__REACTOME_SIGNALING_BY_BMP	6.0	8.0																	
+archived_frequency		R2_NO_QUOTA_SELECTOR												REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB	2.0	8.0																	
+archived_frequency		R2_NO_QUOTA_SELECTOR												REACTOME__REACTOME_TRANSLATION	8.0	8.0																	
+archived_frequency		R2_NO_QUOTA_SELECTOR												REACTOME__REACTOME_TRIGLYCERIDE_METABOLISM	8.0	8.0																	
+archived_frequency		R2_NO_QUOTA_SELECTOR												REACTOME__REACTOME_TRNA_AMINOACYLATION	8.0	8.0																	
+heldout_by_donor_direction		PUBLISHED_SELECTOR		ALL													ALL	232.0	240.0	0.9666666666666666	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		PUBLISHED_SELECTOR		ALL													LA-biased	171.0	177.0	0.9661016949152542	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		PUBLISHED_SELECTOR		ALL													RA-biased	61.0	63.0	0.9682539682539681	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		PUBLISHED_SELECTOR		1479_2													ALL	30.0	30.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		PUBLISHED_SELECTOR		1479_2													LA-biased	22.0	22.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		PUBLISHED_SELECTOR		1479_2													RA-biased	8.0	8.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		PUBLISHED_SELECTOR		1545_1													ALL	29.0	30.0	0.9666666666666666	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		PUBLISHED_SELECTOR		1545_1													LA-biased	22.0	22.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		PUBLISHED_SELECTOR		1545_1													RA-biased	7.0	8.0	0.875	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		PUBLISHED_SELECTOR		1545_2													ALL	30.0	30.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		PUBLISHED_SELECTOR		1545_2													LA-biased	22.0	22.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		PUBLISHED_SELECTOR		1545_2													RA-biased	8.0	8.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		PUBLISHED_SELECTOR		1546_1													ALL	28.0	30.0	0.9333333333333332	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		PUBLISHED_SELECTOR		1546_1													LA-biased	21.0	22.0	0.9545454545454544	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		PUBLISHED_SELECTOR		1546_1													RA-biased	7.0	8.0	0.875	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		PUBLISHED_SELECTOR		1546_2													ALL	30.0	30.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		PUBLISHED_SELECTOR		1546_2													LA-biased	22.0	22.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		PUBLISHED_SELECTOR		1546_2													RA-biased	8.0	8.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		PUBLISHED_SELECTOR		1547_2													ALL	25.0	30.0	0.8333333333333333	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		PUBLISHED_SELECTOR		1547_2													LA-biased	18.0	23.0	0.782608695652174	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		PUBLISHED_SELECTOR		1547_2													RA-biased	7.0	7.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		PUBLISHED_SELECTOR		1548_2													ALL	30.0	30.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		PUBLISHED_SELECTOR		1548_2													LA-biased	22.0	22.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		PUBLISHED_SELECTOR		1548_2													RA-biased	8.0	8.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		PUBLISHED_SELECTOR		1550_1													ALL	30.0	30.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		PUBLISHED_SELECTOR		1550_1													LA-biased	22.0	22.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		PUBLISHED_SELECTOR		1550_1													RA-biased	8.0	8.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		R2_NO_QUOTA_SELECTOR		ALL													ALL	230.0	240.0	0.9583333333333331	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		R2_NO_QUOTA_SELECTOR		ALL													LA-biased	210.0	219.0	0.958904109589041	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		R2_NO_QUOTA_SELECTOR		ALL													RA-biased	20.0	21.0	0.9523809523809524	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		R2_NO_QUOTA_SELECTOR		1479_2													ALL	30.0	30.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		R2_NO_QUOTA_SELECTOR		1479_2													LA-biased	28.0	28.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		R2_NO_QUOTA_SELECTOR		1479_2													RA-biased	2.0	2.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		R2_NO_QUOTA_SELECTOR		1545_1													ALL	30.0	30.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		R2_NO_QUOTA_SELECTOR		1545_1													LA-biased	28.0	28.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		R2_NO_QUOTA_SELECTOR		1545_1													RA-biased	2.0	2.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		R2_NO_QUOTA_SELECTOR		1545_2													ALL	30.0	30.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		R2_NO_QUOTA_SELECTOR		1545_2													LA-biased	28.0	28.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		R2_NO_QUOTA_SELECTOR		1545_2													RA-biased	2.0	2.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		R2_NO_QUOTA_SELECTOR		1546_1													ALL	28.0	30.0	0.9333333333333332	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		R2_NO_QUOTA_SELECTOR		1546_1													LA-biased	25.0	26.0	0.9615384615384616	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		R2_NO_QUOTA_SELECTOR		1546_1													RA-biased	3.0	4.0	0.75	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		R2_NO_QUOTA_SELECTOR		1546_2													ALL	30.0	30.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		R2_NO_QUOTA_SELECTOR		1546_2													LA-biased	25.0	25.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		R2_NO_QUOTA_SELECTOR		1546_2													RA-biased	5.0	5.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		R2_NO_QUOTA_SELECTOR		1547_2													ALL	22.0	30.0	0.7333333333333332	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		R2_NO_QUOTA_SELECTOR		1547_2													LA-biased	22.0	30.0	0.7333333333333332	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		R2_NO_QUOTA_SELECTOR		1547_2													RA-biased	0.0	0.0		0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		R2_NO_QUOTA_SELECTOR		1548_2													ALL	30.0	30.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		R2_NO_QUOTA_SELECTOR		1548_2													LA-biased	27.0	27.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		R2_NO_QUOTA_SELECTOR		1548_2													RA-biased	3.0	3.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		R2_NO_QUOTA_SELECTOR		1550_1													ALL	30.0	30.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		R2_NO_QUOTA_SELECTOR		1550_1													LA-biased	27.0	27.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+heldout_by_donor_direction		R2_NO_QUOTA_SELECTOR		1550_1													RA-biased	3.0	3.0	1.0	0.0	Counts add program-fold keys. Folds overlap, so this is not an independent sample size.											
+f15_f16_trace	full8_stored_tstat	PUBLISHED_SELECTOR	full8											REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB									0.6466664667849825	1.0	1.0	1.0	1.0	True	1.0	retained	in_direction_target_from_diverse_set	34.0	
+f15_f16_trace	full8_stored_tstat	PUBLISHED_SELECTOR	full8											REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS									0.5279429833627198	0.0	1.0	1.0	1.0	True	1.0	retained	in_direction_target_from_diverse_set	60.0	
+f15_f16_trace	full8_stored_tstat	R2_NO_QUOTA_SELECTOR	full8											REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB									0.6466664667849825	1.0	1.0	1.0	1.0	NOT_APPLICABLE	1.0	retained		34.0	
+f15_f16_trace	full8_stored_tstat	R2_NO_QUOTA_SELECTOR	full8											REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS									0.5279429833627198	0.0	1.0	1.0	1.0	NOT_APPLICABLE	0.0	below_score_cap		44.0	0.591620584866892
+f15_f16_trace	full8_limma	PUBLISHED_SELECTOR	full8											REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB									0.6307564233274525	1.0	1.0	1.0	1.0	True	1.0	retained	in_direction_target_from_diverse_set	32.0	
+f15_f16_trace	full8_limma	PUBLISHED_SELECTOR	full8											REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS									0.500184481166766	0.0	1.0	1.0	1.0	False	0.0	not_kept_after_direction_rule		50.0	0.5164409754342604
+f15_f16_trace	full8_limma	R2_NO_QUOTA_SELECTOR	full8											REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB									0.6307564233274525	1.0	1.0	1.0	1.0	NOT_APPLICABLE	1.0	retained		32.0	
+f15_f16_trace	full8_limma	R2_NO_QUOTA_SELECTOR	full8											REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS									0.500184481166766	0.0	1.0	1.0	1.0	NOT_APPLICABLE	0.0	below_score_cap		50.0	0.5941430748194954
+f15_f16_trace	outer7_limma	PUBLISHED_SELECTOR	1	1479_2										REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB									0.5931525472695304	0.0	0.0	0.0	0.0	False	0.0	fgsea_padj_not_below_0.10			
+f15_f16_trace	outer7_limma	PUBLISHED_SELECTOR	1	1479_2										REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS									0.4658122847910857	0.0	0.0	0.0	0.0	False	0.0	score_below_fallback			
+f15_f16_trace	outer7_limma	R2_NO_QUOTA_SELECTOR	1	1479_2										REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB									0.5931525472695304	0.0	0.0	0.0	0.0	NOT_APPLICABLE	0.0	fgsea_padj_not_below_0.10			
+f15_f16_trace	outer7_limma	R2_NO_QUOTA_SELECTOR	1	1479_2										REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS									0.4658122847910857	0.0	0.0	0.0	0.0	NOT_APPLICABLE	0.0	score_below_fallback			
+f15_f16_trace	outer7_limma	PUBLISHED_SELECTOR	2	1545_1										REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB										0.0	0.0	0.0	0.0	NOT_APPLICABLE	0.0	absent_from_candidates			
+f15_f16_trace	outer7_limma	PUBLISHED_SELECTOR	2	1545_1										REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS									0.4959233721602164	0.0	0.0	0.0	0.0	False	0.0	score_below_fallback			
+f15_f16_trace	outer7_limma	R2_NO_QUOTA_SELECTOR	2	1545_1										REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB										0.0	0.0	0.0	0.0	NOT_APPLICABLE	0.0	absent_from_candidates			
+f15_f16_trace	outer7_limma	R2_NO_QUOTA_SELECTOR	2	1545_1										REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS									0.4959233721602164	0.0	0.0	0.0	0.0	NOT_APPLICABLE	0.0	score_below_fallback			
+f15_f16_trace	outer7_limma	PUBLISHED_SELECTOR	3	1545_2										REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB									0.6503845855977319	1.0	1.0	1.0	1.0	True	1.0	retained	in_direction_target_from_diverse_set	33.0	
+f15_f16_trace	outer7_limma	PUBLISHED_SELECTOR	3	1545_2										REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS									0.5407145116432585	0.0	1.0	1.0	1.0	True	1.0	retained	in_direction_target_from_diverse_set	47.0	
+f15_f16_trace	outer7_limma	R2_NO_QUOTA_SELECTOR	3	1545_2										REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB									0.6503845855977319	1.0	1.0	1.0	1.0	NOT_APPLICABLE	1.0	retained		33.0	
+f15_f16_trace	outer7_limma	R2_NO_QUOTA_SELECTOR	3	1545_2										REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS									0.5407145116432585	0.0	1.0	1.0	1.0	NOT_APPLICABLE	0.0	below_score_cap		35.0	0.5690026376403096
+f15_f16_trace	outer7_limma	PUBLISHED_SELECTOR	4	1546_1										REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB									0.522320853289689	0.0	0.0	0.0	0.0	False	0.0	stability_below_threshold			
+f15_f16_trace	outer7_limma	PUBLISHED_SELECTOR	4	1546_1										REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS									0.4592614381668473	0.0	0.0	0.0	0.0	False	0.0	score_below_fallback			
+f15_f16_trace	outer7_limma	R2_NO_QUOTA_SELECTOR	4	1546_1										REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB									0.522320853289689	0.0	0.0	0.0	0.0	NOT_APPLICABLE	0.0	stability_below_threshold			
+f15_f16_trace	outer7_limma	R2_NO_QUOTA_SELECTOR	4	1546_1										REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS									0.4592614381668473	0.0	0.0	0.0	0.0	NOT_APPLICABLE	0.0	score_below_fallback			
+f15_f16_trace	outer7_limma	PUBLISHED_SELECTOR	5	1546_2										REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB									0.5803891333979726	0.0	0.0	0.0	0.0	False	0.0	stability_below_threshold			
+f15_f16_trace	outer7_limma	PUBLISHED_SELECTOR	5	1546_2										REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS									0.4792336264802187	0.0	0.0	0.0	0.0	False	0.0	score_below_fallback			
+f15_f16_trace	outer7_limma	R2_NO_QUOTA_SELECTOR	5	1546_2										REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB									0.5803891333979726	0.0	0.0	0.0	0.0	NOT_APPLICABLE	0.0	stability_below_threshold			
+f15_f16_trace	outer7_limma	R2_NO_QUOTA_SELECTOR	5	1546_2										REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS									0.4792336264802187	0.0	0.0	0.0	0.0	NOT_APPLICABLE	0.0	score_below_fallback			
+f15_f16_trace	outer7_limma	PUBLISHED_SELECTOR	6	1547_2										REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB										0.0	0.0	0.0	0.0	NOT_APPLICABLE	0.0	absent_from_candidates			
+f15_f16_trace	outer7_limma	PUBLISHED_SELECTOR	6	1547_2										REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS									0.5207361404083543	0.0	1.0	1.0	1.0	True	1.0	retained	in_direction_target_from_diverse_set	72.0	
+f15_f16_trace	outer7_limma	R2_NO_QUOTA_SELECTOR	6	1547_2										REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB										0.0	0.0	0.0	0.0	NOT_APPLICABLE	0.0	absent_from_candidates			
+f15_f16_trace	outer7_limma	R2_NO_QUOTA_SELECTOR	6	1547_2										REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS									0.5207361404083543	0.0	1.0	1.0	1.0	NOT_APPLICABLE	0.0	below_score_cap		52.0	0.6206670074048148
+f15_f16_trace	outer7_limma	PUBLISHED_SELECTOR	7	1548_2										REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB										0.0	0.0	0.0	0.0	NOT_APPLICABLE	0.0	absent_from_candidates			
+f15_f16_trace	outer7_limma	PUBLISHED_SELECTOR	7	1548_2										REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS									0.5019021613895313	0.0	1.0	1.0	1.0	False	0.0	not_kept_after_direction_rule		49.0	0.511141825014861
+f15_f16_trace	outer7_limma	R2_NO_QUOTA_SELECTOR	7	1548_2										REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB										0.0	0.0	0.0	0.0	NOT_APPLICABLE	0.0	absent_from_candidates			
+f15_f16_trace	outer7_limma	R2_NO_QUOTA_SELECTOR	7	1548_2										REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS									0.5019021613895313	0.0	1.0	1.0	1.0	NOT_APPLICABLE	0.0	below_score_cap		49.0	0.5531731212503201
+f15_f16_trace	outer7_limma	PUBLISHED_SELECTOR	8	1550_1										REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB									0.6223267863429116	0.0	1.0	1.0	1.0	True	1.0	retained	in_direction_target_from_diverse_set	38.0	
+f15_f16_trace	outer7_limma	PUBLISHED_SELECTOR	8	1550_1										REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS									0.4831986099555505	0.0	0.0	0.0	0.0	False	0.0	score_below_fallback			
+f15_f16_trace	outer7_limma	R2_NO_QUOTA_SELECTOR	8	1550_1										REACTOME__REACTOME_SIGNALING_BY_NTRK2_TRKB									0.6223267863429116	0.0	1.0	1.0	1.0	NOT_APPLICABLE	1.0	retained		38.0	
+f15_f16_trace	outer7_limma	R2_NO_QUOTA_SELECTOR	8	1550_1										REACTOME__REACTOME_KERATAN_SULFATE_BIOSYNTHESIS									0.4831986099555505	0.0	0.0	0.0	0.0	NOT_APPLICABLE	0.0	score_below_fallback			

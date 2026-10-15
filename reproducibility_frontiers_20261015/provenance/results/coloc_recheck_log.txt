@@ -1,0 +1,57 @@
+command: Rscript revision/acrf_provenance_check_20261015/coloc_recheck.R
+started: 2026-10-15T15:32:10+0800
+coloc version: 5.2.3
+coloc path: /home/bio/R/x86_64-pc-linux-gnu-library/4.5/coloc
+PP absolute tolerance predeclared: 1e-06
+priors p1=p2=1e-4 p12=1e-5; eqtl type=quant sdY=1; gwas type=cc s=0.05
+inputs: existing Project_P6/cache only; no download
+
+PP.H0.abf PP.H1.abf PP.H2.abf PP.H3.abf PP.H4.abf 
+ 3.83e-77  1.98e-77  6.42e-01  3.33e-01  2.51e-02 
+[1] "PP abf for shared variant: 2.51%"
+PRELP overlap=6292 PP4=0.0250622 PP3=0.332626
+PP.H0.abf PP.H1.abf PP.H2.abf PP.H3.abf PP.H4.abf 
+   0.0256    0.0201    0.5190    0.4080    0.0274 
+[1] "PP abf for shared variant: 2.74%"
+OMD overlap=7236 PP4=0.0273622 PP3=0.407581
+PP.H0.abf PP.H1.abf PP.H2.abf PP.H3.abf PP.H4.abf 
+  0.00140   0.00333   0.29000   0.69100   0.01490 
+[1] "PP abf for shared variant: 1.49%"
+IDH2 overlap=7421 PP4=0.0148652 PP3=0.69077
+PP.H0.abf PP.H1.abf PP.H2.abf PP.H3.abf PP.H4.abf 
+   0.3290    0.2350    0.2320    0.1660    0.0391 
+[1] "PP abf for shared variant: 3.91%"
+NDUFA8 overlap=6449 PP4=0.0390657 PP3=0.165651
+PP.H0.abf PP.H1.abf PP.H2.abf PP.H3.abf PP.H4.abf 
+   0.3830    0.2640    0.2000    0.1380    0.0159 
+[1] "PP abf for shared variant: 1.59%"
+NTRK2 overlap=7062 PP4=0.0158544 PP3=0.137531
+PP.H0.abf PP.H1.abf PP.H2.abf PP.H3.abf PP.H4.abf 
+  0.44600   0.35500   0.10600   0.08440   0.00815 
+[1] "PP abf for shared variant: 0.815%"
+NTF3 overlap=7469 PP4=0.00815396 PP3=0.0844195
+PP.H0.abf PP.H1.abf PP.H2.abf PP.H3.abf PP.H4.abf 
+ 9.87e-30  8.75e-30  5.03e-01  4.45e-01  5.23e-02 
+[1] "PP abf for shared variant: 5.23%"
+FRS2 overlap=7591 PP4=0.0522624 PP3=0.445182
+PP.H0.abf PP.H1.abf PP.H2.abf PP.H3.abf PP.H4.abf 
+ 2.39e-29  1.67e-29  5.71e-01  3.99e-01  2.96e-02 
+[1] "PP abf for shared variant: 2.96%"
+BMP10 overlap=6982 PP4=0.0295727 PP3=0.398946
+PP.H0.abf PP.H1.abf PP.H2.abf PP.H3.abf PP.H4.abf 
+  0.02550   0.79800   0.00539   0.16900   0.00255 
+[1] "PP abf for shared variant: 0.255%"
+SMAD9 overlap=7239 PP4=0.00255213 PP3=0.168528
+PP.H0.abf PP.H1.abf PP.H2.abf PP.H3.abf PP.H4.abf 
+ 1.24e-04  7.84e-05  5.88e-01  3.72e-01  4.03e-02 
+[1] "PP abf for shared variant: 4.03%"
+SMAD6 overlap=6421 PP4=0.0403029 PP3=0.371839
+PP.H0.abf PP.H1.abf PP.H2.abf PP.H3.abf PP.H4.abf 
+   0.0000    0.0000    0.5690    0.3760    0.0549 
+[1] "PP abf for shared variant: 5.49%"
+PITX2 overlap=6820 PP4=0.054887 PP3=0.375791
+PP.H0.abf PP.H1.abf PP.H2.abf PP.H3.abf PP.H4.abf 
+1.62e-255 1.43e-255  4.70e-01  4.14e-01  1.16e-01 
+[1] "PP abf for shared variant: 11.6%"
+KCNN3 overlap=4280 PP4=0.115648 PP3=0.414133
+exit_status: completed

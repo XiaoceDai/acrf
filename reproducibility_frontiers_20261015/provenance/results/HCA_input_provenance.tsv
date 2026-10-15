@@ -1,0 +1,28 @@
+field	value	note
+local_path	/home/bio/Project_P02/global_raw.h5ad	not a symlink; resolved path is the same
+referenced_by	scripts/p_hca_pseudobulk_chamber.py	H5AD = ROOT / global_raw.h5ad; opened backed
+downstream	scripts/v3/fig1f_v3_HCA_baseline_attribution.py	reads the pseudobulk written by the script above
+pseudobulk_dir	Project_P3/HCA/pseudobulk_chamber/	existing output; not regenerated this round
+bytes	5068859764	
+sha256_this_check	80917c4e67e581ee2696691ddd4b031bf45cbc7ba77757c8a203cd88c15f9c3f	computed 2026-10-15T07:28:25Z to completion; not a historical download checksum
+file_mtime	2026-04-17 09:26:52 +0800	filesystem mtime only; not a download date
+root_hdf5_attrs	empty	no accession, DOI, or version string inside the file
+n_obs	486134	matches reports/s1_schema.txt
+n_vars	33538	matches reports/s1_schema.txt
+donors	D1,D2,D3,D4,D5,D6,D7,D11,H2,H3,H4,H5,H6,H7	14 atlas donors
+regions	AX,LA,LV,RA,RV,SP	six regions
+source	CD45+,Cells,Nuclei	
+cell_source	Harvard-Nuclei,Sanger-CD45,Sanger-Cells,Sanger-Nuclei	
+Used	No,Yes	
+cell_types	Adipocytes,Atrial_Cardiomyocyte,Endothelial,Fibroblast,Lymphoid,Mesothelial,Myeloid,Neuronal,NotAssigned,Pericytes,Smooth_muscle_cells,Ventricular_Cardiomyocyte,doublets	
+obs_name_sha256	d411cc432649725d5431d86ca56e41d31c07b3420e99a1156d3e20244ba61a31	fingerprint of obs names in file order
+var_name_sha256	0cbd85a66c61929d0e59da26e5a47f7c29ea293dc24430c0189eb326a2720794	fingerprint of var names in file order
+filter_applied	source==Nuclei; region in LA,RA; Used==Yes; mapped cell types only	same rule as scripts/p_hca_pseudobulk_chamber.py
+cells_after_filter	77969	read-only count; pseudobulk was not rebuilt
+donors_after_filter	all 14	this is not the paired-donor count
+paired_donors_existing	adipocyte 5; atrialCM 13; endothelial 12; epicardial 1; fibroblast 13; lymphocyte 7; macrophage 12; neuronal 6; pericyte 11; vascular_smooth_muscle 10	from Project_P3/HCA/pseudobulk_chamber/paired_donors.tsv; not recomputed
+schema_vs_s1	match	486134 x 33538, 14 donors, 6 regions, empty root attrs
+public_v1_correspondence	schema and cell-source labels match the published Heart Cell Atlas v1 description	HCA project ad98d3cd-26fb-4ee3-99c9-8a2ab085e737; ERP123138; PRJEB39602
+public_byte_identity	not verified	no official checksum and no download log were found
+download_date	not recovered	
+download_url_in_repo	not found	searched scripts and reports for a saved URL; none stored

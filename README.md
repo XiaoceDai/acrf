@@ -4,6 +4,10 @@ Atrial **Chamber-aware Rewiring Framework (CRF)** — analysis code and installa
 
 **GitHub:** [github.com/XiaoceDai/acrf](https://github.com/XiaoceDai/acrf)
 
+The package version is 0.2.0. The analyses in the Frontiers submission used tag `v0.2.0` (`f10135200ca295af2d9e23c5392c3771c532ba87`). The default branch also contains a later documentation commit. That commit is not tag `v0.2.0` and does not change the scoring code.
+
+Current submission entry point: [`reproducibility_frontiers_20261015/README.md`](reproducibility_frontiers_20261015/README.md). It maps Figure 1–3 and Supplementary Figures S1–S12, lists the 13 supplementary source tables, and records the eGene, coloc, and Heart Cell Atlas checks.
+
 Publication-facing text uses NCP. Internal artifact names retain the historical
 ncp_v3 identifier to preserve frozen lineage, checksums and
 backward-compatible workflow paths.

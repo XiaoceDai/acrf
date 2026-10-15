@@ -1,0 +1,43 @@
+anchor	eqtl_cache	gwas_cache	status	n_eqtl	n_gwas	n_overlap	n_allele_flip	eqtl_N	gwas_N	lead_eqtl_p	gwas_min_p	coloc_PP0	coloc_PP1	coloc_PP2	coloc_PP3	coloc_PP4	PP4_ge_0.70	warning
+PRELP	/home/bio/Project_P02/Project_P6/cache/eqtl_PRELP_chr1_202475828_204491352.tsv.gz	/home/bio/Project_P02/Project_P6/cache/gwas_PRELP_chr1_202475828_204491352.tsv.gz	rechecked	6612	42510	6292	6292	372	2212180	0.000256206	6.581e-84	3.83170716182391e-77	1.9844270947262e-77	0.642311920302359	0.332625927101721	0.0250621525959168	FALSE	"minimum p value is: 0.00022155
+If this is what you expected, this is not a problem.
+If this is not as small as you expected, please check you supplied var(beta) and not sd(beta) for the varbeta argument. If that's not the explanation, please check the 02_data vignette."
+OMD	/home/bio/Project_P02/Project_P6/cache/eqtl_OMD_chr9_91414245_93424461.tsv.gz	/home/bio/Project_P02/Project_P6/cache/gwas_OMD_chr9_91414245_93424461.tsv.gz	rechecked	7562	41438	7236	7236	372	2212180	0.000609584	1.284e-07	0.025563517367496	0.0200601055698501	0.519433576877508	0.407580567415305	0.0273622327698407	FALSE	"minimum p value is: 0.00082678
+If this is what you expected, this is not a problem.
+If this is not as small as you expected, please check you supplied var(beta) and not sd(beta) for the varbeta argument. If that's not the explanation, please check the 02_data vignette."
+IDH2	/home/bio/Project_P02/Project_P6/cache/eqtl_IDH2_chr15_89083045_91102504.tsv.gz	/home/bio/Project_P02/Project_P6/cache/gwas_IDH2_chr15_89083045_91102504.tsv.gz	rechecked	7854	46217	7421	7421	372	2175900	8.19198e-06	7.827e-09	0.00139572803192151	0.00332877299742685	0.289640506848089	0.690769783452145	0.0148652086704176	FALSE	"minimum p value is: 6.0052e-06
+If this is what you expected, this is not a problem.
+If this is not as small as you expected, please check you supplied var(beta) and not sd(beta) for the varbeta argument. If that's not the explanation, please check the 02_data vignette."
+NDUFA8	/home/bio/Project_P02/Project_P6/cache/eqtl_NDUFA8_chr9_121144058_123159819.tsv.gz	/home/bio/Project_P02/Project_P6/cache/gwas_NDUFA8_chr9_121144058_123159819.tsv.gz	rechecked	6768	41323	6449	6449	372	2175900	0.000368407	1.854e-06	0.328601283867571	0.234843114317241	0.231839249530897	0.165650644143236	0.0390657081410546	FALSE	"minimum p value is: 0.00032291
+If this is what you expected, this is not a problem.
+If this is not as small as you expected, please check you supplied var(beta) and not sd(beta) for the varbeta argument. If that's not the explanation, please check the 02_data vignette. | minimum p value is: 1.8913e-06
+If this is what you expected, this is not a problem.
+If this is not as small as you expected, please check you supplied var(beta) and not sd(beta) for the varbeta argument. If that's not the explanation, please check the 02_data vignette."
+NTRK2	/home/bio/Project_P02/Project_P6/cache/eqtl_NTRK2_chr9_83668522_86029699.tsv.gz	/home/bio/Project_P02/Project_P6/cache/gwas_NTRK2_chr9_83668522_86029699.tsv.gz	rechecked	7424	48778	7062	7062	372	2212180	0.000311034	1.275e-05	0.38311281050218	0.263568193952395	0.199933351508598	0.137531288217923	0.0158543558189048	FALSE	"minimum p value is: 0.00027094
+If this is what you expected, this is not a problem.
+If this is not as small as you expected, please check you supplied var(beta) and not sd(beta) for the varbeta argument. If that's not the explanation, please check the 02_data vignette. | minimum p value is: 1.1688e-05
+If this is what you expected, this is not a problem.
+If this is not as small as you expected, please check you supplied var(beta) and not sd(beta) for the varbeta argument. If that's not the explanation, please check the 02_data vignette."
+NTF3	/home/bio/Project_P02/Project_P6/cache/eqtl_NTF3_chr12_4404888_6495026.tsv.gz	/home/bio/Project_P02/Project_P6/cache/gwas_NTF3_chr12_4404888_6495026.tsv.gz	rechecked	7869	46914	7469	7469	372	2212180	1.99126e-05	6.377e-06	0.446157817803743	0.355230333198301	0.106038398303677	0.0844194948673054	0.00815395582697339	FALSE	"minimum p value is: 1.5329e-05
+If this is what you expected, this is not a problem.
+If this is not as small as you expected, please check you supplied var(beta) and not sd(beta) for the varbeta argument. If that's not the explanation, please check the 02_data vignette. | minimum p value is: 7.7411e-06
+If this is what you expected, this is not a problem.
+If this is not as small as you expected, please check you supplied var(beta) and not sd(beta) for the varbeta argument. If that's not the explanation, please check the 02_data vignette."
+FRS2	/home/bio/Project_P02/Project_P6/cache/eqtl_FRS2_chr12_68464533_70513650.tsv.gz	/home/bio/Project_P02/Project_P6/cache/gwas_FRS2_chr12_68464533_70513650.tsv.gz	rechecked	7991	43146	7591	7591	372	2175900	9.1307e-05	1.059e-36	9.87221477284614e-30	8.74619706901073e-30	0.502555478702772	0.445182100483789	0.0522624208134413	FALSE	"minimum p value is: 7.5662e-05
+If this is what you expected, this is not a problem.
+If this is not as small as you expected, please check you supplied var(beta) and not sd(beta) for the varbeta argument. If that's not the explanation, please check the 02_data vignette."
+BMP10	/home/bio/Project_P02/Project_P6/cache/eqtl_BMP10_chr2_67869054_69886842.tsv.gz	/home/bio/Project_P02/Project_P6/cache/gwas_BMP10_chr2_67869054_69886842.tsv.gz	rechecked	7345	43208	6982	6982	372	2212180	0.000275773	1.284e-35	2.39381895983958e-29	1.67122908264861e-29	0.571481095918577	0.398946224448754	0.0295726796326668	FALSE	"minimum p value is: 0.00023913
+If this is what you expected, this is not a problem.
+If this is not as small as you expected, please check you supplied var(beta) and not sd(beta) for the varbeta argument. If that's not the explanation, please check the 02_data vignette."
+SMAD9	/home/bio/Project_P02/Project_P6/cache/eqtl_SMAD9_chr13_35879326_37925087.tsv.gz	/home/bio/Project_P02/Project_P6/cache/gwas_SMAD9_chr13_35879326_37925087.tsv.gz	rechecked	7625	42253	7239	7239	372	2212180	1.27017e-07	3.366e-06	0.0255259902469827	0.798002921646105	0.0053908475572224	0.168528112468594	0.00255212808109666	FALSE	"minimum p value is: 8.4581e-05
+If this is what you expected, this is not a problem.
+If this is not as small as you expected, please check you supplied var(beta) and not sd(beta) for the varbeta argument. If that's not the explanation, please check the 02_data vignette."
+SMAD6	/home/bio/Project_P02/Project_P6/cache/eqtl_SMAD6_chr15_65703041_67782082.tsv.gz	/home/bio/Project_P02/Project_P6/cache/gwas_SMAD6_chr15_65703041_67782082.tsv.gz	rechecked	6708	42504	6421	6421	372	2212180	0.000199648	2.02e-10	0.00012385115304588	7.83753271335332e-05	0.58765564492386	0.371839185297828	0.0403029432981336	FALSE	"minimum p value is: 0.00017096
+If this is what you expected, this is not a problem.
+If this is not as small as you expected, please check you supplied var(beta) and not sd(beta) for the varbeta argument. If that's not the explanation, please check the 02_data vignette."
+PITX2	/home/bio/Project_P02/Project_P6/cache/eqtl_PITX2_chr4_109610001_111633149.tsv.gz	/home/bio/Project_P02/Project_P6/cache/gwas_PITX2_chr4_109610001_111633149.tsv.gz	rechecked	7160	42694	6820	6820	372	2212180	0.000797352	1e-305	0	0	0.569322199490257	0.375790787335577	0.0548870131739546	FALSE	"minimum p value is: 0.00071775
+If this is what you expected, this is not a problem.
+If this is not as small as you expected, please check you supplied var(beta) and not sd(beta) for the varbeta argument. If that's not the explanation, please check the 02_data vignette."
+KCNN3	/home/bio/Project_P02/Project_P6/cache/eqtl_KCNN3_chr1_153837802_155961963.tsv.gz	/home/bio/Project_P02/Project_P6/cache/gwas_KCNN3_chr1_153837802_155961963.tsv.gz	rechecked	4498	38341	4280	4280	372	2123090	9.44229e-05	4.83e-258	1.61811866266888e-255	1.42551408991332e-255	0.470218635670775	0.414132889628713	0.115648474700467	FALSE	"minimum p value is: 7.8359e-05
+If this is what you expected, this is not a problem.
+If this is not as small as you expected, please check you supplied var(beta) and not sd(beta) for the varbeta argument. If that's not the explanation, please check the 02_data vignette."

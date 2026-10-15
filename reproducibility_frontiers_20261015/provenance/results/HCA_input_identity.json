@@ -1,0 +1,78 @@
+{
+  "path": "/home/bio/Project_P02/global_raw.h5ad",
+  "bytes": 5068859764,
+  "sha256_this_check": "80917c4e67e581ee2696691ddd4b031bf45cbc7ba77757c8a203cd88c15f9c3f",
+  "checked_at_utc": "2026-10-15T07:31:11Z",
+  "root_attrs_empty": true,
+  "n_obs": 486134,
+  "n_vars": 33538,
+  "donors": [
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6",
+    "D7",
+    "D11",
+    "H2",
+    "H3",
+    "H4",
+    "H5",
+    "H6",
+    "H7"
+  ],
+  "regions": [
+    "AX",
+    "LA",
+    "LV",
+    "RA",
+    "RV",
+    "SP"
+  ],
+  "source": [
+    "CD45+",
+    "Cells",
+    "Nuclei"
+  ],
+  "cell_source": [
+    "Harvard-Nuclei",
+    "Sanger-CD45",
+    "Sanger-Cells",
+    "Sanger-Nuclei"
+  ],
+  "cell_type": [
+    "Adipocytes",
+    "Atrial_Cardiomyocyte",
+    "Endothelial",
+    "Fibroblast",
+    "Lymphoid",
+    "Mesothelial",
+    "Myeloid",
+    "Neuronal",
+    "NotAssigned",
+    "Pericytes",
+    "Smooth_muscle_cells",
+    "Ventricular_Cardiomyocyte",
+    "doublets"
+  ],
+  "cells_after_nuclei_lara_used_mapped_type": 77969,
+  "donors_remaining_after_that_filter": [
+    "D1",
+    "D11",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6",
+    "D7",
+    "H2",
+    "H3",
+    "H4",
+    "H5",
+    "H6",
+    "H7"
+  ],
+  "obs_name_sha256": "d411cc432649725d5431d86ca56e41d31c07b3420e99a1156d3e20244ba61a31",
+  "var_name_sha256": "0cbd85a66c61929d0e59da26e5a47f7c29ea293dc24430c0189eb326a2720794"
+}
